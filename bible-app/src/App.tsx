@@ -1,8 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Home from "./pages/home/Home"
+import Home from "./pages/Home"
 import { AnimatePresence } from "framer-motion"
-import Learn from "./pages/learnit/Learn"
 import { VerseProvider } from "./utils/VerseContext"
+import Random from "./pages/Random"
+import Popular from "./pages/Popular"
+import Search from "./pages/Search"
+import Phase1 from "./pages/Phase1"
 function App() {
   return (
     <>
@@ -12,7 +15,10 @@ function App() {
             <Router>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/learn" element={<Learn />} />
+                <Route path="/random" element={<Random />} />
+                <Route path="/essentials" element={<Popular />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/learn" element={<Phase1 />} />
               </Routes>
             </Router>
           </AnimatePresence>

@@ -1,5 +1,5 @@
-import { Card } from "../../comps/Card"
-import { Button } from "../../comps/Button"
+import { Card } from "../comps/Card"
+import { Button } from "../comps/Button"
 const Search = () => {
   return (
     <>

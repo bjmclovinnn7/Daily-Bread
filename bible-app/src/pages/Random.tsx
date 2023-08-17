@@ -1,9 +1,9 @@
-import { Card } from "../../comps/Card"
-import { Button } from "../../comps/Button"
+import { Card } from "../comps/Card"
+import { Button } from "../comps/Button"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { useVerseContext } from "../../utils/VerseContext"
+import { useVerseContext } from "../utils/VerseContext"
 
 const baseURL = "http://localhost:8080/random"
 
@@ -23,6 +23,11 @@ const Random = () => {
       })
       .catch((error) => console.log(error))
   }
+
+  useEffect(() => {
+    ;() => getRandomVerse()
+    return
+  }, [])
 
   return (
     <>

@@ -25,39 +25,36 @@ const Random = () => {
   }
 
   useEffect(() => {
-    ;() => getRandomVerse()
-    return
+    getRandomVerse()
   }, [])
 
   return (
     <>
-      <Card size={"lg"} variant={"outline"} className="p-10">
-        <div className="bg-black text-white w-fit text-center rounded-2xl font-bold text-4xl p-2">
+      <Card size={"lg"} variant={"outline"} className="h-[100vh]">
+        <div className=" text-white w-fit text-center rounded-2xl font-bold text-4xl p-2">
           Random
         </div>
-        <div className="w-full h-full rounded-2xl ">
-          <div className="flex items-center justify-center text-3xl h-20 ">
+        <div className="w-full h-full rounded-2xl space-y-10">
+          <div className="text-center text-3xl font-bold">
             {verseData.name +
               " " +
               verseData.chapter +
               ":" +
               verseData.versecount}
           </div>
-          <div className="flex items-center justify-center h-60 text-3xl">
-            {verseData.verse}
-          </div>
+          <div className="text-start text-3xl">{verseData.verse}</div>
         </div>
         <div className="flex justify-between w-full h-fit">
           <Button
             size={"default"}
-            variant={"outline"}
+            variant={"outline1"}
             whileHover={{ scale: 1.1 }}
           >
             <Link to="/learn">Learn Verse</Link>
           </Button>
           <Button
             size={"default"}
-            variant={"outline"}
+            variant={"outline1"}
             onClick={getRandomVerse}
             whileHover={{ scale: 1.1 }}
           >

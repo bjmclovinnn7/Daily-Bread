@@ -1,37 +1,38 @@
 import { Card } from "../comps/Card"
 import { Button } from "../comps/Button"
 import { Link } from "react-router-dom"
+import { CircleButton } from "../comps/CircleButton"
 
 const Home = () => {
   return (
     <>
-      <section className="w-full h-[100vh] flex justify-center items-center gap-4 p-6">
-        <Card size={"md"} variant={"glass"} className="">
+      <div className="grid place-content-center gap-4 h-[100vh]">
+        <Card size={"lg"} variant={"outline"}>
           <div className="grid place-items-center h-full w-full ">
             <div className="text-2xl text-black font-bold text-center">
-              Want a challenge? Learn a random verse!
+              Get a Random Verse!
             </div>
-            <Button
-              size={"lg"}
-              variant={"outline"}
-              whileHover={{ scale: 1.1 }}
-              className="text-3xl font-bold"
-            >
-              <Link to="/random">Let's go!</Link>
-            </Button>
+            <Link to="/random">
+              <CircleButton
+                size={"lg"}
+                variant={"outline1"}
+                whileHover={{ scale: 1.1, color: "rgb(248, 207, 80)" }}
+                className="text-white text-6xl"
+              ></CircleButton>
+            </Link>
           </div>
         </Card>
-        <Card size={"md"} variant={"glass"} className="">
-          <Button whileHover={{ scale: 1.1 }}>
+        <Card size={"lg"} variant={"outline"}>
+          <Button variant={"outline1"} whileHover={{ scale: 1.1 }}>
             <Link to="/popular">The Essentials!</Link>
           </Button>
         </Card>
-        <Card size={"md"} variant={"glass"} className="">
-          <Button whileHover={{ scale: 1.1 }}>
+        <Card size={"lg"} variant={"outline"}>
+          <Button variant={"outline1"} whileHover={{ scale: 1.1 }}>
             <Link to="/search">Search it!</Link>
           </Button>
         </Card>
-      </section>
+      </div>
     </>
   )
 }

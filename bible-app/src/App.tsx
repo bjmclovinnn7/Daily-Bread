@@ -16,7 +16,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/random" element={<Random />} />
-                <Route path="/essentials" element={<Popular />} />
+                <Route path="/popular" element={<Popular />} />
                 <Route path="/search" element={<Search />} />
                 <Route path="/learn" element={<Phase1 />} />
               </Routes>

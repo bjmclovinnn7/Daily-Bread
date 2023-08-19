@@ -21,7 +21,7 @@ const pool = mysql.createPool({
 
 app.get("/random", (req, res) => {
   pool.query(
-    "SELECT name, chapter, versecount, verse FROM entire ORDER BY RAND() LIMIT 2;",
+    "SELECT name, chapter, versecount, verse FROM entire ORDER BY RAND() LIMIT 1;",
     (error, results, fields) => {
       if (error) {
         console.error(error)

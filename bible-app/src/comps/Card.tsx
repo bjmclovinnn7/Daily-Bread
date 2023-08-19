@@ -5,10 +5,10 @@ import { cn } from "../utils/utils"
 const cardVariants = cva("relative grid place-items-center rounded-2xl", {
   variants: {
     variant: {
-      default: "bg-blue-400",
-      outline: "bg-red-300",
+      default: "bg-serenity-100",
+      outline: "bg-freesia-300",
       glass:
-        "bg-blue-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border-2 shadow-2xl",
+        "bg-midnightBlue-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border-2 shadow-2xl",
     },
     size: {
       default: "h-1/2 w-1/2 p-10",

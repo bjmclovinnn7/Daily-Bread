@@ -2,9 +2,10 @@ import { forwardRef } from "react"
 import { VariantProps, cva } from "class-variance-authority"
 import { cn } from "../utils/utils"
 import { motion, HTMLMotionProps } from "framer-motion"
+import { HiSparkles } from "react-icons/Hi"
 
 const buttonVariants = cva(
-  "h-fit w-fit flex justify-center items-center rounded-2xl text-xl",
+  "h-fit w-fit flex justify-center items-center rounded-full text-xl",
   {
     variants: {
       variant: {
@@ -38,16 +39,18 @@ interface ButtonProps
   extends React.ComponentPropsWithRef<"button">,
     VariantProps<typeof buttonVariants> {}
 
-const Button = forwardRef<HTMLButtonElement, ButtonMotionProps>(
+const CircleButton = forwardRef<HTMLButtonElement, ButtonMotionProps>(
   ({ className, size, variant, ...props }, buttonRef) => {
     return (
       <motion.button
         ref={buttonRef}
         className={cn(buttonVariants({ variant, size, className }))}
         {...props}
-      />
+      >
+        <HiSparkles className="stroke-black stroke-1 pointer-events-none" />
+      </motion.button>
     )
   }
 )
 
-export { Button, buttonVariants }
+export { CircleButton, buttonVariants }

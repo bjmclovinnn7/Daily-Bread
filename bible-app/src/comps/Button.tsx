@@ -8,16 +8,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "border bg-serenity-100",
-        outline1: "border bg-serenity-100",
-        outline2: "border bg-freesia-300",
-        outline3: "border bg-midnightBlue-400",
+        default: "border bg-beige-100",
+        outline1: "border bg-scarlet-300",
+        outline2: "border bg-blue-800",
+        outline3: "border bg-blueGray-700",
         glass1:
-          "bg-serenity-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
+          "bg-beige-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
         glass2:
-          "bg-freesia-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
+          "bg-scarlet-300 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
         glass3:
-          "bg-midnightBlue-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
+          "bg-blueGray-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
       },
       size: {
         default: "p-3",

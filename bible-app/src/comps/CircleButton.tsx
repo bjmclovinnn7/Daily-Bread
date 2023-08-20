@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "border bg-serenity-100",
-        outline1: "border bg-serenity-100",
-        outline2: "border bg-freesia-300",
-        outline3: "border bg-midnightBlue-400",
+        default: "border bg-beige-100",
+        outline1: "border bg-scarlet-100",
+        outline2: "border bg-blueGray-300",
+        outline3: "border bg-blueGray-400",
         glass1:
-          "bg-serenity-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
+          "bg-scarlet-300 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
         glass2:
-          "bg-freesia-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
+          "bg-blueGray-300 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
         glass3:
-          "bg-midnightBlue-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
+          "bg-blue-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
       },
       size: {
         default: "p-3",
@@ -46,9 +46,7 @@ const CircleButton = forwardRef<HTMLButtonElement, ButtonMotionProps>(
         ref={buttonRef}
         className={cn(buttonVariants({ variant, size, className }))}
         {...props}
-      >
-        <HiSparkles className="stroke-black stroke-1 pointer-events-none" />
-      </motion.button>
+      />
     )
   }
 )

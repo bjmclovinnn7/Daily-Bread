@@ -30,38 +30,40 @@ const Random = () => {
 
   return (
     <>
-      <Card size={"lg"} variant={"outline"} className="h-[100vh]">
-        <div className=" text-white w-fit text-center rounded-2xl font-bold text-4xl p-2">
-          Random
-        </div>
-        <div className="w-full h-full rounded-2xl space-y-10">
-          <div className="text-center text-3xl font-bold">
-            {verseData.name +
-              " " +
-              verseData.chapter +
-              ":" +
-              verseData.versecount}
+      <div className="p-4 h-[100vh]">
+        <Card size={"lg"} variant={"glass1"} className="">
+          <div className=" text-white text-center rounded-2xl font-bold text-4xl">
+            Random
           </div>
-          <div className="text-start text-3xl">{verseData.verse}</div>
-        </div>
-        <div className="flex justify-between w-full h-fit">
-          <Button
-            size={"default"}
-            variant={"outline1"}
-            whileHover={{ scale: 1.1 }}
-          >
-            <Link to="/learn">Learn Verse</Link>
-          </Button>
-          <Button
-            size={"default"}
-            variant={"outline1"}
-            onClick={getRandomVerse}
-            whileHover={{ scale: 1.1 }}
-          >
-            New Verse
-          </Button>
-        </div>
-      </Card>
+          <div className="h-[70vh] rounded-2xl space-y-5 bg-scarlet-100 p-2 text-white">
+            <div className="text-center text-3xl font-bold">
+              {verseData.name +
+                " " +
+                verseData.chapter +
+                ":" +
+                verseData.versecount}
+            </div>
+            <div className="text-start text-3xl">{verseData.verse}</div>
+          </div>
+          <div className="flex justify-between w-full h-fit">
+            <Button
+              size={"default"}
+              variant={"outline1"}
+              whileHover={{ scale: 1.1 }}
+            >
+              <Link to="/learn">Learn Verse</Link>
+            </Button>
+            <Button
+              size={"default"}
+              variant={"outline1"}
+              onClick={getRandomVerse}
+              whileHover={{ scale: 1.1 }}
+            >
+              New Verse
+            </Button>
+          </div>
+        </Card>
+      </div>
     </>
   )
 }

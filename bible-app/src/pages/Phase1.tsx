@@ -70,7 +70,8 @@ const Phase1 = () => {
 
   // Define a custom component to display when the user finishes
   const CompletionMessage = () => {
-    const [completionData, setCompletionData] = useState({
+    const percentage = Math.floor(((correct - incorrect) / correct) * 100)
+    const completionData = {
       labels: ["Correct", "Incoorect"],
       datasets: [
         {
@@ -78,31 +79,39 @@ const Phase1 = () => {
           backgroundColor: ["rgb(54, 210, 75", "rgb(225, 82, 82)"],
         },
       ],
-    })
+    }
+
+    let redo = `You got ${percentage}%! Please try again!`
+
+    let success = `Congrats on finishing Phase One with ${percentage}%`
+
     return (
-      <Card size={"lg"} variant={"outline"} className="absolute inset-0">
-        <div className="text-center text-3xl lg:text-6xl font-bold">
-          Congrats on finishing the Phase One!
-        </div>
-        <div className="lg:grid lg:grid-cols-2 w-full h-full">
-          <div className="grid place-content-center space-y-32">
-            some stuff here
+      <div className="absolute p-3 inset-0">
+        <Card size={"lg"} variant={"default"} className="relative ">
+          <div className="text-center text-3xl lg:text-6xl font-bold text-white">
+            {percentage > 80 ? success : redo}
           </div>
-          <div className="">
-            <div className="relative h-full w-full">
-              <PieChart chartData={completionData} />
+
+          <div className="lg:grid lg:grid-cols-2 w-full h-full">
+            <div className="grid place-content-center space-y-32">
+              some stuff here
             </div>
-            <Button
-              size={"md"}
-              variant={"outline1"}
-              className="w-full"
-              whileHover={{ scale: 1.1 }}
-            >
-              <Link to="/random">Go Back</Link>
-            </Button>
+            <div className="">
+              <div className="relative h-full w-full">
+                <PieChart chartData={completionData} />
+              </div>
+              <Button
+                size={"md"}
+                variant={"glass1"}
+                className="w-full"
+                whileHover={{ scale: 1.1 }}
+              >
+                <Link to="/random">Go Back</Link>
+              </Button>
+            </div>
           </div>
-        </div>
-      </Card>
+        </Card>
+      </div>
     )
   }
 
@@ -117,7 +126,7 @@ const Phase1 = () => {
           <div className="flex flex-wrap justify-center items-center h-60 text-2xl">
             {verseData.verse}
           </div>
-          <div className="w-full flex flex-wrap gap-2 text-2xl">
+          <div className="w-full flex flex-wrap gap-1 text-2xl">
             {verseArray.map((word, index) => (
               <div key={index} className="flex justify-center items-center">
                 <input

@@ -1,62 +1,87 @@
 import { Card } from "../comps/Card"
-import { Button } from "../comps/Button"
 import { Link } from "react-router-dom"
-import { CircleButton } from "../comps/CircleButton"
-import { HiSparkles, HiHeart, HiSearch } from "react-icons/Hi"
+import {
+  HiSparkles,
+  HiHeart,
+  HiSearch,
+  HiSun,
+  HiUserCircle,
+} from "react-icons/Hi"
+import { HiFire } from "react-icons/Hi"
+import Random from "./Random"
 
 const Home = () => {
   return (
     <>
-      <div className="grid place-content-center gap-4 h-[100vh]">
-        <Card size={"lg"} variant={"glass1"} className="gap-3">
-          <div className="text-2xl text-white bg-blueGray-700 rounded-xl font-bold text-center border-2 border-white p-2">
-            Get a Random Verse!
+      <div className="relative">
+        <div className="h-[15vh] w-full fixed flex justify-between items-center bg-white text-3xl p-5">
+          <div>NIV</div>
+          <div className="flex justify-center items-center">
+            <span>5</span>
+            <HiFire className=" text-orange-500" />
           </div>
-          <Link to="/random">
-            <CircleButton
-              size={"lg"}
-              variant={"outline1"}
-              whileHover={{ scale: 1.1, color: "rgb(250, 204, 21)" }}
-              className="text-white text-6xl"
-            >
-              <HiSparkles className="stroke-black stroke-1 pointer-events-none" />
-            </CircleButton>
-          </Link>
-        </Card>
+          <div>Trophy</div>
+          <div>Settings</div>
+        </div>
+        <div className="fixed top-[15vh] h-[70vh] w-full overflow-hidden scroll-smooth bg-blueGray-100">
+          <section
+            id="today"
+            className="h-full grid place-content-center snap-center"
+          >
+            Verse of the day.
+          </section>
+          <section
+            id="search"
+            className="h-full grid place-content-center snap-center"
+          >
+            Search Comp
+          </section>
+          <section
+            id="popular"
+            className="h-full grid place-content-center snap-center"
+          >
+            Popular Comp
+          </section>
+          <section
+            id="random"
+            className="h-full grid place-content-center snap-center"
+          >
+            <Random />
+          </section>
+        </div>
 
-        <Card size={"lg"} variant={"glass2"} className="gap-3">
-          <div className="text-2xl text-white bg-blueGray-700 rounded-xl font-bold text-center border-2 border-white p-2 bg-yellow">
-            Get a Random Verse!
-          </div>
-          <Link to="/popular">
-            <CircleButton
-              size={"lg"}
-              variant={"glass2"}
-              whileHover={{ scale: 1.1, color: "rgb(250, 204, 21)" }}
-              className="text-white text-6xl"
-            >
-              <HiHeart className="pointer-events-none stroke-black stroke-1" />
-            </CircleButton>
-          </Link>
-        </Card>
+        <div className="h-[15vh] flex fixed bottom-0 w-full justify-between items-center p-5 bg-white">
+          <Card size={"lg"} variant={"glass3"} className="gap-3">
+            <Link to="/profile">
+              <HiUserCircle className="pointer-events-none text-white text-4xl" />
+            </Link>
+          </Card>
+          <Card size={"lg"} variant={"glass1"} className="gap-3">
+            <a href="#today">
+              <HiSun className="pointer-events-none text-white text-4xl" />
+            </a>
+          </Card>
+          <Card size={"lg"} variant={"glass3"} className="gap-3">
+            <a href="#search">
+              <HiSearch className="pointer-events-none text-white text-4xl" />
+            </a>
+          </Card>
 
-        <Card size={"lg"} variant={"glass3"} className="gap-3">
-          <div className="text-2xl text-white bg-blueGray-700 rounded-xl font-bold text-center border-2 border-white p-2">
-            Get a Random Verse!
-          </div>
-          <Link to="/search">
-            <CircleButton
-              size={"lg"}
-              variant={"glass3"}
-              whileHover={{ scale: 1.1, color: "rgb(250, 204, 21)" }}
-              className="text-6xl text-white"
-            >
-              <HiSearch className="pointer-events-none stroke-black stroke-1" />
-            </CircleButton>
-          </Link>
-        </Card>
+          <Card size={"lg"} variant={"glass2"} className="gap-3">
+            <a href="#popular">
+              <HiHeart className="pointer-events-none text-white text-4xl" />
+            </a>
+          </Card>
+
+          <Card size={"lg"} variant={"glass1"} className="gap-3">
+            <a href="#random">
+              <HiSparkles className=" text-white pointer-events-none text-4xl" />
+            </a>
+          </Card>
+        </div>
       </div>
     </>
   )
 }
+
 export default Home

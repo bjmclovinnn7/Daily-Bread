@@ -1,32 +1,11 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  ReactNode,
-  SetStateAction,
-  Dispatch,
-} from "react"
+import { createContext, useContext, useState, ReactNode } from "react"
+import { colRefCategories, colRefVerses } from "./firebase"
+import { getDoc, doc } from "firebase/firestore"
 
 interface VerseContextType {
-  verseData: {
-    name: string
-    chapter: string
-    versecount: string
-    verse: string
-  }
-  setVerseData: Dispatch<
-    SetStateAction<{
-      name: string
-      chapter: string
-      versecount: string
-      verse: string
-    }>
-  >
+  getCategories: () => void
 }
-
 const VerseContext = createContext<VerseContextType | undefined>(undefined)
-
-// ...
 
 export function useVerseContext() {
   const context = useContext(VerseContext)
@@ -37,16 +16,18 @@ export function useVerseContext() {
 }
 
 export function VerseProvider({ children }: { children: ReactNode }) {
-  const [verseData, setVerseData] = useState({
-    name: "",
-    chapter: "",
-    versecount: "",
-    verse: "",
-  })
+  const [categories, setCategories] = useState<any>(null)
+
+  const getCategories = () => {
+    console.log("getting categories.")
+    console.log(getDoc(doc(colRefCategories, "selfControl")))
+    let docs = "hey"
+    setCategories(docs)
+    localStorage.setItem("categories", JSON.stringify(categories))
+  }
 
   const contextValue: VerseContextType = {
-    verseData,
-    setVerseData,
+    getCategories,
   }
 
   return (
@@ -55,5 +36,3 @@ export function VerseProvider({ children }: { children: ReactNode }) {
     </VerseContext.Provider>
   )
 }
-
-// ...

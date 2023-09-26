@@ -1,10 +1,4 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useState,
-  useEffect,
-} from "react"
+import { createContext, ReactNode, useContext, useState, useEffect } from "react"
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -16,13 +10,7 @@ import { auth, colRefUsers } from "./firebase"
 import { getDoc, setDoc, doc, collection, addDoc } from "firebase/firestore"
 
 interface UserContextType {
-  createUser: (
-    firstName: string,
-    lastName: string,
-    userName: string,
-    email: string,
-    password: string
-  ) => void
+  createUser: (firstName: string, lastName: string, userName: string, email: string, password: string) => void
   logOut: () => void
   signIn: (email: string, password: string) => void
   userData: any
@@ -30,9 +18,7 @@ interface UserContextType {
 
 const UserContext = createContext<UserContextType | undefined>(undefined)
 
-export const UserContextProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
+export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [userData, setUserData] = useState<any>(() => {
     const saved = localStorage.getItem("userData")
     const initialValue = saved ? JSON.parse(saved) : ""
@@ -44,7 +30,6 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({
       if (currentUser) {
         console.log(currentUser)
         // Fetch user data when a user logs in or signs up
-        fetchUserData(currentUser.uid)
       } else {
         // Set user data to null when the user signs out
         setUserData(null)
@@ -56,19 +41,9 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({
     }
   }, [])
 
-  const createUser = async (
-    firstName: string,
-    lastName: string,
-    userName: string,
-    email: string,
-    password: string
-  ) => {
+  const createUser = async (firstName: string, lastName: string, userName: string, email: string, password: string) => {
     try {
-      const currentUser = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      )
+      const currentUser = await createUserWithEmailAndPassword(auth, email, password)
       const user = currentUser.user
       const userId = user.uid
       const userDocRef = doc(colRefUsers, userId)
@@ -106,9 +81,16 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({
     }
   }, [userData])
 
-  const signIn = (email: string, password: string) => {
+  const signIn = async (email: string, password: string) => {
     console.log("Signing In.")
-    return signInWithEmailAndPassword(auth, email, password)
+    try {
+      const currentUser = await signInWithEmailAndPassword(auth, email, password)
+      const user = currentUser.user
+      const userUid = user.uid
+      fetchUserData(userUid)
+    } catch (error) {
+      console.error("Error creating user:", error)
+    }
   }
 
   const fetchUserData = async (userId: string) => {
@@ -137,11 +119,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({
       })
   }
 
-  return (
-    <UserContext.Provider value={{ createUser, userData, logOut, signIn }}>
-      {children}
-    </UserContext.Provider>
-  )
+  return <UserContext.Provider value={{ createUser, userData, logOut, signIn }}>{children}</UserContext.Provider>
 }
 
 export const useUserContext = () => {

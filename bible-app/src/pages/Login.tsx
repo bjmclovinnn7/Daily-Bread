@@ -1,6 +1,6 @@
 import { Card } from "../comps/Card"
 import { Button } from "../comps/Button"
-import { useState, ChangeEvent, FormEvent } from "react" // Import ChangeEvent and FormEvent
+import { useState, ChangeEvent, FormEvent, useEffect } from "react" // Import ChangeEvent and FormEvent
 import { useUserContext } from "../utils/UserContext"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
@@ -10,14 +10,19 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const navigate = useNavigate()
-  const { signIn } = useUserContext()
+  const { signIn, userData } = useUserContext()
+
+  useEffect(() => {
+    if (userData) {
+      navigate("/")
+    }
+  }, [userData])
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setError("")
     try {
       await signIn(email, password)
-      navigate("/profile")
     } catch (e) {
       if (e instanceof Error) {
         setError(e.message)

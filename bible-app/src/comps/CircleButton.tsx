@@ -2,14 +2,13 @@ import { forwardRef } from "react"
 import { VariantProps, cva } from "class-variance-authority"
 import { cn } from "../utils/utils"
 import { motion, HTMLMotionProps } from "framer-motion"
-import { HiSparkles } from "react-icons/Hi"
 
 const buttonVariants = cva(
-  "h-fit w-fit flex justify-center items-center rounded-full text-xl",
+  "h-fit w-fit flex justify-center items-center rounded-2xl w-full",
   {
     variants: {
       variant: {
-        default: "border bg-beige-100",
+        default: "border",
         outline1: "border bg-scarlet-100",
         outline2: "border bg-blueGray-300",
         outline3: "border bg-blueGray-400",

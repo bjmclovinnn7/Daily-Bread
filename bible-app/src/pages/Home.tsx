@@ -1,12 +1,6 @@
 import { Card } from "../comps/Card"
 import { Link } from "react-router-dom"
-import {
-  HiSparkles,
-  HiHeart,
-  HiSearch,
-  HiSun,
-  HiUserCircle,
-} from "react-icons/Hi"
+import { HiSparkles, HiHeart, HiSearch, HiSun, HiUserCircle } from "react-icons/Hi"
 import { HiFire } from "react-icons/Hi"
 
 import Categories from "./Categories/Categories"
@@ -24,7 +18,7 @@ const Home = () => {
           <div>Trophy</div>
           <div>Settings</div>
         </div>
-        <div className="fixed top-[10vh] h-[75vh] w-full overflow-auto snap-y bg-blueGray-100">
+        <div className="fixed top-[10vh] h-[75vh] w-full bg-blueGray-100 overflow-auto">
           <Categories />
         </div>
 

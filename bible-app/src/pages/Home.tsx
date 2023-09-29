@@ -18,7 +18,7 @@ const Home = () => {
           <div>Trophy</div>
           <div>Settings</div>
         </div>
-        <div className="fixed top-[10vh] h-[75vh] w-full bg-blueGray-100 overflow-auto">
+        <div className="category fixed top-[10vh] h-[75vh] w-full bg-blueGray-100 p-3 overflow-y-scroll">
           <Categories />
         </div>
 

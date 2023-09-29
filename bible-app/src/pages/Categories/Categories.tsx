@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router"
 import { useVerseContext } from "../../utils/VerseContext"
-import { useEffect, useState } from "react"
-import { AnimatePresence, motion, spring } from "framer-motion"
+import { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 
 // Define a type or interface for your verse data
 interface Verse {
@@ -12,23 +12,32 @@ interface Verse {
 
 // Create a separate component for filtered verses
 const FilteredVerses = ({ verses, category, animate }: { verses: Verse[]; category: string; animate: boolean }) => {
+  const navigate = useNavigate()
+  const { saveSelectedVerse } = useVerseContext()
+  const handleClick = (verse: Verse) => {
+    saveSelectedVerse(verse)
+    navigate("/stage1")
+  }
+
   return (
     <AnimatePresence>
       <motion.div
         initial={false}
         animate={animate ? "show" : "hidden"}
         variants={{
-          hidden: { opacity: 0, height: "0px", padding: "0px" },
-          show: { opacity: 1, height: "300px", padding: "20px" },
+          hidden: { opacity: 0, height: "0px" },
+          show: { opacity: 1, height: "250px" },
         }}
-        className={`flex md:lg:block md:lg:overflow-hidden overflow-auto gap-5 `}
+        className={`flex md:lg:block md:lg:overflow-hidden overflow-auto gap-5`}
       >
         {verses
           .filter((verse: Verse) => verse.category === category.toLowerCase())
           .map((verse: Verse) => (
-            <section key={verse.id} className="border-2 rounded-2xl p-2 md:lg:overflow-hidden">
-              <h1 className="text-xl w-full font-bold">{verse.id}</h1>
-              <div className="verseText w-[70vw] text-xl">{verse.text}</div>
+            <section key={verse.id} className="w-full h-full p-5 " onClick={() => handleClick(verse)}>
+              <div className="border-2 h-full w-[65vw] rounded-2xl p-3 md:lg:overflow-hidden bg-blueGray-200">
+                <h1 className="text-xl w-full font-bold">{verse.id}</h1>
+                <div className="verseText text-xl">{verse.text}</div>
+              </div>
             </section>
           ))}
       </motion.div>
@@ -51,7 +60,7 @@ const Categories = () => {
 
   return (
     <>
-      <div className="grid place-content-center p-5 gap-5">
+      <div className="grid place-content-center gap-5">
         {categories.map((category, index) => (
           <div key={index} className="bg-white overflow-hidden">
             <button

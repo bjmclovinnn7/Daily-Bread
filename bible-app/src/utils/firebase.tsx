@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth"
 import { getFirestore, collection } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREABASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREABASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREABASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREABASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREABASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREABASE_APP_ID,
+  apiKey: "AIzaSyAt6cKC9EcJ71Pe3Fz87UG9HtF8G8KA-yw",
+  authDomain: "bible-app-production.firebaseapp.com",
+  projectId: "bible-app-production",
+  storageBucket: "bible-app-production.appspot.com",
+  messagingSenderId: "104523985989",
+  appId: "1:104523985989:web:51ffe78590173303639f2c",
 }
 
 const app = initializeApp(firebaseConfig)

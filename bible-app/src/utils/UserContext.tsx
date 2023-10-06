@@ -7,7 +7,7 @@ import {
   User,
 } from "firebase/auth"
 import { auth, colRefUsers } from "./firebase"
-import { getDoc, setDoc, doc, collection, addDoc } from "firebase/firestore"
+import { getDoc, setDoc, doc, collection } from "firebase/firestore"
 
 interface UserContextType {
   createUser: (firstName: string, lastName: string, userName: string, email: string, password: string) => void

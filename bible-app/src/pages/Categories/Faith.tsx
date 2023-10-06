@@ -9,11 +9,11 @@ interface Verse {
   text: string
 }
 
-const PrayerVerses = () => {
+const Faith = () => {
   const { verses, saveSelectedVerse } = useVerseContext()
   const navigate = useNavigate()
   // Filter the verses to include only those in the "Salvation" category
-  const prayerVerses = verses.filter((verse: Verse) => verse.category === "prayer")
+  const faithVerses = verses.filter((verse: Verse) => verse.category === "faith")
 
   const handleClick = (verse: Verse) => {
     saveSelectedVerse(verse)
@@ -25,9 +25,9 @@ const PrayerVerses = () => {
       <motion.button onClick={() => navigate("/")} whileTap={{ scale: 1.05 }} className="absolute inset-0 h-fit w-fit">
         <HiChevronLeft className=" text-6xl" />
       </motion.button>
-      <h1 className="h-20 grid place-content-center text-3xl font-bold">Prayer Verses</h1>
+      <h1 className="h-20 grid place-content-center text-3xl font-bold">Faith Verses</h1>
       <div className="space-y-5 p-5">
-        {prayerVerses.map((verse: Verse) => (
+        {faithVerses.map((verse: Verse) => (
           <motion.div
             whileTap={{ scale: 1.05 }}
             onClick={() => handleClick(verse)}
@@ -43,4 +43,4 @@ const PrayerVerses = () => {
   )
 }
 
-export default PrayerVerses
+export default Faith

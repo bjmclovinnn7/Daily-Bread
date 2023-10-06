@@ -2,7 +2,7 @@ import { useVerseContext } from "../utils/VerseContext"
 import { motion } from "framer-motion"
 import { useNavigate } from "react-router"
 import { HiChevronLeft } from "react-icons/Hi"
-import React, { useEffect, useState, useRef } from "react"
+import React, { useState, useRef } from "react"
 
 const Stage1 = () => {
   const navigate = useNavigate()
@@ -14,7 +14,7 @@ const Stage1 = () => {
   const [correctArray, setCorrectArray] = useState<boolean[]>([])
   const totalWordsRef = useRef(cleanedUpVerseArray.length)
   const correctWords = correctArray.filter((correct) => correct === true).length
-  const incorrectWords = correctArray.filter((correct) => correct === false).length
+  // const incorrectWords = correctArray.filter((correct) => correct === false).length
   const percentage = (correctWords / totalWordsRef.current) * 100
   const [oneLetterMode, setOneLetterMode] = useState(false)
 

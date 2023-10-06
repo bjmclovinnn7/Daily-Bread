@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router"
 import { useVerseContext } from "../../utils/VerseContext"
 import { useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 // Define a type or interface for your verse data
 interface Verse {
@@ -20,28 +20,26 @@ const FilteredVerses = ({ verses, category, animate }: { verses: Verse[]; catego
   }
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={false}
-        animate={animate ? "show" : "hidden"}
-        variants={{
-          hidden: { opacity: 0, height: "0px" },
-          show: { opacity: 1, height: "250px" },
-        }}
-        className={`flex md:lg:block md:lg:overflow-hidden overflow-auto gap-5`}
-      >
-        {verses
-          .filter((verse: Verse) => verse.category === category.toLowerCase())
-          .map((verse: Verse) => (
-            <section key={verse.id} className="w-full h-full p-5 " onClick={() => handleClick(verse)}>
-              <div className="border-2 h-full w-[65vw] rounded-2xl p-3 md:lg:overflow-hidden bg-blueGray-200">
-                <h1 className="text-xl w-full font-bold">{verse.id}</h1>
-                <div className="verseText text-xl">{verse.text}</div>
-              </div>
-            </section>
-          ))}
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      initial={false}
+      animate={animate ? "show" : "hidden"}
+      variants={{
+        hidden: { opacity: 0, height: "0px" },
+        show: { opacity: 1, height: "250px" },
+      }}
+      className={`flex overflow-auto gap-5 border-t-2`}
+    >
+      {verses
+        .filter((verse: Verse) => verse.category === category.toLowerCase())
+        .map((verse: Verse) => (
+          <section key={verse.id} className="w-full h-full p-5 " onClick={() => handleClick(verse)}>
+            <div className=" h-full w-60 md:w-80 lg:w-96 rounded-3xl p-3 md:lg:overflow-hidden bg-white">
+              <h1 className="text-lg w-full font-header">{verse.id}</h1>
+              <div className="verseText text-xl">{verse.text}</div>
+            </div>
+          </section>
+        ))}
+    </motion.div>
   )
 }
 
@@ -60,19 +58,20 @@ const Categories = () => {
 
   return (
     <>
-      <div className="grid place-content-center gap-5">
+      <div className="grid place-content-center gap-5 overscroll-auto">
         {categories.map((category, index) => (
-          <div key={index} className="bg-white overflow-hidden">
-            <button
-              onClick={() => handleClick(category)}
-              className={`w-full flex justify-between items-center p-3 bg-black text-white`}
-            >
-              <span className="h-full text-2xl font-bold">{category}</span>
+          <div
+            key={index}
+            className="bg-white overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-2xl rounded-3xl"
+          >
+            <button onClick={() => handleClick(category)} className={`w-full flex justify-between items-center p-3`}>
+              <span className="h-full text-3xl font-header text-white">{category}</span>
               <motion.span
                 onClick={() => navigate(`/${category.toLowerCase()}`)}
                 initial={false}
                 animate={{ opacity: openCategories[category] ? 1 : 0 }}
-                transition={{ ease: "easeIn", delay: 0.2 }}
+                transition={{ ease: "easeIn", duration: 0.3 }}
+                className="text-xl font-header text-black"
               >
                 {openCategories[category] ? "See All" : ""}
               </motion.span>

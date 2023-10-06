@@ -59,6 +59,10 @@ export default {
           700: "#2A547E",
         },
       },
+      fontFamily: {
+        body: ["Bebas Neue"],
+        header: ["Shrikhand", "cursive"],
+      },
     },
   },
   plugins: [],

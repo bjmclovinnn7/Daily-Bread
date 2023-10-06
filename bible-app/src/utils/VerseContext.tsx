@@ -1,12 +1,6 @@
-import {
-  createContext,
-  useContext,
-  useState,
-  ReactNode,
-  useEffect,
-} from "react"
+import { createContext, useContext, useState, ReactNode, useEffect } from "react"
 import { colRefVerses } from "./firebase"
-import { getDocs, collection } from "firebase/firestore"
+import { getDocs } from "firebase/firestore"
 
 interface selectedVerse {
   id: string
@@ -35,14 +29,12 @@ export function VerseProvider({ children }: { children: ReactNode }) {
     const initialValue = saved ? JSON.parse(saved) : ""
     return [initialValue]
   })
-  const [selectedVerse, setSelectedVerse] = useState<selectedVerse | null>(
-    () => {
-      const saved = localStorage.getItem("selectedVerse")
-      const initialValue = saved ? JSON.parse(saved) : null // Initialize to null if not found
+  const [selectedVerse, setSelectedVerse] = useState<selectedVerse | null>(() => {
+    const saved = localStorage.getItem("selectedVerse")
+    const initialValue = saved ? JSON.parse(saved) : null // Initialize to null if not found
 
-      return initialValue
-    }
-  )
+    return initialValue
+  })
 
   const saveSelectedVerse = (selectedVerse: selectedVerse) => {
     setSelectedVerse(selectedVerse)
@@ -84,9 +76,5 @@ export function VerseProvider({ children }: { children: ReactNode }) {
     selectedVerse,
     saveSelectedVerse,
   }
-  return (
-    <VerseContext.Provider value={contextValue}>
-      {children}
-    </VerseContext.Provider>
-  )
+  return <VerseContext.Provider value={contextValue}>{children}</VerseContext.Provider>
 }

@@ -13,9 +13,7 @@ const SalvationVerses = () => {
   const { verses, saveSelectedVerse } = useVerseContext()
   const navigate = useNavigate()
   // Filter the verses to include only those in the "Salvation" category
-  const salvationVerses = verses.filter(
-    (verse: Verse) => verse.category === "salvation"
-  )
+  const salvationVerses = verses.filter((verse: Verse) => verse.category === "salvation")
 
   const handleClick = (verse: Verse) => {
     saveSelectedVerse(verse)
@@ -24,16 +22,10 @@ const SalvationVerses = () => {
 
   return (
     <div className="text-black h-[100vh] w-[100vw] bg-white">
-      <motion.button
-        onClick={() => navigate("/")}
-        whileTap={{ scale: 1.05 }}
-        className="absolute inset-0 h-fit w-fit"
-      >
+      <motion.button onClick={() => navigate("/")} whileTap={{ scale: 1.05 }} className="absolute inset-0 h-fit w-fit">
         <HiChevronLeft className=" text-6xl" />
       </motion.button>
-      <h1 className="h-20 grid place-content-center text-3xl font-bold">
-        Salvation Verses
-      </h1>
+      <h1 className="h-20 grid place-content-center text-3xl font-bold">Salvation Verses</h1>
       <div className="space-y-5 p-5">
         {salvationVerses.map((verse: Verse) => (
           <motion.div

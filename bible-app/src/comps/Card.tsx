@@ -7,17 +7,14 @@ const cardVariants = cva("relative grid place-items-center", {
     variant: {
       default: "bg-white",
       outline: "bg-white",
-      glass1:
-        "bg-scarlet-300 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border-2 shadow-2xl",
-      glass2:
-        "bg-blueGray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border-2 shadow-2xl",
-      glass3:
-        "bg-blue-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border-2 shadow-2xl",
+      glass1: "bg-scarlet-300 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border-2 shadow-2xl",
+      glass2: "bg-blueGray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border-2 shadow-2xl",
+      glass3: "bg-blue-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border-2 shadow-2xl",
     },
     size: {
       default: "h-1/2 w-1/2 p-10",
-      md: "h-2/3 w-2/3 p-10",
-      lg: "h-full w-full",
+      md: "h-full w-full p-3",
+      lg: "h-[100vh] w-[100vw]",
     },
   },
   defaultVariants: {
@@ -26,23 +23,13 @@ const cardVariants = cva("relative grid place-items-center", {
   },
 })
 //extends these objects to any React.Component that is specified ex. "div"
-interface CardProps
-  extends React.ComponentPropsWithRef<"div">,
-    VariantProps<typeof cardVariants> {}
+interface CardProps extends React.ComponentPropsWithRef<"div">, VariantProps<typeof cardVariants> {}
 
 //...props catched all attributes that are unwanted other than the ones we want.
-const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ className, size, variant, ...props }, cardRef) => {
-    //forwardRef allows us to target these functions on any element but also gives us type saftey.
+const Card = forwardRef<HTMLDivElement, CardProps>(({ className, size, variant, ...props }, cardRef) => {
+  //forwardRef allows us to target these functions on any element but also gives us type saftey.
 
-    return (
-      <div
-        ref={cardRef}
-        className={cn(cardVariants({ variant, size, className }))}
-        {...props}
-      />
-    )
-  }
-)
+  return <div ref={cardRef} className={cn(cardVariants({ variant, size, className }))} {...props} />
+})
 
 export { Card, cardVariants }

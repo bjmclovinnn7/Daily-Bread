@@ -10,6 +10,8 @@ import Prayer from "./pages/Categories/Prayer"
 import Salvation from "./pages/Categories/Salvation"
 import Stage1 from "./pages/Stage1"
 import Praise from "./pages/Categories/Praise"
+import Faith from "./pages/Categories/Faith"
+import Love from "./pages/Categories/Love"
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
               <Route path="/salvation" element={<Salvation />} />
               <Route path="/prayer" element={<Prayer />} />
               <Route path="/praise" element={<Praise />} />
+              <Route path="/faith" element={<Faith />} />
+              <Route path="/love" element={<Love />} />
               <Route
                 path="/"
                 element={

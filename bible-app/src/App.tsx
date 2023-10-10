@@ -6,12 +6,8 @@ import { UserContextProvider } from "./utils/UserContext"
 import Login from "./pages/Login"
 import Profile from "./pages/Profile"
 import ProtectedRoute from "./utils/ProtectedRoute"
-import Prayer from "./pages/Categories/Prayer"
-import Salvation from "./pages/Categories/Salvation"
+import AllLoaded from "./pages/Categories/AllLoaded"
 import Stage1 from "./pages/Stage1"
-import Praise from "./pages/Categories/Praise"
-import Faith from "./pages/Categories/Faith"
-import Love from "./pages/Categories/Love"
 
 function App() {
   return (
@@ -22,11 +18,7 @@ function App() {
             <Routes>
               <Route path="/auth" element={<Auth />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/salvation" element={<Salvation />} />
-              <Route path="/prayer" element={<Prayer />} />
-              <Route path="/praise" element={<Praise />} />
-              <Route path="/faith" element={<Faith />} />
-              <Route path="/love" element={<Love />} />
+              <Route path="/all_verses" element={<AllLoaded />} />
               <Route
                 path="/"
                 element={

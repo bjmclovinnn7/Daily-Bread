@@ -3,11 +3,13 @@ import { motion } from "framer-motion"
 import { useNavigate } from "react-router"
 import { HiChevronLeft } from "react-icons/Hi"
 import React, { useState, useRef } from "react"
+import { Button } from "../comps/Button"
 
 const Stage1 = () => {
   const navigate = useNavigate()
   const { selectedVerse } = useVerseContext()
   const [userInput, setUserInput] = useState("")
+
   const verseWordArray = selectedVerse?.text.split(" ") || []
   const cleanedUpVerseArray = verseWordArray.map((word) => word.replace(/[^a-zA-Z0-9]/g, ""))
   const [activeWordIndex, setActiveWordIndex] = useState(0)
@@ -119,40 +121,45 @@ const Stage1 = () => {
 
   return (
     <>
-      <div className="h-[100vh] w-[100vw]">
-        <motion.button
-          onClick={() => navigate("/salvation")}
-          whileTap={{ scale: 1.05 }}
-          className="absolute inset-0 h-fit w-fit"
-        >
-          <HiChevronLeft className=" text-6xl" />
-        </motion.button>
-        <h1 className="h-20 grid place-content-center text-3xl font-bold">Stage 1</h1>
-        <div className="grid place-content-center">
-          <span className="text-3xl font-bold">{selectedVerse?.id}</span>
-          <button
-            onClick={() => setOneLetterMode(!oneLetterMode)}
-            className="w-full border-2 border-black rounded-full"
+      <div className="h-screen w-full grid bg-gradient-to-r from-violet-500/60 to-fuchsia-500/60 p-10">
+        <div className="max-w-[600px] h-fit  text-white">
+          <motion.button
+            onClick={() => navigate("/")}
+            whileTap={{ scale: 1.05 }}
+            className="absolute inset-0 h-fit w-fit"
           >
-            {oneLetterMode ? "1st Letter" : "Full Word"}
-          </button>
-        </div>
-        <div className="p-5 space-y-10">
-          <div className="grid place-content-center gap-5">
-            <div className="flex flex-wrap gap-1 text-xl">
-              {verseWordArray?.map((word, index) => (
-                <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
-              ))}
-            </div>
-
-            <input
-              className="w-full h-10 border-2 border-black text-black text-xl"
-              type="text"
-              value={userInput}
-              onChange={(e) => handleSwitch(e.target.value)}
-            />
+            <HiChevronLeft className=" text-6xl" />
+          </motion.button>
+          <h1 className="h-20 grid place-content-center text-3xl font-bold">Stage 1</h1>
+          <div className="flex justify-center items-center gap-2">
+            <span className="text-3xl font-bold">{selectedVerse?.id}</span>
           </div>
-          <div className="text-center text-xl">{`Percentage Correct: ${percentage.toFixed(1)}%`}</div>
+          <div className="p-3 space-y-10">
+            <div className="grid place-content-center gap-5">
+              <div className="flex flex-wrap gap-1 text-xl">
+                {verseWordArray?.map((word, index) => (
+                  <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
+                ))}
+              </div>
+
+              <input
+                className="w-full h-10 text-black text-xl"
+                type="text"
+                value={userInput}
+                onChange={(e) => handleSwitch(e.target.value)}
+              />
+            </div>
+            <div className="flex justify-center items-center gap-4 font-bold">
+              <Button
+                variant={"glass3"}
+                onClick={() => setOneLetterMode(!oneLetterMode)}
+                className="w-fit p-2 border-2 border-white rounded-full bg-blueGray-300"
+              >
+                {oneLetterMode ? "1st Letter" : "Full Word"}
+              </Button>
+              <div className="text-center text-xl">{`Correct: ${percentage.toFixed(1)}%`}</div>
+            </div>
+          </div>
         </div>
       </div>
     </>

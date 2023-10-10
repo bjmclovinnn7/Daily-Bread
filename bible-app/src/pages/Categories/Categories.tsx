@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router"
 import { useVerseContext } from "../../utils/VerseContext"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 // Define a type or interface for your verse data
@@ -13,11 +13,15 @@ interface Verse {
 // Create a separate component for filtered verses
 const FilteredVerses = ({ verses, category, animate }: { verses: Verse[]; category: string; animate: boolean }) => {
   const navigate = useNavigate()
-  const { saveSelectedVerse } = useVerseContext()
+  const { saveSelectedVerse, getAllVerses } = useVerseContext()
   const handleClick = (verse: Verse) => {
     saveSelectedVerse(verse)
     navigate("/stage1")
   }
+
+  useEffect(() => {
+    getAllVerses()
+  }, [])
 
   return (
     <motion.div
@@ -45,7 +49,7 @@ const FilteredVerses = ({ verses, category, animate }: { verses: Verse[]; catego
 
 const Categories = () => {
   const navigate = useNavigate()
-  const { verses } = useVerseContext()
+  const { verses, saveCurrentCategory } = useVerseContext()
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({})
   const categories = ["Salvation", "Prayer", "Praise", "Faith", "Love"]
 
@@ -56,6 +60,10 @@ const Categories = () => {
     }))
   }
 
+  const handleSeeAll = (category: string) => {
+    saveCurrentCategory(category)
+    navigate("/all_verses")
+  }
   return (
     <>
       <div className="grid place-content-center gap-5 overscroll-auto">
@@ -67,7 +75,7 @@ const Categories = () => {
             <button onClick={() => handleClick(category)} className={`w-full flex justify-between items-center p-3`}>
               <span className="h-full text-3xl font-header text-white">{category}</span>
               <motion.span
-                onClick={() => navigate(`/${category.toLowerCase()}`)}
+                onClick={() => handleSeeAll(category)}
                 initial={false}
                 animate={{ opacity: openCategories[category] ? 1 : 0 }}
                 transition={{ ease: "easeIn", duration: 0.3 }}

@@ -1,5 +1,8 @@
 import { useUserContext } from "../utils/UserContext"
 import { useNavigate } from "react-router"
+import { Button } from "../comps/Button"
+import { HiChevronLeft } from "react-icons/Hi"
+import { motion } from "framer-motion"
 const Profile = () => {
   const { userData, logOut } = useUserContext()
   const navigate = useNavigate()
@@ -17,31 +20,38 @@ const Profile = () => {
 
   return (
     <>
-      <div className="h-[100vh] w-[100vw] bg-white">
-        <div className="relative grid place-content-center h-full w-full bg-white">
-          <div className="flex justify-between items-center absolute top-5 w-full">
-            <div className="text-3xl font-bold text-gray-500 pl-5">Profile</div>
-            <button className="h-10 w-20 border rounded-2xl bg-red-300" onClick={() => handleLogOut()}>
-              Log out
-            </button>
-          </div>
-          <section className="h-[20vh] w-[80vw] p-2">
-            <div className="text-3xl font-bold">{userData ? userData.userName : "No user signed in."}</div>
-            <div className="text-gray-500">
-              {userData ? (userData.firstName + " " + userData.lastName).toUpperCase() : ""}
+      <div className="h-screen w-full grid bg-gradient-to-r from-violet-500/60 to-fuchsia-500/60">
+        <div className=" p-10">
+          <div className="text-5xl w-full text-center font-bold text-white pb-5 border-b-2">Profile</div>
+          <motion.button
+            onClick={() => navigate("/")}
+            whileTap={{ scale: 1.05 }}
+            className="absolute inset-0 h-fit w-fit text-white"
+          >
+            <HiChevronLeft className=" text-6xl" />
+          </motion.button>
+          <div className="grid place-content-start gap-5 p-5 w-full">
+            <div className=" text-white">
+              <div className="text-3xl font-bold">{userData ? userData.userName : "No user signed in."}</div>
+              <div className="text-black">
+                {userData ? (userData.firstName + " " + userData.lastName).toUpperCase() : ""}
+              </div>
             </div>
-          </section>
-          <section className="h-[20vh] w-[80vw] p-2">
-            <span className="text-3xl font-bold">Learned</span>
-            <div className="text-gray-500">
-              {userData ? userData.versesLearned : "You haven't learned any verses yet."}
+            <div className=" text-white">
+              <span className="text-3xl font-bold">Learned</span>
+              <div className="text-black">
+                {userData ? userData.versesLearned : "You haven't learned any verses yet."}
+              </div>
             </div>
-          </section>
 
-          <section className="h-[20vh] w-[80vw] p-2">
-            <span className="text-3xl font-bold">Friends</span>
-            <div className="text-gray-500">{userData ? userData.friends : "You haven't added any friends."}</div>
-          </section>
+            <div className=" text-white">
+              <span className="text-3xl font-bold">Friends</span>
+              <div className="text-black">{userData ? userData.friends : "You haven't added any friends."}</div>
+            </div>
+          </div>
+          <Button variant={"glass3"} className="w-full border rounded-2xl" onClick={() => handleLogOut()}>
+            Log out
+          </Button>
         </div>
       </div>
     </>

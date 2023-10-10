@@ -49,7 +49,7 @@ const Auth = () => {
           <div className="text-2xl text-white font-bold">
             <label>First Name</label>
             <input
-              className="border-2 border-gray-300 rounded-sm w-full"
+              className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="text"
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 setfirstName(e.target.value)
@@ -58,7 +58,7 @@ const Auth = () => {
             ></input>
             <label>Last Name</label>
             <input
-              className="border-2 border-gray-300 rounded-sm w-full"
+              className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="text"
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 setlastName(e.target.value)
@@ -67,7 +67,7 @@ const Auth = () => {
             ></input>
             <label>User Name</label>
             <input
-              className="border-2 border-gray-300 rounded-sm w-full"
+              className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="text"
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 setUserName(e.target.value)
@@ -76,7 +76,7 @@ const Auth = () => {
             ></input>
             <label>Email</label>
             <input
-              className="border-2 border-gray-300 rounded-sm w-full"
+              className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="email"
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 setEmail(e.target.value)
@@ -85,7 +85,7 @@ const Auth = () => {
             ></input>
             <label>Password</label>
             <input
-              className="border-2 border-gray-300 rounded-sm w-full"
+              className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="password"
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 setPassword(e.target.value)
@@ -94,7 +94,7 @@ const Auth = () => {
             ></input>
             <label>Password Confirmation</label>
             <input
-              className="border-2 border-gray-300 rounded-sm w-full"
+              className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="password"
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 setConfirmPassword(e.target.value)

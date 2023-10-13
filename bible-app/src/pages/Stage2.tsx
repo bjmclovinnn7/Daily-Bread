@@ -5,7 +5,7 @@ import { HiChevronLeft } from "react-icons/Hi"
 import React, { useState, useRef } from "react"
 import { Button } from "../comps/Button"
 
-const Stage1 = () => {
+const Stage2 = () => {
   const navigate = useNavigate()
   const { selectedVerse } = useVerseContext()
   const [userInput, setUserInput] = useState("")
@@ -15,7 +15,6 @@ const Stage1 = () => {
   const [correctArray, setCorrectArray] = useState<boolean[]>([])
   const totalWordsRef = useRef(cleanedUpVerseArray.length)
   const correctWords = correctArray.filter((correct) => correct === true).length
-
   const percentage = (correctWords / totalWordsRef.current) * 100
   const [oneLetterMode, setOneLetterMode] = useState(false)
 
@@ -175,7 +174,7 @@ const Stage1 = () => {
           >
             <HiChevronLeft className=" text-6xl" />
           </motion.button>
-          <h1 className="h-20 grid place-content-center text-4xl font-header">Stage 1</h1>
+          <h1 className="h-20 grid place-content-center text-4xl font-header">Stage 2</h1>
           <div className="flex justify-center items-center gap-2">
             <span className="text-3xl font-bold">{selectedVerse?.id}</span>
           </div>
@@ -211,4 +210,4 @@ const Stage1 = () => {
     </>
   )
 }
-export default Stage1
+export default Stage2

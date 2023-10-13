@@ -13,9 +13,10 @@ interface Verse {
 // Create a separate component for filtered verses
 const FilteredVerses = ({ verses, category, animate }: { verses: Verse[]; category: string; animate: boolean }) => {
   const navigate = useNavigate()
-  const { saveSelectedVerse, getAllVerses } = useVerseContext()
+  const { saveSelectedVerse, getAllVerses, saveCurrentCategory } = useVerseContext()
   const handleClick = (verse: Verse) => {
     saveSelectedVerse(verse)
+    saveCurrentCategory(verse.category)
     navigate("/stage1")
   }
 
@@ -51,7 +52,7 @@ const Categories = () => {
   const navigate = useNavigate()
   const { verses, saveCurrentCategory } = useVerseContext()
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({})
-  const categories = ["Salvation", "Prayer", "Praise", "Faith", "Love"]
+  const categories = ["salvation", "prayer", "praise", "faith", "love"]
 
   const handleClick = (category: string) => {
     setOpenCategories((prevOpenCategories) => ({
@@ -62,6 +63,7 @@ const Categories = () => {
 
   const handleSeeAll = (category: string) => {
     saveCurrentCategory(category)
+    console.log(category)
     navigate("/all_verses")
   }
   return (

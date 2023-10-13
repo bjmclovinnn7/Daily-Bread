@@ -51,7 +51,7 @@ export function VerseProvider({ children }: { children: ReactNode }) {
   }
   const saveCurrentCategory = (currentCategory: string) => {
     setCurrentCategory(currentCategory)
-    localStorage.setItem("currentCategory", JSON.stringify(selectedVerse))
+    localStorage.setItem("currentCategory", JSON.stringify(currentCategory))
   }
 
   const getAllVerses = async () => {

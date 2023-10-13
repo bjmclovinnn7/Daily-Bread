@@ -1,10 +1,31 @@
 {
   "hosting": {
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "rewrites": [
+      {
+        "source": "/auth/**",
+        "destination": "/auth/index.html"
+      },
+      {
+        "source": "/login/**",
+        "destination": "/login/index.html"
+      },
+      {
+        "source": "/all_verses/**",
+        "destination": "/all_verses/index.html"
+      },
+      {
+        "source": "/profile/**",
+        "destination": "/profile/index.html"
+      },
+      {
+        "source": "/stage1/**",
+        "destination": "/stage1/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }

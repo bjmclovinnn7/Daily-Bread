@@ -8,13 +8,14 @@ import Profile from "./pages/Profile"
 import ProtectedRoute from "./utils/ProtectedRoute"
 import AllLoaded from "./pages/Categories/AllLoaded"
 import Stage1 from "./pages/Stage1"
+import Stage2 from "./pages/Stage2"
 
 function App() {
   return (
     <>
       <UserContextProvider>
         <VerseProvider>
-          <Router>
+          <Router basename="/bible-app-production">
             <Routes>
               <Route path="/auth" element={<Auth />} />
               <Route path="/login" element={<Login />} />
@@ -40,6 +41,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <Stage1 />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/stage2"
+                element={
+                  <ProtectedRoute>
+                    <Stage2 />
                   </ProtectedRoute>
                 }
               />

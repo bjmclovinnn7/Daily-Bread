@@ -18,3 +18,15 @@ body {
 .category {
   scrollbar-width: none;
 }
+
+input:focus {
+  outline-style: none;
+  box-shadow: none;
+}
+
+@media (orientation: portrait) {
+  body {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+}

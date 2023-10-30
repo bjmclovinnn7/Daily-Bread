@@ -1,5 +1,5 @@
 import { useVerseContext } from "../utils/VerseContext"
-import { motion } from "framer-motion"
+
 import { useNavigate } from "react-router"
 import { HiChevronLeft } from "react-icons/Hi"
 import React, { useState, useRef } from "react"
@@ -130,7 +130,7 @@ const Stage1 = () => {
         return (
           <>
             <div className="grid place-content-center absolute inset-0 h-screen w-full bg-white p-5 text-3xl gap-10">
-              <div className="text-center font-header">
+              <div className="text-center ">
                 You got <span className="text-green-600">{percentage.toFixed(2)}</span>%{" "}
               </div>
               <div className="text-center">Nice work!</div>
@@ -148,7 +148,7 @@ const Stage1 = () => {
         return (
           <>
             <div className="grid place-content-center absolute inset-0 h-screen w-full bg-white p-5 text-3xl gap-10">
-              <div className="text-center font-header">
+              <div className="text-center ">
                 You got <span className="text-red-400">{percentage.toFixed(2)}</span>%{" "}
               </div>
               <div className="text-center font-bold">You need 90% or better to move on.</div>
@@ -166,29 +166,25 @@ const Stage1 = () => {
 
   return (
     <>
-      <div className="h-screen w-full grid bg-gradient-to-r from-violet-500/60 to-fuchsia-500/60 p-10">
-        <div className="max-w-[600px] h-fit  text-white">
-          <motion.button
-            onClick={() => navigate("/all_verses")}
-            whileTap={{ scale: 1.05 }}
-            className="absolute inset-0 h-fit w-fit"
-          >
+      <div className="h-screen w-full grid p-10">
+        <div className="max-w-[600px] h-fit  ">
+          <button onClick={() => navigate("/")} className="absolute inset-0 h-fit w-fit">
             <HiChevronLeft className=" text-6xl" />
-          </motion.button>
-          <h1 className="h-20 grid place-content-center text-4xl font-header">Stage 1</h1>
+          </button>
+          <h1 className="h-20 grid place-content-center text-4xl ">Stage 1</h1>
           <div className="flex justify-center items-center gap-2">
             <span className="text-3xl font-bold">{selectedVerse?.id}</span>
           </div>
           <div className="p-3 space-y-10">
             <div className="grid place-content-center gap-5">
-              <div className="flex flex-wrap gap-1 text-xl">
+              <div className="flex flex-wrap gap-1 text-2xl">
                 {verseWordArray?.map((word, index) => (
                   <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
                 ))}
               </div>
 
               <input
-                className="w-full h-10 text-black text-xl"
+                className="w-full h-10 text-black text-xl bg-slate-300"
                 type="text"
                 value={userInput}
                 onChange={(e) => handleSwitch(e.target.value)}

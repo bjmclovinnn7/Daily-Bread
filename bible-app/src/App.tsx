@@ -9,13 +9,17 @@ import ProtectedRoute from "./utils/ProtectedRoute"
 import AllLoaded from "./pages/Categories/AllLoaded"
 import Stage1 from "./pages/Stage1"
 import Stage2 from "./pages/Stage2"
+import Stage3 from "./pages/Stage3"
+import Learned from "./pages/Learned"
+import Friends from "./pages/Friends"
+import FriendProfile from "./pages/FriendProfile"
 
 function App() {
   return (
     <>
       <UserContextProvider>
         <VerseProvider>
-          <Router basename="/bible-app-production">
+          <Router>
             <Routes>
               <Route path="/auth" element={<Auth />} />
               <Route path="/login" element={<Login />} />
@@ -49,6 +53,38 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <Stage2 />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/stage3"
+                element={
+                  <ProtectedRoute>
+                    <Stage3 />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/learned"
+                element={
+                  <ProtectedRoute>
+                    <Learned />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/friends"
+                element={
+                  <ProtectedRoute>
+                    <Friends />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/friendProfile"
+                element={
+                  <ProtectedRoute>
+                    <FriendProfile />
                   </ProtectedRoute>
                 }
               />

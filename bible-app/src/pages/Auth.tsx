@@ -40,13 +40,13 @@ const Auth = () => {
 
   return (
     <>
-      <div className="h-screen w-full grid place-content-center bg-gradient-to-r from-violet-500/60 to-fuchsia-500/60 p-10">
+      <div className="h-screen w-full grid place-content-center p-10">
         <form
           onSubmit={handleSubmit}
           className="max-w-[400px] p-5 border-2 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-2xl rounded-3xl grid gap-3"
         >
-          <div className="text-center text-5xl md:text-6xl lg:text-7xl font-header text-white ">Sign Up</div>
-          <div className="text-2xl text-white font-bold">
+          <div className="text-center text-5xl md:text-6xl lg:text-7xl font-header ">Sign Up</div>
+          <div className="text-2xl font-bold">
             <label>First Name</label>
             <input
               className="border-2 border-gray-300 rounded-sm w-full text-black"
@@ -103,14 +103,14 @@ const Auth = () => {
             ></input>
           </div>
           <div className="flex justify-center items-center p-7">
-            <Button variant={"glass3"} className="w-40 text-white font-bold">
+            <Button variant={"glass3"} className="w-40 font-bold">
               Sign-up
             </Button>
           </div>
         </form>
 
-        <div className="p-5 space-x-2 text-center text-white text-xl">
-          <button className="text-white">
+        <div className="p-5 space-x-2 text-center text-xl">
+          <button className="">
             <Link to="/login" className="grid">
               <span>Already have an account?</span>
               <span className="font-bold">Login.</span>

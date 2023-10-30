@@ -23,6 +23,22 @@
         "destination": "/stage1/index.html"
       },
       {
+        "source": "/stage2/**",
+        "destination": "/stage2/index.html"
+      },
+      {
+        "source": "/stage3/**",
+        "destination": "/stage3/index.html"
+      },
+      {
+        "source": "/learned/**",
+        "destination": "/learned/index.html"
+      },
+      {
+        "source": "/friends/**",
+        "destination": "/friends/index.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

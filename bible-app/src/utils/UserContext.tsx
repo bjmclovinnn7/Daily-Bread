@@ -7,13 +7,47 @@ import {
   User,
 } from "firebase/auth"
 import { auth, colRefUsers } from "./firebase"
-import { getDoc, setDoc, doc, collection } from "firebase/firestore"
+import { getDoc, setDoc, doc, collection, getDocs } from "firebase/firestore"
+
+interface UserLearnedVerses {
+  id: string
+  data: {
+    learned: boolean
+    timeStamp: string
+  }
+}
+
+interface UserFriends {
+  id: string
+  data: {
+    firstName: string
+    lastName: string
+    userName: string
+    email: string
+    learnedVerses: []
+  }
+}
+
+interface UserData {
+  uid: string
+  data: {
+    email: string
+    firstName: string
+    lastName: string
+    userName: string
+  }
+}
 
 interface UserContextType {
   createUser: (firstName: string, lastName: string, userName: string, email: string, password: string) => void
   logOut: () => void
   signIn: (email: string, password: string) => void
-  userData: any
+  fetchLearnedVerses: (userUid: string) => void
+  userData: UserData
+  userFriends: UserFriends[]
+  userLearnedVerses: UserLearnedVerses[]
+  fetchUserData: (userUid: string) => void
+  fetchUserFriends: (userUid: string) => void
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined)
@@ -24,18 +58,27 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
     const initialValue = saved ? JSON.parse(saved) : ""
     return initialValue
   })
+  const [userLearnedVerses, setUserLearnedVerses] = useState<UserLearnedVerses[]>(() => {
+    const saved = localStorage.getItem("userLearnedVerses")
+    const initialValue = saved ? JSON.parse(saved) : ""
+    return initialValue
+  })
+  const [userFriends, setUserFriends] = useState<UserFriends[]>(() => {
+    const saved = localStorage.getItem("userFriends")
+    const initialValue = saved ? JSON.parse(saved) : ""
+    return initialValue
+  })
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser: User | null) => {
       if (currentUser) {
-        console.log(currentUser)
-        // Fetch user data when a user logs in or signs up
+        console.log("Welcome")
       } else {
         // Set user data to null when the user signs out
         setUserData(null)
+        console.log("Goodbye!")
       }
     })
-
     return () => {
       unsubscribe()
     }
@@ -53,18 +96,9 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
         firstName: firstName,
         lastName: lastName,
         userName: userName,
+        email: email,
+        uid: userId,
       })
-
-      // Create subcollections with initial documents
-      const favoritesColRef = collection(userDocRef, "favorites")
-      const learnedColRef = collection(userDocRef, "learned")
-
-      // Add initial documents to subcollections
-      const favoriteDocRef = doc(favoritesColRef) // Firestore will auto-generate a document ID
-      await setDoc(favoriteDocRef, { data: "initial data for favorites" })
-
-      const learnedDocRef = doc(learnedColRef) // Firestore will auto-generate a document ID
-      await setDoc(learnedDocRef, { data: "initial data for learned" })
 
       // Fetch user data after successful creation
       fetchUserData(userId)
@@ -72,14 +106,6 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
       console.error("Error creating user:", error)
     }
   }
-
-  useEffect(() => {
-    if (userData) {
-      localStorage.setItem("userData", JSON.stringify(userData))
-    } else {
-      localStorage.removeItem("userData")
-    }
-  }, [userData])
 
   const signIn = async (email: string, password: string) => {
     console.log("Signing In.")
@@ -93,14 +119,24 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
     }
   }
 
-  const fetchUserData = async (userId: string) => {
-    const userDocRef = doc(colRefUsers, userId)
-
+  const fetchUserData = async (userUid: string) => {
+    const userDocRef = doc(colRefUsers, userUid)
     try {
       const userDocSnap = await getDoc(userDocRef)
       if (userDocSnap.exists()) {
         const userData = userDocSnap.data()
-        setUserData(userData)
+        setUserData({
+          uid: userData.uid,
+          data: {
+            email: userData.email,
+            firstName: userData.firstName,
+            lastName: userData.lastName,
+            userName: userData.userName,
+          },
+        })
+        saveToLocalStorage("userData", userData)
+        fetchLearnedVerses(userData.uid)
+        fetchUserFriends(userData.uid)
       } else {
         console.log("User document does not exist.")
       }
@@ -109,17 +145,92 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
     }
   }
 
+  const fetchLearnedVerses = async (userUid: string) => {
+    const userDocRef = doc(colRefUsers, userUid)
+    const learnedVersesRef = collection(userDocRef, "learnedVerses")
+    console.log("Fetch Learned Verses Initiated.")
+
+    try {
+      const querySnapshot = await getDocs(learnedVersesRef)
+      const learnedVerses: UserLearnedVerses[] = []
+
+      querySnapshot.forEach((doc) => {
+        const data = doc.data() as UserLearnedVerses["data"]
+        learnedVerses.push({
+          id: doc.id,
+          data,
+        })
+      })
+
+      // Update the state using a function to correctly merge the new data
+      setUserLearnedVerses(learnedVerses)
+      saveToLocalStorage("userLearnedVerses", learnedVerses)
+    } catch (error) {
+      console.error("Error retrieving learned verses:", error)
+    }
+  }
+
+  const fetchUserFriends = async (userUid: string) => {
+    const userDocRef = doc(colRefUsers, userUid)
+    const userFriendsRef = collection(userDocRef, "friends")
+    console.log("Fetch user friends initiated.")
+
+    try {
+      const querySnapshot = await getDocs(userFriendsRef)
+      const friends: UserFriends[] = []
+
+      querySnapshot.forEach((doc) => {
+        const data = doc.data() as UserFriends["data"]
+        friends.push({ id: doc.id, data })
+      })
+
+      // Update the user data with the retrieved friends
+      setUserFriends(friends)
+      saveToLocalStorage("userFriends", friends)
+    } catch (error) {
+      console.error("Error retrieving user friends:", error)
+    }
+  }
+
   const logOut = () => {
     return signOut(auth)
       .then(() => {
         console.log("You have been signed out!")
+        setUserData(null)
+        removeFromLocalStorage("userData")
+        removeFromLocalStorage("userLearnedVerses")
+        removeFromLocalStorage("userFriends")
       })
       .catch((error) => {
         console.log(error)
       })
   }
 
-  return <UserContext.Provider value={{ createUser, userData, logOut, signIn }}>{children}</UserContext.Provider>
+  const saveToLocalStorage = (name: string, item: any) => {
+    localStorage.setItem(name, JSON.stringify(item))
+  }
+
+  const removeFromLocalStorage = (name: string) => {
+    localStorage.removeItem(name)
+  }
+
+  return (
+    <UserContext.Provider
+      value={{
+        createUser,
+        userData,
+        userFriends,
+        userLearnedVerses,
+        logOut,
+        signIn,
+        fetchLearnedVerses,
+        fetchUserData,
+        fetchUserFriends,
+      }}
+    >
+      {children}
+    </UserContext.Provider>
+  )
 }
 
 export const useUserContext = () => {

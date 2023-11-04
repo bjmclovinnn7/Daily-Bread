@@ -1,18 +1,38 @@
 import { useNavigate } from "react-router"
-import { HiChevronLeft, HiOutlineRefresh } from "react-icons/Hi"
 import { useUserContext } from "../utils/UserContext"
 import SearchFriends from "../comps/SearchFriend"
 import { useState } from "react"
+import { FaTrophy } from "react-icons/fa6"
 
 const Friends = () => {
   const navigate = useNavigate()
-  const { userData, userFriends, fetchUserFriends } = useUserContext()
+  const { saveSelectedFriend, userFriends } = useUserContext()
   const [open, setOpen] = useState(true)
 
-  const handleNavigateToFriend = (friend: string) => {
-    console.log(friend)
+  interface UserLearnedVerses {
+    id: string
+    translation: string
+    learned: boolean
+  }
+
+  interface UserData {
+    uid: string
+    email: string
+    displayName: string
+    createdOn: string
+    learnedVerses: UserLearnedVerses[]
+    friends: UserData[]
+  }
+
+  const handleNavigateToFriend = (friendData: UserData) => {
+    console.log(friendData.displayName)
+    saveSelectedFriend(friendData)
     navigate("/friendProfile")
   }
+
+  const sortedFriends = userFriends
+    ? [...userFriends].sort((friendA, friendB) => friendB.learnedVerses.length - friendA.learnedVerses.length)
+    : []
 
   return (
     <>
@@ -23,39 +43,36 @@ const Friends = () => {
       >
         <div className=" flex justify-center items-center p-4">
           <button onClick={() => navigate("/")} className="w-1/4 flex justify-center items-center text-black">
-            <HiChevronLeft className="text-4xl" /> <span className="text-2xl">Home</span>
+            <span className="text-2xl">Home</span>
           </button>
 
           <div className="text-2xl text-black text-center w-1/2">Friends</div>
-          <button
-            onClick={() => fetchUserFriends(userData.uid)}
-            className="text-3xl text-black w-1/4 flex justify-center"
-          >
-            <HiOutlineRefresh />
-          </button>
+          <button>Refresh</button>
         </div>
         <div className="p-5">
           <button onClick={() => setOpen(!open)} className="block bg-slate-300 w-full rounded-3xl text-xl">
             Add Friends
           </button>
         </div>
+        <SearchFriends open={open} setOpen={setOpen} />
 
         <div className=" text-black">
           <div className="flex items-center gap-2 pl-2">
-            <span className="text-3xl font-bold">{userFriends ? userFriends.length : 0}</span>
+            <span className="text-3xl font-bold">{userFriends ? userFriends?.length : 0}</span>
             <span className="text-3xl font-bold">Friend(s)</span>
           </div>
-          {userFriends ? (
-            userFriends.map((friend, index) => (
+          {sortedFriends ? (
+            sortedFriends.map((friend, index) => (
               <div key={index} className="p-2">
                 <button
-                  onClick={() => handleNavigateToFriend(friend.data.userName)}
-                  className="text-black text-center text-2xl grid place-content-center border-2 w-full rounded-3xl"
+                  onClick={() => handleNavigateToFriend(friend)}
+                  className="text-black text-center flex items-center justify-between px-8 text-3xl border-2 w-full rounded-3xl p-4"
                 >
-                  <span>
-                    {friend.data.firstName} {friend.data.lastName}
-                  </span>
-                  <span>{friend.data.userName}</span>
+                  <span>{friend.displayName}</span>
+                  <div className="flex gap-2 items-center">
+                    <span>{friend.learnedVerses.length}</span>
+                    <FaTrophy className="text-orange-500 h-6 w-6" />
+                  </div>
                 </button>
               </div>
             ))
@@ -63,9 +80,9 @@ const Friends = () => {
             <div className="text-black text-center p-2">You haven't added any friends.</div>
           )}
         </div>
-        <SearchFriends open={open} setOpen={setOpen} />
       </div>
     </>
   )
 }
+
 export default Friends

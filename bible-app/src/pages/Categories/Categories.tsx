@@ -1,31 +1,40 @@
 import { useNavigate } from "react-router"
 import { useVerseContext } from "../../utils/VerseContext"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { useUserContext } from "../../utils/UserContext"
 import { FaTrophy } from "react-icons/fa6"
+import verseData from "../../utils/Verses.json"
+// import bookData from "../../utils/Biblebooks.json"
 
-interface Verse {
+interface SelectedVerse {
   id: string
   category: string
-  text: string
+  translations: {
+    NIV: string
+    ESV: string
+    KJV: string
+  }
 }
 
-// Create a separate component for filtered verses
-const FilteredVerses = ({ verses, category, animate }: { verses: Verse[]; category: string; animate: boolean }) => {
-  const navigate = useNavigate()
-  const { saveSelectedVerse, getAllVerses, saveCurrentCategory } = useVerseContext()
-  const { userLearnedVerses } = useUserContext()
+// interface SelectedBooks {
+//   book: string
+//   title: string
+//   category: string
+//   subCategory: string
+// }
 
-  const handleClick = (verse: Verse) => {
+// Create a separate component for filtered verses
+const FilteredVerses = ({ category, animate }: { category: string; animate: boolean }) => {
+  const navigate = useNavigate()
+  const { saveSelectedVerse, saveCurrentCategory, translation } = useVerseContext()
+  const { userData } = useUserContext()
+
+  const handleLearnClick = (verse: SelectedVerse) => {
     saveSelectedVerse(verse)
     saveCurrentCategory(verse.category)
     navigate("/stage1")
   }
-
-  useEffect(() => {
-    getAllVerses()
-  }, [])
 
   return (
     <motion.div
@@ -37,22 +46,25 @@ const FilteredVerses = ({ verses, category, animate }: { verses: Verse[]; catego
       }}
       className={`flex overflow-auto gap-5`}
     >
-      {verses
-        .filter((verse: Verse) => verse.category === category.toLowerCase())
-        .map((verse: Verse) => (
-          <section key={verse.id} className="w-full h-full p-5 " onClick={() => handleClick(verse)}>
+      {verseData
+        .filter((verse: SelectedVerse) => verse.category === category.toLowerCase())
+        .map((verse: SelectedVerse) => (
+          <section key={verse.id} className="w-full h-full p-5 " onClick={() => handleLearnClick(verse)}>
             <div className={`h-full w-60 md:w-80 lg:w-96 rounded-3xl p-3 md:lg:overflow-hidden bg-white`}>
               <div className="flex justify-center items-center">
                 <h1 className="text-xl font-bold w-full ">{verse.id}</h1>
 
-                {userLearnedVerses && userLearnedVerses.some((learnedVerse) => learnedVerse.id === verse.id) ? (
+                {userData.learnedVerses &&
+                userData.learnedVerses.some((learnedVerse) => learnedVerse.id === verse.id) ? (
                   <FaTrophy className=" text-orange-500 text-2xl" />
                 ) : (
                   ""
                 )}
               </div>
 
-              <div className="verseText text-xl">{verse.text}</div>
+              <div className="verseText text-xl">
+                {verse.translations[translation as keyof typeof verse.translations]}
+              </div>
             </div>
           </section>
         ))}
@@ -62,9 +74,10 @@ const FilteredVerses = ({ verses, category, animate }: { verses: Verse[]; catego
 
 const Categories = () => {
   const navigate = useNavigate()
-  const { verses, saveCurrentCategory } = useVerseContext()
+  const { saveCurrentCategory } = useVerseContext()
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({})
-  const categories = ["salvation", "prayer", "praise", "faith", "love"]
+  const verseCategories = ["salvation", "prayer", "praise", "faith", "love"]
+  // const bookCategories = ["All Books", "Old Testament", "New Testament"]
 
   const handleClick = (category: string) => {
     setOpenCategories((prevOpenCategories) => ({
@@ -78,10 +91,25 @@ const Categories = () => {
     console.log(category)
     navigate("/all_verses")
   }
+
+  // const handleLearnBooks = (bookCategory: string) => {
+  //   if (bookCategory === "All Books") {
+  //     const booksToLearn = bookData.map((book) => book["title"])
+  //     let booksObject = {
+  //       id: bookCategory,
+  //       category: "Bible",
+  //       text: booksToLearn.join(" "),
+  //     }
+  //     saveCurrentCategory(bookCategory)
+  //     saveSelectedVerse(booksObject)
+  //     navigate("/stage1")
+  //   }
+  // }
+
   return (
     <>
-      <div className="grid place-content-center gap-5 overscroll-auto">
-        {categories.map((category, index) => (
+      <div className="grid place-content-center gap-5 overscroll-auto pb-20">
+        {verseCategories.map((category, index) => (
           <div key={index} className="bg-black overflow-hidden rounded-3xl">
             <button
               onClick={() => handleClick(category)}
@@ -98,9 +126,20 @@ const Categories = () => {
                 {openCategories[category] ? "See All" : ""}
               </motion.span>
             </button>
-            <FilteredVerses verses={verses} category={category} animate={openCategories[category]} />
+            <FilteredVerses category={category} animate={openCategories[category]} />
           </div>
         ))}
+
+        {/* <div className="text-3xl font-bold">Memorize the books!</div>
+        {bookCategories.map((category, index) => (
+          <button
+            key={index}
+            onClick={() => handleLearnBooks(category)}
+            className=" bg-black rounded-3xl p-3 flex justify-between items-center"
+          >
+            <span className="h-full text-3xl text-white">{category}</span>
+          </button>
+        ))} */}
       </div>
     </>
   )

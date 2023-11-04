@@ -24,9 +24,7 @@ input:focus {
   box-shadow: none;
 }
 
-@media (orientation: portrait) {
-  body {
-    transform: rotate(0deg);
-    transform-origin: center;
-  }
+button:focus {
+  outline: none;
+  box-shadow: none;
 }

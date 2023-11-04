@@ -1,52 +1,86 @@
 import { Button } from "../comps/Button"
 import { useState, ChangeEvent, FormEvent } from "react" // Import ChangeEvent and FormEvent
-import { useUserContext } from "../utils/UserContext"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
+import { FcGoogle } from "react-icons/fc"
+import { GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth"
+import { doc, setDoc } from "firebase/firestore"
+import { auth, colRefUsers } from "../utils/firebase"
 
 const Auth = () => {
   const [firstName, setfirstName] = useState("")
   const [lastName, setlastName] = useState("")
-  const [userName, setUserName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
   const navigate = useNavigate()
-  const { createUser } = useUserContext()
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    // Use FormEvent<HTMLFormElement> for the event type
+  const handleGoogleSignUp = async () => {
+    console.log("Handling Google Sign-up")
+    const provider = new GoogleAuthProvider()
+    const currentUser = await signInWithPopup(auth, provider)
+    try {
+      await createUserDoc(currentUser)
+      navigate("/")
+    } catch (error) {
+      console.error(error)
+      alert("If you already have an account, make sure to login.")
+      console.log(currentUser) // Fallback to fetchUserData in case of an error
+    }
+  }
+
+  const handleEmailSignUp = async (e: FormEvent<HTMLFormElement>) => {
+    console.log("Handling Email Sign-up")
     e.preventDefault()
-    setError("")
 
     if (password !== confirmPassword) {
       setError("Passwords do not match")
-      console.log(error)
+      alert(error)
       return
     }
 
     try {
-      await createUser(firstName, lastName, userName, email, password)
-      navigate("/")
-    } catch (e) {
-      if (e instanceof Error) {
-        // Check if 'e' is an instance of Error
-        setError(e.message)
-        console.log(e.message)
-      }
+      const currentUser = await createUserWithEmailAndPassword(auth, email, password)
+      await createUserDoc(currentUser)
+    } catch (error) {
+      console.error(error)
     }
+  }
+
+  const createUserDoc = async (currentUser: any) => {
+    console.log("Creating User Document")
+    const userDocRef = doc(colRefUsers, currentUser.user.uid)
+    //check if the user has a frist and last name and combine to make displayName
+    let displayName = ""
+    if (firstName && lastName) {
+      displayName = firstName + " " + lastName
+    }
+    // user used google and just use displayName
+    else {
+      displayName = currentUser.user.displayName
+    }
+    await setDoc(userDocRef, {
+      displayName: displayName,
+      email: currentUser.user.email,
+      uid: currentUser.user.uid,
+      createdOn: new Date(),
+      learnedVerses: [],
+      friends: [],
+    })
+    navigate("/")
   }
 
   return (
     <>
       <div className="h-screen w-full grid place-content-center p-10">
+        <div className="text-center text-3xl md:text-4xl lg:text-5xl font-header p-4">Sign Up</div>
+
         <form
-          onSubmit={handleSubmit}
-          className="max-w-[400px] p-5 border-2 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-2xl rounded-3xl grid gap-3"
+          onSubmit={handleEmailSignUp}
+          className="max-w-[400px] p-5 border-2 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-xl rounded-xl grid gap-3"
         >
-          <div className="text-center text-5xl md:text-6xl lg:text-7xl font-header ">Sign Up</div>
-          <div className="text-2xl font-bold">
+          <div className="text-xl font-bold">
             <label>First Name</label>
             <input
               className="border-2 border-gray-300 rounded-sm w-full text-black"
@@ -65,15 +99,7 @@ const Auth = () => {
               }}
               required
             ></input>
-            <label>User Name</label>
-            <input
-              className="border-2 border-gray-300 rounded-sm w-full text-black"
-              type="text"
-              onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                setUserName(e.target.value)
-              }}
-              required
-            ></input>
+
             <label>Email</label>
             <input
               className="border-2 border-gray-300 rounded-sm w-full text-black"
@@ -108,7 +134,19 @@ const Auth = () => {
             </Button>
           </div>
         </form>
-
+        <div className="grid pt-6">
+          <button
+            onClick={handleGoogleSignUp}
+            className=" border-2 flex bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-xl rounded-xl"
+          >
+            <div className="border-r-2 p-2 text-4xl">
+              <FcGoogle />
+            </div>
+            <span className="w-full text-center h-full flex justify-center items-center font-bold text-xl">
+              Continue with Google
+            </span>
+          </button>
+        </div>
         <div className="p-5 space-x-2 text-center text-xl">
           <button className="">
             <Link to="/login" className="grid">

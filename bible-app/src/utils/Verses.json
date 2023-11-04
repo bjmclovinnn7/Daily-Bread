@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1 Thessalonians 5:16-22",
+    "category": "praise",
+    "translations": {
+      "NIV": "Rejoice always, pray continually, give thanks in all circumstances; for this is God's will for you in Christ Jesus. Do not quench the Spirit. Do not treat prophecies with contempt but test them all; hold on to what is good, reject every kind of evil.",
+      "ESV": "Rejoice always, pray without ceasing, give thanks in all circumstances; for this is the will of God in Christ Jesus for you. Do not quench the Spirit. Do not despise prophecies, but test everything; hold fast what is good. Abstain from every form of evil.",
+      "KJV": "Rejoice evermore. Pray without ceasing. In everything give thanks: for this is the will of God in Christ Jesus concerning you. Quench not the Spirit. Despise not prophesyings. Prove all things; hold fast that which is good. Abstain from all appearance of evil."
+    }
+  },
+  {
+    "id": "2 Samuel 22:5-7",
+    "category": "prayer",
+    "translations": {
+      "NIV": "The waves of death swirled about me; the torrents of destruction overwhelmed me. The cords of the grave coiled around me; the snares of death confronted me. 'In my distress I called to the Lord; I called out to my God. From his temple he heard my voice; my cry came to his ears.'",
+      "ESV": "The cords of death encompassed me; the torrents of destruction assailed me; the cords of Sheol entangled me; the snares of death confronted me. 'In my distress, I called upon the LORD; to my God, I called.' From his temple, he heard my voice, and my cry came to his ears.",
+      "KJV": "When the waves of death compassed me, the floods of ungodly men made me afraid; The sorrows of hell compassed me about; the snares of death prevented me; In my distress, I called upon the LORD, and cried to my God. He heard my voice out of his temple, and my cry came before him, even into his ears."
+    }
+  },
+  {
+    "id": "James 1:5-8",
+    "category": "faith",
+    "translations": {
+      "NIV": "If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you. But when you ask, you must believe and not doubt, because the one who doubts is like a wave of the sea, blown and tossed by the wind. That person should not expect to receive anything from the Lord. Such a person is double-minded and unstable in all they do.",
+      "ESV": "If any of you lacks wisdom, let him ask God, who gives generously to all without reproach, and it will be given him. But let him ask in faith, with no doubting, for the one who doubts is like a wave of the sea that is driven and tossed by the wind. For that person must not suppose that he will receive anything from the Lord; he is a double-minded man, unstable in all his ways.",
+      "KJV": "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him. But let him ask in faith, nothing wavering. For he that wavereth is like a wave of the sea, driven with the wind and tossed. For let not that man think that he shall receive anything of the Lord. A double-minded man is unstable in all his ways."
+    }
+  },
+  {
+    "id": "John 13:34-35",
+    "category": "love",
+    "translations": {
+      "NIV": "A new command I give you: Love one another. As I have loved you, so you must love one another. By this, everyone will know that you are my disciples if you love one another.",
+      "ESV": "A new commandment I give to you, that you love one another: just as I have loved you, you also are to love one another. By this, all people will know that you are my disciples if you have love for one another.",
+      "KJV": "A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another. By this shall all men know that ye are my disciples if ye have love one to another."
+    }
+  },
+  {
+    "id": "John 1:12",
+    "category": "salvation",
+    "translations": {
+      "NIV": "Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God.",
+      "ESV": "But to all who did receive him, who believed in his name, he gave the right to become children of God.",
+      "KJV": "But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name."
+    }
+  },
+  {
+    "id": "Mathew 22:37-40",
+    "category": "love",
+    "translations": {
+      "NIV": "Jesus replied: 'Love the Lord your God with all your heart and with all your soul and with all your mind.' This is the first and greatest commandment. And the second is like it: 'Love your neighbor as yourself.' All the Law and the Prophets hang on these two commandments.",
+      "ESV": "And he said to him, 'You shall love the Lord your God with all your heart and with all your soul and with all your mind. This is the great and first commandment. And a second is like it: 'You shall love your neighbor as yourself.' On these two commandments depend all the Law and the Prophets.",
+      "KJV": "Jesus said unto him, 'Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind. This is the first and great commandment. And the second is like unto it, 'Thou shalt love thy neighbor as thyself.' On these two commandments hang all the Law and the Prophets."
+    }
+  },
+  {
+    "id": "Matthew 18:2-3",
+    "category": "salvation",
+    "translations": {
+      "NIV": "He called a little child to him, and placed the child among them. And he said, 'Truly I tell you, unless you change and become like little children, you will never enter the kingdom of heaven.'",
+      "ESV": "And calling to him a child, he put him in the midst of them and said, 'Truly, I say to you, unless you turn and become like children, you will never enter the kingdom of heaven.'",
+      "KJV": " And Jesus called a little child unto him, and set him in the midst of them, And said, 'Verily I say unto you, Except ye be converted and become as little children, ye shall not enter into the kingdom of heaven.'"
+    }
+  },
+  {
+    "id": "Proverbs 3:5-6",
+    "category": "faith",
+    "translations": {
+      "NIV": "Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
+      "ESV": "Trust in the LORD with all your heart, and do not lean on your own understanding. In all your ways acknowledge him, and he will make straight your paths.",
+      "KJV": "Trust in the LORD with all thine heart, and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths."
+    }
+  },
+  {
+    "id": "Psalm 103",
+    "category": "praise",
+    "translations": {
+      "NIV": "Praise the Lord, my soul; all my inmost being, praise his holy name. Praise the Lord, my soul, and forget not all his benefits.",
+      "ESV": "Bless the LORD, O my soul, and all that is within me, bless his holy name! Bless the LORD, O my soul, and forget not all his benefits.",
+      "KJV": "Bless the LORD, O my soul, and all that is within me, bless his holy name! Bless the LORD, O my soul, and forget not all his benefits."
+    }
+  },
+  {
+    "id": "Psalms 5:3",
+    "category": "prayer",
+    "translations": {
+      "NIV": "In the morning, Lord, you hear my voice; in the morning I lay my requests before you and wait expectantly.",
+      "ESV": "O LORD, in the morning you hear my voice; in the morning, I prepare a sacrifice for you and watch.",
+      "KJV": "My voice shalt thou hear in the morning, O LORD; in the morning will I direct my prayer unto thee, and will look up."
+    }
+  }
+]

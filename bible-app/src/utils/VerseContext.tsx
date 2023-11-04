@@ -1,20 +1,24 @@
 import { createContext, useContext, useState, ReactNode } from "react"
-import { colRefVerses } from "./firebase"
-import { getDocs } from "firebase/firestore"
 
-interface selectedVerse {
+interface SelectedVerse {
   id: string
   category: string
-  text: string
+  translations: {
+    NIV: string
+    ESV: string
+    KJV: string
+  }
 }
 
 interface VerseContextType {
-  verses: any[]
-  selectedVerse: selectedVerse | null
-  saveSelectedVerse: (selectedVerse: selectedVerse) => void
+  selectedVerse: SelectedVerse | null
+  saveSelectedVerse: (selectedVerse: SelectedVerse) => void
   currentCategory: string
   saveCurrentCategory: (category: string) => void
-  getAllVerses: () => void
+  translation: string
+  saveTranslation: (translation: string) => void
+  changeLearnMethods: (oneLetterMode: boolean) => void
+  oneLetterMode: boolean
 }
 const VerseContext = createContext<VerseContextType | undefined>(undefined)
 
@@ -27,12 +31,7 @@ export function useVerseContext() {
 }
 
 export function VerseProvider({ children }: { children: ReactNode }) {
-  const [verses, setVerses] = useState<any[]>(() => {
-    const saved = localStorage.getItem("verses")
-    const initialValue = saved ? JSON.parse(saved) : ""
-    return [initialValue]
-  })
-  const [selectedVerse, setSelectedVerse] = useState<selectedVerse | null>(() => {
+  const [selectedVerse, setSelectedVerse] = useState<SelectedVerse | null>(() => {
     const saved = localStorage.getItem("selectedVerse")
     const initialValue = saved ? JSON.parse(saved) : null // Initialize to null if not found
 
@@ -44,8 +43,28 @@ export function VerseProvider({ children }: { children: ReactNode }) {
 
     return initialValue
   })
+  const [translation, setTranslation] = useState(() => {
+    const saved = localStorage.getItem("translation")
+    const initialValue = saved ? JSON.parse(saved) : "NIV" // Initialize to null if not found
 
-  const saveSelectedVerse = (selectedVerse: selectedVerse) => {
+    return initialValue
+  })
+  const [oneLetterMode, setOneLetterMode] = useState(() => {
+    const saved = localStorage.getItem("oneWordMode")
+    const initialValue = saved ? JSON.parse(saved) : false // Initialize to null if not found
+    return initialValue
+  })
+
+  const changeLearnMethods = () => {
+    setOneLetterMode(!oneLetterMode)
+  }
+
+  const saveTranslation = (translation: string) => {
+    setTranslation(translation)
+    localStorage.setItem("translation", JSON.stringify(translation))
+  }
+
+  const saveSelectedVerse = (selectedVerse: SelectedVerse) => {
     setSelectedVerse(selectedVerse)
     localStorage.setItem("selectedVerse", JSON.stringify(selectedVerse))
   }
@@ -54,36 +73,15 @@ export function VerseProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("currentCategory", JSON.stringify(currentCategory))
   }
 
-  const getAllVerses = async () => {
-    try {
-      const savedData = localStorage.getItem("verses")
-
-      if (savedData) {
-        // Data is available in local storage, parse and set it
-        const parsedData = JSON.parse(savedData)
-        setVerses(parsedData)
-      } else {
-        // Data is not available in local storage, fetch from the database
-        const querySnapshot = await getDocs(colRefVerses)
-        const versesData = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }))
-        setVerses(versesData)
-        localStorage.setItem("verses", JSON.stringify(versesData))
-      }
-    } catch (error) {
-      console.error("Error fetching verses:", error)
-    }
-  }
-
   const contextValue: VerseContextType = {
-    verses,
+    translation,
+    saveTranslation,
     selectedVerse,
     saveSelectedVerse,
     saveCurrentCategory,
     currentCategory,
-    getAllVerses,
+    changeLearnMethods,
+    oneLetterMode,
   }
   return <VerseContext.Provider value={contextValue}>{children}</VerseContext.Provider>
 }

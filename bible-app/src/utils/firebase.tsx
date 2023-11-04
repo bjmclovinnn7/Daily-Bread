@@ -15,13 +15,8 @@ const app = initializeApp(firebaseConfig)
 
 //initialize db
 export const db = getFirestore()
-
 //collection ref users
 export const colRefUsers = collection(db, "users")
-//collection ref categories
-export const colRefCategories = collection(db, "categories")
-//collection ref verses
-export const colRefVerses = collection(db, "verses")
 //add user with Authentication
 export const auth = getAuth(app)
 

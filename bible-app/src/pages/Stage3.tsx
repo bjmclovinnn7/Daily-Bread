@@ -1,23 +1,22 @@
 import { useVerseContext } from "../utils/VerseContext"
-
 import { useNavigate } from "react-router"
-import { HiChevronLeft } from "react-icons/Hi"
 import React, { useState, useRef } from "react"
 import { Button } from "../comps/Button"
 import { colRefUsers } from "../utils/firebase"
-import { getDoc, setDoc, doc, collection } from "firebase/firestore"
+import { getDoc, updateDoc, doc } from "firebase/firestore"
 import { useUserContext } from "../utils/UserContext"
+import { FaTrophy } from "react-icons/fa"
 
 const Stage3 = () => {
   const navigate = useNavigate()
-  const { selectedVerse } = useVerseContext()
-  const { userData, fetchLearnedVerses } = useUserContext()
+  const { selectedVerse, translation, changeLearnMethods, oneLetterMode } = useVerseContext()
+  const { userData } = useUserContext()
   const [userInput, setUserInput] = useState("")
   const [activeWordIndex, setActiveWordIndex] = useState(0)
   const [correctArray, setCorrectArray] = useState<boolean[]>([])
-  const [oneLetterMode, setOneLetterMode] = useState(false)
 
-  const verseWordArray = selectedVerse?.text.split(" ") || []
+  const verseWordArray =
+    selectedVerse?.translations[translation as keyof typeof selectedVerse.translations].split(" ") || []
   const cleanedUpVerseArray = verseWordArray.map((word) => word.replace(/[^a-zA-Z0-9]/g, ""))
   const totalWordsRef = useRef(cleanedUpVerseArray.length)
   const correctWords = correctArray.filter((correct) => correct === true).length
@@ -31,47 +30,63 @@ const Stage3 = () => {
     }
   }
 
-  interface selectedVerse {
+  interface UserLearnedVerses {
     id: string
-    category: string
-    text: string
+    translation: string
+    learned: boolean
   }
 
   const handleLearnVerse = async () => {
+    console.log("Creating learnedVerse Doc")
     const userId = userData?.uid
-    const userDocRef = doc(colRefUsers, userId)
-    const learnedVersesRef = collection(userDocRef, "learnedVerses")
-    const versesDocRef = doc(learnedVersesRef, selectedVerse?.id)
-    const timeStamp = new Date()
+    const userLearnedVersesRef = doc(colRefUsers, userId)
 
-    const verses: selectedVerse[] = JSON.parse(localStorage.getItem("learnedVerses") || "[]")
-    const selectedVerseData = verses.find((verse) => verse.id === selectedVerse?.id)
+    try {
+      const verseName = selectedVerse?.id
 
-    if (!selectedVerseData) {
-      try {
-        // Create a new document if it doesn't exist, or retrieve the existing one
-        const verseData = (await getDoc(versesDocRef)).data() || {}
+      if (verseName) {
+        // Retrieve the user's document
+        const userDoc = await getDoc(userLearnedVersesRef)
 
-        // Update the "learned" field
-        verseData.learned = true
+        if (userDoc.exists()) {
+          // Get the existing user data
+          const userData = userDoc.data()
 
-        // Format the date as "Month Day, Year" (e.g., "October 23, 2023" or "Nov 4, 2022")
-        const formattedDate = `${new Intl.DateTimeFormat("en-US", { month: "long" }).format(
-          timeStamp
-        )} ${timeStamp.getDate()}, ${timeStamp.getFullYear()}`
-        verseData.timeStamp = formattedDate
+          // Check if userData has a learnedVerses array; if not, create an empty array
+          const learnedVerses = userData?.learnedVerses || []
 
-        // Set the document with the updated data
-        await setDoc(versesDocRef, verseData)
+          // Check if the verse is already in the array
+          const verseExists = learnedVerses.some((verse: UserLearnedVerses) => verse.id === verseName)
 
-        console.log("Selected verse saved successfully.")
+          if (!verseExists) {
+            // Add the new verse to the learnedVerses array
+            learnedVerses.push({
+              id: verseName,
+              learned: true,
+              translation: translation,
+            })
+
+            // Update the user's document with the modified learnedVerses array
+            await updateDoc(userLearnedVersesRef, {
+              learnedVerses,
+            })
+
+            console.log("Selected verse saved successfully.")
+            navigate("/")
+          } else {
+            console.log("Verse is already learned.")
+            navigate("/")
+          }
+        } else {
+          console.log("User document does not exist.")
+          navigate("/")
+        }
+      } else {
+        console.log("No selected verse to learn.")
         navigate("/")
-        fetchLearnedVerses(userId)
-      } catch (error) {
-        console.error("Error saving or updating the selected verse:", error)
       }
-    } else {
-      console.log("You've already learned this verse.")
+    } catch (error) {
+      console.error("Error saving or updating the selected verse:", error)
       navigate("/")
     }
   }
@@ -188,32 +203,44 @@ const Stage3 = () => {
       if (percentage >= 100) {
         return (
           <>
-            <div className="grid place-content-center absolute inset-0 h-screen w-full bg-white p-5 text-3xl gap-10">
-              <div className="text-center">
-                You got <span className="text-green-600">{percentage.toFixed(2)}</span>%{" "}
-              </div>
-              <div className="text-center">Nice work! You've achieved mastery of {selectedVerse?.id}.</div>
+            <div className="absolute inset-0 h-screen w-full bg-white p-5">
+              <div className="grid place-content-center h-1/2 w-full gap-2">
+                <div className="text-center text-3xl">
+                  You got <span className="text-green-600">{percentage.toFixed(2)}</span>%{" "}
+                </div>
+                <div className="text-center text-2xl">
+                  Nice work! You've achieved mastery of <span className="font-bold">{selectedVerse?.id}</span>.
+                </div>
+                <div className="grid place-content-center p-6">
+                  <div className="flex justify-center items-center gap-2">
+                    <span className="text-5xl font-bold">+1</span>
+                    <FaTrophy className="text-orange-500 h-12 w-12" />
+                  </div>
+                </div>
 
-              <Button onClick={handleLearnVerse} variant={"glass3"} className="w-full text-2xl">
-                Home
-              </Button>
-              <Button variant={"glass2"} onClick={handleReset} className="text-center w-full text-2xl">
-                Retry
-              </Button>
+                <Button onClick={() => handleLearnVerse()} variant={"glass3"} className="w-full text-2xl">
+                  Home
+                </Button>
+              </div>
             </div>
           </>
         )
       } else {
         return (
           <>
-            <div className="grid place-content-center absolute inset-0 h-screen w-full bg-white p-5 text-3xl gap-10">
-              <div className="text-center">
-                You got <span className="text-red-400">{percentage.toFixed(2)}</span>%{" "}
+            <div className="absolute inset-0 w-full bg-white p-5 text-3xl">
+              <div className="grid place-content-center h-1/2 w-full gap-2">
+                <div className="text-center">
+                  <span>You got </span>
+                  <span className="text-red-400">{percentage.toFixed(2)}</span>%,
+                </div>
+                <div className="text-center">You need 100% for mastery!</div>
+                <div className="flex w-full">
+                  <Button variant={"glass2"} onClick={handleReset} className="text-center w-full text-2xl">
+                    Retry
+                  </Button>
+                </div>
               </div>
-              <div className="text-center font-bold">You need 100% to achieve mastery!</div>
-              <Button variant={"glass2"} onClick={handleReset} className="text-center w-full text-2xl">
-                Retry
-              </Button>
             </div>
           </>
         )
@@ -225,10 +252,10 @@ const Stage3 = () => {
 
   return (
     <>
-      <div className="h-screen w-full grid p-10">
+      <div className="h-screen w-full grid p-4">
         <div className="max-w-[600px] h-fit  ">
           <button onClick={() => navigate("/all_verses")} className="absolute inset-0 h-fit w-fit">
-            <HiChevronLeft className=" text-6xl" />
+            Back
           </button>
           <h1 className="h-20 grid place-content-center text-4xl">Stage 3</h1>
           <div className="flex justify-center items-center gap-2">
@@ -236,7 +263,7 @@ const Stage3 = () => {
           </div>
           <div className="p-3 space-y-10">
             <div className="grid place-content-center gap-5">
-              <div className="flex flex-wrap gap-1 text-2xl">
+              <div className="flex flex-wrap gap-1 text-xl">
                 {verseWordArray?.map((word, index) => (
                   <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
                 ))}
@@ -252,7 +279,7 @@ const Stage3 = () => {
             <div className="flex justify-center items-center gap-4 font-bold">
               <Button
                 variant={"glass3"}
-                onClick={() => setOneLetterMode(!oneLetterMode)}
+                onClick={() => changeLearnMethods(!oneLetterMode)}
                 className="w-fit p-2 border-2 border-white rounded-full bg-blueGray-300"
               >
                 {oneLetterMode ? "1st Letter" : "Full Word"}

@@ -23,12 +23,20 @@ function App() {
             <Routes>
               <Route path="/auth" element={<Auth />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/all_verses" element={<AllLoaded />} />
+
               <Route
                 path="/"
                 element={
                   <ProtectedRoute>
                     <Home />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/all_verses"
+                element={
+                  <ProtectedRoute>
+                    <AllLoaded />
                   </ProtectedRoute>
                 }
               />

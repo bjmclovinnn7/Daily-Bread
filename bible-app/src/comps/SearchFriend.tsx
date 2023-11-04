@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useAnimate } from "framer-motion"
 import { FormEvent, useEffect, ChangeEvent } from "react"
 import { BiSearchAlt } from "react-icons/bi"
-import { collection, doc, getDocs, getDoc, query, where, setDoc } from "firebase/firestore"
+import { doc, getDocs, getDoc, query, where, updateDoc } from "firebase/firestore"
 import { colRefUsers } from "../utils/firebase"
 import { useUserContext } from "../utils/UserContext"
 import { useState } from "react"
@@ -10,7 +10,7 @@ function useDisplayAnimation(open: boolean) {
   const [scope, animate] = useAnimate()
 
   useEffect(() => {
-    animate(".searchbox", open ? { transform: "translateY(-15%)" } : { transform: "translateY(100%)" }, {
+    animate(".searchbox", open ? { transform: "translateY(0%)" } : { transform: "translateY(100%)" }, {
       type: "spring",
       stiffness: 70,
       damping: 15,
@@ -25,91 +25,82 @@ interface Props {
   setOpen: (open: boolean) => void
 }
 
-interface FriendData {
-  email: string
-  firstName: string
-  lastName: string
-  userName: string
+interface UserData {
   uid: string
+  email: string
+  displayName: string
+  createdOn: string
 }
 
 const SearchFriends = ({ open, setOpen }: Props) => {
   const scope = useDisplayAnimation(!open)
-  const { userData, userFriends, fetchUserFriends } = useUserContext()
+  const { userData } = useUserContext()
   const [userInput, setUserInput] = useState("")
-  const [friendData, setFriendData] = useState<FriendData | null>(null)
-  const [alreadyFriend, setAlreadyFriends] = useState(false)
+  const [friendData, setFriendData] = useState<UserData | null>(null)
 
   const handleSearchFriend = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     // Check if the friend is already added based on their email
-    if (userFriends.some((friend) => friend.data.email === userInput.trim())) {
-      console.log("Friend with this email is already added.")
-      setAlreadyFriends(true)
-      return
-    } else {
-      setAlreadyFriends(false)
-      const mapFriendInfoToFriendData = (friendInfo: any): FriendData => {
-        return {
-          email: friendInfo.email || "",
-          firstName: friendInfo.firstName || "",
-          lastName: friendInfo.lastName || "",
-          userName: friendInfo.userName || "",
-          uid: friendInfo.uid || "",
-        }
+    try {
+      const userEmail = userInput.trim()
+      if (userEmail === userData.email) {
+        return alert("You cannot add your own account.")
       }
+      const querySnapshot = await getDocs(query(colRefUsers, where("email", "==", userEmail)))
+      if (!querySnapshot.empty) {
+        // Check if the querySnapshot has documents
+        // User with the given email found
+        const userDoc = querySnapshot.docs[0]
+        const friendInfo = userDoc.data()
 
-      try {
-        const userEmail = userInput.trim()
+        setFriendData({
+          uid: friendInfo.uid,
+          email: friendInfo.email,
+          displayName: friendInfo.displayName,
+          createdOn: friendInfo.createdOn,
+        })
 
-        const querySnapshot = await getDocs(query(colRefUsers, where("email", "==", userEmail)))
-
-        if (!querySnapshot.empty) {
-          // User with the given email found
-          const userDoc = querySnapshot.docs[0]
-          const friendInfo = userDoc.data()
-          const friendData = mapFriendInfoToFriendData(friendInfo)
-          setFriendData(friendData)
-          // Display or handle the found user data, and allow the user to add them as a friend
-          console.log("User found:", friendData)
-
-          // You can call your own function to add this friend to the current user's "friends" subcollection here.
-        } else {
-          console.log("User not found")
-        }
-      } catch (error) {
-        console.error("Error searching for user:", error)
+        console.log(friendData)
+      } else {
+        console.log("User not found")
       }
+    } catch (error) {
+      console.error("Error searching for user:", error)
     }
   }
 
   const handleAddFriend = async () => {
-    const userId = userData?.uid
-    const friendUid = friendData?.uid // Assuming that the friend's UID is available in friendData
-
-    // Create a reference to the user's "friends" subcollection
-    const userDocRef = doc(colRefUsers, userId)
-    const friendsCollection = collection(userDocRef, "friends")
-
-    // Check if the friend already exists in the "friends" subcollection
-    const friendDocRef = doc(friendsCollection, friendUid)
-
-    try {
-      // Get the friend document
-      const friendDoc = await getDoc(friendDocRef)
-
-      if (friendDoc.exists()) {
-        // Friend already exists
-        console.log("Friend already added.")
-      } else {
-        // Friend does not exist, so add them
-        await setDoc(friendDocRef, friendData)
-        fetchUserFriends(userData.uid)
-        console.log("Friend added successfully")
+    if (friendData) {
+      const userId = userData?.uid
+      const userFriendRef = doc(colRefUsers, userId)
+      try {
+        const userDoc = await getDoc(userFriendRef)
+        if (userDoc.exists()) {
+          const userData = userDoc.data()
+          const friends = userData?.friends || []
+          const friendExists = friends.some((friend: UserData) => friend.email === friendData.email)
+          if (!friendExists) {
+            friends.push({
+              uid: friendData.uid,
+              email: friendData.email,
+              displayName: friendData.displayName,
+              createdOn: friendData.createdOn,
+            })
+            await updateDoc(userFriendRef, {
+              friends,
+            })
+            console.log("Friend successfully added")
+            setOpen(!open)
+            setUserInput("")
+            setFriendData(null)
+          } else {
+            console.log("Friend already added.")
+          }
+        }
+      } catch (error) {
+        console.log("Error saving or updating friend:", error)
       }
-    } catch (error) {
-      console.log("Error adding friend:", error)
     }
   }
 
@@ -117,13 +108,12 @@ const SearchFriends = ({ open, setOpen }: Props) => {
     setOpen(!open)
     setUserInput("")
     setFriendData(null)
-    setAlreadyFriends(false)
   }
 
   return (
     <>
       <AnimatePresence>
-        <motion.div ref={scope}>
+        <motion.div ref={scope} className={`absolute top-[15vh] ${open ? "pointer-events-none" : ""}`}>
           <motion.div
             initial={{ transform: "translateY(100%)" }}
             className="searchbox h-screen w-screen bg-white border-2 p-4 rounded-3xl "
@@ -153,15 +143,13 @@ const SearchFriends = ({ open, setOpen }: Props) => {
               </div>
             </form>
             <div>
-              {alreadyFriend && <span className="text-black">You've already added this user.</span>}
               {friendData && (
                 <div className="flex justify-between items-center border-2 ">
                   <div className="p-2 rounded-3xl text-xl">
                     <div className="flex w-3/4 gap-2 font-bold">
-                      <span>{friendData.firstName}</span>
-                      <span>{friendData.lastName}</span>
+                      <span>{friendData.displayName}</span>
+                      <span>{friendData.email}</span>
                     </div>
-                    <p>User Name: {friendData.userName}</p>
                   </div>
                   <div className="grid place-items-center p-2">
                     <button onClick={handleAddFriend} className="border-2 rounded-full text-2xl w-16 h-16 bg-green-100">

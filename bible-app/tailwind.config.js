@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        iPhoneSe: "660px",
+      },
       colors: {
         serenity: {
           100: "#B3CEE5",

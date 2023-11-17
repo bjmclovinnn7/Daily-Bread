@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { FaTrophy, FaUserFriends } from "react-icons/fa"
+import { FaTrophy, FaUserFriends, FaUser } from "react-icons/fa"
 import Categories from "./Categories/Categories"
 import { useUserContext } from "../utils/UserContext"
 import { useNavigate } from "react-router-dom"
@@ -23,9 +23,9 @@ function useIconAnimation(test: boolean) {
 const Home = () => {
   const [test, setTest] = useState(false)
   const scope = useIconAnimation(test)
-  const { userData } = useUserContext()
+  const { userData, photo } = useUserContext()
   const navigate = useNavigate()
-  const { saveTranslation } = useVerseContext()
+  const { saveTranslation, translation } = useVerseContext()
   const learnedVersesCount = userData.learnedVerses ? userData?.learnedVerses?.length : 0
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Home = () => {
 
   // State to control the dropdown visibility and selected translation
   const [showDropdown, setShowDropdown] = useState(false)
-  const [selectedTranslation, setSelectedTranslation] = useState("NIV")
+  const [selectedTranslation, setSelectedTranslation] = useState(translation)
 
   const handleTranslationSelect = (translation: string) => {
     setSelectedTranslation(translation)
@@ -75,6 +75,12 @@ const Home = () => {
                 >
                   KJV
                 </li>
+                <li
+                  onClick={() => handleTranslationSelect("NKJV")}
+                  className={`${selectedTranslation === "NKJV" ? "bg-gray-400" : ""} border-2 p-4`}
+                >
+                  NKJV
+                </li>
               </ul>
             )}
           </div>
@@ -84,18 +90,26 @@ const Home = () => {
             className="trophy flex justify-center items-center gap-2"
           >
             <div>{test ? "+1" : learnedVersesCount}</div>
-            <FaTrophy className="text-orange-500 h-8 w-8" />
+            <FaTrophy className="text-yellow-500 h-8 w-8" />
           </motion.button>
 
           <button onClick={() => navigate("/friends")} className="flex justify-center items-center gap-2">
             <span>{userData?.friends?.length}</span>
-            <FaUserFriends className="h-8 w-8" />
+            <FaUserFriends className="h-9 w-9 " />
           </button>
 
-          <button onClick={() => navigate("/profile")}>Profile</button>
+          <button onClick={() => navigate("/profile")}>
+            {photo ? (
+              <img src={photo} alt="User Photo" className="h-12 rounded-full border border-black" />
+            ) : (
+              <FaUser className="h-7 w-7 " />
+            )}
+          </button>
         </div>
-        <div className="category pt-[12vh] h-screen w-full overflow-y-auto p-3">
-          <h1 className="font-header text-3xl pb-4">Welcome, {userData?.displayName.split(" ")[0]}.</h1>
+        <div className="category pt-[12vh] h-screen w-full overflow-y-auto p-3 bg-[#444444]">
+          <h1 className="font-header text-3xl pb-4 text-white">
+            Welcome, {userData && userData.displayName ? userData.displayName.split(" ")[0] : " "}
+          </h1>
           <Categories />
         </div>
       </motion.div>

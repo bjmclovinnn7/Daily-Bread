@@ -5,6 +5,7 @@ import { doc, getDocs, getDoc, query, where, updateDoc } from "firebase/firestor
 import { colRefUsers } from "../utils/firebase"
 import { useUserContext } from "../utils/UserContext"
 import { useState } from "react"
+import { IoMdPersonAdd } from "react-icons/io"
 
 function useDisplayAnimation(open: boolean) {
   const [scope, animate] = useAnimate()
@@ -63,7 +64,7 @@ const SearchFriends = ({ open, setOpen }: Props) => {
 
         console.log(friendData)
       } else {
-        console.log("User not found")
+        alert("User not found")
       }
     } catch (error) {
       console.error("Error searching for user:", error)
@@ -91,6 +92,7 @@ const SearchFriends = ({ open, setOpen }: Props) => {
               friends,
             })
             console.log("Friend successfully added")
+
             setOpen(!open)
             setUserInput("")
             setFriendData(null)
@@ -113,20 +115,20 @@ const SearchFriends = ({ open, setOpen }: Props) => {
   return (
     <>
       <AnimatePresence>
-        <motion.div ref={scope} className={`absolute top-[15vh] ${open ? "pointer-events-none" : ""}`}>
+        <motion.div ref={scope} className={`absolute top-[15vh] inset-0 ${open ? "pointer-events-none" : ""}`}>
           <motion.div
             initial={{ transform: "translateY(100%)" }}
             className="searchbox h-screen w-screen bg-white border-2 p-4 rounded-3xl "
           >
             <div className="flex items-center">
-              <button className="w-1/3 p-2 font-bold text-start text-lg" onClick={handleDone}>
+              <button className="w-1/3 p-2 font-bold text-start text-lg text-black" onClick={handleDone}>
                 Done
               </button>
               <span className="w-2/3 p-2 font-bold text-lg">Add Friends</span>
             </div>
             <form onSubmit={handleSearchFriend}>
               <div className="p-3 bg-gray-200 rounded text-center flex items-center justify-center gap-2">
-                <BiSearchAlt className="text-2xl" />
+                <BiSearchAlt className="text-2xl text-gray-500" />
                 <input
                   placeholder="Username or email"
                   type="text"
@@ -135,25 +137,24 @@ const SearchFriends = ({ open, setOpen }: Props) => {
                   }}
                   value={userInput} // Set the value of the input field
                   required
-                  className="w-full h-10 text-xl bg-gray-200"
+                  className="w-full h-10 text-xl bg-gray-200 text-black"
                 ></input>
               </div>
               <div className="p-4">
-                <button className="bg-slate-300 w-full rounded-3xl text-xl">Search</button>
+                <button className="bg-gray-500 w-full rounded-3xl text-xl">Search</button>
               </div>
             </form>
             <div>
               {friendData && (
-                <div className="flex justify-between items-center border-2 ">
-                  <div className="p-2 rounded-3xl text-xl">
-                    <div className="flex w-3/4 gap-2 font-bold">
+                <div className="flex justify-between items-center border-2 text-black rounded-xl">
+                  <div className="p-2 rounded-3xl text-2xl">
+                    <div className="font-bold grid">
                       <span>{friendData.displayName}</span>
-                      <span>{friendData.email}</span>
                     </div>
                   </div>
-                  <div className="grid place-items-center p-2">
-                    <button onClick={handleAddFriend} className="border-2 rounded-full text-2xl w-16 h-16 bg-green-100">
-                      Add
+                  <div className="grid place-items-center p-2 w-1/4">
+                    <button onClick={handleAddFriend} className="bg-blue-400 p-2 rounded-xl">
+                      <IoMdPersonAdd className="w-8 h-8 text-white" />
                     </button>
                   </div>
                 </div>

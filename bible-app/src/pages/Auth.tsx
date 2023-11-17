@@ -1,12 +1,12 @@
 import { Button } from "../comps/Button"
-import { useState, ChangeEvent, FormEvent } from "react" // Import ChangeEvent and FormEvent
+import { useState, ChangeEvent, FormEvent, useEffect } from "react" // Import ChangeEvent and FormEvent
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc"
 import { GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth"
-import { doc, setDoc } from "firebase/firestore"
+import { doc, setDoc, getDoc } from "firebase/firestore"
 import { auth, colRefUsers } from "../utils/firebase"
-
+import { useUserContext } from "../utils/UserContext"
 const Auth = () => {
   const [firstName, setfirstName] = useState("")
   const [lastName, setlastName] = useState("")
@@ -15,18 +15,26 @@ const Auth = () => {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
   const navigate = useNavigate()
+  const { userData } = useUserContext()
 
   const handleGoogleSignUp = async () => {
     console.log("Handling Google Sign-up")
     const provider = new GoogleAuthProvider()
     const currentUser = await signInWithPopup(auth, provider)
+    const userUid = currentUser.user.uid
+    const currentUserRef = doc(colRefUsers, userUid)
+
     try {
-      await createUserDoc(currentUser)
-      navigate("/")
+      const userDoc = await getDoc(currentUserRef)
+      if (userDoc.exists()) {
+        // User already exists, handle it as needed
+        console.log("User already exists")
+      } else {
+        // User doesn't exist, create the user document
+        await createUserDoc(currentUser)
+      }
     } catch (error) {
       console.error(error)
-      alert("If you already have an account, make sure to login.")
-      console.log(currentUser) // Fallback to fetchUserData in case of an error
     }
   }
 
@@ -39,7 +47,6 @@ const Auth = () => {
       alert(error)
       return
     }
-
     try {
       const currentUser = await createUserWithEmailAndPassword(auth, email, password)
       await createUserDoc(currentUser)
@@ -47,6 +54,14 @@ const Auth = () => {
       console.error(error)
     }
   }
+
+  useEffect(() => {
+    if (userData) {
+      navigate("/")
+    } else {
+      return
+    }
+  }, [userData])
 
   const createUserDoc = async (currentUser: any) => {
     console.log("Creating User Document")
@@ -68,17 +83,16 @@ const Auth = () => {
       learnedVerses: [],
       friends: [],
     })
-    navigate("/")
   }
 
   return (
     <>
-      <div className="h-screen w-full grid place-content-center p-10">
+      <div className="h-screen w-full grid place-content-center p-10 bg-[#444444] text-white">
         <div className="text-center text-3xl md:text-4xl lg:text-5xl font-header p-4">Sign Up</div>
 
         <form
           onSubmit={handleEmailSignUp}
-          className="max-w-[400px] p-5 border-2 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-xl rounded-xl grid gap-3"
+          className="max-w-[400px] p-5 border-2 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-xl rounded-xl grid gap-3 "
         >
           <div className="text-xl font-bold">
             <label>First Name</label>

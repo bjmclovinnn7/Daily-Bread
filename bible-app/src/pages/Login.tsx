@@ -1,11 +1,12 @@
 import { Button } from "../comps/Button"
 import { useState, ChangeEvent, FormEvent, useEffect } from "react" // Import ChangeEvent and FormEvent
-import { useUserContext } from "../utils/UserContext"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc"
 import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth"
-import { auth } from "../utils/firebase"
+import { doc, getDoc, setDoc } from "firebase/firestore"
+import { auth, colRefUsers } from "../utils/firebase"
+import { useUserContext } from "../utils/UserContext"
 
 const Login = () => {
   const [email, setEmail] = useState("")
@@ -18,20 +19,29 @@ const Login = () => {
   useEffect(() => {
     if (userData) {
       navigate("/")
+    } else {
+      return
     }
   }, [userData])
 
   const handleGoogleLogin = async () => {
+    console.log("Handling Google Sign-up")
+    const provider = new GoogleAuthProvider()
+    const currentUser = await signInWithPopup(auth, provider)
+    const userUid = currentUser.user.uid
+    const currentUserRef = doc(colRefUsers, userUid)
+
     try {
-      console.log("Handling Google Login")
-      const provider = new GoogleAuthProvider()
-      await signInWithPopup(auth, provider)
-      setErrorMessage("")
-      setError(false)
-    } catch (error: any) {
-      console.log(error)
-      setErrorMessage(error.toString())
-      setError(true)
+      const userDoc = await getDoc(currentUserRef)
+      if (userDoc.exists()) {
+        // User already exists, handle it as needed
+        console.log("User already exists")
+      } else {
+        // User doesn't exist, create the user document
+        await createUserDoc(currentUser)
+      }
+    } catch (error) {
+      console.error(error)
     }
   }
 
@@ -49,9 +59,24 @@ const Login = () => {
     }
   }
 
+  const createUserDoc = async (currentUser: any) => {
+    console.log("Creating User Document")
+    const userDocRef = doc(colRefUsers, currentUser.user.uid)
+    //check if the user has a frist and last name and combine to make displayName
+
+    await setDoc(userDocRef, {
+      displayName: currentUser.user.displayName,
+      email: currentUser.user.email,
+      uid: currentUser.user.uid,
+      createdOn: new Date(),
+      learnedVerses: [],
+      friends: [],
+    })
+  }
+
   return (
     <>
-      <div className="h-screen w-full grid place-content-center p-10">
+      <div className="h-screen w-full grid place-content-center p-10 bg-[#444444] text-white ">
         <div className="text-center text-5xl md:text-6xl lg:text-7xl font-header p-4">Login.</div>
         {error && <div className="bg-red-600 text-white font-bold">{errorMessage}</div>}
         <form
@@ -61,7 +86,7 @@ const Login = () => {
           <div className="text-2xl">
             <label className=" font-bold">Email</label>
             <input
-              className="border-2 border-gray-300 rounded-sm w-full"
+              className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="email"
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 // Use ChangeEvent<HTMLInputElement> for the event type
@@ -71,7 +96,7 @@ const Login = () => {
             ></input>
             <label className="font-bold">Password</label>
             <input
-              className="border-2 border-gray-300 rounded-sm w-full"
+              className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="password"
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 // Use ChangeEvent<HTMLInputElement> for the event type

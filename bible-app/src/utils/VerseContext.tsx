@@ -7,6 +7,7 @@ interface SelectedVerse {
     NIV: string
     ESV: string
     KJV: string
+    NKJV: string
   }
 }
 
@@ -34,19 +35,16 @@ export function VerseProvider({ children }: { children: ReactNode }) {
   const [selectedVerse, setSelectedVerse] = useState<SelectedVerse | null>(() => {
     const saved = localStorage.getItem("selectedVerse")
     const initialValue = saved ? JSON.parse(saved) : null // Initialize to null if not found
-
     return initialValue
   })
   const [currentCategory, setCurrentCategory] = useState(() => {
     const saved = localStorage.getItem("currentCategory")
     const initialValue = saved ? JSON.parse(saved) : "" // Initialize to null if not found
-
     return initialValue
   })
   const [translation, setTranslation] = useState(() => {
     const saved = localStorage.getItem("translation")
     const initialValue = saved ? JSON.parse(saved) : "NIV" // Initialize to null if not found
-
     return initialValue
   })
   const [oneLetterMode, setOneLetterMode] = useState(() => {

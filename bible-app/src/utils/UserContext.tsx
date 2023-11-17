@@ -5,15 +5,23 @@ import { doc, onSnapshot, getDoc } from "firebase/firestore"
 
 interface UserLearnedVerses {
   id: string
-  translation: string
+  translations: string
   learned: boolean
+  category: string
+  timeStamp: {
+    seconds: number
+    nanoseconds: number
+  }
 }
 
 interface UserData {
   uid: string
   email: string
   displayName: string
-  createdOn: string
+  createdOn: {
+    seconds: number
+    nanoseconds: number
+  }
   learnedVerses: UserLearnedVerses[]
   friends: UserData[]
 }
@@ -26,6 +34,7 @@ interface UserContextType {
   getFriendData: () => void
   saveSelectedFriend: (friendData: UserData) => void
   getUpdatedFriendData: (friendData: UserData) => void
+  photo: string
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined)
@@ -33,9 +42,13 @@ const UserContext = createContext<UserContextType | undefined>(undefined)
 export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [userData, setUserData] = useState<any>(() => {
     const saved = localStorage.getItem("userData")
-    const initialValue = saved ? JSON.parse(saved) : ""
+    if (saved === undefined) {
+      return null
+    }
+    const initialValue = saved ? JSON.parse(saved) : null
     return initialValue
   })
+  const [photo, setPhoto] = useState("")
   const [userFriends, setUserFriends] = useState<UserData[]>(() => {
     const saved = localStorage.getItem("userFriends")
     const initialValue = saved ? JSON.parse(saved) : []
@@ -43,7 +56,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
   })
   const [selectedFriend, setSelectedFriend] = useState<UserData>(() => {
     const saved = localStorage.getItem("userFriends")
-    const initialValue = saved ? JSON.parse(saved) : ""
+    const initialValue = saved ? JSON.parse(saved) : {}
     return initialValue
   })
 
@@ -56,6 +69,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
   const getUpdatedFriendData = async (oldFriendData: UserData) => {
     const friendDocRef = doc(colRefUsers, oldFriendData.uid)
     try {
+      console.log(`Getting Data for ${oldFriendData.displayName}`, oldFriendData.uid)
       const friendDoc = await getDoc(friendDocRef)
       const friendData = friendDoc.data()
 
@@ -88,51 +102,63 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
 
   const getFriendData = async () => {
     if (userData && userData.friends) {
-      let updatedFriendData: UserData[] = []
+      const updatedFriendData: UserData[] = []
+      const existingFriendUIDs = new Set(userFriends.map((userFriend) => userFriend.uid))
 
       for (const friend of userData.friends) {
-        const friendUid = friend.uid
-
-        const friendDocRef = doc(colRefUsers, friendUid)
-        try {
-          const friendDoc = await getDoc(friendDocRef)
-          const friendData = friendDoc.data()
-
-          if (friendData) {
-            const userFriendData: UserData = {
-              uid: friendUid,
-              email: friendData.email,
-              displayName: friendData.displayName,
-              createdOn: friendData.createdOn,
-              learnedVerses: friendData.learnedVerses,
-              friends: friendData.friends,
-            }
-
-            updatedFriendData.push(userFriendData)
-          } else {
-            console.log("Friend data not found for UID: " + friendUid)
+        if (existingFriendUIDs.has(friend.uid)) {
+          // Friend is already in userFriends, so add them to updatedFriendData
+          const existingFriend = userFriends.find((userFriend) => userFriend.uid === friend.uid)
+          if (existingFriend) {
+            updatedFriendData.push(existingFriend)
           }
-        } catch (error) {
-          console.error(error)
+        } else {
+          console.log(`Getting Document Reads for ${friend.displayName}`, friend.uid)
+          const friendUid = friend.uid
+          const friendDocRef = doc(colRefUsers, friendUid)
+
+          try {
+            const friendDoc = await getDoc(friendDocRef)
+            const friendData = friendDoc.data()
+
+            if (friendData) {
+              const userFriendData: UserData = {
+                uid: friendUid,
+                email: friendData.email,
+                displayName: friendData.displayName,
+                createdOn: friendData.createdOn,
+                learnedVerses: friendData.learnedVerses,
+                friends: friendData.friends,
+              }
+
+              updatedFriendData.push(userFriendData)
+              console.log("Friend Data Read;", friendData.displayName)
+            }
+          } catch (error) {
+            console.error(error)
+          }
         }
       }
+
+      // Update the state with the new friend data while preserving existing friends
+      setUserFriends(updatedFriendData)
+      // Also, update the userFriends data in local storage
       saveToLocalStorage("userFriends", updatedFriendData)
-      setUserFriends(updatedFriendData) // Update the state with the new friend data
     }
   }
+
   useEffect(() => {
-    if (userData?.friends) {
-      getFriendData()
-    }
-  }, [userData?.friends])
+    getFriendData()
+  }, [userData])
 
   //listeners for when user signs in; will check for changes in userFriends + learnedVerses and update.
   useEffect(() => {
     const unsubscribeAuth = onAuthStateChanged(auth, (currentUser: User | null) => {
       if (currentUser?.uid) {
         // User is signed in, you can fetch their learned verses
-        console.log("listeners engaged.")
+        console.log(currentUser)
         const userUid = currentUser.uid
+        setPhoto(currentUser.photoURL || "")
         const currentUserRef = doc(colRefUsers, userUid)
 
         const unsubscribeUser = onSnapshot(currentUserRef, (snapshot) => {
@@ -158,10 +184,8 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
         // Clean up the learnedVerses listener when the component unmounts
         return () => {
           console.log("Unsubscribing")
-          unsubscribeUser
+          unsubscribeUser()
         }
-      } else {
-        setUserData(null)
       }
     })
     // Clean up the authentication listener when the component unmounts
@@ -170,20 +194,19 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
     }
   }, [])
 
-  const logOut = () => {
-    return signOut(auth)
-      .then(() => {
-        console.log("You have been signed out!")
-        setUserData(null)
-        setUserFriends([])
-        removeFromLocalStorage("userData")
-        removeFromLocalStorage("userFriends")
-        removeFromLocalStorage("currentCategory")
-        removeFromLocalStorage("selectedVerse")
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+  const logOut = async () => {
+    try {
+      await signOut(auth)
+      console.log("You have been signed out!")
+      setUserData(null)
+      setUserFriends([])
+      removeFromLocalStorage("userData")
+      removeFromLocalStorage("userFriends")
+      removeFromLocalStorage("currentCategory")
+      removeFromLocalStorage("selectedVerse")
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   const saveToLocalStorage = (name: string, item: any) => {
@@ -204,6 +227,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
         getFriendData,
         saveSelectedFriend,
         getUpdatedFriendData,
+        photo,
       }}
     >
       {children}

@@ -14,6 +14,7 @@ interface SelectedVerse {
     NIV: string
     ESV: string
     KJV: string
+    NKJV: string
   }
 }
 
@@ -44,25 +45,27 @@ const FilteredVerses = ({ category, animate }: { category: string; animate: bool
         hidden: { opacity: 0, height: "0px" },
         show: { opacity: 1, height: "250px" },
       }}
-      className={`flex overflow-auto gap-5`}
+      className={`flex overflow-auto gap-5 border-t-2 border-gray-500`}
     >
       {verseData
         .filter((verse: SelectedVerse) => verse.category === category.toLowerCase())
         .map((verse: SelectedVerse) => (
-          <section key={verse.id} className="w-full h-full p-5 " onClick={() => handleLearnClick(verse)}>
-            <div className={`h-full w-60 md:w-80 lg:w-96 rounded-3xl p-3 md:lg:overflow-hidden bg-white`}>
+          <section key={verse.id} className="w-full h-full p-5" onClick={() => handleLearnClick(verse)}>
+            <div
+              className={`h-full w-60 md:w-80 lg:w-96 rounded-3xl p-3 md:lg:overflow-hidden bg-[#444444] shadow-lg shadow-black`}
+            >
               <div className="flex justify-center items-center">
-                <h1 className="text-xl font-bold w-full ">{verse.id}</h1>
+                <h1 className="text-xl font-bold w-full text-white">{verse.id}</h1>
 
                 {userData.learnedVerses &&
                 userData.learnedVerses.some((learnedVerse) => learnedVerse.id === verse.id) ? (
-                  <FaTrophy className=" text-orange-500 text-2xl" />
+                  <FaTrophy className=" text-yellow-500 text-2xl" />
                 ) : (
                   ""
                 )}
               </div>
 
-              <div className="verseText text-xl">
+              <div className="verseText text-xl text-white">
                 {verse.translations[translation as keyof typeof verse.translations]}
               </div>
             </div>
@@ -110,18 +113,15 @@ const Categories = () => {
     <>
       <div className="grid place-content-center gap-5 overscroll-auto pb-20">
         {verseCategories.map((category, index) => (
-          <div key={index} className="bg-black overflow-hidden rounded-3xl">
-            <button
-              onClick={() => handleClick(category)}
-              className={`w-full flex justify-between items-center p-3 bg-black`}
-            >
-              <span className="h-full text-3xl text-white">{category}</span>
+          <div key={index} className="bg-white overflow-hidden rounded-3xl">
+            <button onClick={() => handleClick(category)} className={`w-full flex justify-between items-center p-3`}>
+              <span className="h-full text-3xl text-black">{category}</span>
               <motion.span
                 onClick={() => handleSeeAll(category)}
                 initial={false}
                 animate={{ opacity: openCategories[category] ? 1 : 0 }}
                 transition={{ ease: "easeIn", duration: 0.3 }}
-                className="text-xl text-white"
+                className="text-xl text-black"
               >
                 {openCategories[category] ? "See All" : ""}
               </motion.span>

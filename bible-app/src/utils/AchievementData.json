@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Legendary",
+    "goal": 100,
+    "description": "Learn 100 or more verses"
+  },
+  {
+    "title": "Scholar",
+    "goal": 75,
+    "description": "Learn 75 verses"
+  },
+
+  {
+    "title": "Intermediate",
+    "goal": 50,
+    "description": "Learn 50 verses"
+  },
+  {
+    "title": "Novice",
+    "goal": 25,
+    "description": "Learn 25 verses"
+  },
+  {
+    "title": "Newbie",
+    "goal": 10,
+    "description": "Learn 10 verses"
+  }
+]

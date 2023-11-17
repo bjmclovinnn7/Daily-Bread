@@ -6,6 +6,8 @@ import { colRefUsers } from "../utils/firebase"
 import { getDoc, updateDoc, doc } from "firebase/firestore"
 import { useUserContext } from "../utils/UserContext"
 import { FaTrophy } from "react-icons/fa"
+import { PiNumberCircleThreeFill, PiArrowRight, PiCheckCircleFill } from "react-icons/pi"
+import { FaXmark } from "react-icons/fa6"
 
 const Stage3 = () => {
   const navigate = useNavigate()
@@ -34,6 +36,8 @@ const Stage3 = () => {
     id: string
     translation: string
     learned: boolean
+    timeStamp: string
+    category: string
   }
 
   const handleLearnVerse = async () => {
@@ -42,9 +46,7 @@ const Stage3 = () => {
     const userLearnedVersesRef = doc(colRefUsers, userId)
 
     try {
-      const verseName = selectedVerse?.id
-
-      if (verseName) {
+      if (selectedVerse) {
         // Retrieve the user's document
         const userDoc = await getDoc(userLearnedVersesRef)
 
@@ -56,14 +58,16 @@ const Stage3 = () => {
           const learnedVerses = userData?.learnedVerses || []
 
           // Check if the verse is already in the array
-          const verseExists = learnedVerses.some((verse: UserLearnedVerses) => verse.id === verseName)
+          const verseExists = learnedVerses.some((verse: UserLearnedVerses) => verse.id === selectedVerse?.id)
 
           if (!verseExists) {
             // Add the new verse to the learnedVerses array
             learnedVerses.push({
-              id: verseName,
+              id: selectedVerse?.id,
               learned: true,
               translation: translation,
+              timeStamp: new Date(),
+              category: selectedVerse?.category,
             })
 
             // Update the user's document with the modified learnedVerses array
@@ -179,15 +183,15 @@ const Stage3 = () => {
       }
     }
     if (correct === true) {
-      return <span className="font-bold text-green-700">{text}</span>
+      return <span className="font-bold text-green-500">{text}</span>
     }
 
     if (correct === false) {
-      return <span className="font-bold text-red-700">{text}</span>
+      return <span className="font-bold text-red-500">{text}</span>
     }
 
     if (active) {
-      return <span className="font-bold text-yellow-400">{replaceHiddenWords(text)}</span>
+      return <span className="font-bold text-yellow-500">{replaceHiddenWords(text)}</span>
     }
     return <span>{replaceHiddenWords(text)}</span>
   })
@@ -203,10 +207,10 @@ const Stage3 = () => {
       if (percentage >= 100) {
         return (
           <>
-            <div className="absolute inset-0 h-screen w-full bg-white p-5">
+            <div className="absolute inset-0 h-screen w-full bg-[#444444] p-5 text-white text-4xl">
               <div className="grid place-content-center h-1/2 w-full gap-2">
                 <div className="text-center text-3xl">
-                  You got <span className="text-green-600">{percentage.toFixed(2)}</span>%{" "}
+                  You got <span className="text-green-500">{percentage.toFixed(2)}</span>%{" "}
                 </div>
                 <div className="text-center text-2xl">
                   Nice work! You've achieved mastery of <span className="font-bold">{selectedVerse?.id}</span>.
@@ -214,7 +218,7 @@ const Stage3 = () => {
                 <div className="grid place-content-center p-6">
                   <div className="flex justify-center items-center gap-2">
                     <span className="text-5xl font-bold">+1</span>
-                    <FaTrophy className="text-orange-500 h-12 w-12" />
+                    <FaTrophy className="text-yellow-500 h-12 w-12" />
                   </div>
                 </div>
 
@@ -228,11 +232,11 @@ const Stage3 = () => {
       } else {
         return (
           <>
-            <div className="absolute inset-0 w-full bg-white p-5 text-3xl">
+            <div className="absolute inset-0 w-full bg-[#444444] p-5 text-4xl text-white">
               <div className="grid place-content-center h-1/2 w-full gap-2">
                 <div className="text-center">
                   <span>You got </span>
-                  <span className="text-red-400">{percentage.toFixed(2)}</span>%,
+                  <span className="text-red-500">{percentage.toFixed(2)}</span>%,
                 </div>
                 <div className="text-center">You need 100% for mastery!</div>
                 <div className="flex w-full">
@@ -252,16 +256,25 @@ const Stage3 = () => {
 
   return (
     <>
-      <div className="h-screen w-full grid p-4">
+      <div className="h-screen w-full grid p-4 lg:place-content-center bg-[#444444] text-white">
         <div className="max-w-[600px] h-fit  ">
-          <button onClick={() => navigate("/all_verses")} className="absolute inset-0 h-fit w-fit">
-            Back
-          </button>
-          <h1 className="h-20 grid place-content-center text-4xl">Stage 3</h1>
-          <div className="flex justify-center items-center gap-2">
-            <span className="text-3xl font-bold">{selectedVerse?.id}</span>
+          <div className="text-4xl flex justify-center items-center gap-8">
+            <button onClick={() => navigate("/all_verses")} className="h-fit w-fit">
+              <FaXmark />
+            </button>
+            <div className="flex items-center">
+              <PiCheckCircleFill className="text-green-500" />
+              <PiArrowRight className="text-2xl w-10" />
+              <PiCheckCircleFill className="text-green-500 " />
+              <PiArrowRight className="text-2xl w-10" />
+              <PiNumberCircleThreeFill className="text-yellow-500 animate-pulse" />
+            </div>
+            <div className="text-center text-2xl w-fit">{`${percentage.toFixed(1)}%`}</div>
           </div>
-          <div className="p-3 space-y-10">
+          <div className="flex justify-between items-center p-4">
+            <span className="text-2xl font-bold">{selectedVerse?.id}</span>
+          </div>
+          <div className="p-4">
             <div className="grid place-content-center gap-5">
               <div className="flex flex-wrap gap-1 text-xl">
                 {verseWordArray?.map((word, index) => (
@@ -270,13 +283,14 @@ const Stage3 = () => {
               </div>
 
               <input
-                className="w-full h-10 text-black text-xl bg-slate-300"
+                className="w-full h-10 text-black text-xl "
                 type="text"
                 value={userInput}
                 onChange={(e) => handleSwitch(e.target.value)}
+                autoFocus={false}
               />
             </div>
-            <div className="flex justify-center items-center gap-4 font-bold">
+            <div className="flex justify-center items-center font-bold pt-4">
               <Button
                 variant={"glass3"}
                 onClick={() => changeLearnMethods(!oneLetterMode)}
@@ -284,11 +298,9 @@ const Stage3 = () => {
               >
                 {oneLetterMode ? "1st Letter" : "Full Word"}
               </Button>
-              <div className="text-center text-xl">{`Correct: ${percentage.toFixed(1)}%`}</div>
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap gap-1 text-xl">{}</div>
       </div>
       <CompletionMessage />
     </>

@@ -16,7 +16,8 @@ import { FaXmark } from "react-icons/fa6"
 
 const Stage1 = () => {
   const navigate = useNavigate()
-  const { selectedVerse, translation, changeLearnMethods, oneLetterMode } = useVerseContext()
+  const { selectedVerse, translation, changeLearnMethods, oneLetterMode, hintsOn } = useVerseContext()
+  const [showInstructions, setShowInstructions] = useState(hintsOn)
   const [userInput, setUserInput] = useState("")
   const [utterance, setUtterance] = useState(false)
   const verseWordArray =
@@ -140,13 +141,13 @@ const Stage1 = () => {
         return (
           <>
             <div className="absolute inset-0 w-full bg-[#444444] p-5 text-4xl text-white">
-              <div className="grid place-content-center h-1/2 w-full gap-2">
+              <div className="grid place-content-center h-1/2 w-full gap-4">
                 <div className="text-center">
                   <span>You got </span>
                   <span className="text-green-600">{percentage.toFixed(2)}</span>%,
                 </div>
                 <div className="text-center">Nice work!</div>
-                <div className="flex w-full">
+                <div className="flex w-full gap-4">
                   <Button variant={"glass2"} onClick={handleReset} className="text-center w-40 text-2xl">
                     Retry
                   </Button>
@@ -162,13 +163,13 @@ const Stage1 = () => {
         return (
           <>
             <div className="absolute inset-0 w-full bg-[#444444] p-5 text-4xl text-white">
-              <div className="grid place-content-center h-1/2 w-full gap-2">
+              <div className="grid place-content-center h-1/2 w-full gap-4">
                 <div className="text-center">
                   <span>You got </span>
                   <span className="text-red-500">{percentage.toFixed(2)}</span>%,
                 </div>
                 <div className="text-center">90% or better is needed.</div>
-                <div className="flex w-full">
+                <div className="flex w-full ">
                   <Button variant={"glass2"} onClick={handleReset} className="text-center w-full text-2xl">
                     Retry
                   </Button>
@@ -208,25 +209,66 @@ const Stage1 = () => {
     }
   }, [utterance])
 
+  const HintMessage = () => {
+    if (showInstructions) {
+      return (
+        <div className="absolute inset-0 z-20 ">
+          <div className="grid place-content-center h-full bg-black px-8 gap-4 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80">
+            <div className="text-white font-header text-3xl">Stage 1:</div>
+            <h1 className="text-white font-bold text-xl ">
+              Stage 1 requires you to get every word correct. Simply click on the input field to get started.
+            </h1>
+            <h2 className="text-white font-bold text-xl ">There are two modes. Full word and first letter.</h2>
+            <h2 className="text-white font-bold text-xl ">
+              Full word requires you to type out the entire word. Don't worry about special characters. Just type the
+              word and press space.{" "}
+            </h2>
+            <h2 className="text-white font-bold text-xl ">
+              First letter only requires you to type the first letter of each word.
+            </h2>
+            <h2 className="text-white font-bold text-xl ">
+              If you get enough words correct, you will move on to the next stage! If you don't, you'll need to try
+              again! Good luck!
+            </h2>
+
+            <h2 className="font-bold text-xl text-orange-500">
+              You can turn off instructions permanentaly in your profile settings.
+            </h2>
+
+            <button onClick={() => setShowInstructions(!showInstructions)} className="bg-white text-black rounded-2xl ">
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )
+    } else
+      return (
+        <div>
+          <h1>Turn on Insructions</h1>
+        </div>
+      )
+  }
+
   return (
     <>
-      <div className="h-screen w-full grid p-4 lg:place-content-center bg-[#444444] text-white">
-        <div className="max-w-[600px] h-fit ">
-          <div className="text-4xl flex justify-center items-center gap-8 ">
-            <button onClick={() => navigate("/")} className="h-fit w-fit">
-              <FaXmark />
-            </button>
-            <div className="flex items-center">
-              <PiNumberCircleOneFill className="text-yellow-500 animate-pulse" />
-              <PiArrowRight className="text-2xl w-10" />
-              <PiNumberCircleTwoFill className="text-red-500" />
-              <PiArrowRight className="text-2xl w-10" />
-              <PiNumberCircleThreeFill className="text-red-500" />
-            </div>
-            <div className="text-center text-2xl w-fit">{`${percentage.toFixed(1)}%`}</div>
+      <div className="h-screen w-full p-4  bg-[#444444] text-white">
+        <div className="text-3xl md:text-4xl lg:text-5xl relative flex justify-between items-center gap-8 ">
+          <button onClick={() => navigate("/")} className="h-fit w-1/5">
+            <FaXmark />
+          </button>
+
+          <div className="flex items-center justify-center w-3/5">
+            <PiNumberCircleOneFill className="text-yellow-500 animate-pulse" />
+            <PiArrowRight className=" w-10" />
+            <PiNumberCircleTwoFill className="text-red-500" />
+            <PiArrowRight className="w-10" />
+            <PiNumberCircleThreeFill className="text-red-500" />
           </div>
-          <div className="flex justify-between items-center p-4">
-            <span className="text-2xl font-bold">{selectedVerse?.id}</span>
+          <div className="text-end h-fit w-1/5">{`${percentage.toFixed(1)}%`}</div>
+        </div>
+        <div className="max-w-2xl mx-auto text-2xl md:text-3xl lg:text-4xl">
+          <div className="flex justify-between items-center p-4 ">
+            <span className="font-bold">{selectedVerse?.id}</span>
             {/* <button onClick={() => setUtterance(!utterance)} className="text-2xl">
               {utterance ? (
                 <div className="flex items-center">
@@ -243,15 +285,16 @@ const Stage1 = () => {
           </div>
           <div className="px-2">
             <div className="grid place-content-center gap-5">
-              <div className="flex flex-wrap gap-1 text-xl">
+              <div className="flex flex-wrap gap-2">
                 {verseWordArray?.map((word, index) => (
                   <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
                 ))}
               </div>
 
               <input
-                className="w-full h-10 text-black text-xl "
+                className="w-full h-10 text-black "
                 type="text"
+                placeholder={`${oneLetterMode ? "1st Letter" : "Full Word"}`}
                 value={userInput}
                 onChange={(e) => handleSwitch(e.target.value)}
                 autoFocus={false}
@@ -266,10 +309,21 @@ const Stage1 = () => {
                 {oneLetterMode ? "1st Letter" : "Full Word"}
               </Button>
             </div>
+            <button
+              onClick={() =>
+                setTimeout(() => {
+                  setShowInstructions(!showInstructions)
+                }, 300)
+              }
+              className=" absolute bottom-10 right-10 left-10 text-base rounded-full"
+            >
+              Show Instructions
+            </button>
           </div>
         </div>
       </div>
       <CompletionMessage />
+      <HintMessage />
     </>
   )
 }

@@ -55,13 +55,12 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
     return initialValue
   })
   const [selectedFriend, setSelectedFriend] = useState<UserData>(() => {
-    const saved = localStorage.getItem("userFriends")
+    const saved = localStorage.getItem("selectedFriend")
     const initialValue = saved ? JSON.parse(saved) : {}
     return initialValue
   })
 
   const saveSelectedFriend = (friendData: UserData) => {
-    removeFromLocalStorage("selectedFriend")
     setSelectedFriend(friendData)
     saveToLocalStorage("selectedFriend", selectedFriend)
   }
@@ -204,6 +203,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
       removeFromLocalStorage("userFriends")
       removeFromLocalStorage("currentCategory")
       removeFromLocalStorage("selectedVerse")
+      removeFromLocalStorage("selectedFriend")
     } catch (error) {
       console.log(error)
     }

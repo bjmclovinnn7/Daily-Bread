@@ -106,10 +106,18 @@ const Home = () => {
             )}
           </button>
         </div>
-        <div className="category pt-[12vh] h-screen w-full overflow-y-auto p-3 bg-[#444444]">
-          <h1 className="font-header text-3xl pb-4 text-white">
-            Welcome, {userData && userData.displayName ? userData.displayName.split(" ")[0] : " "}
-          </h1>
+        <div className="category pt-[12vh] h-screen w-full overflow-y-auto  p-4 bg-[#444444]">
+          <div className="p-2 grid place-content-center">
+            <div className=" md:lg:max-w-[1000px]">
+              <h1 className="font-header text-3xl md:text-4xl lg:text-5xl text-white block">
+                Welcome, {userData && userData.displayName ? userData.displayName.split(" ")[0] + "." : " "}
+              </h1>
+              <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 font-header">
+                Select a category to start learning.
+              </h2>
+            </div>
+          </div>
+
           <Categories />
         </div>
       </motion.div>

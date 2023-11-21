@@ -1,10 +1,10 @@
 import { useUserContext } from "../utils/UserContext"
 import { useState } from "react"
 import { useNavigate } from "react-router"
-import { FaTrophy, FaXmark } from "react-icons/fa6"
+import { FaTrophy } from "react-icons/fa6"
 import Achievements from "../comps/Achievements"
 import achievementData from "../utils/AchievementData.json" // Assuming you have an Achievements component
-import { FaClock, FaPlus } from "react-icons/fa"
+import { FaArrowLeft, FaClock, FaPlus } from "react-icons/fa"
 
 const FriendProfile = () => {
   const { selectedFriend } = useUserContext()
@@ -31,16 +31,16 @@ const FriendProfile = () => {
       <div className="bg-[#444444] h-screen w-full text-white p-4 overflow-auto">
         <div className="relative block text-center">
           <button onClick={() => navigate("/friends")} className="absolute inset-0">
-            <FaXmark className="text-3xl" />
+            <FaArrowLeft className="text-3xl md:text-4xl lg:text-5xl" />
           </button>
-          <span className="text-3xl text-white text-center font-bold">Friend</span>
+          <span className="text-3xl md:text-4xl lg:text-5xl text-white text-center font-header">Friend</span>
         </div>
 
-        <section className="text-white py-4">
+        <section className="text-white py-4 max-w-2xl mx-auto">
           <div className="flex justify-between">
             <div className="profile">
               <div className="flex justify-between items-center w-full">
-                <div className="text-2xl font-header">{selectedFriend.displayName}</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold">{selectedFriend.displayName}</div>
               </div>
               <div className="flex justify-start gap-2 items-center">
                 <span>
@@ -68,9 +68,9 @@ const FriendProfile = () => {
             </button>
           </div> */}
         </section>
-        <section className="text-white py-4 border-t-2">
+        <section className="text-white py-4 border-t-2 max-w-2xl mx-auto">
           <div className="Statistics">
-            <h1 className="text-2xl font-bold pb-2">Statistics</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold pb-2">Statistics</h1>
             <div className="grid grid-cols-2 place-content-center gap-4 px-4">
               <div className="">
                 <div className="flex items-center justify-center bg-[#696969] rounded-xl">
@@ -97,10 +97,10 @@ const FriendProfile = () => {
             </div>
           </div>
         </section>
-        <section className="text-white py-4 border-t-2">
+        <section className="text-white py-4 border-t-2 max-w-2xl mx-auto">
           <div className="Acheivements">
             <div className="flex justify-between items-center">
-              <h1 className="text-2xl font-bold pb-2">Achievements</h1>
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold pb-2">Achievements</h1>
               <button onClick={() => setSeeAchievements(true)}>View All</button>
             </div>
             <div className="max-h-[400px] overflow-hidden">

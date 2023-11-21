@@ -45,7 +45,7 @@ const FilteredVerses = ({ category, animate }: { category: string; animate: bool
         hidden: { opacity: 0, height: "0px" },
         show: { opacity: 1, height: "250px" },
       }}
-      className={`flex overflow-auto gap-5 border-t-2 border-gray-500`}
+      className={`flex overflow-auto gap-5 border-t-2 border-gray-500 md:lg:max-w-[1000px]`}
     >
       {verseData
         .filter((verse: SelectedVerse) => verse.category === category.toLowerCase())
@@ -111,17 +111,17 @@ const Categories = () => {
 
   return (
     <>
-      <div className="grid place-content-center gap-5 overscroll-auto pb-20">
+      <div className="grid place-content-center gap-5 overscroll-auto pb-20 ">
         {verseCategories.map((category, index) => (
-          <div key={index} className="bg-white overflow-hidden rounded-3xl">
+          <div key={index} className="bg-white overflow-hidden rounded-3xl ">
             <button onClick={() => handleClick(category)} className={`w-full flex justify-between items-center p-3`}>
-              <span className="h-full text-3xl text-black">{category}</span>
+              <span className="h-full text-2xl md:text-3xl lg:text-4xl text-black font-header">{category}</span>
               <motion.span
                 onClick={() => handleSeeAll(category)}
                 initial={false}
                 animate={{ opacity: openCategories[category] ? 1 : 0 }}
                 transition={{ ease: "easeIn", duration: 0.3 }}
-                className="text-xl text-black"
+                className="text-xl md:text-2xl lg:text-3xl text-black font-header"
               >
                 {openCategories[category] ? "See All" : ""}
               </motion.span>

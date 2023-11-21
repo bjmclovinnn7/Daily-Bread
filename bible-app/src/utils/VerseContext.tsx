@@ -20,6 +20,8 @@ interface VerseContextType {
   saveTranslation: (translation: string) => void
   changeLearnMethods: (oneLetterMode: boolean) => void
   oneLetterMode: boolean
+  changeHints: (hintsOn: boolean) => void
+  hintsOn: boolean
 }
 const VerseContext = createContext<VerseContextType | undefined>(undefined)
 
@@ -52,9 +54,18 @@ export function VerseProvider({ children }: { children: ReactNode }) {
     const initialValue = saved ? JSON.parse(saved) : false // Initialize to null if not found
     return initialValue
   })
+  const [hintsOn, setHintsOff] = useState(() => {
+    const saved = localStorage.getItem("oneWordMode")
+    const initialValue = saved ? JSON.parse(saved) : false // Initialize to null if not found
+    return initialValue
+  })
 
   const changeLearnMethods = () => {
     setOneLetterMode(!oneLetterMode)
+  }
+
+  const changeHints = () => {
+    setHintsOff(!hintsOn)
   }
 
   const saveTranslation = (translation: string) => {
@@ -80,6 +91,8 @@ export function VerseProvider({ children }: { children: ReactNode }) {
     currentCategory,
     changeLearnMethods,
     oneLetterMode,
+    hintsOn,
+    changeHints,
   }
   return <VerseContext.Provider value={contextValue}>{children}</VerseContext.Provider>
 }

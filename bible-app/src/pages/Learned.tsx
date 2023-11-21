@@ -41,38 +41,30 @@ const Learned = () => {
   return (
     <>
       <div className="h-screen w-full bg-[#444444] text-white p-4">
-        <div className="relative flex justify-between items-center">
+        <div className="relative flex justify-between items-center ">
           <button onClick={() => navigate("/")} className="">
-            <FaXmark className="text-3xl" />
+            <FaXmark className="text-3xl md:text-4xl lg:text-5xl" />
           </button>
-          <span className="text-3xl text-white text-center">Learned</span>
-          <div className="flex items-center gap-2">
+          <span className="text-3xl md:text-4xl lg:text-5xl text-white text-center font-header">Learned</span>
+          <div className="flex items-center gap-2 text-3xl md:text-4xl lg:text-5xl">
             <span>{userData.learnedVerses.length}</span>
-            <FaTrophy className="text-yellow-500 text-2xl" />
+            <FaTrophy className="text-yellow-500" />
           </div>
         </div>
-        <div className="p-2">
-          <div className="text-black">
-            <div className="p-2 grid w-full">
-              {userData ? (
-                <ul className="space-y-2">
-                  {userData.learnedVerses.map((verse) => (
-                    <button
-                      onClick={() => handleReview(verse.id)}
-                      key={verse.id}
-                      className="border-2 bg-white shadow-2xl rounded-3xl p-2 text-start w-full"
-                    >
-                      <span className="block text-2xl font-bold">{verse.id}</span>
-                      <span className="block">{verse.translations}</span>
-                      <span>{handleTimeStamp(verse.timeStamp)}</span>
-                    </button>
-                  ))}
-                </ul>
-              ) : (
-                "You haven't learned any verses yet."
-              )}
-            </div>
-          </div>
+        <div className="grid pt-4 sm:grid-cols-2 place-content-center max-w-2xl mx-auto text-white gap-2">
+          {userData
+            ? userData.learnedVerses.map((verse) => (
+                <button
+                  onClick={() => handleReview(verse.id)}
+                  key={verse.id}
+                  className="text-center flex items-center justify-between gap-8 px-4 text-2xl border-2 w-full rounded-3xl p-4"
+                >
+                  <span className="block text-2xl font-bold">{verse.id}</span>
+                  <span className="block">{verse.translations}</span>
+                  <span>{handleTimeStamp(verse.timeStamp)}</span>
+                </button>
+              ))
+            : "You haven't learned any verses yet."}
         </div>
       </div>
     </>

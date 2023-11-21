@@ -6,7 +6,7 @@ import { FaTrophy, FaXmark, FaPlus } from "react-icons/fa6"
 
 const Friends = () => {
   const navigate = useNavigate()
-  const { saveSelectedFriend, userFriends } = useUserContext()
+  const { saveSelectedFriend, userFriends, getUpdatedFriendData } = useUserContext()
   const [open, setOpen] = useState(true)
 
   interface UserLearnedVerses {
@@ -35,6 +35,7 @@ const Friends = () => {
   const handleNavigateToFriend = (friendData: UserData) => {
     console.log(friendData.displayName)
     saveSelectedFriend(friendData)
+    getUpdatedFriendData(friendData)
     navigate("/friendProfile")
   }
 
@@ -47,16 +48,16 @@ const Friends = () => {
       <div
         className={`h-screen w-full relative overflow-hidden bg-[#444444] text-white ${
           open ? "" : " bg-black bg-clip-padding backdrop-filter bg-opacity-30"
-        } transition-all duration-500 p-4 `}
+        } transition-all duration-500 p-4`}
       >
-        <div className="relative block text-center">
+        <div className="relative block text-center text-3xl md:text-4xl lg:text-5xl">
           <button onClick={() => navigate("/")} className="absolute inset-0">
-            <FaXmark className="text-3xl" />
+            <FaXmark className="" />
           </button>
-          <span className="text-3xl text-white text-center font-bold">Friends</span>
+          <span className=" text-white text-center font-header">Friends</span>
         </div>
 
-        <div className="grid p-4">
+        <div className="grid p-4 max-w-2xl mx-auto">
           <button
             onClick={() => setOpen(!open)}
             className="flex h-8 justify-center items-center gap-2 bg-white text-black rounded-full text-xl"
@@ -66,17 +67,18 @@ const Friends = () => {
           </button>
         </div>
 
-        <div className="">
-          <div className="flex items-center gap-2 pl-2">
-            <span className="text-2xl font-bold">{userFriends ? userFriends?.length : 0}</span>
-            <span className="text-2xl font-bold">{userFriends?.length === 1 ? "Friend" : "Friends"}</span>
-          </div>
+        <div className="flex items-center gap-2 pl-2 max-w-2xl mx-auto">
+          <span className="text-2xl font-bold">{userFriends ? userFriends?.length : 0}</span>
+          <span className="text-2xl font-bold">{userFriends?.length === 1 ? "Friend" : "Friends"}</span>
+        </div>
+
+        <div className="grid sm:grid-cols-2 place-content-center max-w-2xl mx-auto">
           {sortedFriends ? (
             sortedFriends.map((friend, index) => (
-              <div key={index} className="p-2">
+              <div key={index} className="p-2 ">
                 <button
                   onClick={() => handleNavigateToFriend(friend)}
-                  className=" text-center flex items-center justify-between px-8 text-2xl border-2 w-full rounded-3xl p-4"
+                  className=" text-center flex items-center justify-between gap-8 px-4 text-2xl border-2 w-full rounded-3xl p-4"
                 >
                   <span>{friend.displayName}</span>
                   <div className="flex gap-2 items-center">

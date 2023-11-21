@@ -115,10 +115,10 @@ const SearchFriends = ({ open, setOpen }: Props) => {
   return (
     <>
       <AnimatePresence>
-        <motion.div ref={scope} className={`absolute top-[15vh] inset-0 ${open ? "pointer-events-none" : ""}`}>
+        <motion.div ref={scope} className={`absolute top-[15vh] inset-0  ${open ? "pointer-events-none" : ""}`}>
           <motion.div
             initial={{ transform: "translateY(100%)" }}
-            className="searchbox h-screen w-screen bg-white border-2 p-4 rounded-3xl "
+            className="searchbox h-screen w-screen bg-white border-2 p-4 rounded-3xl max-w-2xl mx-auto"
           >
             <div className="flex items-center">
               <button className="w-1/3 p-2 font-bold text-start text-lg text-black" onClick={handleDone}>
@@ -130,7 +130,7 @@ const SearchFriends = ({ open, setOpen }: Props) => {
               <div className="p-3 bg-gray-200 rounded text-center flex items-center justify-center gap-2">
                 <BiSearchAlt className="text-2xl text-gray-500" />
                 <input
-                  placeholder="Username or email"
+                  placeholder="Friend's email"
                   type="text"
                   onChange={(e: ChangeEvent<HTMLInputElement>) => {
                     setUserInput(e.target.value)

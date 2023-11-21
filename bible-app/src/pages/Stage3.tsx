@@ -191,7 +191,7 @@ const Stage3 = () => {
     }
 
     if (active) {
-      return <span className="font-bold text-yellow-500">{replaceHiddenWords(text)}</span>
+      return <span className="font-bold text-yellow-500 animate-pulse">{replaceHiddenWords(text)}</span>
     }
     return <span>{replaceHiddenWords(text)}</span>
   })
@@ -208,7 +208,7 @@ const Stage3 = () => {
         return (
           <>
             <div className="absolute inset-0 h-screen w-full bg-[#444444] p-5 text-white text-4xl">
-              <div className="grid place-content-center h-1/2 w-full gap-2">
+              <div className="grid place-content-center h-1/2 w-full gap-4">
                 <div className="text-center text-3xl">
                   You got <span className="text-green-500">{percentage.toFixed(2)}</span>%{" "}
                 </div>
@@ -216,7 +216,7 @@ const Stage3 = () => {
                   Nice work! You've achieved mastery of <span className="font-bold">{selectedVerse?.id}</span>.
                 </div>
                 <div className="grid place-content-center p-6">
-                  <div className="flex justify-center items-center gap-2">
+                  <div className="flex justify-center items-center gap-4">
                     <span className="text-5xl font-bold">+1</span>
                     <FaTrophy className="text-yellow-500 h-12 w-12" />
                   </div>
@@ -233,13 +233,13 @@ const Stage3 = () => {
         return (
           <>
             <div className="absolute inset-0 w-full bg-[#444444] p-5 text-4xl text-white">
-              <div className="grid place-content-center h-1/2 w-full gap-2">
+              <div className="grid place-content-center h-1/2 w-full gap-4">
                 <div className="text-center">
                   <span>You got </span>
                   <span className="text-red-500">{percentage.toFixed(2)}</span>%,
                 </div>
                 <div className="text-center">You need 100% for mastery!</div>
-                <div className="flex w-full">
+                <div className="flex w-full gap-4">
                   <Button variant={"glass2"} onClick={handleReset} className="text-center w-full text-2xl">
                     Retry
                   </Button>
@@ -256,27 +256,27 @@ const Stage3 = () => {
 
   return (
     <>
-      <div className="h-screen w-full grid p-4 lg:place-content-center bg-[#444444] text-white">
-        <div className="max-w-[600px] h-fit  ">
-          <div className="text-4xl flex justify-center items-center gap-8">
-            <button onClick={() => navigate("/all_verses")} className="h-fit w-fit">
-              <FaXmark />
-            </button>
-            <div className="flex items-center">
-              <PiCheckCircleFill className="text-green-500" />
-              <PiArrowRight className="text-2xl w-10" />
-              <PiCheckCircleFill className="text-green-500 " />
-              <PiArrowRight className="text-2xl w-10" />
-              <PiNumberCircleThreeFill className="text-yellow-500 animate-pulse" />
-            </div>
-            <div className="text-center text-2xl w-fit">{`${percentage.toFixed(1)}%`}</div>
+      <div className="h-screen w-full p-4  bg-[#444444] text-white">
+        <div className="text-3xl md:text-4xl lg:text-5xl relative flex justify-between items-center gap-8">
+          <button onClick={() => navigate("/all_verses")} className="h-fit w-1/5">
+            <FaXmark />
+          </button>
+          <div className="flex items-center justify-center w-3/5">
+            <PiCheckCircleFill className="text-green-500" />
+            <PiArrowRight className="text-2xl w-10" />
+            <PiCheckCircleFill className="text-green-500 " />
+            <PiArrowRight className="text-2xl w-10" />
+            <PiNumberCircleThreeFill className="text-yellow-500 animate-pulse" />
           </div>
+          <div className="text-end h-fit w-1/5">{`${percentage.toFixed(1)}%`}</div>
+        </div>
+        <div className="max-w-2xl mx-auto text-2xl md:text-3xl lg:text-4xl ">
           <div className="flex justify-between items-center p-4">
-            <span className="text-2xl font-bold">{selectedVerse?.id}</span>
+            <span className="font-bold">{selectedVerse?.id}</span>
           </div>
           <div className="p-4">
             <div className="grid place-content-center gap-5">
-              <div className="flex flex-wrap gap-1 text-xl">
+              <div className="flex flex-wrap gap-2">
                 {verseWordArray?.map((word, index) => (
                   <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
                 ))}
@@ -285,6 +285,7 @@ const Stage3 = () => {
               <input
                 className="w-full h-10 text-black text-xl "
                 type="text"
+                placeholder={`${oneLetterMode ? "1st Letter" : "Full Word"}`}
                 value={userInput}
                 onChange={(e) => handleSwitch(e.target.value)}
                 autoFocus={false}

@@ -86,10 +86,7 @@ const Profile = () => {
             <div className="flex justify-between items-center gap-8 p-4">
               <h1 className="font-bold text-xl">Help & Hints:</h1>
               <div
-                className={`  flex  ${
-                  hintsOn ? "justify-start " : "justify-end "
-                }  p-[10px] rounded-full w-20 bg-slate-500`}
-                data-isOn={hintsOn}
+                className={`  flex  ${hintsOn ? "justify-start " : "justify-end "}  p-2 rounded-full w-20 bg-[#696969]`}
                 onClick={() => changeHints(!hintsOn)}
               >
                 <motion.div

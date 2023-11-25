@@ -49,8 +49,8 @@ const FilteredVerses = ({ category, animate }: { category: string; animate: bool
     >
       {verseData
         .filter((verse: SelectedVerse) => verse.category === category.toLowerCase())
-        .map((verse: SelectedVerse) => (
-          <section key={verse.id} className="w-full h-full p-5" onClick={() => handleLearnClick(verse)}>
+        .map((verse: SelectedVerse, index) => (
+          <section key={index} className="w-full h-full p-5" onClick={() => handleLearnClick(verse)}>
             <div
               className={`h-full w-60 md:w-80 lg:w-96 rounded-3xl p-3 md:lg:overflow-hidden bg-[#444444] shadow-lg shadow-black`}
             >
@@ -79,7 +79,7 @@ const Categories = () => {
   const navigate = useNavigate()
   const { saveCurrentCategory } = useVerseContext()
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({})
-  const verseCategories = ["salvation", "prayer", "praise", "faith", "love"]
+  const verseCategories = ["top 100", "salvation", "prayer", "praise", "faith", "love"]
   // const bookCategories = ["All Books", "Old Testament", "New Testament"]
 
   const handleClick = (category: string) => {
@@ -111,7 +111,7 @@ const Categories = () => {
 
   return (
     <>
-      <div className="grid place-content-center gap-5 overscroll-auto pb-20 ">
+      <div className="grid place-content-center gap-5 overscroll-auto pb-4">
         {verseCategories.map((category, index) => (
           <div key={index} className="bg-white overflow-hidden rounded-3xl ">
             <button onClick={() => handleClick(category)} className={`w-full flex justify-between items-center p-3`}>

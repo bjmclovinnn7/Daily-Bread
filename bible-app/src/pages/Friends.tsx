@@ -72,7 +72,7 @@ const Friends = () => {
           <span className="text-2xl font-bold">{userFriends?.length === 1 ? "Friend" : "Friends"}</span>
         </div>
 
-        <div className="grid sm:grid-cols-2 place-content-center max-w-2xl mx-auto">
+        <div className="grid sm:grid-cols-2 max-w-2xl mx-auto">
           {sortedFriends ? (
             sortedFriends.map((friend, index) => (
               <div key={index} className="p-2 ">

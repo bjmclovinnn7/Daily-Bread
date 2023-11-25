@@ -8,17 +8,64 @@ import { useUserContext } from "../utils/UserContext"
 import { FaTrophy } from "react-icons/fa"
 import { PiNumberCircleThreeFill, PiArrowRight, PiCheckCircleFill } from "react-icons/pi"
 import { FaXmark } from "react-icons/fa6"
+import HintMessage from "../comps/HintMessage"
+import { motion } from "framer-motion"
 
 const Stage3 = () => {
+  const stageDetails = {
+    id: "Stage 3",
+    goal: "If you get all of the words correct, you will get your mastery trophy! If you don't, you'll need totry again. You got this!",
+  }
   const navigate = useNavigate()
-  const { selectedVerse, translation, changeLearnMethods, oneLetterMode } = useVerseContext()
+  const { selectedVerse, translation, changeLearnMethods, oneLetterMode, hintsOn } = useVerseContext()
+  const [showInstructions, setShowInstructions] = useState(hintsOn)
   const { userData } = useUserContext()
   const [userInput, setUserInput] = useState("")
   const [activeWordIndex, setActiveWordIndex] = useState(0)
   const [correctArray, setCorrectArray] = useState<boolean[]>([])
+  const formatString = (id: string) => {
+    let idArr = id.split(" ")
+    let formattedArr = []
+
+    for (let x = 0; x < idArr.length; x++) {
+      if (idArr[x].includes(":") || idArr[x].includes("-")) {
+        let splitItems = idArr[x].split(/(:|-)/).filter((item: any) => item !== "") // Split by ':' or '-' and filter out empty strings
+        formattedArr.push(...splitItems)
+      } else {
+        formattedArr.push(idArr[x])
+      }
+    }
+
+    let finalArray = []
+    let index = 0
+
+    while (index < formattedArr.length) {
+      let current = formattedArr[index]
+
+      if (/^[a-zA-Z0-9]+$/.test(current)) {
+        let combined = current
+
+        while (index + 1 < formattedArr.length && !/^[a-zA-Z0-9]+$/.test(formattedArr[index + 1])) {
+          combined += formattedArr[index + 1]
+          index++
+        }
+
+        finalArray.push(combined)
+      } else {
+        finalArray.push(current)
+      }
+
+      index++
+    }
+
+    return finalArray.join(" ")
+  }
 
   const verseWordArray =
-    selectedVerse?.translations[translation as keyof typeof selectedVerse.translations].split(" ") || []
+    selectedVerse?.translations[translation as keyof typeof selectedVerse.translations]
+      .concat(" " + formatString(selectedVerse?.id))
+      .split(" ") || []
+
   const cleanedUpVerseArray = verseWordArray.map((word) => word.replace(/[^a-zA-Z0-9]/g, ""))
   const totalWordsRef = useRef(cleanedUpVerseArray.length)
   const correctWords = correctArray.filter((correct) => correct === true).length
@@ -105,6 +152,10 @@ const Stage3 = () => {
       // Do not allow another input after reaching the last word
       return
     }
+    if (value === " ") {
+      // Ignore space character
+      return
+    }
 
     if (value.endsWith(" ")) {
       if (activeWordIndex === totalWordsRef.current - 1) {
@@ -137,6 +188,11 @@ const Stage3 = () => {
 
     if (activeWordIndex === totalWordsRef.current - 1 && userInput === "Completed") {
       // Do not allow further input after reaching the last word
+      return
+    }
+
+    if (value === " ") {
+      // Ignore space character
       return
     }
 
@@ -176,7 +232,7 @@ const Stage3 = () => {
     const replaceHiddenWords = (text: string) => {
       for (let i = 0; i < text.length; i++) {
         if (text.length >= 0) {
-          return "_"
+          return "?"
         } else {
           return text
         }
@@ -256,7 +312,7 @@ const Stage3 = () => {
 
   return (
     <>
-      <div className="h-screen w-full p-4  bg-[#444444] text-white">
+      <div className="fixed h-screen w-full p-4  bg-[#444444] text-white">
         <div className="text-3xl md:text-4xl lg:text-5xl relative flex justify-between items-center gap-8">
           <button onClick={() => navigate("/all_verses")} className="h-fit w-1/5">
             <FaXmark />
@@ -270,20 +326,20 @@ const Stage3 = () => {
           </div>
           <div className="text-end h-fit w-1/5">{`${percentage.toFixed(1)}%`}</div>
         </div>
-        <div className="max-w-2xl mx-auto text-2xl md:text-3xl lg:text-4xl ">
-          <div className="flex justify-between items-center p-4">
+        <div className="max-w-2xl mx-auto text-2xl md:text-3xl lg:text-4xl pt-4">
+          <div className="flex justify-between items-center px-2 md:py-4 lg:py-8">
             <span className="font-bold">{selectedVerse?.id}</span>
           </div>
-          <div className="p-4">
-            <div className="grid place-content-center gap-5">
-              <div className="flex flex-wrap gap-2">
+          <div className="px-2">
+            <div className="grid gap-2 md:gap-4 lg:gap-8">
+              <div className="flex flex-wrap justify-center gap-x-2 text-lg md:text-2xl lg:text-3xl">
                 {verseWordArray?.map((word, index) => (
                   <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
                 ))}
               </div>
 
               <input
-                className="w-full h-10 text-black text-xl "
+                className="w-full h-8 lg:h-10 text-black text-xl"
                 type="text"
                 placeholder={`${oneLetterMode ? "1st Letter" : "Full Word"}`}
                 value={userInput}
@@ -291,18 +347,43 @@ const Stage3 = () => {
                 autoFocus={false}
               />
             </div>
-            <div className="flex justify-center items-center font-bold pt-4">
-              <Button
-                variant={"glass3"}
+            <div className="p-2 flex justify-center items-center gap-4 text-xl">
+              <span>1st Letter</span>
+              <div
+                className={`  flex  ${
+                  oneLetterMode ? "justify-start " : "justify-end "
+                }  p-2 rounded-full w-20 bg-[#696969]`}
                 onClick={() => changeLearnMethods(!oneLetterMode)}
-                className="w-fit p-2 border-2 border-white rounded-full bg-blueGray-300"
               >
-                {oneLetterMode ? "1st Letter" : "Full Word"}
-              </Button>
+                <motion.div
+                  className={` ${
+                    oneLetterMode ? "bg-gray-200" : "bg-gray-400"
+                  } rounded-full text-black px-4 grid place-content-center w-1/2 h-8`}
+                  layout
+                  transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                  whileHover={{ scale: 1.2 }}
+                ></motion.div>
+              </div>
+              <span>Full Word</span>
             </div>
+            <button
+              onClick={() =>
+                setTimeout(() => {
+                  setShowInstructions(!showInstructions)
+                }, 300)
+              }
+              className=" absolute bottom-10 right-10 left-10 text-base rounded-full"
+            >
+              Show Instructions
+            </button>
           </div>
         </div>
       </div>
+      <HintMessage
+        showInstructions={showInstructions}
+        setShowInstructions={setShowInstructions}
+        stageDetails={stageDetails}
+      />
       <CompletionMessage />
     </>
   )

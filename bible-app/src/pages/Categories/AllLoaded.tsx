@@ -39,10 +39,10 @@ const AllVerses = () => {
         <h1 className=" text-center font-header">{currentCategory.toLowerCase()}</h1>
       </div>
       <div className="gap-4 p-4 grid place-content-center max-w-2xl mx-auto">
-        {filteredVerses.map((verse: Verse) => (
+        {filteredVerses.map((verse: Verse, index) => (
           <div
             onClick={() => handleClick(verse)}
-            key={verse.id}
+            key={index}
             className="text-black border-2 p-4 bg-white shadow-2xl rounded-3xl"
           >
             <div className="flex justify-between items-center ">

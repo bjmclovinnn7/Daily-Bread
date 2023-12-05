@@ -35,6 +35,7 @@ const Login = () => {
       const userDoc = await getDoc(currentUserRef)
       if (userDoc.exists()) {
         // User already exists, handle it as needed
+
         console.log("User already exists")
       } else {
         // User doesn't exist, create the user document
@@ -59,6 +60,13 @@ const Login = () => {
     }
   }
 
+  const uidConversion = (displayName: string, uid: string) => {
+    let last5 = uid.slice(-5)
+    let updatedDisplay = displayName.split(" ")[0].toLocaleLowerCase()
+    let newUid = updatedDisplay + "#" + last5
+    return newUid
+  }
+
   const createUserDoc = async (currentUser: any) => {
     console.log("Creating User Document")
     const userDocRef = doc(colRefUsers, currentUser.user.uid)
@@ -67,7 +75,7 @@ const Login = () => {
     await setDoc(userDocRef, {
       displayName: currentUser.user.displayName,
       email: currentUser.user.email,
-      uid: currentUser.user.uid,
+      uid: uidConversion(currentUser.user.displayName, currentUser.user.uid),
       createdOn: new Date(),
       learnedVerses: [],
       friends: [],

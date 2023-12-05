@@ -5,7 +5,7 @@ import { doc, onSnapshot, getDoc } from "firebase/firestore"
 
 interface UserLearnedVerses {
   id: string
-  translations: string
+  translation: string
   learned: boolean
   category: string
   timeStamp: {
@@ -15,8 +15,8 @@ interface UserLearnedVerses {
 }
 
 interface UserData {
-  uid: string
-  email: string
+  uid: string // needs to be hidden or partial so that other's can't abuse it. Displayname + # + last 5 of UID?
+  email: string // maybe we don't add email?
   displayName: string
   createdOn: {
     seconds: number
@@ -24,6 +24,7 @@ interface UserData {
   }
   learnedVerses: UserLearnedVerses[]
   friends: UserData[]
+  experience: number
 }
 
 interface UserContextType {
@@ -83,6 +84,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
               createdOn: friendData.createdOn,
               learnedVerses: friendData.learnedVerses,
               friends: friendData.friends,
+              experience: friendData.experience || 0,
             }
           } else {
             return friend
@@ -128,6 +130,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
                 createdOn: friendData.createdOn,
                 learnedVerses: friendData.learnedVerses,
                 friends: friendData.friends,
+                experience: friendData.experience || 0,
               }
 
               updatedFriendData.push(userFriendData)
@@ -175,6 +178,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
             },
             learnedVerses: userData?.learnedVerses,
             friends: userData?.friends,
+            experience: userData?.experience,
           })
 
           saveToLocalStorage("userData", userData)

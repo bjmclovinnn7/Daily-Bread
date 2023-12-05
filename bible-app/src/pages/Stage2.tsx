@@ -1,19 +1,24 @@
 import { useVerseContext } from "../utils/VerseContext"
 import { useNavigate } from "react-router"
 import React, { useState, useRef } from "react"
-import { Button } from "../comps/Button"
 import { PiNumberCircleTwoFill, PiNumberCircleThreeFill, PiArrowRight, PiCheckCircleFill } from "react-icons/pi"
 import { FaXmark } from "react-icons/fa6"
 import HintMessage from "../comps/HintMessage"
 import { motion } from "framer-motion"
+import CompletionMessage from "../comps/Stages/CompletionMessage"
+import LetterMode from "../comps/Stages/LetterMode"
 const Stage2 = () => {
   const stageDetails = {
     id: "Stage 2",
     goal: "If you get over 90% of the words correct, you will move on to the next stage. If you don't, you'll need to try again!",
+    stagePercentage: 90,
+    stageNavigate: "/stage3",
+    nextStage: "Stage 3",
   }
   const navigate = useNavigate()
   const { selectedVerse, translation, oneLetterMode, changeLearnMethods, hintsOn } = useVerseContext()
   const [showInstructions, setShowInstructions] = useState(hintsOn)
+  const [showCompletionMessage, setShowCompletionMessage] = useState(false)
   const [userInput, setUserInput] = useState("")
   const [activeWordIndex, setActiveWordIndex] = useState(0)
   const [correctArray, setCorrectArray] = useState<boolean[]>([])
@@ -54,12 +59,10 @@ const Stage2 = () => {
 
     return finalArray.join(" ")
   }
-
   const verseWordArray =
     selectedVerse?.translations[translation as keyof typeof selectedVerse.translations]
       .concat(" " + formatString(selectedVerse?.id))
       .split(" ") || []
-
   const cleanedUpVerseArray = verseWordArray.map((word) => word.replace(/[^a-zA-Z0-9]/g, ""))
   const totalWordsRef = useRef(cleanedUpVerseArray.length)
   const correctWords = correctArray.filter((correct) => correct === true).length
@@ -75,7 +78,6 @@ const Stage2 = () => {
 
   const processInput = (value: string) => {
     if (activeWordIndex >= totalWordsRef.current) {
-      console.log("Finished")
       return
     }
 
@@ -90,8 +92,8 @@ const Stage2 = () => {
 
     if (value.endsWith(" ")) {
       if (activeWordIndex === totalWordsRef.current - 1) {
-        console.log("Finished")
         setUserInput("Completed")
+        setShowCompletionMessage(true)
       } else {
         setUserInput("")
         setActiveWordIndex((index) => index + 1) // Increment after updating correctArray
@@ -131,6 +133,7 @@ const Stage2 = () => {
       if (activeWordIndex === totalWordsRef.current - 1) {
         console.log("Finished")
         setUserInput("Completed")
+        setShowCompletionMessage(true)
       } else {
         setUserInput("")
         setActiveWordIndex((index) => index + 1) // Increment after updating correctArray
@@ -170,11 +173,11 @@ const Stage2 = () => {
       }
     }
     if (correct === true) {
-      return <span className="font-bold text-green-500">{text}</span>
+      return <span className=" text-green-500">{text}</span>
     }
 
     if (correct === false) {
-      return <span className="font-bold text-red-500">{text}</span>
+      return <span className=" text-red-500">{text}</span>
     }
 
     if (active) {
@@ -183,64 +186,16 @@ const Stage2 = () => {
     return <span>{replaceHiddenWords(text)}</span>
   })
 
-  const CompletionMessage = () => {
-    const handleReset = () => {
-      setActiveWordIndex(0)
-      setUserInput("")
-      setCorrectArray(Array(cleanedUpVerseArray.length).fill(null))
-    }
-
-    if (activeWordIndex === totalWordsRef.current - 1 && userInput === "Completed") {
-      if (percentage >= 90) {
-        return (
-          <>
-            <div className="absolute inset-0 w-full bg-[#444444] p-5 text-4xl text-white">
-              <div className="grid place-content-center h-1/2 w-full gap-4">
-                <div className="text-center">
-                  <span>You got </span>
-                  <span className="text-green-500">{percentage.toFixed(2)}</span>%,
-                </div>
-                <div className="text-center">Nice work!</div>
-                <div className="flex w-full gap-4">
-                  <Button variant={"glass2"} onClick={handleReset} className="text-center w-40 text-2xl">
-                    Retry
-                  </Button>
-                  <Button onClick={() => navigate("/stage3")} variant={"glass3"} className="w-40 text-2xl">
-                    Stage 3
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </>
-        )
-      } else {
-        return (
-          <>
-            <div className="absolute inset-0 w-full bg-[#444444] p-5 text-4xl text-white">
-              <div className="grid place-content-center h-1/2 w-full gap-4">
-                <div className="text-center">
-                  <span>You got </span>
-                  <span className="text-red-500">{percentage.toFixed(2)}</span>%,
-                </div>
-                <div className="text-center">90% or better is needed.</div>
-                <div className="flex w-full">
-                  <Button variant={"glass2"} onClick={handleReset} className="text-center w-full text-2xl">
-                    Retry
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </>
-        )
-      }
-    } else {
-      return
-    }
+  const handleReset = () => {
+    setActiveWordIndex(0)
+    setUserInput("")
+    setCorrectArray(Array(cleanedUpVerseArray.length).fill(null))
+    setShowCompletionMessage(false)
   }
 
   return (
     <>
-      <div className="fixed h-screen w-full p-4  bg-[#444444] text-white">
+      <div className="fixed inset-0 h-screen w-full p-4 bg-black text-white font-Inter">
         <div className="text-3xl md:text-4xl lg:text-5xl relative flex justify-between items-center gap-8">
           <button onClick={() => navigate("/all_verses")} className="h-fit w-1/5">
             <FaXmark />
@@ -252,62 +207,60 @@ const Stage2 = () => {
             <PiArrowRight className="text-2xl w-10" />
             <PiNumberCircleThreeFill className="text-red-500" />
           </div>
-          <div className="text-end h-fit w-1/5">{`${percentage.toFixed(1)}%`}</div>
+          <div className="text-end h-fit w-1/5">{`${percentage.toFixed(0)}%`}</div>
         </div>
         <div className="max-w-2xl mx-auto text-2xl md:text-3xl lg:text-4xl pt-4">
-          <div className="flex justify-between items-center px-2 md:py-4 lg:py-8">
-            <span className="font-bold">{selectedVerse?.id}</span>
-          </div>
           <div className="px-2">
-            <div className="grid place-content-center gap-2 md:gap-4 lg:gap-8">
-              <div className="flex flex-wrap gap-x-2 text-lg md:text-2xl lg:text-3xl">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={{
+                visible: { opacity: 1, x: 0 },
+                hidden: { opacity: 0, x: -50 },
+              }}
+              transition={{ type: "spring", stiffness: 200, damping: 10 }}
+              className="grid gap-2 md:gap-4 lg:gap-8"
+            >
+              <div className="flex flex-wrap gap-x-2 text-lg md:text-2xl lg:text-3xl py-4">
                 {verseWordArray?.map((word, index) => (
                   <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
                 ))}
               </div>
 
               <input
-                className="w-full md:8 lg:h-10 text-black "
+                className="w-full h-8 lg:h-10 text-black bg-white"
                 type="text"
                 placeholder={`${oneLetterMode ? "1st Letter" : "Full Word"}`}
                 value={userInput}
                 onChange={(e) => handleSwitch(e.target.value)}
                 autoFocus={false}
               />
-            </div>
-            <div className="p-2 flex justify-center items-center gap-4 text-xl">
-              <span>1st Letter</span>
-              <div
-                className={`  flex  ${
-                  oneLetterMode ? "justify-start " : "justify-end "
-                }  p-2 rounded-full w-20 bg-[#696969]`}
-                onClick={() => changeLearnMethods(!oneLetterMode)}
-              >
-                <motion.div
-                  className={` ${
-                    oneLetterMode ? "bg-gray-200" : "bg-gray-400"
-                  } rounded-full text-black px-4 grid place-content-center w-1/2 h-8`}
-                  layout
-                  transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                  whileHover={{ scale: 1.2 }}
-                ></motion.div>
-              </div>
-              <span>Full Word</span>
-            </div>
+            </motion.div>
+            {showCompletionMessage && (
+              <CompletionMessage
+                percentage={percentage}
+                handleReset={handleReset}
+                stageDetails={stageDetails}
+                handleLearnVerse={() => null}
+              />
+            )}
+            <LetterMode oneLetterMode={oneLetterMode} changeLearnMethods={changeLearnMethods} />
+
             <button
               onClick={() =>
                 setTimeout(() => {
                   setShowInstructions(!showInstructions)
                 }, 300)
               }
-              className=" absolute bottom-10 right-10 left-10 text-base rounded-full"
+              className="absolute bottom-10 right-10 left-10 text-base rounded-full"
             >
               Show Instructions
             </button>
           </div>
         </div>
       </div>
-      <CompletionMessage />
+
       <HintMessage
         showInstructions={showInstructions}
         setShowInstructions={setShowInstructions}

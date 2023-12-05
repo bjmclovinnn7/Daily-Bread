@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { useUserContext } from "../../utils/UserContext"
 import { FaTrophy } from "react-icons/fa6"
 import verseData from "../../utils/Verses.json"
+import { FaArrowRight } from "react-icons/fa"
 // import bookData from "../../utils/Biblebooks.json"
 
 interface SelectedVerse {
@@ -45,17 +46,23 @@ const FilteredVerses = ({ category, animate }: { category: string; animate: bool
         hidden: { opacity: 0, height: "0px" },
         show: { opacity: 1, height: "250px" },
       }}
-      className={`flex overflow-auto gap-5 border-t-2 border-gray-500 md:lg:max-w-[1000px]`}
+      className={`flex overflow-auto h-full md:lg:max-w-[1000px]`}
     >
       {verseData
-        .filter((verse: SelectedVerse) => verse.category === category.toLowerCase())
+        .filter((verse: SelectedVerse) => verse.category === category)
         .map((verse: SelectedVerse, index) => (
-          <section key={index} className="w-full h-full p-5" onClick={() => handleLearnClick(verse)}>
+          <section
+            key={index}
+            className={`w-full h-full px-4 pb-4 font-Inter ${animate ? "bg-white" : "bg-[#4F4F4F]"}`}
+            onClick={() => handleLearnClick(verse)}
+          >
             <div
-              className={`h-full w-60 md:w-80 lg:w-96 rounded-3xl p-3 md:lg:overflow-hidden bg-[#444444] shadow-lg shadow-black`}
+              className={`h-full w-60 md:w-80 lg:w-96 rounded p-3 md:lg:overflow-hidden ${
+                animate ? "bg-white border" : "bg-[#4F4F4F]"
+              }`}
             >
               <div className="flex justify-center items-center">
-                <h1 className="text-xl font-bold w-full text-white">{verse.id}</h1>
+                <h1 className="w-full text-black">{verse.id}</h1>
 
                 {userData.learnedVerses &&
                 userData.learnedVerses.some((learnedVerse) => learnedVerse.id === verse.id) ? (
@@ -65,7 +72,7 @@ const FilteredVerses = ({ category, animate }: { category: string; animate: bool
                 )}
               </div>
 
-              <div className="verseText text-xl text-white">
+              <div className="verseText text-black">
                 {verse.translations[translation as keyof typeof verse.translations]}
               </div>
             </div>
@@ -75,14 +82,20 @@ const FilteredVerses = ({ category, animate }: { category: string; animate: bool
   )
 }
 
-const Categories = () => {
+interface Props {
+  setCategoryOpened: (item: boolean) => void
+  categoryOpened: boolean
+}
+
+const Categories = ({ setCategoryOpened, categoryOpened }: Props) => {
   const navigate = useNavigate()
   const { saveCurrentCategory } = useVerseContext()
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({})
-  const verseCategories = ["top 100", "salvation", "prayer", "praise", "faith", "love"]
+  const verseCategories = ["Top 100", "Salvation", "Prayer", "Praise", "Faith", "Love", "Birth and Youth"]
   // const bookCategories = ["All Books", "Old Testament", "New Testament"]
 
   const handleClick = (category: string) => {
+    setCategoryOpened(!categoryOpened)
     setOpenCategories((prevOpenCategories) => ({
       ...prevOpenCategories,
       [category]: !prevOpenCategories[category],
@@ -112,23 +125,45 @@ const Categories = () => {
   return (
     <>
       <div className="grid place-content-center gap-5 overscroll-auto pb-4">
-        {verseCategories.map((category, index) => (
-          <div key={index} className="bg-white overflow-hidden rounded-3xl ">
-            <button onClick={() => handleClick(category)} className={`w-full flex justify-between items-center p-3`}>
-              <span className="h-full text-2xl md:text-3xl lg:text-4xl text-black font-header">{category}</span>
-              <motion.span
-                onClick={() => handleSeeAll(category)}
-                initial={false}
-                animate={{ opacity: openCategories[category] ? 1 : 0 }}
-                transition={{ ease: "easeIn", duration: 0.3 }}
-                className="text-xl md:text-2xl lg:text-3xl text-black font-header"
-              >
-                {openCategories[category] ? "See All" : ""}
-              </motion.span>
-            </button>
-            <FilteredVerses category={category} animate={openCategories[category]} />
-          </div>
-        ))}
+        {verseCategories.map((category, index) => {
+          const versesInCategory = verseData.filter((verse) => verse.category === category)
+
+          return (
+            <div
+              key={index}
+              className={`${openCategories[category] ? "bg-white" : "bg-[#4F4F4F]"} overflow-hidden rounded-lg h-fit`}
+            >
+              <button onClick={() => handleClick(category)} className={`w-full flex justify-between items-center p-4`}>
+                <div
+                  className={`h-full text-lg md:text-xl lg:text-2xl font-Inter text-start grid ${
+                    openCategories[category] ? "text-black" : "text-white"
+                  }`}
+                >
+                  <span>{category}</span>
+                  <span className=" text-xs">{versesInCategory.length} Verses</span>
+                </div>
+                <motion.span
+                  onClick={() => handleSeeAll(category)}
+                  initial={false}
+                  animate={{ opacity: openCategories[category] ? 1 : 0 }}
+                  className={`md:text-xl lg:text-2xl text-black font-Inter flex justify-center items-center gap-2 ${
+                    openCategories[category] ? "" : "pointer-events-none"
+                  }`}
+                >
+                  {openCategories[category] ? (
+                    <>
+                      <span>See All</span>
+                      <FaArrowRight className="text-sm" />
+                    </>
+                  ) : (
+                    ""
+                  )}
+                </motion.span>
+              </button>
+              <FilteredVerses category={category} animate={openCategories[category]} />
+            </div>
+          )
+        })}
 
         {/* <div className="text-3xl font-bold">Memorize the books!</div>
         {bookCategories.map((category, index) => (

@@ -65,6 +65,7 @@ export default {
       fontFamily: {
         body: ["Bebas Neue"],
         header: ["Shrikhand", "cursive"],
+        Inter: ["Inter"],
       },
     },
   },

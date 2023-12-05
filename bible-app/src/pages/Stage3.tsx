@@ -1,28 +1,39 @@
 import { useVerseContext } from "../utils/VerseContext"
 import { useNavigate } from "react-router"
 import React, { useState, useRef } from "react"
-import { Button } from "../comps/Button"
 import { colRefUsers } from "../utils/firebase"
 import { getDoc, updateDoc, doc } from "firebase/firestore"
 import { useUserContext } from "../utils/UserContext"
-import { FaTrophy } from "react-icons/fa"
+
 import { PiNumberCircleThreeFill, PiArrowRight, PiCheckCircleFill } from "react-icons/pi"
 import { FaXmark } from "react-icons/fa6"
 import HintMessage from "../comps/HintMessage"
 import { motion } from "framer-motion"
+import CompletionMessage from "../comps/Stages/CompletionMessage"
+import Stage3FinalCompletion from "../comps/Stage3FinalCompletion"
+import LetterMode from "../comps/Stages/LetterMode"
 
 const Stage3 = () => {
-  const stageDetails = {
-    id: "Stage 3",
-    goal: "If you get all of the words correct, you will get your mastery trophy! If you don't, you'll need totry again. You got this!",
-  }
   const navigate = useNavigate()
+
   const { selectedVerse, translation, changeLearnMethods, oneLetterMode, hintsOn } = useVerseContext()
   const [showInstructions, setShowInstructions] = useState(hintsOn)
+  const [showCompletionMessage, setShowCompletionMessage] = useState(false)
+  const [showFinalCompletionMessage, setShowFinalCompletionMessage] = useState(false)
+  const [userExperience, setUserExperience] = useState(0)
   const { userData } = useUserContext()
   const [userInput, setUserInput] = useState("")
   const [activeWordIndex, setActiveWordIndex] = useState(0)
   const [correctArray, setCorrectArray] = useState<boolean[]>([])
+
+  const stageDetails = {
+    id: "Stage 3",
+    goal: "If you get all of the words correct, you will get your mastery trophy! If you don't, you'll need totry again. You got this!",
+    stagePercentage: 100,
+    stageNavigate: "/",
+    nextStage: "Home",
+  }
+
   const formatString = (id: string) => {
     let idArr = id.split(" ")
     let formattedArr = []
@@ -60,12 +71,10 @@ const Stage3 = () => {
 
     return finalArray.join(" ")
   }
-
   const verseWordArray =
     selectedVerse?.translations[translation as keyof typeof selectedVerse.translations]
       .concat(" " + formatString(selectedVerse?.id))
       .split(" ") || []
-
   const cleanedUpVerseArray = verseWordArray.map((word) => word.replace(/[^a-zA-Z0-9]/g, ""))
   const totalWordsRef = useRef(cleanedUpVerseArray.length)
   const correctWords = correctArray.filter((correct) => correct === true).length
@@ -90,12 +99,12 @@ const Stage3 = () => {
   const handleLearnVerse = async () => {
     console.log("Creating learnedVerse Doc")
     const userId = userData?.uid
-    const userLearnedVersesRef = doc(colRefUsers, userId)
+    const userRef = doc(colRefUsers, userId)
 
     try {
       if (selectedVerse) {
         // Retrieve the user's document
-        const userDoc = await getDoc(userLearnedVersesRef)
+        const userDoc = await getDoc(userRef)
 
         if (userDoc.exists()) {
           // Get the existing user data
@@ -105,10 +114,14 @@ const Stage3 = () => {
           const learnedVerses = userData?.learnedVerses || []
 
           // Check if the verse is already in the array
-          const verseExists = learnedVerses.some((verse: UserLearnedVerses) => verse.id === selectedVerse?.id)
+          const verseExistsIndex = learnedVerses.findIndex((verse: UserLearnedVerses) => verse.id === selectedVerse?.id)
 
-          if (!verseExists) {
+          if (verseExistsIndex === -1) {
+            // Verse doesn't exist in learnedVerses array
+
             // Add the new verse to the learnedVerses array
+            setShowFinalCompletionMessage(true)
+
             learnedVerses.push({
               id: selectedVerse?.id,
               learned: true,
@@ -117,16 +130,68 @@ const Stage3 = () => {
               category: selectedVerse?.category,
             })
 
-            // Update the user's document with the modified learnedVerses array
-            await updateDoc(userLearnedVersesRef, {
+            const updatedExperience = userData?.experience || 0
+            const newExperience = updatedExperience + 10
+            setUserExperience(10)
+
+            // Update the user's experience
+            await updateDoc(userRef, {
               learnedVerses,
+              experience: newExperience,
             })
 
-            console.log("Selected verse saved successfully.")
-            navigate("/")
+            setTimeout(() => navigate("/"), 5000)
           } else {
-            console.log("Verse is already learned.")
-            navigate("/")
+            // Verse exists in learnedVerses array
+            const existingVerse = learnedVerses[verseExistsIndex]
+
+            interface timeStamp {
+              seconds: number
+              nanoseconds: number
+            }
+            // Check if the existing verse's timeStamp is today
+            const handleTimeStamp = (timeStamp: timeStamp) => {
+              const oldDate = new Date(timeStamp.seconds * 1000 + timeStamp.nanoseconds / 1000000)
+
+              const oldReadableDate = oldDate.toLocaleDateString()
+
+              const newDate = new Date().toLocaleDateString()
+
+              if (newDate === oldReadableDate) {
+                return true
+              } else {
+                return false
+              }
+            }
+
+            const today = new Date()
+
+            if (handleTimeStamp(existingVerse.timeStamp)) {
+              console.log("Verse has already been reviewed today.")
+              setUserExperience(0)
+              setShowFinalCompletionMessage(true)
+
+              setTimeout(() => navigate("/"), 5000)
+              return
+            } else {
+              // Update the user's experience with +1 for re-learning an already known verse
+              const updatedExperience = userData?.experience || 0
+              const newExperience = updatedExperience + 1
+
+              setUserExperience(1)
+              setShowFinalCompletionMessage(true)
+
+              // Update the existing verse's timeStamp to the current date
+              existingVerse.timeStamp = today
+
+              // Update the user's document with the modified learnedVerses array
+              await updateDoc(userRef, {
+                learnedVerses,
+                experience: newExperience,
+              })
+
+              setTimeout(() => navigate("/"), 5000)
+            }
           }
         } else {
           console.log("User document does not exist.")
@@ -144,7 +209,6 @@ const Stage3 = () => {
 
   const processInput = (value: string) => {
     if (activeWordIndex >= totalWordsRef.current) {
-      console.log("Finished")
       return
     }
 
@@ -159,8 +223,8 @@ const Stage3 = () => {
 
     if (value.endsWith(" ")) {
       if (activeWordIndex === totalWordsRef.current - 1) {
-        console.log("Finished")
         setUserInput("Completed")
+        setShowCompletionMessage(true)
       } else {
         setUserInput("")
         setActiveWordIndex((index) => index + 1) // Increment after updating correctArray
@@ -182,7 +246,6 @@ const Stage3 = () => {
 
   const processInputOneWord = (value: string) => {
     if (activeWordIndex >= totalWordsRef.current) {
-      console.log("Finished")
       return
     }
 
@@ -198,8 +261,8 @@ const Stage3 = () => {
 
     if (value.length === 1) {
       if (activeWordIndex === totalWordsRef.current - 1) {
-        console.log("Finished")
         setUserInput("Completed")
+        setShowCompletionMessage(true)
       } else {
         setUserInput("")
         setActiveWordIndex((index) => index + 1) // Increment after updating correctArray
@@ -239,11 +302,11 @@ const Stage3 = () => {
       }
     }
     if (correct === true) {
-      return <span className="font-bold text-green-500">{text}</span>
+      return <span className=" text-green-500">{text}</span>
     }
 
     if (correct === false) {
-      return <span className="font-bold text-red-500">{text}</span>
+      return <span className=" text-red-500">{text}</span>
     }
 
     if (active) {
@@ -252,67 +315,17 @@ const Stage3 = () => {
     return <span>{replaceHiddenWords(text)}</span>
   })
 
-  const CompletionMessage = () => {
-    const handleReset = () => {
-      setActiveWordIndex(0)
-      setUserInput("")
-      setCorrectArray(Array(cleanedUpVerseArray.length).fill(null))
-    }
-
-    if (activeWordIndex === totalWordsRef.current - 1 && userInput === "Completed") {
-      if (percentage >= 100) {
-        return (
-          <>
-            <div className="absolute inset-0 h-screen w-full bg-[#444444] p-5 text-white text-4xl">
-              <div className="grid place-content-center h-1/2 w-full gap-4">
-                <div className="text-center text-3xl">
-                  You got <span className="text-green-500">{percentage.toFixed(2)}</span>%{" "}
-                </div>
-                <div className="text-center text-2xl">
-                  Nice work! You've achieved mastery of <span className="font-bold">{selectedVerse?.id}</span>.
-                </div>
-                <div className="grid place-content-center p-6">
-                  <div className="flex justify-center items-center gap-4">
-                    <span className="text-5xl font-bold">+1</span>
-                    <FaTrophy className="text-yellow-500 h-12 w-12" />
-                  </div>
-                </div>
-
-                <Button onClick={() => handleLearnVerse()} variant={"glass3"} className="w-full text-2xl">
-                  Home
-                </Button>
-              </div>
-            </div>
-          </>
-        )
-      } else {
-        return (
-          <>
-            <div className="absolute inset-0 w-full bg-[#444444] p-5 text-4xl text-white">
-              <div className="grid place-content-center h-1/2 w-full gap-4">
-                <div className="text-center">
-                  <span>You got </span>
-                  <span className="text-red-500">{percentage.toFixed(2)}</span>%,
-                </div>
-                <div className="text-center">You need 100% for mastery!</div>
-                <div className="flex w-full gap-4">
-                  <Button variant={"glass2"} onClick={handleReset} className="text-center w-full text-2xl">
-                    Retry
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </>
-        )
-      }
-    } else {
-      return
-    }
+  const handleReset = () => {
+    setActiveWordIndex(0)
+    setUserInput("")
+    setCorrectArray(Array(cleanedUpVerseArray.length).fill(null))
+    setShowCompletionMessage(false)
+    setShowFinalCompletionMessage(false)
   }
 
   return (
     <>
-      <div className="fixed h-screen w-full p-4  bg-[#444444] text-white">
+      <div className="fixed inset-0 h-screen w-full p-4 bg-black text-white font-Inter">
         <div className="text-3xl md:text-4xl lg:text-5xl relative flex justify-between items-center gap-8">
           <button onClick={() => navigate("/all_verses")} className="h-fit w-1/5">
             <FaXmark />
@@ -324,67 +337,65 @@ const Stage3 = () => {
             <PiArrowRight className="text-2xl w-10" />
             <PiNumberCircleThreeFill className="text-yellow-500 animate-pulse" />
           </div>
-          <div className="text-end h-fit w-1/5">{`${percentage.toFixed(1)}%`}</div>
+          <div className="text-end h-fit w-1/5">{`${percentage.toFixed(0)}%`}</div>
         </div>
         <div className="max-w-2xl mx-auto text-2xl md:text-3xl lg:text-4xl pt-4">
-          <div className="flex justify-between items-center px-2 md:py-4 lg:py-8">
-            <span className="font-bold">{selectedVerse?.id}</span>
-          </div>
           <div className="px-2">
-            <div className="grid gap-2 md:gap-4 lg:gap-8">
-              <div className="flex flex-wrap justify-center gap-x-2 text-lg md:text-2xl lg:text-3xl">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={{
+                visible: { opacity: 1, x: 0 },
+                hidden: { opacity: 0, x: -50 },
+              }}
+              transition={{ type: "spring", stiffness: 200, damping: 10 }}
+              className="grid gap-2 md:gap-4 lg:gap-8"
+            >
+              <div className="flex flex-wrap gap-x-2 text-lg md:text-2xl lg:text-3xl py-4">
                 {verseWordArray?.map((word, index) => (
                   <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
                 ))}
               </div>
 
               <input
-                className="w-full h-8 lg:h-10 text-black text-xl"
+                className="w-full h-8 lg:h-10 text-black bg-white"
                 type="text"
                 placeholder={`${oneLetterMode ? "1st Letter" : "Full Word"}`}
                 value={userInput}
                 onChange={(e) => handleSwitch(e.target.value)}
                 autoFocus={false}
               />
-            </div>
-            <div className="p-2 flex justify-center items-center gap-4 text-xl">
-              <span>1st Letter</span>
-              <div
-                className={`  flex  ${
-                  oneLetterMode ? "justify-start " : "justify-end "
-                }  p-2 rounded-full w-20 bg-[#696969]`}
-                onClick={() => changeLearnMethods(!oneLetterMode)}
-              >
-                <motion.div
-                  className={` ${
-                    oneLetterMode ? "bg-gray-200" : "bg-gray-400"
-                  } rounded-full text-black px-4 grid place-content-center w-1/2 h-8`}
-                  layout
-                  transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                  whileHover={{ scale: 1.2 }}
-                ></motion.div>
-              </div>
-              <span>Full Word</span>
-            </div>
+            </motion.div>
+            {showCompletionMessage && (
+              <CompletionMessage
+                percentage={percentage}
+                handleReset={handleReset}
+                stageDetails={stageDetails}
+                handleLearnVerse={handleLearnVerse}
+              />
+            )}
+            <LetterMode oneLetterMode={oneLetterMode} changeLearnMethods={changeLearnMethods} />
             <button
               onClick={() =>
                 setTimeout(() => {
                   setShowInstructions(!showInstructions)
                 }, 300)
               }
-              className=" absolute bottom-10 right-10 left-10 text-base rounded-full"
+              className="absolute bottom-10 right-10 left-10 text-base rounded-full"
             >
               Show Instructions
             </button>
           </div>
         </div>
       </div>
+      {showFinalCompletionMessage && <Stage3FinalCompletion userExperience={userExperience} />}
+
       <HintMessage
         showInstructions={showInstructions}
         setShowInstructions={setShowInstructions}
         stageDetails={stageDetails}
       />
-      <CompletionMessage />
     </>
   )
 }

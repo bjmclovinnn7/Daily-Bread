@@ -38,6 +38,13 @@ const Auth = () => {
     }
   }
 
+  const uidConversion = (displayName: string, uid: string) => {
+    let last5 = uid.slice(-5)
+    let updatedDisplay = displayName.replace(/\s/g, "").toLocaleLowerCase()
+    let newUid = updatedDisplay + last5
+    return newUid
+  }
+
   const handleEmailSignUp = async (e: FormEvent<HTMLFormElement>) => {
     console.log("Handling Email Sign-up")
     e.preventDefault()
@@ -78,7 +85,7 @@ const Auth = () => {
     await setDoc(userDocRef, {
       displayName: displayName,
       email: currentUser.user.email,
-      uid: currentUser.user.uid,
+      uid: uidConversion(displayName, currentUser.user.uid),
       createdOn: new Date(),
       learnedVerses: [],
       friends: [],

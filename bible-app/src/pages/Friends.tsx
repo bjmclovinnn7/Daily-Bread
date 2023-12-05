@@ -2,7 +2,8 @@ import { useNavigate } from "react-router"
 import { useUserContext } from "../utils/UserContext"
 import SearchFriends from "../comps/SearchFriend"
 import { useState } from "react"
-import { FaTrophy, FaXmark, FaPlus } from "react-icons/fa6"
+import { FaTrophy, FaPlus } from "react-icons/fa6"
+import { FaArrowLeft } from "react-icons/fa"
 
 const Friends = () => {
   const navigate = useNavigate()
@@ -11,7 +12,7 @@ const Friends = () => {
 
   interface UserLearnedVerses {
     id: string
-    translations: string
+    translation: string
     learned: boolean
     category: string
     timeStamp: {
@@ -30,6 +31,7 @@ const Friends = () => {
     }
     learnedVerses: UserLearnedVerses[]
     friends: UserData[]
+    experience: number
   }
 
   const handleNavigateToFriend = (friendData: UserData) => {
@@ -46,15 +48,15 @@ const Friends = () => {
   return (
     <>
       <div
-        className={`h-screen w-full relative overflow-hidden bg-[#444444] text-white ${
-          open ? "" : " bg-black bg-clip-padding backdrop-filter bg-opacity-30"
+        className={`h-screen w-full relative overflow-auto bg-black text-white font-Inter${
+          open ? "" : " bg-black bg-clip-padding backdrop-filter bg-opacity-70"
         } transition-all duration-500 p-4`}
       >
         <div className="relative block text-center text-3xl md:text-4xl lg:text-5xl">
           <button onClick={() => navigate("/")} className="absolute inset-0">
-            <FaXmark className="" />
+            <FaArrowLeft className="" />
           </button>
-          <span className=" text-white text-center font-header">Friends</span>
+          <span className=" text-white text-center">Friends</span>
         </div>
 
         <div className="grid p-4 max-w-2xl mx-auto">
@@ -78,12 +80,12 @@ const Friends = () => {
               <div key={index} className="p-2 ">
                 <button
                   onClick={() => handleNavigateToFriend(friend)}
-                  className=" text-center flex items-center justify-between gap-8 px-4 text-2xl border-2 w-full rounded-3xl p-4"
+                  className=" text-center flex items-center justify-between gap-8 px-4 text-2xl w-full rounded-lg p-4 bg-[#444444]"
                 >
                   <span>{friend.displayName}</span>
                   <div className="flex gap-2 items-center">
                     <span>{friend.learnedVerses.length}</span>
-                    <FaTrophy className="text-orange-500 h-6 w-6" />
+                    <FaTrophy className="text-yellow-500 h-6 w-6" />
                   </div>
                 </button>
               </div>

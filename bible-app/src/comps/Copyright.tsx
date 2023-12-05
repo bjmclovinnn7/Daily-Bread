@@ -33,6 +33,6 @@ const Copyright = () => {
       break
   }
 
-  return <div className=" text-white text-center text-sm">{content}</div>
+  return <div className=" text-[#696969] text-sm font-bold grid max-w-[1000px] mx-auto">{content}</div>
 }
 export default Copyright

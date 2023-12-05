@@ -1,7 +1,7 @@
 [
   {
     "id": "1 Thessalonians 5:16-22",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "Rejoice always, pray continually, give thanks in all circumstances; for this is God's will for you in Christ Jesus. Do not quench the Spirit. Do not treat prophecies with contempt but test them all; hold on to what is good, reject every kind of evil.",
       "ESV": "Rejoice always, pray without ceasing, give thanks in all circumstances; for this is the will of God in Christ Jesus for you. Do not quench the Spirit. Do not despise prophecies, but test everything; hold fast what is good. Abstain from every form of evil.",
@@ -11,7 +11,7 @@
   },
   {
     "id": "2 Samuel 22:5-7",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "The waves of death swirled about me; the torrents of destruction overwhelmed me. The cords of the grave coiled around me; the snares of death confronted me. 'In my distress I called to the Lord; I called out to my God. From his temple he heard my voice; my cry came to his ears.'",
       "ESV": "The cords of death encompassed me; the torrents of destruction assailed me; the cords of Sheol entangled me; the snares of death confronted me. 'In my distress, I called upon the LORD; to my God, I called.' From his temple, he heard my voice, and my cry came to his ears.",
@@ -21,7 +21,7 @@
   },
   {
     "id": "James 1:5-8",
-    "category": "faith",
+    "category": "Faith",
     "translations": {
       "NIV": "If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you. But when you ask, you must believe and not doubt, because the one who doubts is like a wave of the sea, blown and tossed by the wind. That person should not expect to receive anything from the Lord. Such a person is double-minded and unstable in all they do.",
       "ESV": "If any of you lacks wisdom, let him ask God, who gives generously to all without reproach, and it will be given him. But let him ask in faith, with no doubting, for the one who doubts is like a wave of the sea that is driven and tossed by the wind. For that person must not suppose that he will receive anything from the Lord; he is a double-minded man, unstable in all his ways.",
@@ -31,7 +31,7 @@
   },
   {
     "id": "John 13:34-35",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "A new command I give you: Love one another. As I have loved you, so you must love one another. By this, everyone will know that you are my disciples if you love one another.",
       "ESV": "A new commandment I give to you, that you love one another: just as I have loved you, you also are to love one another. By this, all people will know that you are my disciples if you have love for one another.",
@@ -41,7 +41,7 @@
   },
   {
     "id": "John 1:12",
-    "category": "salvation",
+    "category": "Salvation",
     "translations": {
       "NIV": "Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God.",
       "ESV": "But to all who did receive him, who believed in his name, he gave the right to become children of God.",
@@ -51,7 +51,7 @@
   },
   {
     "id": "Mathew 22:37-40",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "Jesus replied: 'Love the Lord your God with all your heart and with all your soul and with all your mind.' This is the first and greatest commandment. And the second is like it: 'Love your neighbor as yourself.' All the Law and the Prophets hang on these two commandments.",
       "ESV": "And he said to him, 'You shall love the Lord your God with all your heart and with all your soul and with all your mind. This is the great and first commandment. And a second is like it: 'You shall love your neighbor as yourself.' On these two commandments depend all the Law and the Prophets.",
@@ -61,7 +61,7 @@
   },
   {
     "id": "Matthew 18:2-3",
-    "category": "salvation",
+    "category": "Salvation",
     "translations": {
       "NIV": "He called a little child to him, and placed the child among them. And he said, 'Truly I tell you, unless you change and become like little children, you will never enter the kingdom of heaven.'",
       "ESV": "And calling to him a child, he put him in the midst of them and said, 'Truly, I say to you, unless you turn and become like children, you will never enter the kingdom of heaven.'",
@@ -71,7 +71,7 @@
   },
   {
     "id": "Proverbs 3:5-6",
-    "category": "faith",
+    "category": "Faith",
     "translations": {
       "NIV": "Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
       "ESV": "Trust in the LORD with all your heart, and do not lean on your own understanding. In all your ways acknowledge him, and he will make straight your paths.",
@@ -81,7 +81,7 @@
   },
   {
     "id": "Psalm 103",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "Praise the Lord, my soul; all my inmost being, praise his holy name. Praise the Lord, my soul, and forget not all his benefits.",
       "ESV": "Bless the LORD, O my soul, and all that is within me, bless his holy name! Bless the LORD, O my soul, and forget not all his benefits.",
@@ -91,7 +91,7 @@
   },
   {
     "id": "Psalms 5:3",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "In the morning, Lord, you hear my voice; in the morning I lay my requests before you and wait expectantly.",
       "ESV": "O LORD, in the morning you hear my voice; in the morning, I prepare a sacrifice for you and watch.",
@@ -101,7 +101,7 @@
   },
   {
     "id": "Proverbs 17:17",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "A friend loves at all times, and a brother is born for adversity.",
       "ESV": "A friend loves at all times, and a brother is born for adversity.",
@@ -111,7 +111,7 @@
   },
   {
     "id": "Matthew 5:43-44",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "You have heard that it was said, 'You shall love your neighbor and hate your enemy.' But I say to you, Love your enemies and pray for those who persecute you.",
       "ESV": "You have heard that it was said, 'You shall love your neighbor and hate your enemy.' But I say to you, Love your enemies and pray for those who persecute you.",
@@ -121,7 +121,7 @@
   },
   {
     "id": "Matthew 22:37-39",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "And he said to him, 'You shall love the Lord your God with all your heart and with all your soul and with all your mind. This is the great and first commandment. And a second is like it: You shall love your neighbor as yourself.'",
       "ESV": "And he said to him, 'You shall love the Lord your God with all your heart and with all your soul and with all your mind. This is the great and first commandment. And a second is like it: You shall love your neighbor as yourself.'",
@@ -131,7 +131,7 @@
   },
   {
     "id": "John 15:9",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "As the Father has loved me, so have I loved you. Abide in my love.",
       "ESV": "As the Father has loved me, so have I loved you. Abide in my love.",
@@ -141,7 +141,7 @@
   },
   {
     "id": "Romans 12:9-10",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "Let love be genuine. Abhor what is evil; hold fast to what is good. Love one another with brotherly affection. Outdo one another in showing honor.",
       "ESV": "Let love be genuine. Abhor what is evil; hold fast to what is good. Love one another with brotherly affection. Outdo one another in showing honor.",
@@ -151,7 +151,7 @@
   },
   {
     "id": "1 Corinthians 13:4-7",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "Love is patient and kind; love does not envy or boast; it is not arrogant or rude. It does not insist on its own way; it is not irritable or resentful; it does not rejoice at wrongdoing, but rejoices with the truth. Love bears all things, believes all things, hopes all things, endures all things.",
       "ESV": "Love is patient and kind; love does not envy or boast; it is not arrogant or rude. It does not insist on its own way; it is not irritable or resentful; it does not rejoice at wrongdoing, but rejoices with the truth. Love bears all things, believes all things, hopes all things, endures all things.",
@@ -161,7 +161,7 @@
   },
   {
     "id": "1 Corinthians 13:13",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "So now faith, hope, and love abide, these three; but the greatest of these is love.",
       "ESV": "So now faith, hope, and love abide, these three; but the greatest of these is love.",
@@ -171,7 +171,7 @@
   },
   {
     "id": "1 John 2:10",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "Whoever loves his brother abides in the light, and in him there is no cause for stumbling.",
       "ESV": "Whoever loves his brother abides in the light, and in him there is no cause for stumbling.",
@@ -181,7 +181,7 @@
   },
   {
     "id": "1 John 3:18",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "Little children, let us not love in word or talk but in deed and in truth.",
       "ESV": "Little children, let us not love in word or talk but in deed and in truth.",
@@ -191,7 +191,7 @@
   },
   {
     "id": "1 John 4:7-8",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "Beloved, let us love one another, for love is from God, and whoever loves has been born of God and knows God. Anyone who does not love does not know God, because God is love.",
       "ESV": "Beloved, let us love one another, for love is from God, and whoever loves has been born of God and knows God. Anyone who does not love does not know God, because God is love.",
@@ -201,7 +201,7 @@
   },
   {
     "id": "1 John 4:12",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "No one has ever seen God; if we love one another, God abides in us and his love is perfected in us.",
       "ESV": "No one has ever seen God; if we love one another, God abides in us and his love is perfected in us.",
@@ -212,7 +212,7 @@
 
   {
     "id": "1 John 4:21",
-    "category": "love",
+    "category": "Love",
     "translations": {
       "NIV": "And this commandment we have from him: whoever loves God must also love his brother.",
       "ESV": "And this commandment we have from him: whoever loves God must also love his brother.",
@@ -222,7 +222,7 @@
   },
   {
     "id": "Matthew 17:20",
-    "category": "faith",
+    "category": "Faith",
     "translations": {
       "NIV": "He replied, 'Because you have so little faith. Truly I tell you, if you have faith as small as a mustard seed, you can say to this mountain, 'Move from here to there,' and it will move. Nothing will be impossible for you.'",
       "ESV": "He said to them, 'Because of your little faith. For truly, I say to you, if you have faith like a grain of mustard seed, you will say to this mountain, 'Move from here to there,' and it will move, and nothing will be impossible for you.'",
@@ -232,7 +232,7 @@
   },
   {
     "id": "Mark 11:22-23",
-    "category": "faith",
+    "category": "Faith",
     "translations": {
       "NIV": "Have faith in God,' Jesus answered. 'Truly I tell you, if anyone says to this mountain, 'Go, throw yourself into the sea,' and does not doubt in their heart but believes that what they say will happen, it will be done for them.'",
       "ESV": "And Jesus answered them, 'Have faith in God. Truly, I say to you, whoever says to this mountain, 'Be taken up and thrown into the sea,' and does not doubt in his heart, but believes that what he says will come to pass, it will be done for him.'",
@@ -242,7 +242,7 @@
   },
   {
     "id": "Romans 5:1",
-    "category": "faith",
+    "category": "Faith",
     "translations": {
       "NIV": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ.",
       "ESV": "Therefore, since we have been justified by faith, we have peace with God through our Lord Jesus Christ.",
@@ -252,7 +252,7 @@
   },
   {
     "id": "2 Corinthians 5:7",
-    "category": "faith",
+    "category": "Faith",
     "translations": {
       "NIV": "For we live by faith, not by sight.",
       "ESV": "For we walk by faith, not by sight.",
@@ -262,7 +262,7 @@
   },
   {
     "id": "Galatians 2:20",
-    "category": "faith",
+    "category": "Faith",
     "translations": {
       "NIV": "I have been crucified with Christ, and I no longer live, but Christ lives in me. The life I now live in the body, I live by faith in the Son of God, who loved me and gave himself for me.",
       "ESV": "I have been crucified with Christ. It is no longer I who live, but Christ who lives in me. And the life I now live in the flesh I live by faith in the Son of God, who loved me and gave himself for me.",
@@ -272,7 +272,7 @@
   },
   {
     "id": "James 1:2-3",
-    "category": "faith",
+    "category": "Faith",
     "translations": {
       "NIV": "Consider it pure joy, my brothers and sisters, whenever you face trials of many kinds because you know that the testing of your faith produces perseverance.",
       "ESV": "Count it all joy, my brothers, when you meet trials of various kinds, for you know that the testing of your faith produces steadfastness.",
@@ -282,7 +282,7 @@
   },
   {
     "id": "1 John 5:4",
-    "category": "faith",
+    "category": "Faith",
     "translations": {
       "NIV": "For everyone born of God overcomes the world. This is the victory that has overcome the world, even our faith.",
       "ESV": "For everyone who has been born of God overcomes the world. And this is the victory that has overcome the world—our faith.",
@@ -292,7 +292,7 @@
   },
   {
     "id": "1 Chronicles 16:34",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "Give thanks to the LORD, for he is good; his love endures forever.",
       "ESV": "Oh give thanks to the LORD, for he is good; for his steadfast love endures forever!",
@@ -302,7 +302,7 @@
   },
   {
     "id": "1 Chronicles 29:11",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "Yours, LORD, is the greatness and the power and the glory and the majesty and the splendor, for everything in heaven and earth is yours. Yours, LORD, is the kingdom; you are exalted as head over all.",
       "ESV": "Yours, O LORD, is the greatness and the power and the glory and the victory and the majesty, for all that is in the heavens and in the earth is yours. Yours is the kingdom, O LORD, and you are exalted as head above all.",
@@ -312,7 +312,7 @@
   },
   {
     "id": "Psalm 9:1-2",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "I will give thanks to you, LORD, with all my heart; I will tell of all your wonderful deeds. I will be glad and rejoice in you; I will sing the praises of your name, O Most High.",
       "ESV": "I will give thanks to the LORD with my whole heart; I will recount all of your wonderful deeds. I will be glad and exult in you; I will sing praise to your name, O Most High.",
@@ -322,7 +322,7 @@
   },
   {
     "id": "Psalm 89:1",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "I will sing of the LORD's great love forever; with my mouth, I will make your faithfulness known through all generations.",
       "ESV": "I will sing of the steadfast love of the LORD, forever; with my mouth, I will make known your faithfulness to all generations.",
@@ -332,7 +332,7 @@
   },
   {
     "id": "Psalm 100:4-5",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "Enter his gates with thanksgiving and his courts with praise; give thanks to him and praise his name. For the LORD is good, and his love endures forever; his faithfulness continues through all generations.",
       "ESV": "Enter his gates with thanksgiving, and his courts with praise! Give thanks to him; bless his name! For the LORD is good; his steadfast love endures forever, and his faithfulness to all generations.",
@@ -342,7 +342,7 @@
   },
   {
     "id": "Psalm 145:1-3",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "I will exalt you, my God the King; I will praise your name for ever and ever. Every day I will praise you and extol your name for ever and ever. Great is the LORD and most worthy of praise; his greatness no one can fathom.",
       "ESV": "I will extol you, my God and King, and bless your name forever and ever. Every day I will bless you and praise your name forever and ever. Great is the LORD, and greatly to be praised, and his greatness is unsearchable.",
@@ -352,7 +352,7 @@
   },
   {
     "id": "Psalm 150:1-2",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "Praise the LORD. Praise God in his sanctuary; praise him in his mighty heavens. Praise him for his acts of power; praise him for his surpassing greatness.",
       "ESV": "Praise the LORD! Praise God in his sanctuary; praise him in his mighty heavens! Praise him for his mighty deeds; praise him according to his excellent greatness!",
@@ -362,7 +362,7 @@
   },
   {
     "id": "Psalm 150:6",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "Let everything that has breath praise the LORD. Praise the LORD.",
       "ESV": "Let everything that has breath praise the LORD! Praise the LORD!",
@@ -372,7 +372,7 @@
   },
   {
     "id": "James 5:13",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "Is anyone among you in trouble? Let them pray. Is anyone happy? Let them sing songs of praise.",
       "ESV": "Is anyone among you suffering? Let him pray. Is anyone cheerful? Let him sing praise.",
@@ -382,7 +382,7 @@
   },
   {
     "id": "Revelation 5:12",
-    "category": "praise",
+    "category": "Praise",
     "translations": {
       "NIV": "In a loud voice, they were saying: 'Worthy is the Lamb, who was slain, to receive power and wealth and wisdom and strength and honor and glory and praise!'",
       "ESV": "Saying with a loud voice, 'Worthy is the Lamb who was slain, to receive power and wealth and wisdom and might and honor and glory and blessing!'",
@@ -392,7 +392,7 @@
   },
   {
     "id": "Matthew 6:6",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "But when you pray, go into your room, close the door, and pray to your Father, who is unseen. Then your Father, who sees what is done in secret, will reward you.",
       "ESV": "But when you pray, go into your room and shut the door and pray to your Father who is in secret. And your Father who sees in secret will reward you.",
@@ -402,7 +402,7 @@
   },
   {
     "id": "Matthew 6:9-13",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "This, then, is how you should pray: 'Our Father in heaven, hallowed be your name, your kingdom come, your will be done, on earth as it is in heaven. Give us today our daily bread. Forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, but deliver us from the evil one.'",
       "ESV": "Pray then like this: 'Our Father in heaven, hallowed be your name. Your kingdom come, your will be done, on earth as it is in heaven. Give us this day our daily bread, and forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, but deliver us from evil.'",
@@ -412,7 +412,7 @@
   },
   {
     "id": "Matthew 7:11",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "If you, then, though you are evil, know how to give good gifts to your children, how much more will your Father in heaven give good gifts to those who ask him!",
       "ESV": "If you then, who are evil, know how to give good gifts to your children, how much more will your Father who is in heaven give good things to those who ask him!",
@@ -422,7 +422,7 @@
   },
   {
     "id": "Mark 11:24-25",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "Therefore I tell you, whatever you ask for in prayer, believe that you have received it, and it will be yours. And when you stand praying, if you hold anything against anyone, forgive them, so that your Father in heaven may forgive you your sins.",
       "ESV": "Therefore I tell you, whatever you ask in prayer, believe that you have received it, and it will be yours. And whenever you stand praying, forgive, if you have anything against anyone, so that your Father also who is in heaven may forgive you your trespasses.",
@@ -432,7 +432,7 @@
   },
   {
     "id": "Ephesians 6:18",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "And pray in the Spirit on all occasions with all kinds of prayers and requests. With this in mind, be alert and always keep on praying for all the Lord's people.",
       "ESV": "Praying at all times in the Spirit, with all prayer and supplication. To that end, keep alert with all perseverance, making supplication for all the saints.",
@@ -442,7 +442,7 @@
   },
   {
     "id": "Philippians 4:6-7",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.",
       "ESV": "Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God. And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
@@ -452,7 +452,7 @@
   },
   {
     "id": "1 Thessalonians 5:16-18",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "Rejoice always, pray continually, give thanks in all circumstances; for this is God's will for you in Christ Jesus.",
       "ESV": "Rejoice always, pray without ceasing, give thanks in all circumstances; for this is the will of God in Christ Jesus for you.",
@@ -462,7 +462,7 @@
   },
   {
     "id": "1 Timothy 2:1-2",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "I urge, then, first of all, that petitions, prayers, intercession and thanksgiving be made for all people— for kings and all those in authority, that we may live peaceful and quiet lives in all godliness and holiness.",
       "ESV": "First of all, then, I urge that supplications, prayers, intercessions, and thanksgivings be made for all people, for kings and all who are in high positions, that we may lead a peaceful and quiet life, godly and dignified in every way.",
@@ -472,7 +472,7 @@
   },
   {
     "id": "Hebrews 4:16",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "Let us then approach God's throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
       "ESV": "Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need.",
@@ -482,7 +482,7 @@
   },
   {
     "id": "James 5:13",
-    "category": "prayer",
+    "category": "Prayer",
     "translations": {
       "NIV": "Is anyone among you in trouble? Let them pray. Is anyone happy? Let them sing songs of praise.",
       "ESV": "Is anyone among you suffering? Let him pray. Is anyone cheerful? Let him sing praise.",
@@ -492,7 +492,7 @@
   },
   {
     "id": "Acts 4:12",
-    "category": "salvation",
+    "category": "Salvation",
     "translations": {
       "NIV": "Salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved.",
       "ESV": "And there is salvation in no one else, for there is no other name under heaven given among men by which we must be saved.",
@@ -502,7 +502,7 @@
   },
   {
     "id": "Romans 8:1",
-    "category": "salvation",
+    "category": "Salvation",
     "translations": {
       "NIV": "Therefore, there is now no condemnation for those who are in Christ Jesus.",
       "ESV": "There is therefore now no condemnation for those who are in Christ Jesus.",
@@ -512,7 +512,7 @@
   },
   {
     "id": "Romans 10:9-10",
-    "category": "salvation",
+    "category": "Salvation",
     "translations": {
       "NIV": "If you declare with your mouth, 'Jesus is Lord,' and believe in your heart that God raised him from the dead, you will be saved. For it is with your heart that you believe and are justified, and it is with your mouth that you profess your faith and are saved.",
       "ESV": "Because, if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved. For with the heart one believes and is justified, and with the mouth one confesses and is saved.",
@@ -522,7 +522,7 @@
   },
   {
     "id": "Romans 10:13",
-    "category": "salvation",
+    "category": "Salvation",
     "translations": {
       "NIV": "For, 'Everyone who calls on the name of the Lord will be saved.'",
       "ESV": "For 'everyone who calls on the name of the Lord will be saved.'",
@@ -532,7 +532,7 @@
   },
   {
     "id": "Ephesians 2:8-10",
-    "category": "salvation",
+    "category": "Salvation",
     "translations": {
       "NIV": "For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God—not by works, so that no one can boast. For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.",
       "ESV": "For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast. For we are his workmanship, created in Christ Jesus for good works, which God prepared beforehand, that we should walk in them.",
@@ -542,7 +542,7 @@
   },
   {
     "id": "Genesis 1:1",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "In the beginning God created the heavens and the earth.",
       "ESV": "In the beginning, God created the heavens and the earth.",
@@ -552,7 +552,7 @@
   },
   {
     "id": "Joshua 1:8",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Keep this Book of the Law always on your lips; meditate on it day and night, so that you may be careful to do everything written in it. Then you will be prosperous and successful.",
       "ESV": "This Book of the Law shall not depart from your mouth, but you shall meditate on it day and night, so that you may be careful to do according to all that is written in it. For then you will make your way prosperous, and then you will have good success.",
@@ -562,7 +562,7 @@
   },
   {
     "id": "Psalm 133:1-2",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "How good and pleasant it is when God’s people live together in unity! It is like precious oil poured on the head, running down on the beard, running down on Aaron’s beard, down on the collar of his robe.",
       "ESV": "Behold, how good and pleasant it is when brothers dwell in unity! It is like the precious oil on the head, running down on the beard, on the beard of Aaron, running down on the collar of his robes!",
@@ -572,7 +572,7 @@
   },
   {
     "id": "Proverbs 3:5-6",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
       "ESV": "Trust in the LORD with all your heart, and do not lean on your own understanding. In all your ways acknowledge him, and he will make straight your paths.",
@@ -582,7 +582,7 @@
   },
   {
     "id": "Isaiah 26:3",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "You will keep in perfect peace those whose minds are steadfast, because they trust in you.",
       "ESV": "You keep him in perfect peace whose mind is stayed on you, because he trusts in you.",
@@ -592,7 +592,7 @@
   },
   {
     "id": "Isaiah 40:31",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "but those who hope in the LORD will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint.",
       "ESV": "but they who wait for the LORD shall renew their strength; they shall mount up with wings like eagles; they shall run and not be weary; they shall walk and not faint.",
@@ -602,7 +602,7 @@
   },
   {
     "id": "Isaiah 41:10",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand.",
       "ESV": "fear not, for I am with you; be not dismayed, for I am your God; I will strengthen you, I will help you, I will uphold you with my righteous right hand.",
@@ -612,7 +612,7 @@
   },
   {
     "id": "Isaiah 53:4-5",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Surely he took up our pain and bore our suffering, yet we considered him punished by God, stricken by him, and afflicted. But he was pierced for our transgressions, he was crushed for our iniquities; the punishment that brought us peace was on him, and by his wounds we are healed.",
       "ESV": "Surely he has borne our griefs and carried our sorrows; yet we esteemed him stricken, smitten by God, and afflicted. But he was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his wounds we are healed.",
@@ -622,7 +622,7 @@
   },
   {
     "id": "Isaiah 55:8",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For my thoughts are not your thoughts, neither are your ways my ways, declares the LORD.",
       "ESV": "For my thoughts are not your thoughts, neither are your ways my ways, declares the LORD.",
@@ -632,7 +632,7 @@
   },
   {
     "id": "Jeremiah 29:11",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For I know the plans I have for you,” declares the LORD, “plans to prosper you and not to harm you, plans to give you hope and a future.",
       "ESV": "For I know the plans I have for you, declares the LORD, plans for welfare and not for evil, to give you a future and a hope.",
@@ -642,7 +642,7 @@
   },
   {
     "id": "Micah 6:8",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "He has shown you, O mortal, what is good. And what does the LORD require of you? To act justly and to love mercy and to walk humbly with your God.",
       "ESV": "He has told you, O man, what is good; and what does the LORD require of you but to do justice, and to love kindness, and to walk humbly with your God?",
@@ -652,7 +652,7 @@
   },
   {
     "id": "Matthew 11:28-30",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Come to me, all you who are weary and burdened, and I will give you rest. Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls. For my yoke is easy and my burden is light.",
       "ESV": "Come to me, all who labor and are heavy laden, and I will give you rest. Take my yoke upon you, and learn from me, for I am gentle and lowly in heart, and you will find rest for your souls. For my yoke is easy, and my burden is light.",
@@ -662,7 +662,7 @@
   },
   {
     "id": "Matthew 22:37",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Jesus replied: 'Love the Lord your God with all your heart and with all your soul and with all your mind.'",
       "ESV": "And he said to him, 'You shall love the Lord your God with all your heart and with all your soul and with all your mind.'",
@@ -672,7 +672,7 @@
   },
   {
     "id": "John 1:1",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "In the beginning was the Word, and the Word was with God, and the Word was God.",
       "ESV": "In the beginning was the Word, and the Word was with God, and the Word was God.",
@@ -682,7 +682,7 @@
   },
   {
     "id": "John 1:12",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God.",
       "ESV": "But to all who did receive him, who believed in his name, he gave the right to become children of God.",
@@ -692,7 +692,7 @@
   },
   {
     "id": "John 5:24",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Very truly I tell you, whoever hears my word and believes him who sent me has eternal life and will not be judged but has crossed over from death to life.",
       "ESV": "Truly, truly, I say to you, whoever hears my word and believes him who sent me has eternal life. He does not come into judgment, but has passed from death to life.",
@@ -702,7 +702,7 @@
   },
   {
     "id": "John 11:25",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Jesus said to her, 'I am the resurrection and the life. The one who believes in me will live, even though they die;'",
       "ESV": "Jesus said to her, 'I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live,'",
@@ -712,7 +712,7 @@
   },
   {
     "id": "John 13:35",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "By this everyone will know that you are my disciples, if you love one another.",
       "ESV": "By this all people will know that you are my disciples, if you have love for one another.",
@@ -722,7 +722,7 @@
   },
   {
     "id": "John 14:6",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Jesus answered, 'I am the way and the truth and the life. No one comes to the Father except through me.'",
       "ESV": "Jesus said to him, 'I am the way, and the truth, and the life. No one comes to the Father except through me.'",
@@ -732,7 +732,7 @@
   },
   {
     "id": "John 14:27",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.",
       "ESV": "Peace I leave with you; my peace I give to you. Not as the world gives do I give to you. Let not your hearts be troubled, neither let them be afraid.",
@@ -742,7 +742,7 @@
   },
   {
     "id": "John 15:13",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Greater love has no one than this: to lay down one’s life for one’s friends.",
       "ESV": "Greater love has no one than this, that someone lay down his life for his friends.",
@@ -752,7 +752,7 @@
   },
   {
     "id": "John 16:33",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world.",
       "ESV": "I have said these things to you, that in me you may have peace. In the world you will have tribulation. But take heart; I have overcome the world.",
@@ -762,7 +762,7 @@
   },
   {
     "id": "Acts 1:8",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "But you will receive power when the Holy Spirit comes on you; and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the ends of the earth.",
       "ESV": "But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem and in all Judea and Samaria, and to the end of the earth.",
@@ -772,7 +772,7 @@
   },
   {
     "id": "Acts 4:12",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved.",
       "ESV": "And there is salvation in no one else, for there is no other name under heaven given among men by which we must be saved.",
@@ -782,7 +782,7 @@
   },
   {
     "id": "Romans 3:23",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "for all have sinned and fall short of the glory of God,",
       "ESV": "for all have sinned and fall short of the glory of God,",
@@ -792,7 +792,7 @@
   },
   {
     "id": "Romans 8:28",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
       "ESV": "And we know that for those who love God all things work together for good, for those who are called according to his purpose.",
@@ -802,7 +802,7 @@
   },
   {
     "id": "Romans 8:38-39",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
       "ESV": "For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord.",
@@ -812,7 +812,7 @@
   },
   {
     "id": "Romans 10:9-10",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "If you declare with your mouth, 'Jesus is Lord,' and believe in your heart that God raised him from the dead, you will be saved. For it is with your heart that you believe and are justified, and it is with your mouth that you profess your faith and are saved.",
       "ESV": "because, if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved. For with the heart one believes and is justified, and with the mouth one confesses and is saved.",
@@ -822,7 +822,7 @@
   },
   {
     "id": "Romans 10:17",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Consequently, faith comes from hearing the message, and the message is heard through the word about Christ.",
       "ESV": "So faith comes from hearing, and hearing through the word of Christ.",
@@ -832,7 +832,7 @@
   },
   {
     "id": "Romans 12:2",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God’s will is—his good, pleasing and perfect will.",
       "ESV": "Do not be conformed to this world, but be transformed by the renewal of your mind, that by testing you may discern what is the will of God, what is good and acceptable and perfect.",
@@ -842,7 +842,7 @@
   },
   {
     "id": "Romans 15:13",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "May the God of hope fill you with all joy and peace as you trust in him, so that you may overflow with hope by the power of the Holy Spirit.",
       "ESV": "May the God of hope fill you with all joy and peace in believing, so that by the power of the Holy Spirit you may abound in hope.",
@@ -852,7 +852,7 @@
   },
   {
     "id": "1 Corinthians 6:19",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Do you not know that your bodies are temples of the Holy Spirit, who is in you, whom you have received from God? You are not your own;",
       "ESV": "Or do you not know that your body is a temple of the Holy Spirit within you, whom you have from God? You are not your own,",
@@ -862,7 +862,7 @@
   },
   {
     "id": "1 Corinthians 10:13",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "No temptation has overtaken you except what is common to mankind. And God is faithful; he will not let you be tempted beyond what you can bear. But when you are tempted, he will also provide a way out so that you can endure it.",
       "ESV": "No temptation has overtaken you that is not common to man. God is faithful, and he will not let you be tempted beyond your ability, but with the temptation he will also provide the way of escape, that you may be able to endure it.",
@@ -872,7 +872,7 @@
   },
   {
     "id": "2 Corinthians 5:21",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "God made him who had no sin to be sin for us, so that in him we might become the righteousness of God.",
       "ESV": "For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God.",
@@ -882,7 +882,7 @@
   },
   {
     "id": "2 Corinthians 12:9",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "But he said to me, 'My grace is sufficient for you, for my power is made perfect in weakness.' Therefore I will boast all the more gladly about my weaknesses, so that Christ’s power may rest on me.",
       "ESV": "But he said to me, 'My grace is sufficient for you, for my power is made perfect in weakness.' Therefore I will boast all the more gladly of my weaknesses, so that the power of Christ may rest upon me.",
@@ -892,7 +892,7 @@
   },
   {
     "id": "Galatians 2:20",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "I have been crucified with Christ and I no longer live, but Christ lives in me. The life I now live in the body, I live by faith in the Son of God, who loved me and gave himself for me.",
       "ESV": "I have been crucified with Christ. It is no longer I who live, but Christ who lives in me. And the life I now live in the flesh I live by faith in the Son of God, who loved me and gave himself for me.",
@@ -902,7 +902,7 @@
   },
   {
     "id": "Galatians 5:22-23",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. Against such things there is no law.",
       "ESV": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control; against such things there is no law.",
@@ -912,7 +912,7 @@
   },
   {
     "id": "Ephesians 2:8-10",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God—not by works, so that no one can boast. For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.",
       "ESV": "For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast. For we are his workmanship, created in Christ Jesus for good works, which God prepared beforehand, that we should walk in them.",
@@ -922,7 +922,7 @@
   },
   {
     "id": "Ephesians 3:20-21",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Now to him who is able to do immeasurably more than all we ask or imagine, according to his power that is at work within us, to him be glory in the church and in Christ Jesus throughout all generations, for ever and ever! Amen.",
       "ESV": "Now to him who is able to do far more abundantly than all that we ask or think, according to the power at work within us, to him be glory in the church and in Christ Jesus throughout all generations, forever and ever. Amen.",
@@ -932,7 +932,7 @@
   },
   {
     "id": "Philippians 1:6",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "being confident of this, that he who began a good work in you will carry it on to completion until the day of Christ Jesus.",
       "ESV": "And I am sure of this, that he who began a good work in you will bring it to completion at the day of Jesus Christ.",
@@ -942,7 +942,7 @@
   },
   {
     "id": "Philippians 4:6-7",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.",
       "ESV": "do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God. And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
@@ -952,7 +952,7 @@
   },
   {
     "id": "Philippians 4:8",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Finally, brothers and sisters, whatever is true, whatever is noble, whatever is right, whatever is pure, whatever is lovely, whatever is admirable—if anything is excellent or praiseworthy—think about such things.",
       "ESV": "Finally, brothers, whatever is true, whatever is honorable, whatever is just, whatever is pure, whatever is lovely, whatever is commendable, if there is any excellence, if there is anything worthy of praise, think about these things.",
@@ -962,7 +962,7 @@
   },
   {
     "id": "Philippians 4:13",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "I can do all this through him who gives me strength.",
       "ESV": "I can do all things through him who strengthens me.",
@@ -972,7 +972,7 @@
   },
   {
     "id": "Philippians 4:19",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "And my God will meet all your needs according to the riches of his glory in Christ Jesus.",
       "ESV": "And my God will supply every need of yours according to his riches in glory in Christ Jesus.",
@@ -982,7 +982,7 @@
   },
   {
     "id": "Colossians 3:23-24",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters, since you know that you will receive an inheritance from the Lord as a reward. It is the Lord Christ you are serving.",
       "ESV": "Whatever you do, work heartily, as for the Lord and not for men, knowing that from the Lord you will receive the inheritance as your reward. You are serving the Lord Christ.",
@@ -992,7 +992,7 @@
   },
   {
     "id": "Hebrews 4:12",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For the word of God is alive and active. Sharper than any double-edged sword, it penetrates even to dividing soul and spirit, joints and marrow; it judges the thoughts and attitudes of the heart.",
       "ESV": "For the word of God is living and active, sharper than any two-edged sword, piercing to the division of soul and of spirit, of joints and of marrow, and discerning the thoughts and intentions of the heart.",
@@ -1002,7 +1002,7 @@
   },
   {
     "id": "Hebrews 4:15-16",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For we do not have a high priest who is unable to empathize with our weaknesses, but we have one who has been tempted in every way, just as we are—yet he did not sin. Let us then approach God’s throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
       "ESV": "For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need.",
@@ -1012,7 +1012,7 @@
   },
   {
     "id": "Hebrews 10:24-25",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching.",
       "ESV": "And let us consider how to stir up one another to love and good works, not neglecting to meet together, as is the habit of some, but encouraging one another, and all the more as you see the Day drawing near.",
@@ -1022,7 +1022,7 @@
   },
   {
     "id": "Hebrews 13:5",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Keep your lives free from the love of money and be content with what you have, because God has said, 'Never will I leave you; never will I forsake you.'",
       "ESV": "Keep your life free from love of money, and be content with what you have, for he has said, 'I will never leave you nor forsake you.'",
@@ -1032,7 +1032,7 @@
   },
   {
     "id": "James 1:2-3",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Consider it pure joy, my brothers and sisters, whenever you face trials of many kinds, because you know that the testing of your faith produces perseverance.",
       "ESV": "Count it all joy, my brothers, when you meet trials of various kinds, for you know that the testing of your faith produces steadfastness.",
@@ -1042,7 +1042,7 @@
   },
   {
     "id": "James 5:16",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective.",
       "ESV": "Therefore, confess your sins to one another and pray for one another, that you may be healed. The prayer of a righteous person has great power as it is working.",
@@ -1052,7 +1052,7 @@
   },
   {
     "id": "1 Peter 2:24",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "He himself bore our sins in his body on the cross, so that we might die to sins and live for righteousness; 'by his wounds you have been healed.'",
       "ESV": "He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness. By his wounds you have been healed.",
@@ -1062,7 +1062,7 @@
   },
   {
     "id": "1 Peter 3:15-16",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "But in your hearts revere Christ as Lord. Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with gentleness and respect, keeping a clear conscience, so that those who speak maliciously against your good behavior in Christ may be ashamed of their slander.",
       "ESV": "but in your hearts honor Christ the Lord as holy, always being prepared to make a defense to anyone who asks you for a reason for the hope that is in you; yet do it with gentleness and respect, having a good conscience, so that, when you are slandered, those who revile your good behavior in Christ may be put to shame.",
@@ -1072,7 +1072,7 @@
   },
   {
     "id": "1 Peter 5:7",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Cast all your anxiety on him because he cares for you.",
       "ESV": "casting all your anxieties on him, because he cares for you.",
@@ -1082,7 +1082,7 @@
   },
   {
     "id": "1 John 1:9",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness.",
       "ESV": "If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.",
@@ -1092,7 +1092,7 @@
   },
   {
     "id": "1 John 3:16",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "This is how we know what love is: Jesus Christ laid down his life for us. And we ought to lay down our lives for our brothers and sisters.",
       "ESV": "By this we know love, that he laid down his life for us, and we ought to lay down our lives for the brothers.",
@@ -1102,7 +1102,7 @@
   },
   {
     "id": "1 John 4:7",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Dear friends, let us love one another, for love comes from God. Everyone who loves has been born of God and knows God.",
       "ESV": "Beloved, let us love one another, for love is from God, and whoever loves has been born of God and knows God.",
@@ -1112,7 +1112,7 @@
   },
   {
     "id": "1 John 4:8",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Whoever does not love does not know God, because God is love.",
       "ESV": "Anyone who does not love does not know God, because God is love.",
@@ -1122,7 +1122,7 @@
   },
   {
     "id": "1 John 4:9-10",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "This is how God showed his love among us: He sent his one and only Son into the world that we might live through him. This is love: not that we loved God, but that he loved us and sent his Son as an atoning sacrifice for our sins.",
       "ESV": "In this the love of God was made manifest among us, that God sent his only Son into the world, so that we might live through him. In this is love, not that we have loved God but that he loved us and sent his Son to be the propitiation for our sins.",
@@ -1132,7 +1132,7 @@
   },
   {
     "id": "1 John 4:18",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love.",
       "ESV": "There is no fear in love, but perfect love casts out fear. For fear has to do with punishment, and whoever fears has not been perfected in love.",
@@ -1142,7 +1142,7 @@
   },
   {
     "id": "1 John 5:13",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "I write these things to you who believe in the name of the Son of God so that you may know that you have eternal life.",
       "ESV": "I write these things to you who believe in the name of the Son of God, that you may know that you have eternal life.",
@@ -1152,7 +1152,7 @@
   },
   {
     "id": "Jude 1:24-25",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "To him who is able to keep you from stumbling and to present you before his glorious presence without fault and with great joy— to the only God our Savior be glory, majesty, power and authority, through Jesus Christ our Lord, before all ages, now and forevermore! Amen.",
       "ESV": "Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time and now and forever. Amen.",
@@ -1162,7 +1162,7 @@
   },
   {
     "id": "Matthew 11:28-30",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Come to me, all you who are weary and burdened, and I will give you rest. Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls. For my yoke is easy and my burden is light.",
       "ESV": "Come to me, all who labor and are heavy laden, and I will give you rest. Take my yoke upon you, and learn from me, for I am gentle and lowly in heart, and you will find rest for your souls. For my yoke is easy, and my burden is light.",
@@ -1172,7 +1172,7 @@
   },
   {
     "id": "Matthew 22:37",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Jesus replied: 'Love the Lord your God with all your heart and with all your soul and with all your mind.'",
       "ESV": "And he said to him, 'You shall love the Lord your God with all your heart and with all your soul and with all your mind.'",
@@ -1182,7 +1182,7 @@
   },
   {
     "id": "John 1:1",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "In the beginning was the Word, and the Word was with God, and the Word was God.",
       "ESV": "In the beginning was the Word, and the Word was with God, and the Word was God.",
@@ -1192,7 +1192,7 @@
   },
   {
     "id": "John 1:12",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God.",
       "ESV": "But to all who did receive him, who believed in his name, he gave the right to become children of God.",
@@ -1202,7 +1202,7 @@
   },
   {
     "id": "John 5:24",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Very truly I tell you, whoever hears my word and believes him who sent me has eternal life and will not be judged but has crossed over from death to life.",
       "ESV": "Truly, truly, I say to you, whoever hears my word and believes him who sent me has eternal life. He does not come into judgment, but has passed from death to life.",
@@ -1212,7 +1212,7 @@
   },
   {
     "id": "John 11:25",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Jesus said to her, 'I am the resurrection and the life. The one who believes in me will live, even though they die;'",
       "ESV": "Jesus said to her, 'I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live,'",
@@ -1222,7 +1222,7 @@
   },
   {
     "id": "John 13:35",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "By this everyone will know that you are my disciples, if you love one another.",
       "ESV": "By this all people will know that you are my disciples, if you have love for one another.",
@@ -1232,7 +1232,7 @@
   },
   {
     "id": "John 14:6",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Jesus answered, 'I am the way and the truth and the life. No one comes to the Father except through me.'",
       "ESV": "Jesus said to him, 'I am the way, and the truth, and the life. No one comes to the Father except through me.'",
@@ -1242,7 +1242,7 @@
   },
   {
     "id": "John 14:27",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.",
       "ESV": "Peace I leave with you; my peace I give to you. Not as the world gives do I give to you. Let not your hearts be troubled, neither let them be afraid.",
@@ -1252,7 +1252,7 @@
   },
   {
     "id": "John 15:13",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Greater love has no one than this: to lay down one’s life for one’s friends.",
       "ESV": "Greater love has no one than this, that someone lay down his life for his friends.",
@@ -1262,7 +1262,7 @@
   },
   {
     "id": "John 16:33",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world.",
       "ESV": "I have said these things to you, that in me you may have peace. In the world you will have tribulation. But take heart; I have overcome the world.",
@@ -1272,7 +1272,7 @@
   },
   {
     "id": "Acts 1:8",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "But you will receive power when the Holy Spirit comes on you; and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the ends of the earth.",
       "ESV": "But you will receive power when the Holy Spirit has come upon you, and you will be my witnesses in Jerusalem and in all Judea and Samaria, and to the end of the earth.",
@@ -1282,7 +1282,7 @@
   },
   {
     "id": "Acts 4:12",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved.",
       "ESV": "And there is salvation in no one else, for there is no other name under heaven given among men by which we must be saved.",
@@ -1292,7 +1292,7 @@
   },
   {
     "id": "Romans 3:23",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For all have sinned and fall short of the glory of God.",
       "ESV": "For all have sinned and fall short of the glory of God.",
@@ -1302,7 +1302,7 @@
   },
   {
     "id": "Romans 8:28",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
       "ESV": "And we know that for those who love God all things work together for good, for those who are called according to his purpose.",
@@ -1312,7 +1312,7 @@
   },
   {
     "id": "Romans 8:38-39",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
       "ESV": "For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord.",
@@ -1322,7 +1322,7 @@
   },
   {
     "id": "Romans 10:9-10",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "If you declare with your mouth, 'Jesus is Lord,' and believe in your heart that God raised him from the dead, you will be saved. For it is with your heart that you believe and are justified, and it is with your mouth that you profess your faith and are saved.",
       "ESV": "Because, if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved. For with the heart one believes and is justified, and with the mouth one confesses and is saved.",
@@ -1332,7 +1332,7 @@
   },
   {
     "id": "Romans 10:17",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Consequently, faith comes from hearing the message, and the message is heard through the word about Christ.",
       "ESV": "So faith comes from hearing, and hearing through the word of Christ.",
@@ -1342,7 +1342,7 @@
   },
   {
     "id": "Romans 12:2",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God’s will is—his good, pleasing and perfect will.",
       "ESV": "Do not be conformed to this world, but be transformed by the renewal of your mind, that by testing you may discern what is the will of God, what is good and acceptable and perfect.",
@@ -1352,7 +1352,7 @@
   },
   {
     "id": "Romans 15:13",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "May the God of hope fill you with all joy and peace as you trust in him, so that you may overflow with hope by the power of the Holy Spirit.",
       "ESV": "May the God of hope fill you with all joy and peace in believing, so that by the power of the Holy Spirit you may abound in hope.",
@@ -1362,7 +1362,7 @@
   },
   {
     "id": "1 Corinthians 6:19",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Do you not know that your bodies are temples of the Holy Spirit, who is in you, whom you have received from God? You are not your own;",
       "ESV": "Or do you not know that your body is a temple of the Holy Spirit within you, whom you have from God? You are not your own,",
@@ -1372,7 +1372,7 @@
   },
   {
     "id": "1 Corinthians 10:13",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "No temptation has overtaken you except what is common to mankind. And God is faithful; he will not let you be tempted beyond what you can bear. But when you are tempted, he will also provide a way out so that you can endure it.",
       "ESV": "No temptation has overtaken you that is not common to man. God is faithful, and he will not let you be tempted beyond your ability, but with the temptation he will also provide the way of escape, that you may be able to endure it.",
@@ -1380,19 +1380,10 @@
       "NKJV": "No temptation has overtaken you except such as is common to man; but God is faithful, who will not allow you to be tempted beyond what you are able, but with the temptation will also make the way of escape, that you may be able to bear it."
     }
   },
-  {
-    "id": "2 Corinthians 5:21",
-    "category": "top 100",
-    "translations": {
-      "NIV": "God made him who had no sin to be sin for us, so that in him we might become the righteousness of God.",
-      "ESV": "For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God.",
-      "KJV": "For he hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him.",
-      "NKJV": "For He made Him who knew no sin to be sin for us, that we might become the righteousness of God in Him."
-    }
-  },
+
   {
     "id": "2 Corinthians 12:9",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "But he said to me, 'My grace is sufficient for you, for my power is made perfect in weakness.' Therefore I will boast all the more gladly about my weaknesses, so that Christ’s power may rest on me.",
       "ESV": "But he said to me, 'My grace is sufficient for you, for my power is made perfect in weakness.' Therefore I will boast all the more gladly of my weaknesses, so that the power of Christ may rest upon me.",
@@ -1402,7 +1393,7 @@
   },
   {
     "id": "Galatians 2:20",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "I have been crucified with Christ and I no longer live, but Christ lives in me. The life I now live in the body, I live by faith in the Son of God, who loved me and gave himself for me.",
       "ESV": "I have been crucified with Christ. It is no longer I who live, but Christ who lives in me. And the life I now live in the flesh I live by faith in the Son of God, who loved me and gave himself for me.",
@@ -1412,7 +1403,7 @@
   },
   {
     "id": "Galatians 5:22-23",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. Against such things there is no law.",
       "ESV": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control; against such things there is no law.",
@@ -1422,7 +1413,7 @@
   },
   {
     "id": "Ephesians 2:8-10",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God—not by works, so that no one can boast. For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.",
       "ESV": "For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast. For we are his workmanship, created in Christ Jesus for good works, which God prepared beforehand, that we should walk in them.",
@@ -1432,7 +1423,7 @@
   },
   {
     "id": "Ephesians 3:20-21",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Now to him who is able to do immeasurably more than all we ask or imagine, according to his power that is at work within us, to him be glory in the church and in Christ Jesus throughout all generations, for ever and ever! Amen.",
       "ESV": "Now to him who is able to do far more abundantly than all that we ask or think, according to the power at work within us, to him be glory in the church and in Christ Jesus throughout all generations, forever and ever. Amen.",
@@ -1442,7 +1433,7 @@
   },
   {
     "id": "Philippians 1:6",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "being confident of this, that he who began a good work in you will carry it on to completion until the day of Christ Jesus.",
       "ESV": "And I am sure of this, that he who began a good work in you will bring it to completion at the day of Jesus Christ.",
@@ -1452,7 +1443,7 @@
   },
   {
     "id": "Philippians 4:6-7",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.",
       "ESV": "do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God. And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
@@ -1462,7 +1453,7 @@
   },
   {
     "id": "Philippians 4:8",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Finally, brothers and sisters, whatever is true, whatever is noble, whatever is right, whatever is pure, whatever is lovely, whatever is admirable—if anything is excellent or praiseworthy—think about such things.",
       "ESV": "Finally, brothers, whatever is true, whatever is honorable, whatever is just, whatever is pure, whatever is lovely, whatever is commendable, if there is any excellence, if there is anything worthy of praise, think about these things.",
@@ -1472,7 +1463,7 @@
   },
   {
     "id": "Philippians 4:13",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "I can do all this through him who gives me strength.",
       "ESV": "I can do all things through him who strengthens me.",
@@ -1482,7 +1473,7 @@
   },
   {
     "id": "Philippians 4:19",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "And my God will meet all your needs according to the riches of his glory in Christ Jesus.",
       "ESV": "And my God will supply every need of yours according to his riches in glory in Christ Jesus.",
@@ -1492,7 +1483,7 @@
   },
   {
     "id": "Colossians 3:23-24",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters, since you know that you will receive an inheritance from the Lord as a reward. It is the Lord Christ you are serving.",
       "ESV": "Whatever you do, work heartily, as for the Lord and not for men, knowing that from the Lord you will receive the inheritance as your reward. You are serving the Lord Christ.",
@@ -1502,7 +1493,7 @@
   },
   {
     "id": "Hebrews 4:12",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For the word of God is alive and active. Sharper than any double-edged sword, it penetrates even to dividing soul and spirit, joints and marrow; it judges the thoughts and attitudes of the heart.",
       "ESV": "For the word of God is living and active, sharper than any two-edged sword, piercing to the division of soul and of spirit, of joints and of marrow, and discerning the thoughts and intentions of the heart.",
@@ -1512,7 +1503,7 @@
   },
   {
     "id": "Hebrews 4:15-16",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "For we do not have a high priest who is unable to empathize with our weaknesses, but we have one who has been tempted in every way, just as we are—yet he did not sin. Let us then approach God’s throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
       "ESV": "For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need.",
@@ -1522,12 +1513,82 @@
   },
   {
     "id": "Joshua 1:9",
-    "category": "top 100",
+    "category": "Top 100",
     "translations": {
       "NIV": "Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.",
       "ESV": "Have I not commanded you? Be strong and courageous. Do not be frightened, and do not be dismayed, for the Lord your God is with you wherever you go.",
       "KJV": "Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the Lord thy God is with thee whithersoever thou goest.",
       "NKJV": "Have I not commanded you? Be strong and of good courage; do not be afraid, nor be dismayed, for the Lord your God is with you wherever you go."
+    }
+  },
+  {
+    "id": "Psalm 22:10",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "From birth I was cast on you; from my mother’s womb you have been my God.",
+      "ESV": "On you was I cast from my birth, and from my mother's womb you have been my God.",
+      "KJV": "I was cast upon thee from the womb: thou art my God from my mother's belly.",
+      "NKJV": "I was cast upon You from birth. From My mother’s womb You have been My God."
+    }
+  },
+  {
+    "id": "Psalm 71:5-6",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "For you have been my hope, Sovereign Lord, my confidence since my youth. From birth I have relied on you; you brought me forth from my mother’s womb. I will ever praise you.",
+      "ESV": "For you, O Lord, are my hope, my trust, O Lord, from my youth. Upon you I have leaned from before my birth; you are he who took me from my mother's womb. My praise is continually of you.",
+      "KJV": "For thou art my hope, O Lord GOD: thou art my trust from my youth. By thee have I been holden up from the womb: thou art he that took me out of my mother's bowels: my praise shall be continually of thee.",
+      "NKJV": "For You are my hope, O Lord GOD; You are my trust from my youth. By You I have been upheld from birth; You are He who took me out of my mother’s womb. My praise shall be continually of You."
+    }
+  },
+  {
+    "id": "Psalm 71:17",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "Since my youth, God, you have taught me, and to this day I declare your marvelous deeds.",
+      "ESV": "O God, from my youth you have taught me, and I still proclaim your wondrous deeds.",
+      "KJV": "O God, thou hast taught me from my youth: and hitherto have I declared thy wondrous works.",
+      "NKJV": "O God, You have taught me from my youth; And to this day I declare Your wondrous works."
+    }
+  },
+  {
+    "id": "Psalm 119:73",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "Your hands made me and formed me; give me understanding to learn your commands.",
+      "ESV": "Your hands have made and fashioned me; give me understanding that I may learn your commandments.",
+      "KJV": "Thy hands have made me and fashioned me: give me understanding, that I may learn thy commandments.",
+      "NKJV": "Your hands have made me and fashioned me; Give me understanding, that I may learn Your commandments."
+    }
+  },
+  {
+    "id": "Psalm 139:13",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "For you created my inmost being; you knit me together in my mother’s womb.",
+      "ESV": "For you formed my inward parts; you knitted me together in my mother's womb.",
+      "KJV": "For thou hast possessed my reins: thou hast covered me in my mother's womb.",
+      "NKJV": "For You formed my inward parts; You covered me in my mother’s womb."
+    }
+  },
+  {
+    "id": "Proverbs 4:3-4",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "When I was a boy in my father’s house, still tender, and an only child of my mother, he taught me and said, 'Lay hold of my words with all your heart; keep my commands, and you will live.'",
+      "ESV": "When I was a son with my father, tender, the only one in the sight of my mother, he taught me and said to me, 'Let your heart hold fast my words; keep my commandments, and live.'",
+      "KJV": "For I was my father's son, tender and only beloved in the sight of my mother. He taught me also, and said unto me, 'Let thine heart retain my words: keep my commandments, and live.'",
+      "NKJV": "When I was my father’s son, Tender and the only one in the sight of my mother, He also taught me, and said to me: 'Let your heart retain my words; Keep my commands, and live.'"
+    }
+  },
+  {
+    "id": "Mark 10:13-16",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "People were bringing little children to Jesus for him to place his hands on them, but the disciples rebuked them. When Jesus saw this, he was indignant. He said to them, 'Let the little children come to me, and do not hinder them, for the kingdom of God belongs to such as these. Truly I tell you, anyone who will not receive the kingdom of God like a little child will never enter it.' And he took the children in his arms, placed his hands on them and blessed them.",
+      "ESV": "And they were bringing children to him that he might touch them, and the disciples rebuked them. But when Jesus saw it, he was indignant and said to them, 'Let the children come to me; do not hinder them, for to such belongs the kingdom of God. Truly, I say to you, whoever does not receive the kingdom of God like a child shall not enter it.' And he took them in his arms and blessed them, laying his hands on them.",
+      "KJV": "And they brought young children to him, that he should touch them: and his disciples rebuked those that brought them. But when Jesus saw it, he was much displeased, and said unto them, 'Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God. Verily I say unto you, Whosoever shall not receive the kingdom of God as a little child, he shall not enter therein.' And he took them up in his arms, put his hands upon them, and blessed them.",
+      "NKJV": "Then they brought little children to Him, that He might touch them; but the disciples rebuked those who brought them. But when Jesus saw it, He was greatly displeased and said to them, 'Let the little children come to Me, and do not forbid them; for of such is the kingdom of God. Assuredly, I say to you, whoever does not receive the kingdom of God as a little child will by no means enter it.' And He took them up in His arms, laid His hands on them, and blessed them."
     }
   }
 ]

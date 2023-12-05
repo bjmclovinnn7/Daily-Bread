@@ -1,0 +1,31 @@
+// const removeLearnedVerse = async () => {
+//   // Assuming you have access to the Firebase Auth instance and the user's ID
+
+//   try {
+//     // Get the reference to the user's document in Firestore
+//     const userDocRef = doc(colRefUsers, userData.uid)
+//     const userDoc = await getDoc(userDocRef)
+
+//     if (userDoc.exists()) {
+//       const userData = userDoc.data()
+//       const learnedVerses = userData.learnedVerses || []
+
+//       // Find the index of the friend to remove
+//       const friendIndex = learnedVerses.findIndex((verse: UserLearnedVerses) => verse.id === selectedVerse.id)
+
+//       if (friendIndex !== -1) {
+//         // Remove the friend from the array
+//         learnedVerses.splice(friendIndex, 1)
+
+//         // Update the Firestore document with the modified friends array
+//         await updateDoc(userDocRef, { learnedVerses })
+
+//         console.log("Friend successfully removed")
+//       } else {
+//         console.log("Friend not found in the list")
+//       }
+//     }
+//   } catch (error) {
+//     console.error("Error removing friend:", error)
+//   }
+// }

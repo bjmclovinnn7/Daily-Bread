@@ -49,9 +49,9 @@ const Learned = () => {
   return (
     <>
       <div
-        className={`h-screen w-full relative overflow-auto bg-black text-white p-4 font-Inter ${
-          open ? "" : " bg-black bg-clip-padding backdrop-filter bg-opacity-70"
-        } transition-all duration-500`}
+        className={`h-screen w-full relative overflow-auto  text-white p-4 font-Inter ${
+          open ? "" : " bg-clip-padding backdrop-filter bg-opacity-70"
+        } transition-all duration-500 bg-black `}
       >
         <div className="relative flex justify-between items-center ">
           <button onClick={() => navigate("/")} className="">

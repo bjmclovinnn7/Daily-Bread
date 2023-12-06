@@ -2,9 +2,8 @@ import { useUserContext } from "../utils/UserContext"
 import { useVerseContext } from "../utils/VerseContext"
 import { useNavigate } from "react-router"
 import { Button } from "../comps/Button"
-import { FaClock, FaUserFriends, FaTrophy, FaPlus, FaArrowLeft, FaFlask } from "react-icons/fa"
+import { FaClock, FaUserFriends, FaTrophy, FaPlus, FaArrowLeft, FaFlask, FaUser } from "react-icons/fa"
 import { cn } from "../utils/utils"
-import { MdMail } from "react-icons/md"
 import Achievements from "../comps/Achievements"
 import achievementData from "../utils/AchievementData.json"
 import { useEffect, useState } from "react"
@@ -54,6 +53,9 @@ const Profile = () => {
 
       setRankColor(newRankColor)
       setUserRank(rankTitle)
+    } else {
+      setRankColor("text-[#CD7F32]")
+      setUserRank("Bronze")
     }
     // No return statement is necessary here
   }, [userData?.experience]) // Add userData?.experience to the dependency array
@@ -94,9 +96,13 @@ const Profile = () => {
                 </span>
                 <span>Joined {handleTimeStamp(userData.createdOn)}</span>
               </div>
-              <div className="flex items-center gap-2 justify-start">
+              {/* <div className="flex items-center gap-2 justify-start">
                 <MdMail className="" />
-                <span className="">{userData?.email}</span>
+                <span className="">{userData?.email || "N/a"}</span>
+              </div> */}
+              <div className="flex items-center gap-2 justify-start">
+                <FaUser className="" />
+                <span className="text-white">{userData.userName}</span>
               </div>
             </div>
             <div className="flex justify-center w-fit">

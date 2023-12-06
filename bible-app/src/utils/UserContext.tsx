@@ -16,7 +16,6 @@ interface UserLearnedVerses {
 
 interface UserData {
   uid: string // needs to be hidden or partial so that other's can't abuse it. Displayname + # + last 5 of UID?
-  email: string // maybe we don't add email?
   displayName: string
   createdOn: {
     seconds: number
@@ -25,6 +24,7 @@ interface UserData {
   learnedVerses: UserLearnedVerses[]
   friends: UserData[]
   experience: number
+  userName: string
 }
 
 interface UserContextType {
@@ -43,9 +43,9 @@ const UserContext = createContext<UserContextType | undefined>(undefined)
 export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [userData, setUserData] = useState<any>(() => {
     const saved = localStorage.getItem("userData")
-    if (saved === undefined) {
-      return null
-    }
+    // if (saved === undefined) {
+    //   return null
+    // }
     const initialValue = saved ? JSON.parse(saved) : null
     return initialValue
   })
@@ -79,7 +79,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
           if (friend.uid === friendData.uid) {
             return {
               uid: friendData.uid,
-              email: friendData.email,
+              userName: friendData.userName,
               displayName: friendData.displayName,
               createdOn: friendData.createdOn,
               learnedVerses: friendData.learnedVerses,
@@ -125,7 +125,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
             if (friendData) {
               const userFriendData: UserData = {
                 uid: friendUid,
-                email: friendData.email,
+                userName: friendData.userName,
                 displayName: friendData.displayName,
                 createdOn: friendData.createdOn,
                 learnedVerses: friendData.learnedVerses,
@@ -156,7 +156,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
   //listeners for when user signs in; will check for changes in userFriends + learnedVerses and update.
   useEffect(() => {
     const unsubscribeAuth = onAuthStateChanged(auth, (currentUser: User | null) => {
-      if (currentUser?.uid) {
+      if (currentUser) {
         // User is signed in, you can fetch their learned verses
         console.log(currentUser)
         const userUid = currentUser.uid
@@ -168,20 +168,22 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
           const userData = snapshot.data()
           // Process the data and update your state
           // Convert the data object into an array of UserLearnedVerses
-          setUserData({
-            uid: userData?.uid,
-            email: userData?.email,
-            displayName: userData?.displayName,
-            createdOn: {
-              seconds: userData?.createdOn.seconds,
-              nanoseconds: userData?.createdOn.nanoseconds,
-            },
-            learnedVerses: userData?.learnedVerses,
-            friends: userData?.friends,
-            experience: userData?.experience,
-          })
+          if (userData?.userName) {
+            setUserData({
+              uid: userData?.uid,
+              email: userData?.email,
+              displayName: userData?.displayName,
+              createdOn: userData?.createdOn,
+              learnedVerses: userData?.learnedVerses,
+              friends: userData?.friends,
+              experience: userData?.experience,
+              userName: userData.userName,
+            })
 
-          saveToLocalStorage("userData", userData)
+            saveToLocalStorage("userData", userData)
+          } else {
+            return
+          }
         })
 
         // Clean up the learnedVerses listener when the component unmounts
@@ -203,6 +205,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
       console.log("You have been signed out!")
       setUserData(null)
       setUserFriends([])
+      localStorage.clear()
       removeFromLocalStorage("userData")
       removeFromLocalStorage("userFriends")
       removeFromLocalStorage("currentCategory")

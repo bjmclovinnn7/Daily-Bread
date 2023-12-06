@@ -8,6 +8,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import Copyright from "../comps/Copyright"
 import PwaPrompt from "../comps/PwaPrompt"
 import { detect } from "detect-browser"
+import { colRefUsers } from "../utils/firebase"
+import { getDocs } from "firebase/firestore"
 
 interface DeferredPrompt extends Event {
   prompt: () => void
@@ -49,6 +51,25 @@ const Home = () => {
     }
   }
 
+  async function getAllDocuments() {
+    try {
+      const snapshot = await getDocs(colRefUsers)
+      const documents: any = []
+
+      snapshot.forEach((doc: any) => {
+        documents.push({
+          id: doc.id,
+          data: doc.data(),
+        })
+      })
+
+      console.log(documents)
+    } catch (error) {
+      console.error("Error getting documents: ", error)
+      throw error
+    }
+  }
+
   useEffect(() => {
     const browser = detect()
 
@@ -79,7 +100,7 @@ const Home = () => {
       )}
       <div className="h-full w-full relative">
         <div className="h-[10vh] w-full fixed flex justify-between items-center bg-black text-white text-xl p-5 z-20">
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center gap-4 ">
             <button
               onClick={() => setShowDropdown(!showDropdown)}
               className="cursor-pointer font-Inter bg-[#4F4F4F] rounded-lg p-1 px-2 flex items-center justify-center gap-2"
@@ -143,7 +164,11 @@ const Home = () => {
             )}
           </button>
         </div>
+
         <div className="category pt-[10vh] h-[100vh] w-full overflow-y-auto p-4 bg-black relative">
+          <button onClick={() => getAllDocuments()} className="text-white">
+            Check
+          </button>
           <div className="grid max-w-[1000px] mx-auto pt-2 pb-4">
             <div className="container w-full text-2xl md:text-3xl lg:text-4xl flex justify-between items-center">
               <span className=" font-Inter text-white font-semibold">

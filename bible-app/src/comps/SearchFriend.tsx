@@ -24,8 +24,19 @@ const SearchFriends = ({ open, setOpen }: Props) => {
   const { userData } = useUserContext()
   const [userInput, setUserInput] = useState("")
   const [friendData, setFriendData] = useState<UserData[]>([])
-
   const [error, setError] = useState<string | null>(null)
+
+  const handleSearchFriend = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const userInputForFriend = userInput.trim()
+
+    try {
+      await searchFriend(userInputForFriend)
+    } catch (error) {
+      setError("Error searching for user. Please try again.")
+      setFriendData([])
+    }
+  }
 
   const searchFriend = async (userInputForFriend: string) => {
     const nameMatch = await queryByName(userInputForFriend)
@@ -43,7 +54,6 @@ const SearchFriends = ({ open, setOpen }: Props) => {
       const querySnapshot = await getDocs(query(colRefUsers, where("displayName", "==", userInputForFriend)))
 
       if (!querySnapshot.empty) {
-        // Handle display name match
         const matchingUsers = querySnapshot.docs.map((doc) => {
           const userData = doc.data() as UserData
           return {
@@ -60,20 +70,8 @@ const SearchFriends = ({ open, setOpen }: Props) => {
         return false
       }
     } catch (error) {
-      console.error("Error querying by display name:", error)
+      console.error("Error querying by displayName:", error)
       throw error
-    }
-  }
-
-  const handleSearchFriend = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const userInputForFriend = userInput.trim()
-
-    try {
-      await searchFriend(userInputForFriend)
-    } catch (error) {
-      setError("Error searching for user. Please try again.")
-      setFriendData([])
     }
   }
 

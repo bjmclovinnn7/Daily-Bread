@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 import { getFirestore, collection } from "firebase/firestore"
+import { getPerformance } from "firebase/performance"
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREABASE_API_KEY,
@@ -17,7 +18,11 @@ const app = initializeApp(firebaseConfig)
 export const db = getFirestore()
 //collection ref users
 export const colRefUsers = collection(db, "users")
+
 //add user with Authentication
+
 export const auth = getAuth(app)
+
+export const perf = getPerformance(app)
 
 export default app

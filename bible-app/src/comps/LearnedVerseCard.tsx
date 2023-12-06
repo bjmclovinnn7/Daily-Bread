@@ -151,11 +151,11 @@ const LearnedVerseCard = ({ open, setOpen }: Props) => {
             hidden: { opacity: 0, y: 500 },
           }}
           transition={{ duration: 0.3 }}
-          className={`fixed inset-0 bg-black text-white font-Inter ${
+          className={`fixed inset-0  bg-[#444444] text-white font-Inter ${
             open ? "pointer-events-none z-10" : ""
           } max-w-2xl mx-auto `}
         >
-          <div className={`h-screen w-screen p-4 max-w-2xl mx-auto `}>
+          <div className={`h-screen w-screen p-4 max-w-2xl mx-auto`}>
             <div className="relative text-center flex items-center justify-center">
               <button className="absolute inset-0" onClick={handleDone}>
                 <FaXmark className="text-3xl md:text-4xl lg:text-5xl" />
@@ -248,7 +248,7 @@ const LearnedVerseCard = ({ open, setOpen }: Props) => {
                   visible: { opacity: 1, y: 0, x: 0 },
                   hidden: { opacity: 0, y: 50 },
                 }}
-                className="bg-white w-full h-fit text-black p-6 rounded-xl mx-auto font-Inter"
+                className="bg-white w-full h-full text-black p-6 rounded-xl mx-auto font-Inter"
               >
                 <div className="relative text-center flex items-center justify-center">
                   <button className="absolute inset-0 text-lg" onClick={() => setShowInfoMessage(!showInfoMessage)}>

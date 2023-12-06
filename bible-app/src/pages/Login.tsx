@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc"
 import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth"
-import { doc, getDoc, setDoc } from "firebase/firestore"
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore"
 import { auth, colRefUsers } from "../utils/firebase"
 import { useUserContext } from "../utils/UserContext"
 
@@ -60,39 +60,40 @@ const Login = () => {
     }
   }
 
-  const uidConversion = (displayName: string, uid: string) => {
-    let last5 = uid.slice(-5)
-    let updatedDisplay = displayName.split(" ")[0].toLocaleLowerCase()
-    let newUid = updatedDisplay + "#" + last5
-    return newUid
-  }
-
   const createUserDoc = async (currentUser: any) => {
     console.log("Creating User Document")
     const userDocRef = doc(colRefUsers, currentUser.user.uid)
-    //check if the user has a frist and last name and combine to make displayName
 
-    await setDoc(userDocRef, {
-      displayName: currentUser.user.displayName,
-      email: currentUser.user.email,
-      uid: uidConversion(currentUser.user.displayName, currentUser.user.uid),
-      createdOn: new Date(),
-      learnedVerses: [],
-      friends: [],
-    })
+    const timeStamp = serverTimestamp()
+    //check if the user has a frist and last name and combine to make displayName
+    try {
+      await setDoc(userDocRef, {
+        displayName: currentUser.user.displayName,
+        email: currentUser.user.email,
+        uid: currentUser.user.uid,
+        createdOn: timeStamp,
+        learnedVerses: [],
+        friends: [],
+        experience: 0,
+      })
+    } catch (error: any) {
+      console.log(error)
+      setErrorMessage
+      setError(true)
+    }
   }
 
   return (
     <>
-      <div className="h-screen w-full grid place-content-center p-10 bg-[#444444] text-white ">
-        <div className="text-center text-5xl md:text-6xl lg:text-7xl font-header p-4">Login.</div>
-        {error && <div className="bg-red-600 text-white font-bold">{errorMessage}</div>}
+      <div className="h-screen w-full grid place-content-center p-10 bg-black text-white font-Inter">
+        <div className="text-center text-5xl md:text-6xl lg:text-7xl p-4">Login.</div>
+        {error && <div className="bg-red-600 text-white">{errorMessage}</div>}
         <form
           onSubmit={handleSubmit}
           className="max-w-[400px] p-5 border-2 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-xl rounded-xl"
         >
           <div className="text-2xl">
-            <label className=" font-bold">Email</label>
+            <label className="">Email</label>
             <input
               className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="email"
@@ -102,7 +103,7 @@ const Login = () => {
               }}
               required
             ></input>
-            <label className="font-bold">Password</label>
+            <label className="">Password</label>
             <input
               className="border-2 border-gray-300 rounded-sm w-full text-black"
               type="password"
@@ -127,7 +128,7 @@ const Login = () => {
             <div className="border-r-2 p-2 text-4xl">
               <FcGoogle />
             </div>
-            <span className="w-full text-center h-full flex justify-center items-center font-bold text-xl">
+            <span className="w-full text-center h-full flex justify-center items-center text-xl">
               Login with Google
             </span>
           </button>

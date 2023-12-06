@@ -123,13 +123,30 @@ const Auth = () => {
     const provider = new GoogleAuthProvider()
     try {
       const currentUser = await signInWithPopup(auth, provider)
-      const userUid = currentUser.user.uid
-      const currentUserRef = doc(colRefUsers, userUid)
+      const googleUid = currentUser.user.uid
+      const googleDisplayName = currentUser?.user?.displayName || ""
+      const googleEmail = currentUser.user.email || ""
+      const currentUserRef = doc(colRefUsers, googleUid)
       const userDoc = await getDoc(currentUserRef)
-      if (userDoc.exists()) {
+      let googleUserData = userDoc.data()
+
+      if (userDoc.exists() && googleUserData?.userName) {
         console.log("User already exists")
+        navigate("/")
       } else {
-        await createUserDoc()
+        setUserData({
+          displayName: googleDisplayName,
+          uid: currentUser.user.uid,
+          email: googleEmail,
+          password: "",
+          confirmedPassword: "",
+          lastName: "",
+          firstName: " ",
+        })
+        setShowFirstStep(false)
+        setShowSecondStep(false)
+        setShowThirdStep(true)
+        setEmaiSignUpSucces(true)
       }
     } catch (error) {
       console.error(error)

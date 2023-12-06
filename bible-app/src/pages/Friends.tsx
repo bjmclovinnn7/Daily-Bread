@@ -23,7 +23,6 @@ const Friends = () => {
 
   interface UserData {
     uid: string
-    email: string
     displayName: string
     createdOn: {
       seconds: number
@@ -32,6 +31,7 @@ const Friends = () => {
     learnedVerses: UserLearnedVerses[]
     friends: UserData[]
     experience: number
+    userName: string
   }
 
   const handleNavigateToFriend = (friendData: UserData) => {

@@ -8,8 +8,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import Copyright from "../comps/Copyright"
 import PwaPrompt from "../comps/PwaPrompt"
 import { detect } from "detect-browser"
-import { colRefUsers } from "../utils/firebase"
-import { getDocs } from "firebase/firestore"
 
 interface DeferredPrompt extends Event {
   prompt: () => void
@@ -48,25 +46,6 @@ const Home = () => {
           setShowPwaInstallPrompt(false)
         }
       })
-    }
-  }
-
-  async function getAllDocuments() {
-    try {
-      const snapshot = await getDocs(colRefUsers)
-      const documents: any = []
-
-      snapshot.forEach((doc: any) => {
-        documents.push({
-          id: doc.id,
-          data: doc.data(),
-        })
-      })
-
-      console.log(documents)
-    } catch (error) {
-      console.error("Error getting documents: ", error)
-      throw error
     }
   }
 
@@ -166,9 +145,6 @@ const Home = () => {
         </div>
 
         <div className="category pt-[10vh] h-[100vh] w-full overflow-y-auto p-4 bg-black relative">
-          <button onClick={() => getAllDocuments()} className="text-white">
-            Check
-          </button>
           <div className="grid max-w-[1000px] mx-auto pt-2 pb-4">
             <div className="container w-full text-2xl md:text-3xl lg:text-4xl flex justify-between items-center">
               <span className=" font-Inter text-white font-semibold">

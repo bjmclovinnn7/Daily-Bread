@@ -4,7 +4,7 @@ import { useNavigate } from "react-router"
 import { FaFlask, FaShield, FaTrophy } from "react-icons/fa6"
 import Achievements from "../comps/Achievements"
 import achievementData from "../utils/AchievementData.json" // Assuming you have an Achievements component
-import { FaArrowLeft, FaClock, FaMinus, FaUserFriends } from "react-icons/fa"
+import { FaArrowLeft, FaClock, FaMinus, FaUser, FaUserFriends } from "react-icons/fa"
 import { doc, getDoc, updateDoc } from "firebase/firestore"
 import { colRefUsers } from "../utils/firebase"
 import { cn } from "../utils/utils"
@@ -22,7 +22,6 @@ interface UserLearnedVerses {
 
 interface UserData {
   uid: string
-  email: string
   displayName: string
   createdOn: {
     seconds: number
@@ -134,6 +133,10 @@ const FriendProfile = () => {
                   <FaClock className="" />
                 </span>
                 <span>Joined {handleTimeStamp(selectedFriend.createdOn)}</span>
+              </div>
+              <div className="flex items-center gap-2 justify-start">
+                <FaUser className="" />
+                <span className="text-white">{selectedFriend.userName}</span>
               </div>
             </div>
           </div>

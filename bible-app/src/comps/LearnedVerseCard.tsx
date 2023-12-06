@@ -25,7 +25,6 @@ interface UserLearnedVerses {
 
 interface UserData {
   uid: string
-  email: string
   displayName: string
   createdOn: {
     seconds: number
@@ -34,6 +33,7 @@ interface UserData {
   learnedVerses: UserLearnedVerses[]
   friends: UserData[]
   experience: number
+  userName: string
 }
 
 const LearnedVerseCard = ({ open, setOpen }: Props) => {

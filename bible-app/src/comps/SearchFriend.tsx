@@ -18,6 +18,7 @@ interface UserData {
   uid: string
   displayName: string
   createdOn: string
+  userName: string
 }
 
 const SearchFriends = ({ open, setOpen }: Props) => {
@@ -39,13 +40,49 @@ const SearchFriends = ({ open, setOpen }: Props) => {
   }
 
   const searchFriend = async (userInputForFriend: string) => {
-    const nameMatch = await queryByName(userInputForFriend)
-
-    if (!nameMatch) {
-      setError("User not found")
+    try {
+      const nameMatch = await queryByName(userInputForFriend)
+      if (!nameMatch) {
+        const userNameMatch = await queryByUserName(userInputForFriend)
+        if (!userNameMatch) {
+          setError("User not found")
+          setFriendData([])
+        } else {
+          setError(null)
+        }
+      } else {
+        setError(null)
+      }
+    } catch (error) {
+      setError("Error searching for user. Please try again.")
       setFriendData([])
-    } else {
-      setError(null)
+    }
+  }
+
+  const queryByUserName = async (userInputForFriend: string): Promise<boolean> => {
+    try {
+      const querySnapshot = await getDocs(query(colRefUsers, where("userName", "==", userInputForFriend)))
+
+      if (!querySnapshot.empty) {
+        const matchingUsers = querySnapshot.docs.map((doc) => {
+          const friendUserData = doc.data() as UserData
+          return {
+            uid: userData.uid,
+            displayName: friendUserData.displayName,
+            createdOn: friendUserData.createdOn,
+            userName: friendUserData.userName,
+          }
+        })
+        setFriendData(matchingUsers)
+        console.log(matchingUsers)
+        console.log("Query by username successful")
+        return true
+      } else {
+        return false
+      }
+    } catch (error) {
+      console.error("Error querying by username:", error)
+      throw error
     }
   }
 
@@ -55,11 +92,12 @@ const SearchFriends = ({ open, setOpen }: Props) => {
 
       if (!querySnapshot.empty) {
         const matchingUsers = querySnapshot.docs.map((doc) => {
-          const userData = doc.data() as UserData
+          const friendUserData = doc.data() as UserData
           return {
             uid: userData.uid,
-            displayName: userData.displayName,
-            createdOn: userData.createdOn,
+            displayName: friendUserData.displayName,
+            createdOn: friendUserData.createdOn,
+            userName: friendUserData.userName,
           }
         })
         setFriendData(matchingUsers)
@@ -175,7 +213,7 @@ const SearchFriends = ({ open, setOpen }: Props) => {
                     <div className="p-2 rounded-3xl text-2xl">
                       <div className="grid">
                         <span className="font-bold ">{friend.displayName}</span>
-                        {/* <span className="text-[#696969]">{friend.uid}</span> */}
+                        <span className="text-[#696969]">{friend.userName}</span>
                       </div>
                     </div>
                     <div className="grid place-items-center p-2 w-1/4">

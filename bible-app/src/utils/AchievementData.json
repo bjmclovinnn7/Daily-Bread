@@ -27,17 +27,17 @@
   },
   {
     "title": "Gold",
-    "goal": 200,
-    "description": "Earn  200 XP"
+    "goal": 1000,
+    "description": "Earn  1000 XP"
   },
   {
     "title": "Silver",
-    "goal": 100,
-    "description": "Earn 100 XP"
+    "goal": 500,
+    "description": "Earn 500 XP"
   },
   {
     "title": "Bronze",
-    "goal": 50,
-    "description": "Earn 50 XP"
+    "goal": 250,
+    "description": "Earn 250 XP"
   }
 ]

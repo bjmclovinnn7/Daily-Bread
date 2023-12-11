@@ -4,14 +4,13 @@ import { useNavigate } from "react-router"
 import { FaTrophy, FaArrowLeft } from "react-icons/fa"
 import LearnedVerseCard from "../comps/LearnedVerseCard"
 import { useVerseContext } from "../utils/VerseContext"
-import verseData from "../utils/Verses.json"
 
 const Learned = () => {
   const { userData } = useUserContext()
   const [open, setOpen] = useState(true)
   const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState("")
-  const { saveSelectedVerse, saveCurrentCategory } = useVerseContext()
+  const { saveSelectedVerse, saveCurrentCategory, verseData } = useVerseContext()
 
   // Define state variables for filters
   const [selectedCategory, setSelectedCategory] = useState("") // State for category filter

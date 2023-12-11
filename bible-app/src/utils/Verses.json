@@ -251,6 +251,16 @@
     }
   },
   {
+    "id": "Hebrews 11:1-3",
+    "category": "Faith",
+    "translations": {
+      "NIV": "Now faith is confidence in what we hope for and assurance about what we do not see. This is what the ancients were commended for. By faith we understand that the universe was formed at God’s command, so that what is seen was not made out of what was visible.",
+      "ESV": "Now faith is the assurance of things hoped for, the conviction of things not seen. For by it the people of old received their commendation. By faith we understand that the universe was created by the word of God, so that what is seen was not made out of things that are visible.",
+      "KJV": "Now faith is the substance of things hoped for, the evidence of things not seen. For by it the elders obtained a good report. Through faith we understand that the worlds were framed by the word of God, so that things which are seen were not made of things which do appear.",
+      "NKJV": "Now faith is the substance of things hoped for, the evidence of things not seen. For by it the elders obtained a good testimony. By faith we understand that the worlds were framed by the word of God, so that the things which are seen were not made of things which are visible."
+    }
+  },
+  {
     "id": "2 Corinthians 5:7",
     "category": "Faith",
     "translations": {
@@ -500,6 +510,7 @@
       "NKJV": "Nor is there salvation in any other, for there is no other name under heaven given among men by which we must be saved."
     }
   },
+
   {
     "id": "Romans 8:1",
     "category": "Salvation",
@@ -508,6 +519,36 @@
       "ESV": "There is therefore now no condemnation for those who are in Christ Jesus.",
       "KJV": "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.",
       "NKJV": "There is therefore now no condemnation to those who are in Christ Jesus, who do not walk according to the flesh, but according to the Spirit."
+    }
+  },
+  {
+    "id": "Titus 3:5",
+    "category": "Salvation",
+    "translations": {
+      "NIV": "he saved us, not because of righteous things we had done, but because of his mercy. He saved us through the washing of rebirth and renewal by the Holy Spirit.",
+      "ESV": "he saved us, not because of works done by us in righteousness, but according to his own mercy, by the washing of regeneration and renewal of the Holy Spirit.",
+      "KJV": "Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost.",
+      "NKJV": "not by works of righteousness which we have done, but according to His mercy He saved us, through the washing of regeneration and renewing of the Holy Spirit."
+    }
+  },
+  {
+    "id": "1 Timothy 2:3-4",
+    "category": "Salvation",
+    "translations": {
+      "NIV": "This is good, and pleases God our Savior, who wants all people to be saved and to come to a knowledge of the truth.",
+      "ESV": "This is good, and it is pleasing in the sight of God our Savior, who desires all people to be saved and to come to the knowledge of the truth.",
+      "KJV": "For this is good and acceptable in the sight of God our Saviour; Who will have all men to be saved, and to come unto the knowledge of the truth.",
+      "NKJV": "For this is good and acceptable in the sight of God our Savior, who desires all men to be saved and to come to the knowledge of the truth."
+    }
+  },
+  {
+    "id": "2 Timothy 1:9",
+    "category": "Salvation",
+    "translations": {
+      "NIV": "He has saved us and called us to a holy life—not because of anything we have done but because of his own purpose and grace. This grace was given us in Christ Jesus before the beginning of time.",
+      "ESV": "...who saved us and called us to a holy calling, not because of our works but because of his own purpose and grace, which he gave us in Christ Jesus before the ages began.",
+      "KJV": "Who hath saved us, and called us with an holy calling, not according to our works, but according to his own purpose and grace, which was given us in Christ Jesus before the world began.",
+      "NKJV": "who has saved us and called us with a holy calling, not according to our works, but according to His own purpose and grace which was given to us in Christ Jesus before time began."
     }
   },
   {
@@ -634,7 +675,7 @@
     "id": "Jeremiah 29:11",
     "category": "Top 100",
     "translations": {
-      "NIV": "For I know the plans I have for you,” declares the LORD, “plans to prosper you and not to harm you, plans to give you hope and a future.",
+      "NIV": "For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, plans to give you hope and a future.",
       "ESV": "For I know the plans I have for you, declares the LORD, plans for welfare and not for evil, to give you a future and a hope.",
       "KJV": "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
       "NKJV": "For I know the thoughts that I think toward you, says the LORD, thoughts of peace and not of evil, to give you a future and a hope."
@@ -998,16 +1039,6 @@
       "ESV": "For the word of God is living and active, sharper than any two-edged sword, piercing to the division of soul and of spirit, of joints and of marrow, and discerning the thoughts and intentions of the heart.",
       "KJV": "For the word of God is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and is a discerner of the thoughts and intents of the heart.",
       "NKJV": "For the word of God is living and powerful, and sharper than any two-edged sword, piercing even to the division of soul and spirit, and of joints and marrow, and is a discerner of the thoughts and intents of the heart."
-    }
-  },
-  {
-    "id": "Hebrews 4:15-16",
-    "category": "Top 100",
-    "translations": {
-      "NIV": "For we do not have a high priest who is unable to empathize with our weaknesses, but we have one who has been tempted in every way, just as we are—yet he did not sin. Let us then approach God’s throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
-      "ESV": "For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need.",
-      "KJV": "For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin. Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.",
-      "NKJV": "For we do not have a High Priest who cannot sympathize with our weaknesses, but was in all points tempted as we are, yet without sin. Let us therefore come boldly to the throne of grace, that we may obtain mercy and find grace to help in time of need."
     }
   },
   {
@@ -1582,6 +1613,36 @@
     }
   },
   {
+    "id": "Ecclesiastes 11:9",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "You who are young, be happy while you are young, and let your heart give you joy in the days of your youth. Follow the ways of your heart and whatever your eyes see, but know that for all these things God will bring you into judgment.",
+      "ESV": "Rejoice, O young man, in your youth, and let your heart cheer you in the days of your youth. Walk in the ways of your heart and the sight of your eyes. But know that for all these things God will bring you into judgment.",
+      "KJV": "Rejoice, O young man, in thy youth; and let thy heart cheer thee in the days of thy youth, and walk in the ways of thine heart, and in the sight of thine eyes: but know thou, that for all these things God will bring thee into judgment.",
+      "NKJV": "Rejoice, O young man, in your youth, and let your heart cheer you in the days of your youth; walk in the ways of your heart, and in the sight of your eyes; but know that for all these God will bring you into judgment."
+    }
+  },
+  {
+    "id": "Psalm 71:17-18",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "Since my youth, God, you have taught me, and to this day I declare your marvelous deeds. Even when I am old and gray, do not forsake me, my God, till I declare your power to the next generation, your mighty acts to all who are to come.",
+      "ESV": "O God, from my youth you have taught me, and I still proclaim your wondrous deeds. So even to old age and gray hairs, O God, do not forsake me, until I proclaim your might to another generation, your power to all those to come.",
+      "KJV": "O God, thou hast taught me from my youth: and hitherto have I declared thy wondrous works. Now also when I am old and greyheaded, O God, forsake me not; until I have shewed thy strength unto this generation, and thy power to every one that is to come.",
+      "NKJV": "O God, You have taught me from my youth; and to this day I declare Your wondrous works. Now also when I am old and grayheaded, O God, do not forsake me, until I declare Your strength to this generation, Your power to everyone who is to come."
+    }
+  },
+  {
+    "id": "Ecclesiastes 12:1",
+    "category": "Birth and Youth",
+    "translations": {
+      "NIV": "Remember your Creator in the days of your youth, before the days of trouble come and the years approach when you will say, 'I find no pleasure in them.'",
+      "ESV": "Remember also your Creator in the days of your youth, before the evil days come and the years draw near of which you will say, 'I have no pleasure in them.'",
+      "KJV": "Remember now thy Creator in the days of thy youth, while the evil days come not, nor the years draw nigh, when thou shalt say, I have no pleasure in them;",
+      "NKJV": "Remember now your Creator in the days of your youth, before the difficult days come, and the years draw near when you say, 'I have no pleasure in them.'"
+    }
+  },
+  {
     "id": "Mark 10:13-16",
     "category": "Birth and Youth",
     "translations": {
@@ -1589,6 +1650,2107 @@
       "ESV": "And they were bringing children to him that he might touch them, and the disciples rebuked them. But when Jesus saw it, he was indignant and said to them, 'Let the children come to me; do not hinder them, for to such belongs the kingdom of God. Truly, I say to you, whoever does not receive the kingdom of God like a child shall not enter it.' And he took them in his arms and blessed them, laying his hands on them.",
       "KJV": "And they brought young children to him, that he should touch them: and his disciples rebuked those that brought them. But when Jesus saw it, he was much displeased, and said unto them, 'Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God. Verily I say unto you, Whosoever shall not receive the kingdom of God as a little child, he shall not enter therein.' And he took them up in his arms, put his hands upon them, and blessed them.",
       "NKJV": "Then they brought little children to Him, that He might touch them; but the disciples rebuked those who brought them. But when Jesus saw it, He was greatly displeased and said to them, 'Let the little children come to Me, and do not forbid them; for of such is the kingdom of God. Assuredly, I say to you, whoever does not receive the kingdom of God as a little child will by no means enter it.' And He took them up in His arms, laid His hands on them, and blessed them."
+    }
+  },
+  {
+    "id": "Psalm 116:15",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "Precious in the sight of the Lord is the death of his faithful servants.",
+      "ESV": "Precious in the sight of the Lord is the death of his saints.",
+      "KJV": "Precious in the sight of the Lord is the death of his saints.",
+      "NKJV": "Precious in the sight of the Lord is the death of His saints."
+    }
+  },
+  {
+    "id": "Psalm 126:5-6",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "Those who sow with tears will reap with songs of joy. Those who go out weeping, carrying seed to sow, will return with songs of joy, carrying sheaves with them.",
+      "ESV": "Those who sow in tears shall reap with shouts of joy! He who goes out weeping, bearing the seed for sowing, shall come home with shouts of joy, bringing his sheaves with him.",
+      "KJV": "They that sow in tears shall reap in joy. He that goeth forth and weepeth, bearing precious seed, shall doubtless come again with rejoicing, bringing his sheaves with him.",
+      "NKJV": "Those who sow in tears shall reap in joy. He who continually goes forth weeping, bearing seed for sowing, shall doubtless come again with rejoicing, bringing his sheaves with him."
+    }
+  },
+  {
+    "id": "Psalm 147:3-5",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "He heals the brokenhearted and binds up their wounds. He determines the number of the stars and calls them each by name. Great is our Lord and mighty in power; his understanding has no limit.",
+      "ESV": "He heals the brokenhearted and binds up their wounds. He determines the number of the stars; he gives to all of them their names. Great is our Lord, and abundant in power; his understanding is beyond measure.",
+      "KJV": "He healeth the broken in heart, and bindeth up their wounds. He telleth the number of the stars; he calleth them all by their names. Great is our Lord, and of great power: his understanding is infinite.",
+      "NKJV": "He heals the brokenhearted and binds up their wounds. He counts the number of the stars; He calls them all by name. Great is our Lord, and mighty in power; His understanding is infinite."
+    }
+  },
+  {
+    "id": "Isaiah 25:8",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "He will swallow up death forever. The Sovereign Lord will wipe away the tears from all faces; he will remove his people’s disgrace from all the earth. The Lord has spoken.",
+      "ESV": "He will swallow up death forever; and the Lord God will wipe away tears from all faces, and the reproach of his people he will take away from all the earth, for the Lord has spoken.",
+      "KJV": "He will swallow up death in victory; and the Lord God will wipe away tears from off all faces; and the rebuke of his people shall he take away from off all the earth: for the Lord hath spoken it.",
+      "NKJV": "He will swallow up death forever, and the Lord God will wipe away tears from all faces; the rebuke of His people He will take away from all the earth; for the Lord has spoken."
+    }
+  },
+  {
+    "id": "Isaiah 26:3-4",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "You will keep in perfect peace those whose minds are steadfast, because they trust in you. Trust in the Lord forever, for the Lord, the Lord himself, is the Rock eternal.",
+      "ESV": "You keep him in perfect peace whose mind is stayed on you, because he trusts in you. Trust in the Lord forever, for the Lord God is an everlasting rock.",
+      "KJV": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Trust ye in the Lord for ever: for in the Lord Jehovah is everlasting strength.",
+      "NKJV": "You will keep him in perfect peace, whose mind is stayed on You, because he trusts in You. Trust in the Lord forever, for in Yah, the Lord, is everlasting strength."
+    }
+  },
+  {
+    "id": "Isaiah 61:3",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "and provide for those who grieve in Zion—to bestow on them a crown of beauty instead of ashes, the oil of joy instead of mourning, and a garment of praise instead of a spirit of despair. They will be called oaks of righteousness, a planting of the Lord for the display of his splendor.",
+      "ESV": "to grant to those who mourn in Zion— to give them a beautiful headdress instead of ashes, the oil of gladness instead of mourning, the garment of praise instead of a faint spirit; that they may be called oaks of righteousness, the planting of the Lord, that he may be glorified.",
+      "KJV": "To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the Lord, that he might be glorified.",
+      "NKJV": "To console those who mourn in Zion, to give them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they may be called trees of righteousness, the planting of the Lord, that He may be glorified."
+    }
+  },
+  {
+    "id": "Matthew 5:4",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "Blessed are those who mourn, for they will be comforted.",
+      "ESV": "Blessed are those who mourn, for they shall be comforted.",
+      "KJV": "Blessed are they that mourn: for they shall be comforted.",
+      "NKJV": "Blessed are those who mourn, for they shall be comforted."
+    }
+  },
+  {
+    "id": "Romans 8:37-39",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "No, in all these things we are more than conquerors through him who loved us. For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
+      "ESV": "No, in all these things we are more than conquerors through him who loved us. For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord.",
+      "KJV": "Nay, in all these things we are more than conquerors through him that loved us. For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      "NKJV": "Yet in all these things we are more than conquerors through Him who loved us. For I am persuaded that neither death nor life, nor angels nor principalities nor powers, nor things present nor things to come, nor height nor depth, nor any other created thing, shall be able to separate us from the love of God which is in Christ Jesus our Lord."
+    }
+  },
+  {
+    "id": "Revelation 7:17",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "For the Lamb at the center of the throne will be their shepherd; ‘he will lead them to springs of living water.’ ‘And God will wipe away every tear from their eyes.’",
+      "ESV": "For the Lamb in the midst of the throne will be their shepherd, and he will guide them to springs of living water, and God will wipe away every tear from their eyes.",
+      "KJV": "For the Lamb which is in the midst of the throne shall feed them, and shall lead them unto living fountains of waters: and God shall wipe away all tears from their eyes.",
+      "NKJV": "for the Lamb who is in the midst of the throne will shepherd them and lead them to living fountains of waters. And God will wipe away every tear from their eyes."
+    }
+  },
+  {
+    "id": "Revelation 21:4",
+    "category": "Comfort in Sorrow",
+    "translations": {
+      "NIV": "He will wipe every tear from their eyes. There will be no more death’ or mourning or crying or pain, for the old order of things has passed away.",
+      "ESV": "He will wipe away every tear from their eyes, and death shall be no more, neither shall there be mourning, nor crying, nor pain anymore, for the former things have passed away.",
+      "KJV": "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.",
+      "NKJV": "And God will wipe away every tear from their eyes; there shall be no more death, nor sorrow, nor crying. There shall be no more pain, for the former things have passed away."
+    }
+  },
+  {
+    "id": "Genesis 1:26-27",
+    "category": "Creation",
+    "translations": {
+      "NIV": "Then God said, 'Let us make mankind in our image, in our likeness, so that they may rule over the fish in the sea and the birds in the sky, over the livestock and all the wild animals, and over all the creatures that move along the ground.' So God created mankind in his own image, in the image of God he created them; male and female he created them.",
+      "ESV": "Then God said, 'Let us make man in our image, after our likeness. And let them have dominion over the fish of the sea and over the birds of the heavens and over the livestock and over all the earth and over every creeping thing that creeps on the earth.' So God created man in his own image, in the image of God he created him; male and female he created them.",
+      "KJV": "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth. So God created man in his own image, in the image of God created he him; male and female created he them.",
+      "NKJV": "Then God said, 'Let Us make man in Our image, according to Our likeness; let them have dominion over the fish of the sea, over the birds of the air, and over the cattle, over all the earth and over every creeping thing that creeps on the earth.' So God created man in His own image; in the image of God He created him; male and female He created them."
+    }
+  },
+  {
+    "id": "Nehemiah 9:6",
+    "category": "Creation",
+    "translations": {
+      "NIV": "You alone are the Lord. You made the heavens, even the highest heavens, and all their starry host, the earth and all that is on it, the seas and all that is in them. You give life to everything, and the multitudes of heaven worship you.",
+      "ESV": "You are the Lord, you alone. You have made heaven, the heaven of heavens, with all their host, the earth and all that is on it, the seas and all that is in them; and you preserve all of them; and the host of heaven worships you.",
+      "KJV": "Thou, even thou, art Lord alone; thou hast made heaven, the heaven of heavens, with all their host, the earth, and all things that are therein, the seas, and all that is therein, and thou preservest them all; and the host of heaven worshippeth thee.",
+      "NKJV": "You alone are the Lord; You have made heaven, the heaven of heavens, with all their host, the earth and everything on it, the seas and all that is in them, and You preserve them all. The host of heaven worships You."
+    }
+  },
+  {
+    "id": "Psalm 19:1",
+    "category": "Creation",
+    "translations": {
+      "NIV": "The heavens declare the glory of God; the skies proclaim the work of his hands.",
+      "ESV": "The heavens declare the glory of God, and the sky above proclaims his handiwork.",
+      "KJV": "The heavens declare the glory of God; and the firmament sheweth his handywork.",
+      "NKJV": "The heavens declare the glory of God; And the firmament shows His handiwork."
+    }
+  },
+  {
+    "id": "Psalm 89:11",
+    "category": "Creation",
+    "translations": {
+      "NIV": "The heavens are yours, and yours also the earth; you founded the world and all that is in it.",
+      "ESV": "The heavens are yours; the earth also is yours; the world and all that is in it, you have founded them.",
+      "KJV": "The heavens are thine, the earth also is thine: as for the world and the fulness thereof, thou hast founded them.",
+      "NKJV": "The heavens are Yours, the earth also is Yours; The world and all its fullness, You have founded them."
+    }
+  },
+  {
+    "id": "Isaiah 45:18",
+    "category": "Creation",
+    "translations": {
+      "NIV": "For this is what the Lord says— he who created the heavens, he is God; he who fashioned and made the earth, he founded it; he did not create it to be empty, but formed it to be inhabited— he says: 'I am the Lord, and there is no other.'",
+      "ESV": "For thus says the Lord, who created the heavens (he is God!), who formed the earth and made it (he established it; he did not create it empty, he formed it to be inhabited!): 'I am the Lord, and there is no other.'",
+      "KJV": "For thus saith the Lord that created the heavens; God himself that formed the earth and made it; he hath established it, he created it not in vain, he formed it to be inhabited: I am the Lord; and there is none else.",
+      "NKJV": "For thus says the Lord, Who created the heavens, Who is God, Who formed the earth and made it, Who has established it, Who did not create it in vain, Who formed it to be inhabited: 'I am the Lord, and there is no other.'"
+    }
+  },
+  {
+    "id": "Jeremiah 32:17",
+    "category": "Creation",
+    "translations": {
+      "NIV": "Ah, Sovereign Lord, you have made the heavens and the earth by your great power and outstretched arm. Nothing is too hard for you.",
+      "ESV": "Ah, Lord God! It is you who have made the heavens and the earth by your great power and by your outstretched arm! Nothing is too hard for you.",
+      "KJV": "Ah Lord God! behold, thou hast made the heaven and the earth by thy great power and stretched out arm, and there is nothing too hard for thee:",
+      "NKJV": "Ah, Lord God! Behold, You have made the heavens and the earth by Your great power and outstretched arm. There is nothing too hard for You."
+    }
+  },
+  {
+    "id": "John 1:3-5",
+    "category": "Creation",
+    "translations": {
+      "NIV": "Through him all things were made; without him nothing was made that has been made. In him was life, and that life was the light of all mankind. The light shines in the darkness, and the darkness has not overcome it.",
+      "ESV": "All things were made through him, and without him was not any thing made that was made. In him was life, and the life was the light of men. The light shines in the darkness, and the darkness has not overcome it.",
+      "KJV": "All things were made by him; and without him was not any thing made that was made. In him was life; and the life was the light of men. And the light shineth in darkness; and the darkness comprehended it not.",
+      "NKJV": "All things were made through Him, and without Him nothing was made that was made. In Him was life, and the life was the light of men. And the light shines in the darkness, and the darkness did not comprehend it."
+    }
+  },
+  {
+    "id": "Hebrews 3:4",
+    "category": "Creation",
+    "translations": {
+      "NIV": "For every house is built by someone, but God is the builder of everything.",
+      "ESV": "For every house is built by someone, but the builder of all things is God.",
+      "KJV": "For every house is builded by some man; but he that built all things is God.",
+      "NKJV": "For every house is built by someone, but He who built all things is God."
+    }
+  },
+  {
+    "id": "Psalm 104:24-30",
+    "category": "Creation",
+    "translations": {
+      "NIV": "How many are your works, Lord! In wisdom you made them all; the earth is full of your creatures. There is the sea, vast and spacious, teeming with creatures beyond number— living things both large and small. There the ships go to and fro, and Leviathan, which you formed to frolic there. All creatures look to you to give them their food at the proper time. When you give it to them, they gather it up; when you open your hand, they are satisfied with good things. When you hide your face, they are terrified; when you take away their breath, they die and return to the dust. When you send your Spirit, they are created, and you renew the face of the ground.",
+      "ESV": "O Lord, how manifold are your works! In wisdom have you made them all; the earth is full of your creatures. Here is the sea, great and wide, which teems with creatures innumerable, living things both small and great. There go the ships, and Leviathan, which you formed to play in it. These all look to you, to give them their food in due season. When you give it to them, they gather it up; when you open your hand, they are filled with good things. When you hide your face, they are dismayed; when you take away their breath, they die and return to their dust. When you send forth your Spirit, they are created, and you renew the face of the ground.",
+      "KJV": "O Lord, how manifold are thy works! in wisdom hast thou made them all: the earth is full of thy riches. So is this great and wide sea, wherein are things creeping innumerable, both small and great beasts. There go the ships: there is that leviathan, whom thou hast made to play therein. These wait all upon thee; that thou mayest give them their meat in due season. That thou givest them they gather: thou openest thine hand, they are filled with good. Thou hidest thy face, they are troubled: thou takest away their breath, they die, and return to their dust. Thou sendest forth thy spirit, they are created: and thou renewest the face of the earth.",
+      "NKJV": "O Lord, how manifold are Your works! In wisdom You have made them all. The earth is full of Your possessions— This great and wide sea, in which are innumerable teeming things, Living things both small and great. There the ships sail about; There is that Leviathan which You have made to play there. These all wait for You, That You may give them their food in due season. What You give them they gather in; You open Your hand, they are filled with good. You hide Your face, they are troubled; You take away their breath, they die and return to their dust. You send forth Your Spirit, they are created; And You renew the face of the earth."
+    }
+  },
+  {
+    "id": "Colossians 1:16",
+    "category": "Creation",
+    "translations": {
+      "NIV": "For in him all things were created: things in heaven and on earth, visible and invisible, whether thrones or powers or rulers or authorities; all things have been created through him and for him.",
+      "ESV": "For by him all things were created, in heaven and on earth, visible and invisible, whether thrones or dominions or rulers or authorities—all things were created through him and for him.",
+      "KJV": "For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him, and for him:",
+      "NKJV": "For by Him all things were created that are in heaven and that are on earth, visible and invisible, whether thrones or dominions or principalities or powers. All things were created through Him and for Him."
+    }
+  },
+  {
+    "id": "Psalm 49:15",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "But God will redeem me from the realm of the dead; he will surely take me to himself.",
+      "ESV": "But God will ransom my soul from the power of Sheol, for he will receive me. Selah",
+      "KJV": "But God will redeem my soul from the power of the grave: for he shall receive me. Selah.",
+      "NKJV": "But God will redeem my soul from the power of the grave, For He shall receive me. Selah"
+    }
+  },
+  {
+    "id": "Ecclesiastes 3:11",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "He has made everything beautiful in its time. He has also set eternity in the human heart; yet no one can fathom what God has done from beginning to end.",
+      "ESV": "He has made everything beautiful in its time. Also, he has put eternity into man's heart, yet so that he cannot find out what God has done from the beginning to the end.",
+      "KJV": "He hath made every thing beautiful in his time: also he hath set the world in their heart, so that no man can find out the work that God maketh from the beginning to the end.",
+      "NKJV": "He has made everything beautiful in its time. Also He has put eternity in their hearts, except that no one can find out the work that God does from beginning to end."
+    }
+  },
+  {
+    "id": "John 6:39-40",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "And this is the will of him who sent me, that I shall lose none of all those he has given me, but raise them up at the last day. For my Father’s will is that everyone who looks to the Son and believes in him shall have eternal life, and I will raise them up at the last day.",
+      "ESV": "And this is the will of him who sent me, that I should lose nothing of all that he has given me, but raise it up on the last day. For this is the will of my Father, that everyone who looks on the Son and believes in him should have eternal life, and I will raise him up on the last day.",
+      "KJV": "And this is the Father's will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day. And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day.",
+      "NKJV": "This is the will of the Father who sent Me, that of all He has given Me I should lose nothing, but should raise it up at the last day. And this is the will of Him who sent Me, that everyone who sees the Son and believes in Him may have everlasting life; and I will raise him up at the last day."
+    }
+  },
+  {
+    "id": "John 6:46-48",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "No one has seen the Father except the one who is from God; only he has seen the Father. Very truly I tell you, the one who believes has eternal life. I am the bread of life.",
+      "ESV": "not that anyone has seen the Father except he who is from God; he has seen the Father. Truly, truly, I say to you, whoever believes has eternal life. I am the bread of life.",
+      "KJV": "Not that any man hath seen the Father, save he which is of God, he hath seen the Father. Verily, verily, I say unto you, He that believeth on me hath everlasting life. I am that bread of life.",
+      "NKJV": "Not that anyone has seen the Father, except He who is from God; He has seen the Father. Most assuredly, I say to you, he who believes in Me has everlasting life. I am the bread of life."
+    }
+  },
+  {
+    "id": "John 10:27-30",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "My sheep listen to my voice; I know them, and they follow me. I give them eternal life, and they shall never perish; no one will snatch them out of my hand. My Father, who has given them to me, is greater than all; no one can snatch them out of my Father’s hand. I and the Father are one.",
+      "ESV": "My sheep hear my voice, and I know them, and they follow me. I give them eternal life, and they will never perish, and no one will snatch them out of my hand. My Father, who has given them to me, is greater than all, and no one is able to snatch them out of the Father's hand. I and the Father are one.",
+      "KJV": "My sheep hear my voice, and I know them, and they follow me: And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father's hand. I and my Father are one.",
+      "NKJV": "My sheep hear My voice, and I know them, and they follow Me. And I give them eternal life, and they shall never perish; neither shall anyone snatch them out of My hand. My Father, who has given them to Me, is greater than all; and no one is able to snatch them out of My Father’s hand. I and My Father are one."
+    }
+  },
+  {
+    "id": "John 11:25-26",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "Jesus said to her, 'I am the resurrection and the life. The one who believes in me will live, even though they die; and whoever lives by believing in me will never die. Do you believe this?'",
+      "ESV": "Jesus said to her, 'I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live, and everyone who lives and believes in me shall never die. Do you believe this?'",
+      "KJV": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?",
+      "NKJV": "Jesus said to her, 'I am the resurrection and the life. He who believes in Me, though he may die, he shall live. And whoever lives and believes in Me shall never die. Do you believe this?'"
+    }
+  },
+  {
+    "id": "1 Peter 5:4",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "And when the Chief Shepherd appears, you will receive the crown of glory that will never fade away.",
+      "ESV": "And when the chief Shepherd appears, you will receive the unfading crown of glory.",
+      "KJV": "And when the chief Shepherd shall appear, ye shall receive a crown of glory that fadeth not away.",
+      "NKJV": "and when the Chief Shepherd appears, you will receive the crown of glory that does not fade away."
+    }
+  },
+  {
+    "id": "1 John 2:16-17",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "For everything in the world—the lust of the flesh, the lust of the eyes, and the pride of life—comes not from the Father but from the world. The world and its desires pass away, but whoever does the will of God lives forever.",
+      "ESV": "For all that is in the world—the desires of the flesh and the desires of the eyes and pride of life—is not from the Father but is from the world. And the world is passing away along with its desires, but whoever does the will of God abides forever.",
+      "KJV": "For all that is in the world, the lust of the flesh, and the lust of the eyes, and the pride of life, is not of the Father, but is of the world. And the world passeth away, and the lust thereof: but he that doeth the will of God abideth for ever.",
+      "NKJV": "For all that is in the world—the lust of the flesh, the lust of the eyes, and the pride of life—is not of the Father but is of the world. And the world is passing away, and the lust of it; but he who does the will of God abides forever."
+    }
+  },
+  {
+    "id": "Revelation 21:4",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "He will wipe every tear from their eyes. There will be no more death' or mourning or crying or pain, for the old order of things has passed away.",
+      "ESV": "He will wipe away every tear from their eyes, and death shall be no more, neither shall there be mourning, nor crying, nor pain anymore, for the former things have passed away.",
+      "KJV": "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.",
+      "NKJV": "And God will wipe away every tear from their eyes; there shall be no more death, nor sorrow, nor crying. There shall be no more pain, for the former things have passed away."
+    }
+  },
+  {
+    "id": "Matthew 19:29",
+    "category": "Eternal Life",
+    "translations": {
+      "NIV": "And everyone who has left houses or brothers or sisters or father or mother or wife or children or fields for my sake will receive a hundred times as much and will inherit eternal life.",
+      "ESV": "And everyone who has left houses or brothers or sisters or father or mother or children or lands, for my name's sake, will receive a hundredfold and will inherit eternal life.",
+      "KJV": "And every one that hath forsaken houses, or brethren, or sisters, or father, or mother, or wife, or children, or lands, for my name's sake, shall receive an hundredfold, and shall inherit everlasting life.",
+      "NKJV": "And everyone who has left houses or brothers or sisters or father or mother or wife or children or lands, for My name’s sake, shall receive a hundredfold, and inherit eternal life."
+    }
+  },
+  {
+    "id": "Proverbs 17:17",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "A friend loves at all times, and a brother is born for a time of adversity.",
+      "ESV": "A friend loves at all times, and a brother is born for adversity.",
+      "KJV": "A friend loveth at all times, and a brother is born for adversity.",
+      "NKJV": "A friend loves at all times, and a brother is born for adversity."
+    }
+  },
+  {
+    "id": "Romans 12:5",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "So in Christ we, though many, form one body, and each member belongs to all the others.",
+      "ESV": "So we, though many, are one body in Christ, and individually members one of another.",
+      "KJV": "So we, being many, are one body in Christ, and every one members one of another.",
+      "NKJV": "so we, being many, are one body in Christ, and individually members of one another."
+    }
+  },
+  {
+    "id": "Romans 15:5-6",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "May the God who gives endurance and encouragement give you the same attitude of mind toward each other that Christ Jesus had, so that with one mind and one voice you may glorify the God and Father of our Lord Jesus Christ.",
+      "ESV": "May the God of endurance and encouragement grant you to live in such harmony with one another, in accord with Christ Jesus, that together you may with one voice glorify the God and Father of our Lord Jesus Christ.",
+      "KJV": "Now the God of patience and consolation grant you to be likeminded one toward another according to Christ Jesus: That ye may with one mind and one mouth glorify God, even the Father of our Lord Jesus Christ.",
+      "NKJV": "Now may the God of patience and comfort grant you to be like-minded toward one another, according to Christ Jesus, that you may with one mind and one mouth glorify the God and Father of our Lord Jesus Christ."
+    }
+  },
+  {
+    "id": "Galatians 6:9-10",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up. Therefore, as we have opportunity, let us do good to all people, especially to those who belong to the family of believers.",
+      "ESV": "And let us not grow weary of doing good, for in due season we will reap, if we do not give up. So then, as we have opportunity, let us do good to everyone, and especially to those who are of the household of faith.",
+      "KJV": "And let us not be weary in well doing: for in due season we shall reap, if we faint not. As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith.",
+      "NKJV": "And let us not grow weary while doing good, for in due season we shall reap if we do not lose heart. Therefore, as we have opportunity, let us do good to all, especially to those who are of the household of faith."
+    }
+  },
+  {
+    "id": "Ephesians 4:1-3",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "As a prisoner for the Lord, then, I urge you to live a life worthy of the calling you have received. Be completely humble and gentle; be patient, bearing with one another in love. Make every effort to keep the unity of the Spirit through the bond of peace.",
+      "ESV": "I therefore, a prisoner for the Lord, urge you to walk in a manner worthy of the calling to which you have been called, with all humility and gentleness, with patience, bearing with one another in love, eager to maintain the unity of the Spirit in the bond of peace.",
+      "KJV": "I therefore, the prisoner of the Lord, beseech you that ye walk worthy of the vocation wherewith ye are called, With all lowliness and meekness, with longsuffering, forbearing one another in love; Endeavouring to keep the unity of the Spirit in the bond of peace.",
+      "NKJV": "I, therefore, the prisoner of the Lord, beseech you to walk worthy of the calling with which you were called, with all lowliness and gentleness, with longsuffering, bearing with one another in love, endeavoring to keep the unity of the Spirit in the bond of peace."
+    }
+  },
+  {
+    "id": "1 Thessalonians 5:11",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "Therefore encourage one another and build each other up, just as in fact you are doing.",
+      "ESV": "Therefore encourage one another and build one another up, just as you are doing.",
+      "KJV": "Wherefore comfort yourselves together, and edify one another, even as also ye do.",
+      "NKJV": "Therefore comfort each other and edify one another, just as you also are doing."
+    }
+  },
+  {
+    "id": "Hebrews 13:2",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "Do not forget to show hospitality to strangers, for by so doing some people have shown hospitality to angels without knowing it.",
+      "ESV": "Do not neglect to show hospitality to strangers, for thereby some have entertained angels unawares.",
+      "KJV": "Be not forgetful to entertain strangers: for thereby some have entertained angels unawares.",
+      "NKJV": "Do not forget to entertain strangers, for by so doing some have unwittingly entertained angels."
+    }
+  },
+  {
+    "id": "1 John 4:12",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "No one has ever seen God; but if we love one another, God lives in us and his love is made complete in us.",
+      "ESV": "No one has ever seen God; if we love one another, God abides in us and his love is perfected in us.",
+      "KJV": "No man hath seen God at any time. If we love one another, God dwelleth in us, and his love is perfected in us.",
+      "NKJV": "No one has seen God at any time. If we love one another, God abides in us, and His love has been perfected in us."
+    }
+  },
+  {
+    "id": "1 John 4:21",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "And he has given us this command: Anyone who loves God must also love their brother and sister.",
+      "ESV": "And this commandment we have from him: whoever loves God must also love his brother.",
+      "KJV": "And this commandment have we from him, That he who loveth God love his brother also.",
+      "NKJV": "And this commandment we have from Him: that he who loves God must love his brother also."
+    }
+  },
+  {
+    "id": "Hebrews 10:24-25",
+    "category": "Fellowship",
+    "translations": {
+      "NIV": "And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching.",
+      "ESV": "And let us consider how to stir up one another to love and good works, not neglecting to meet together, as is the habit of some, but encouraging one another, and all the more as you see the Day drawing near.",
+      "KJV": "And let us consider one another to provoke unto love and to good works: Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching.",
+      "NKJV": "And let us consider one another in order to stir up love and good works, not forsaking the assembling of ourselves together, as is the manner of some, but exhorting one another, and so much the more as you see the Day approaching."
+    }
+  },
+  {
+    "id": "Deuteronomy 28:11-13",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "The Lord will grant you abundant prosperity—in the fruit of your womb, the young of your livestock and the crops of your ground—in the land he swore to your ancestors to give you. The Lord will open the heavens, the storehouse of his bounty, to send rain on your land in season and to bless all the work of your hands. You will lend to many nations but will borrow from none. The Lord will make you the head, not the tail. If you pay attention to the commands of the Lord your God that I give you this day and carefully follow them, you will always be at the top, never at the bottom.",
+      "ESV": "And the Lord will make you abound in prosperity, in the fruit of your womb and in the fruit of your livestock and in the fruit of your ground, within the land that the Lord swore to your fathers to give you. The Lord will open to you his good treasury, the heavens, to give the rain to your land in its season and to bless all the work of your hands. And you shall lend to many nations, but you shall not borrow. And the Lord will make you the head and not the tail, and you shall only go up and not down, if you obey the commandments of the Lord your God, which I command you today, being careful to do them.",
+      "KJV": "And the Lord shall make thee plenteous in goods, in the fruit of thy body, and in the fruit of thy cattle, and in the fruit of thy ground, in the land which the Lord sware unto thy fathers to give thee. The Lord shall open unto thee his good treasure, the heaven to give the rain unto thy land in his season, and to bless all the work of thine hand: and thou shalt lend unto many nations, and thou shalt not borrow. And the Lord shall make thee the head, and not the tail; and thou shalt be above only, and thou shalt not be beneath; if that thou hearken unto the commandments of the Lord thy God, which I command thee this day, to observe and to do them.",
+      "NKJV": "And the Lord will grant you plenty of goods, in the fruit of your body, in the increase of your livestock, and in the produce of your ground, in the land of which the Lord swore to your fathers to give you. The Lord will open to you His good treasure, the heavens, to give the rain to your land in its season, and to bless all the work of your hand. You shall lend to many nations, but you shall not borrow. And the Lord will make you the head and not the tail; you shall be above only, and not be beneath, if you heed the commandments of the Lord your God, which I command you today, and are careful to observe them."
+    }
+  },
+  {
+    "id": "Psalm 9:18",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "But God will never forget the needy; the hope of the afflicted will never perish.",
+      "ESV": "For the needy shall not always be forgotten, and the hope of the poor shall not perish forever.",
+      "KJV": "For the needy shall not always be forgotten: the expectation of the poor shall not perish for ever.",
+      "NKJV": "For the needy shall not always be forgotten; the expectation of the poor shall not perish forever."
+    }
+  },
+  {
+    "id": "Psalm 37:16",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "Better the little that the righteous have than the wealth of many wicked.",
+      "ESV": "Better is the little that the righteous has than the abundance of many wicked.",
+      "KJV": "A little that a righteous man hath is better than the riches of many wicked.",
+      "NKJV": "A little that a righteous man has is better than the riches of many wicked."
+    }
+  },
+  {
+    "id": "Psalm 37:25",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "I was young and now I am old, yet I have never seen the righteous forsaken or their children begging bread.",
+      "ESV": "I have been young, and now am old, yet I have not seen the righteous forsaken or his children begging for bread.",
+      "KJV": "I have been young, and now am old; yet have I not seen the righteous forsaken, nor his seed begging bread.",
+      "NKJV": "I have been young, and now am old; yet I have not seen the righteous forsaken, nor his descendants begging bread."
+    }
+  },
+  {
+    "id": "Malachi 3:10-11",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "Bring the whole tithe into the storehouse, that there may be food in my house. Test me in this,” says the Lord Almighty, “and see if I will not throw open the floodgates of heaven and pour out so much blessing that there will not be room enough to store it. I will prevent pests from devouring your crops, and the vines in your fields will not drop their fruit before it is ripe,” says the Lord Almighty.",
+      "ESV": "Bring the full tithe into the storehouse, that there may be food in my house. And thereby put me to the test, says the Lord of hosts, if I will not open the windows of heaven for you and pour down for you a blessing until there is no more need. I will rebuke the devourer for you, so that it will not destroy the fruits of your soil, and your vine in the field shall not fail to bear, says the Lord of hosts.",
+      "KJV": "Bring ye all the tithes into the storehouse, that there may be meat in mine house, and prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven, and pour you out a blessing, that there shall not be room enough to receive it. And I will rebuke the devourer for your sakes, and he shall not destroy the fruits of your ground; neither shall your vine cast her fruit before the time in the field, saith the Lord of hosts.",
+      "NKJV": "Bring all the tithes into the storehouse, that there may be food in My house, and try Me now in this,” says the Lord of hosts, “If I will not open for you the windows of heaven and pour out for you such blessing that there will not be room enough to receive it. And I will rebuke the devourer for your sakes, so that he will not destroy the fruit of your ground, nor shall the vine fail to bear fruit for you in the field,” says the Lord of hosts."
+    }
+  },
+  {
+    "id": "Matthew 6:31-33",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "So do not worry, saying, ‘What shall we eat?’ or ‘What shall we drink?’ or ‘What shall we wear?’ For the pagans run after all these things, and your heavenly Father knows that you need them. But seek first his kingdom and his righteousness, and all these things will be given to you as well.",
+      "ESV": "Therefore do not be anxious, saying, 'What shall we eat?' or 'What shall we drink?' or 'What shall we wear?' For the Gentiles seek after all these things, and your heavenly Father knows that you need them all. But seek first the kingdom of God and his righteousness, and all these things will be added to you.",
+      "KJV": "Therefore take no thought, saying, What shall we eat? or, What shall we drink? or, Wherewithal shall we be clothed? (For after all these things do the Gentiles seek:) for your heavenly Father knoweth that ye have need of all these things. But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+      "NKJV": "Therefore do not worry, saying, ‘What shall we eat?’ or ‘What shall we drink?’ or ‘What shall we wear?’ For after all these things the Gentiles seek. For your heavenly Father knows that you need all these things. But seek first the kingdom of God and His righteousness, and all these things shall be added to you."
+    }
+  },
+  {
+    "id": "Philippians 4:19",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "And my God will meet all your needs according to the riches of his glory in Christ Jesus.",
+      "ESV": "And my God will supply every need of yours according to his riches in glory in Christ Jesus.",
+      "KJV": "But my God shall supply all your need according to his riches in glory by Christ Jesus.",
+      "NKJV": "And my God shall supply all your need according to His riches in glory by Christ Jesus."
+    }
+  },
+  {
+    "id": "1 Timothy 5:8",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "Anyone who does not provide for their relatives, and especially for their own household, has denied the faith and is worse than an unbeliever.",
+      "ESV": "But if anyone does not provide for his relatives, and especially for members of his household, he has denied the faith and is worse than an unbeliever.",
+      "KJV": "But if any provide not for his own, and specially for those of his own house, he hath denied the faith, and is worse than an infidel.",
+      "NKJV": "But if anyone does not provide for his own, and especially for those of his household, he has denied the faith and is worse than an unbeliever."
+    }
+  },
+  {
+    "id": "1 Timothy 6:6-8",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "But godliness with contentment is great gain. For we brought nothing into the world, and we can take nothing out of it. But if we have food and clothing, we will be content with that.",
+      "ESV": "But godliness with contentment is great gain, for we brought nothing into the world, and we cannot take anything out of the world. But if we have food and clothing, with these we will be content.",
+      "KJV": "But godliness with contentment is great gain. For we brought nothing into this world, and it is certain we can carry nothing out. And having food and raiment let us be therewith content.",
+      "NKJV": "Now godliness with contentment is great gain. For we brought nothing into this world, and it is certain we can carry nothing out. And having food and clothing, with these we shall be content."
+    }
+  },
+  {
+    "id": "Hebrews 13:5",
+    "category": "Financial Provision",
+    "translations": {
+      "NIV": "Keep your lives free from the love of money and be content with what you have, because God has said, 'Never will I leave you; never will I forsake you.'",
+      "ESV": "Keep your life free from love of money, and be content with what you have, for he has said, 'I will never leave you nor forsake you.'",
+      "KJV": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.",
+      "NKJV": "Let your conduct be without covetousness; be content with such things as you have. For He Himself has said, 'I will never leave you nor forsake you.'"
+    }
+  },
+  {
+    "id": "Psalm 34:18",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "The Lord is close to the brokenhearted and saves those who are crushed in spirit.",
+      "ESV": "The Lord is near to the brokenhearted and saves the crushed in spirit.",
+      "KJV": "The Lord is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit.",
+      "NKJV": "The Lord is near to those who have a broken heart, And saves such as have a contrite spirit."
+    }
+  },
+  {
+    "id": "Psalm 51:1-2",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "Have mercy on me, O God, according to your unfailing love; according to your great compassion blot out my transgressions. Wash away all my iniquity and cleanse me from my sin.",
+      "ESV": "Have mercy on me, O God, according to your steadfast love; according to your abundant mercy blot out my transgressions. Wash me thoroughly from my iniquity, and cleanse me from my sin!",
+      "KJV": "Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions. Wash me throughly from mine iniquity, and cleanse me from my sin.",
+      "NKJV": "Have mercy upon me, O God, According to Your lovingkindness; According to the multitude of Your tender mercies, Blot out my transgressions. Wash me thoroughly from my iniquity, And cleanse me from my sin."
+    }
+  },
+  {
+    "id": "Psalm 103:12",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "As far as the east is from the west, so far has he removed our transgressions from us.",
+      "ESV": "As far as the east is from the west, so far does he remove our transgressions from us.",
+      "KJV": "As far as the east is from the west, so far hath he removed our transgressions from us.",
+      "NKJV": "As far as the east is from the west, So far has He removed our transgressions from us."
+    }
+  },
+  {
+    "id": "Jeremiah 33:8",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "I will cleanse them from all the sin they have committed against me and will forgive all their sins of rebellion against me.",
+      "ESV": "I will cleanse them from all the guilt of their sin against me, and I will forgive all the guilt of their sin and rebellion against me.",
+      "KJV": "And I will cleanse them from all their iniquity, whereby they have sinned against me; and I will pardon all their iniquities, whereby they have sinned, and whereby they have transgressed against me.",
+      "NKJV": "And I will cleanse them from all their iniquity, whereby they have sinned against Me, and I will pardon all their iniquities, whereby they have sinned and whereby they have transgressed against Me."
+    }
+  },
+  {
+    "id": "Matthew 6:14",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "For if you forgive other people when they sin against you, your heavenly Father will also forgive you.",
+      "ESV": "For if you forgive others their trespasses, your heavenly Father will also forgive you.",
+      "KJV": "For if ye forgive men their trespasses, your heavenly Father will also forgive you.",
+      "NKJV": "For if you forgive men their trespasses, your heavenly Father will also forgive you."
+    }
+  },
+  {
+    "id": "Mark 11:25-26",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "And when you stand praying, if you hold anything against anyone, forgive them, so that your Father in heaven may forgive you your sins.",
+      "ESV": "And whenever you stand praying, forgive, if you have anything against anyone, so that your Father also who is in heaven may forgive you your trespasses.",
+      "KJV": "And when ye stand praying, forgive, if ye have ought against any: that your Father also which is in heaven may forgive you your trespasses.",
+      "NKJV": "And whenever you stand praying, if you have anything against anyone, forgive him, that your Father in heaven may also forgive you your trespasses."
+    }
+  },
+  {
+    "id": "Luke 6:37",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "Do not judge, and you will not be judged. Do not condemn, and you will not be condemned. Forgive, and you will be forgiven.",
+      "ESV": "Judge not, and you will not be judged; condemn not, and you will not be condemned; forgive, and you will be forgiven.",
+      "KJV": "Judge not, and ye shall not be judged: condemn not, and ye shall not be condemned: forgive, and ye shall be forgiven.",
+      "NKJV": "Judge not, and you shall not be judged. Condemn not, and you shall not be condemned. Forgive, and you will be forgiven."
+    }
+  },
+  {
+    "id": "Ephesians 1:7",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "In him we have redemption through his blood, the forgiveness of sins, in accordance with the riches of God’s grace.",
+      "ESV": "In him we have redemption through his blood, the forgiveness of our trespasses, according to the riches of his grace.",
+      "KJV": "In whom we have redemption through his blood, the forgiveness of sins, according to the riches of his grace.",
+      "NKJV": "In Him we have redemption through His blood, the forgiveness of sins, according to the riches of His grace."
+    }
+  },
+  {
+    "id": "Ephesians 4:32",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you.",
+      "ESV": "Be kind to one another, tenderhearted, forgiving one another, as God in Christ forgave you.",
+      "KJV": "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
+      "NKJV": "And be kind to one another, tenderhearted, forgiving one another, even as God in Christ forgave you."
+    }
+  },
+  {
+    "id": "Colossians 3:12-13",
+    "category": "Forgiveness",
+    "translations": {
+      "NIV": "Therefore, as God’s chosen people, holy and dearly loved, clothe yourselves with compassion, kindness, humility, gentleness and patience. Bear with each other and forgive one another if any of you has a grievance against someone. Forgive as the Lord forgave you.",
+      "ESV": "Put on then, as God's chosen ones, holy and beloved, compassionate hearts, kindness, humility, meekness, and patience, bearing with one another and, if one has a complaint against another, forgiving each other; as the Lord has forgiven you, so you also must forgive.",
+      "KJV": "Put on therefore, as the elect of God, holy and beloved, bowels of mercies, kindness, humbleness of mind, meekness, longsuffering; Forbearing one another, and forgiving one another, if any man have a quarrel against any: even as Christ forgave you, so also do ye.",
+      "NKJV": "Therefore, as the elect of God, holy and beloved, put on tender mercies, kindness, humility, meekness, longsuffering; bearing with one another, and forgiving one another, if anyone has a complaint against another; even as Christ forgave you, so you also must do."
+    }
+  },
+  {
+    "id": "Matthew 6:13",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "And lead us not into temptation, but deliver us from the evil one.",
+      "ESV": "And lead us not into temptation, but deliver us from evil.",
+      "KJV": "And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen.",
+      "NKJV": "And do not lead us into temptation, but deliver us from the evil one. For Yours is the kingdom and the power and the glory forever. Amen."
+    }
+  },
+  {
+    "id": "Romans 13:14",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "Rather, clothe yourselves with the Lord Jesus Christ, and do not think about how to gratify the desires of the flesh.",
+      "ESV": "But put on the Lord Jesus Christ, and make no provision for the flesh, to gratify its desires.",
+      "KJV": "But put ye on the Lord Jesus Christ, and make not provision for the flesh, to fulfil the lusts thereof.",
+      "NKJV": "But put on the Lord Jesus Christ, and make no provision for the flesh, to fulfill its lusts."
+    }
+  },
+  {
+    "id": "1 Corinthians 10:13",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "No temptation has overtaken you except what is common to mankind. And God is faithful; he will not let you be tempted beyond what you can bear. But when you are tempted, he will also provide a way out so that you can endure it.",
+      "ESV": "No temptation has overtaken you that is not common to man. God is faithful, and he will not let you be tempted beyond your ability, but with the temptation he will also provide the way of escape, that you may be able to endure it.",
+      "KJV": "There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also make a way to escape, that ye may be able to bear it.",
+      "NKJV": "No temptation has overtaken you except such as is common to man; but God is faithful, who will not allow you to be tempted beyond what you are able, but with the temptation will also make the way of escape, that you may be able to bear it."
+    }
+  },
+  {
+    "id": "Hebrews 4:15-16",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "For we do not have a high priest who is unable to empathize with our weaknesses, but we have one who has been tempted in every way, just as we are—yet he did not sin. Let us then approach God’s throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
+      "ESV": "For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need.",
+      "KJV": "For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin. Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.",
+      "NKJV": "For we do not have a High Priest who cannot sympathize with our weaknesses, but was in all points tempted as we are, yet without sin. Let us therefore come boldly to the throne of grace, that we may obtain mercy and find grace to help in time of need."
+    }
+  },
+  {
+    "id": "Hebrews 12:1",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "Therefore, since we are surrounded by such a great cloud of witnesses, let us throw off everything that hinders and the sin that so easily entangles. And let us run with perseverance the race marked out for us,",
+      "ESV": "Therefore, since we are surrounded by so great a cloud of witnesses, let us also lay aside every weight, and sin which clings so closely, and let us run with endurance the race that is set before us.",
+      "KJV": "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,",
+      "NKJV": "Therefore we also, since we are surrounded by so great a cloud of witnesses, let us lay aside every weight, and the sin which so easily ensnares us, and let us run with endurance the race that is set before us,"
+    }
+  },
+  {
+    "id": "James 4:7-8",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "Submit yourselves, then, to God. Resist the devil, and he will flee from you. Come near to God and he will come near to you. Wash your hands, you sinners, and purify your hearts, you double-minded.",
+      "ESV": "Submit yourselves therefore to God. Resist the devil, and he will flee from you. Draw near to God, and he will draw near to you. Cleanse your hands, you sinners, and purify your hearts, you double-minded.",
+      "KJV": "Submit yourselves therefore to God. Resist the devil, and he will flee from you. Draw nigh to God, and he will draw nigh to you. Cleanse your hands, ye sinners; and purify your hearts, ye double minded.",
+      "NKJV": "Therefore submit to God. Resist the devil and he will flee from you. Draw near to God and He will draw near to you. Cleanse your hands, you sinners; and purify your hearts, you double-minded."
+    }
+  },
+  {
+    "id": "1 John 1:7",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "But if we walk in the light, as he is in the light, we have fellowship with one another, and the blood of Jesus, his Son, purifies us from all sin.",
+      "ESV": "But if we walk in the light, as he is in the light, we have fellowship with one another, and the blood of Jesus his Son cleanses us from all sin.",
+      "KJV": "But if we walk in the light, as he is in the light, we have fellowship one with another, and the blood of Jesus Christ his Son cleanseth us from all sin.",
+      "NKJV": "But if we walk in the light as He is in the light, we have fellowship with one another, and the blood of Jesus Christ His Son cleanses us from all sin."
+    }
+  },
+  {
+    "id": "Galatians 5:16-17",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "So I say, walk by the Spirit, and you will not gratify the desires of the flesh. For the flesh desires what is contrary to the Spirit, and the Spirit what is contrary to the flesh. They are in conflict with each other, so that you are not to do whatever you want.",
+      "ESV": "But I say, walk by the Spirit, and you will not gratify the desires of the flesh. For the desires of the flesh are against the Spirit, and the desires of the Spirit are against the flesh, for these are opposed to each other, to keep you from doing the things you want to do.",
+      "KJV": "This I say then, Walk in the Spirit, and ye shall not fulfil the lust of the flesh. For the flesh lusteth against the Spirit, and the Spirit against the flesh: and these are contrary the one to the other: so that ye cannot do the things that ye would.",
+      "NKJV": "I say then: Walk in the Spirit, and you shall not fulfill the lust of the flesh. For the flesh lusts against the Spirit, and the Spirit against the flesh; and these are contrary to one another, so that you do not do the things that you wish."
+    }
+  },
+  {
+    "id": "2 Timothy 2:22",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "So flee youthful passions and pursue righteousness, faith, love, and peace, along with those who call on the Lord from a pure heart.",
+      "ESV": "So flee youthful passions and pursue righteousness, faith, love, and peace, along with those who call on the Lord from a pure heart.",
+      "KJV": "Flee also youthful lusts: but follow righteousness, faith, charity, peace, with them that call on the Lord out of a pure heart.",
+      "NKJV": "Flee also youthful lusts; but pursue righteousness, faith, love, peace with those who call on the Lord out of a pure heart."
+    }
+  },
+  {
+    "id": "Romans 6:12-14",
+    "category": "Freedom from Sin",
+    "translations": {
+      "NIV": "Therefore do not let sin reign in your mortal body so that you obey its evil desires. Do not offer any part of yourself to sin as an instrument of wickedness, but rather offer yourselves to God as those who have been brought from death to life; and offer every part of yourself to him as an instrument of righteousness. For sin shall no longer be your master, because you are not under the law, but under grace.",
+      "ESV": "Let not sin therefore reign in your mortal body, to make you obey its passions. Do not present your members to sin as instruments for unrighteousness, but present yourselves to God as those who have been brought from death to life, and your members to God as instruments for righteousness. For sin will have no dominion over you, since you are not under law but under grace.",
+      "KJV": "Let not sin therefore reign in your mortal body, that ye should obey it in the lusts thereof. Neither yield ye your members as instruments of unrighteousness unto sin: but yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God. For sin shall not have dominion over you: for ye are not under the law, but under grace.",
+      "NKJV": "Therefore do not let sin reign in your mortal body, that you should obey it in its lusts. And do not present your members as instruments of unrighteousness to sin, but present yourselves to God as being alive from the dead, and your members as instruments of righteousness to God. For sin shall not have dominion over you, for you are not under law but under grace."
+    }
+  },
+  {
+    "id": "Psalm 41:1-3",
+    "category": "Giving",
+    "translations": {
+      "NIV": "Blessed are those who have regard for the weak; the LORD delivers them in times of trouble. The LORD protects and preserves them—they are counted among the blessed in the land—he does not give them over to the desire of their foes. The LORD sustains them on their sickbed and restores them from their bed of illness.",
+      "ESV": "Blessed is the one who considers the poor! In the day of trouble the LORD delivers him; the LORD protects him and keeps him alive; he is called blessed in the land; you do not give him up to the will of his enemies. The LORD sustains him on his sickbed; in his illness you restore him to full health.",
+      "KJV": "Blessed is he that considereth the poor: the LORD will deliver him in time of trouble. The LORD will preserve him, and keep him alive; and he shall be blessed upon the earth: and thou wilt not deliver him unto the will of his enemies. The LORD will strengthen him upon the bed of languishing: thou wilt make all his bed in his sickness.",
+      "NKJV": "Blessed is he who considers the poor; the LORD will deliver him in time of trouble. The LORD will preserve him and keep him alive, and he will be blessed on the earth; You will not deliver him to the will of his enemies. The LORD will strengthen him on his bed of illness; You will sustain him on his sickbed."
+    }
+  },
+  {
+    "id": "Proverbs 11:25",
+    "category": "Giving",
+    "translations": {
+      "NIV": "A generous person will prosper; whoever refreshes others will be refreshed.",
+      "ESV": "Whoever brings blessing will be enriched, and one who waters will himself be watered.",
+      "KJV": "The liberal soul shall be made fat: and he that watereth shall be watered also himself.",
+      "NKJV": "The generous soul will be made rich, and he who waters will also be watered himself."
+    }
+  },
+  {
+    "id": "Ecclesiastes 11:1-2",
+    "category": "Giving",
+    "translations": {
+      "NIV": "Cast your bread upon the waters, for after many days you will find it again. Give portions to seven, yes to eight, for you do not know what disaster may come upon the land.",
+      "ESV": "Cast your bread upon the waters, for you will find it after many days. Give a portion to seven, or even to eight, for you know not what disaster may happen on earth.",
+      "KJV": "Cast thy bread upon the waters: for thou shalt find it after many days. Give a portion to seven, and also to eight; for thou knowest not what evil shall be upon the earth.",
+      "NKJV": "Cast your bread upon the waters, for you will find it after many days. Give a serving to seven, and also to eight, for you do not know what evil will be on the earth."
+    }
+  },
+  {
+    "id": "Matthew 6:1",
+    "category": "Giving",
+    "translations": {
+      "NIV": "Be careful not to practice your righteousness in front of others to be seen by them. If you do, you will have no reward from your Father in heaven.",
+      "ESV": "Beware of practicing your righteousness before other people in order to be seen by them, for then you will have no reward from your Father who is in heaven.",
+      "KJV": "Take heed that ye do not your alms before men, to be seen of them: otherwise ye have no reward of your Father which is in heaven.",
+      "NKJV": "Take heed that you do not do your charitable deeds before men, to be seen by them. Otherwise you have no reward from your Father in heaven."
+    }
+  },
+  {
+    "id": "Matthew 25:34-36",
+    "category": "Giving",
+    "translations": {
+      "NIV": "Then the King will say to those on his right, 'Come, you who are blessed by my Father; take your inheritance, the kingdom prepared for you since the creation of the world. For I was hungry and you gave me something to eat, I was thirsty and you gave me something to drink, I was a stranger and you invited me in, I needed clothes and you clothed me, I was sick and you looked after me, I was in prison and you came to visit me.'",
+      "ESV": "Then the King will say to those on his right, 'Come, you who are blessed by my Father, inherit the kingdom prepared for you from the foundation of the world. For I was hungry and you gave me food, I was thirsty and you gave me drink, I was a stranger and you welcomed me, I was naked and you clothed me, I was sick and you visited me, I was in prison and you came to me.'",
+      "KJV": "Then shall the King say unto them on his right hand, 'Come, ye blessed of my Father, inherit the kingdom prepared for you from the foundation of the world: For I was an hungred, and ye gave me meat: I was thirsty, and ye gave me drink: I was a stranger, and ye took me in: Naked, and ye clothed me: I was sick, and ye visited me: I was in prison, and ye came unto me.'",
+      "NKJV": "Then the King will say to those on His right hand, 'Come, you blessed of My Father, inherit the kingdom prepared for you from the foundation of the world: for I was hungry and you gave Me food; I was thirsty and you gave Me drink; I was a stranger and you took Me in; I was naked and you clothed Me; I was sick and you visited Me; I was in prison and you came to Me.'"
+    }
+  },
+  {
+    "id": "Mark 9:41",
+    "category": "Giving",
+    "translations": {
+      "NIV": "Truly I tell you, anyone who gives you a cup of water in my name because you belong to the Messiah will certainly not lose their reward.",
+      "ESV": "For truly, I say to you, whoever gives you a cup of water to drink because you belong to Christ will by no means lose his reward.",
+      "KJV": "For whosoever shall give you a cup of water to drink in my name, because ye belong to Christ, verily I say unto you, he shall not lose his reward.",
+      "NKJV": "For whoever gives you a cup of water to drink in My name, because you belong to Christ, assuredly, I say to you, he will by no means lose his reward."
+    }
+  },
+  {
+    "id": "Luke 6:38",
+    "category": "Giving",
+    "translations": {
+      "NIV": "Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap. For with the measure you use, it will be measured to you.",
+      "ESV": "Give, and it will be given to you. Good measure, pressed down, shaken together, running over, will be put into your lap. For with the measure you use it will be measured back to you.",
+      "KJV": "Give, and it shall be given unto you; good measure, pressed down, and shaken together, and running over, shall men give into your bosom. For with the same measure that ye mete withal it shall be measured to you again.",
+      "NKJV": "Give, and it will be given to you: good measure, pressed down, shaken together, and running over will be put into your bosom. For with the same measure that you use, it will be measured back to you."
+    }
+  },
+  {
+    "id": "Acts 20:35",
+    "category": "Giving",
+    "translations": {
+      "NIV": "In everything I did, I showed you that by this kind of hard work we must help the weak, remembering the words the Lord Jesus himself said: 'It is more blessed to give than to receive.'",
+      "ESV": "In all things I have shown you that by working hard in this way we must help the weak and remember the words of the Lord Jesus, how he himself said, 'It is more blessed to give than to receive.'",
+      "KJV": "I have shewed you all things, how that so labouring ye ought to support the weak, and to remember the words of the Lord Jesus, how he said, It is more blessed to give than to receive.",
+      "NKJV": "I have shown you in every way, by laboring like this, that you must support the weak. And remember the words of the Lord Jesus, that He said, 'It is more blessed to give than to receive.'"
+    }
+  },
+  {
+    "id": "2 Corinthians 9:6-7",
+    "category": "Giving",
+    "translations": {
+      "NIV": "Remember this: Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously. Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.",
+      "ESV": "The point is this: whoever sows sparingly will also reap sparingly, and whoever sows bountifully will also reap bountifully. Each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver.",
+      "KJV": "But this I say, He which soweth sparingly shall reap also sparingly; and he which soweth bountifully shall reap also bountifully. Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver.",
+      "NKJV": "But this I say: He who sows sparingly will also reap sparingly, and he who sows bountifully will also reap bountifully. So let each one give as he purposes in his heart, not grudgingly or of necessity; for God loves a cheerful giver."
+    }
+  },
+  {
+    "id": "1 John 3:17",
+    "category": "Giving",
+    "translations": {
+      "NIV": "If anyone has material possessions and sees a brother or sister in need but has no pity on them, how can the love of God be in that person?",
+      "ESV": "But if anyone has the world's goods and sees his brother in need, yet closes his heart against him, how does God's love abide in him?",
+      "KJV": "But whoso hath this world's good, and seeth his brother have need, and shutteth up his bowels of compassion from him, how dwelleth the love of God in him?",
+      "NKJV": "But whoever has this world's goods, and sees his brother in need, and shuts up his heart from him, how does the love of God abide in him?"
+    }
+  },
+  {
+    "id": "Deuteronomy 7:9",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "Know therefore that the Lord your God is God, the faithful God who keeps covenant and steadfast love with those who love him and keep his commandments, to a thousand generations.",
+      "ESV": "Know therefore that the Lord your God is God, the faithful God who keeps covenant and steadfast love with those who love him and keep his commandments, to a thousand generations.",
+      "KJV": "Know therefore that the Lord thy God, he is God, the faithful God, which keepeth covenant and mercy with them that love him and keep his commandments to a thousand generations;",
+      "NKJV": "Therefore know that the Lord your God, He is God, the faithful God who keeps covenant and mercy for a thousand generations with those who love Him and keep His commandments;"
+    }
+  },
+  {
+    "id": "1 Kings 8:60-61",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "That all the peoples of the earth may know that the Lord is God; there is no other. But your hearts must be fully committed to the Lord our God, to live by his decrees and obey his commands, as at this time.",
+      "ESV": "That all the peoples of the earth may know that the Lord is God; there is no other. But your hearts must be fully committed to the Lord our God, to live by his decrees and obey his commands, as at this time.",
+      "KJV": "That all the people of the earth may know that the Lord is God, and that there is none else. But your hearts must be fully committed to the Lord our God, to live by his decrees and obey his commands, as at this time.",
+      "NKJV": "that all the peoples of the earth may know that the Lord is God; there is no other. But your hearts must be fully committed to the Lord our God, to live by his decrees and obey his commands, as at this time."
+    }
+  },
+  {
+    "id": "Psalm 46:10",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "Be still, and know that I am God. I will be exalted among the nations, I will be exalted in the earth!",
+      "ESV": "Be still, and know that I am God. I will be exalted among the nations, I will be exalted in the earth!",
+      "KJV": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+      "NKJV": "Be still, and know that I am God; I will be exalted among the nations, I will be exalted in the earth!"
+    }
+  },
+  {
+    "id": "Psalm 92:1-2",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "It is good to give thanks to the Lord, to sing praises to your name, O Most High; to declare your steadfast love in the morning, and your faithfulness by night,",
+      "ESV": "It is good to give thanks to the Lord, to sing praises to your name, O Most High; to declare your steadfast love in the morning, and your faithfulness by night,",
+      "KJV": "It is a good thing to give thanks unto the Lord, and to sing praises unto thy name, O Most High: To shew forth thy lovingkindness in the morning, and thy faithfulness every night,",
+      "NKJV": "It is good to give thanks to the Lord, and to sing praises to Your name, O Most High; To declare Your lovingkindness in the morning, and Your faithfulness every night,"
+    }
+  },
+  {
+    "id": "Psalm 145:8-9",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "The Lord is gracious and compassionate, slow to anger and rich in love. The Lord is good to all; he has compassion on all he has made.",
+      "ESV": "The Lord is gracious and merciful, slow to anger and abounding in steadfast love. The Lord is good to all, and his mercy is over all that he has made.",
+      "KJV": "The Lord is gracious, and full of compassion; slow to anger, and of great mercy. The Lord is good to all: and his tender mercies are over all his works.",
+      "NKJV": "The Lord is gracious and full of compassion, Slow to anger and great in mercy. The Lord is good to all, and His tender mercies are over all His works."
+    }
+  },
+  {
+    "id": "Isaiah 55:8-9",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "For my thoughts are not your thoughts, neither are your ways my ways, declares the Lord. As the heavens are higher than the earth, so are my ways higher than your ways and my thoughts than your thoughts.",
+      "ESV": "For my thoughts are not your thoughts, neither are your ways my ways, declares the Lord. For as the heavens are higher than the earth, so are my ways higher than your ways and my thoughts than your thoughts.",
+      "KJV": "For my thoughts are not your thoughts, neither are your ways my ways, saith the Lord. For as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts.",
+      "NKJV": "For my thoughts are not your thoughts, nor are your ways my ways, says the Lord. For as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts."
+    }
+  },
+  {
+    "id": "Isaiah 64:4",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "Since ancient times no one has heard, no ear has perceived, no eye has seen any God besides you, who acts on behalf of those who wait for him.",
+      "ESV": "From of old no one has heard or perceived by the ear, no eye has seen a God besides you, who acts for those who wait for him.",
+      "KJV": "For since the beginning of the world men have not heard, nor perceived by the ear, neither hath the eye seen, O God, beside thee, what he hath prepared for him that waiteth for him.",
+      "NKJV": "For since the beginning of the world men have not heard nor perceived by the ear, nor has the eye seen any God besides You, who acts for the one who waits for Him."
+    }
+  },
+  {
+    "id": "Jeremiah 9:24",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "but let the one who boasts boast about this: that they have the understanding to know me, that I am the Lord, who exercises kindness, justice and righteousness on earth, for in these I delight,” declares the Lord.",
+      "ESV": "but let him who boasts boast in this, that he understands and knows me, that I am the Lord who practices steadfast love, justice, and righteousness in the earth. For in these things I delight, declares the Lord.",
+      "KJV": "But let him that glorieth glory in this, that he understandeth and knoweth me, that I am the Lord which exercise lovingkindness, judgment, and righteousness, in the earth: for in these things I delight, saith the Lord.",
+      "NKJV": "But let him who glories glory in this, that he understands and knows Me, that I am the Lord, exercising lovingkindness, judgment, and righteousness in the earth. For in these I delight,” says the Lord."
+    }
+  },
+  {
+    "id": "Zephaniah 3:17",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; in his love he will no longer rebuke you, but will rejoice over you with singing.",
+      "ESV": "The Lord your God is in your midst, a mighty one who will save; he will rejoice over you with gladness; he will quiet you by his love; he will exult over you with loud singing.",
+      "KJV": "The Lord thy God in the midst of thee is mighty; he will save, he will rejoice over thee with joy; he will rest in his love, he will joy over thee with singing.",
+      "NKJV": "The Lord your God in your midst, The Mighty One, will save; He will rejoice over you with gladness, He will quiet you with His love, He will rejoice over you with singing."
+    }
+  },
+  {
+    "id": "Romans 11:33",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "Oh, the depth of the riches of the wisdom and knowledge of God! How unsearchable his judgments, and his paths beyond tracing out!",
+      "ESV": "Oh, the depth of the riches and wisdom and knowledge of God! How unsearchable are his judgments and how inscrutable his ways!",
+      "KJV": "O the depth of the riches both of the wisdom and knowledge of God! how unsearchable are his judgments, and his ways past finding out!",
+      "NKJV": "Oh, the depth of the riches both of the wisdom and knowledge of God! How unsearchable are His judgments and His ways past finding out!"
+    }
+  },
+  {
+    "id": "James 1:17",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "Every good and perfect gift is from above, coming down from the Father of the heavenly lights, who does not change like shifting shadows.",
+      "ESV": "Every good gift and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation or shadow due to change.",
+      "KJV": "Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning.",
+      "NKJV": "Every good gift and every perfect gift is from above, and comes down from the Father of lights, with whom there is no variation or shadow of turning."
+    }
+  },
+  {
+    "id": "Revelation 4:8",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "Each of the four living creatures had six wings and was covered with eyes all around, even under its wings. Day and night they never stop saying: 'Holy, holy, holy is the Lord God Almighty,' who was, and is, and is to come.",
+      "ESV": "And the four living creatures, each of them with six wings, are full of eyes all around and within, and day and night they never cease to say, 'Holy, holy, holy, is the Lord God Almighty, who was and is and is to come!'",
+      "KJV": "And the four beasts had each of them six wings about him; and they were full of eyes within: and they rest not day and night, saying, 'Holy, holy, holy, Lord God Almighty, which was, and is, and is to come.'",
+      "NKJV": "The four living creatures, each having six wings, were full of eyes around and within. And they do not rest day or night, saying: 'Holy, holy, holy, Lord God Almighty, Who was and is and is to come!'"
+    }
+  },
+  {
+    "id": "Revelation 4:11",
+    "category": "God the Father",
+    "translations": {
+      "NIV": "You are worthy, our Lord and God, to receive glory and honor and power, for you created all things, and by your will they were created and have their being.",
+      "ESV": "Worthy are you, our Lord and God, to receive glory and honor and power, for you created all things, and by your will they existed and were created.",
+      "KJV": "Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.",
+      "NKJV": "You are worthy, O Lord, To receive glory and honor and power; For You created all things, And by Your will they exist and were created."
+    }
+  },
+  {
+    "id": "Isaiah 64:6",
+    "category": "Good Works",
+    "translations": {
+      "NIV": "All of us have become like one who is unclean, and all our righteous acts are like filthy rags; we all shrivel up like a leaf, and like the wind our sins sweep us away.",
+      "ESV": "We have all become like one who is unclean, and all our righteous deeds are like a polluted garment. We all fade like a leaf, and our iniquities, like the wind, take us away.",
+      "KJV": "But we are all as an unclean thing, and all our righteousnesses are as filthy rags; and we all do fade as a leaf; and our iniquities, like the wind, have taken us away.",
+      "NKJV": "But we are all like an unclean thing, And all our righteousnesses are like filthy rags; We all fade as a leaf, And our iniquities, like the wind, Have taken us away."
+    }
+  },
+  {
+    "id": "John 14:12",
+    "category": "Good Works",
+    "translations": {
+      "NIV": "Very truly I tell you, whoever believes in me will do the works I have been doing, and they will do even greater things than these, because I am going to the Father.",
+      "ESV": "Truly, truly, I say to you, whoever believes in me will also do the works that I do; and greater works than these will he do, because I am going to the Father.",
+      "KJV": "Verily, verily, I say unto you, He that believeth on me, the works that I do shall he do also; and greater works than these shall he do; because I go unto my Father.",
+      "NKJV": "Most assuredly, I say to you, he who believes in Me, the works that I do he will do also; and greater works than these he will do, because I go to My Father."
+    }
+  },
+  {
+    "id": "1 Corinthians 9:24",
+    "category": "Good Works",
+    "translations": {
+      "NIV": "Do you not know that in a race all the runners run, but only one gets the prize? Run in such a way as to get the prize.",
+      "ESV": "Do you not know that in a race all the runners run, but only one receives the prize? So run that you may obtain it.",
+      "KJV": "Know ye not that they which run in a race run all, but one receiveth the prize? So run, that ye may obtain.",
+      "NKJV": "Do you not know that those who run in a race all run, but one receives the prize? Run in such a way that you may obtain it."
+    }
+  },
+  {
+    "id": "1 Corinthians 15:58",
+    "category": "Good Works",
+    "translations": {
+      "NIV": "Therefore, my dear brothers and sisters, stand firm. Let nothing move you. Always give yourselves fully to the work of the Lord, because you know that your labor in the Lord is not in vain.",
+      "ESV": "Therefore, my beloved brothers, be steadfast, immovable, always abounding in the work of the Lord, knowing that in the Lord your labor is not in vain.",
+      "KJV": "Therefore, my beloved brethren, be ye steadfast, unmovable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.",
+      "NKJV": "Therefore, my beloved brethren, be steadfast, immovable, always abounding in the work of the Lord, knowing that your labor is not in vain in the Lord."
+    }
+  },
+  {
+    "id": "Galatians 6:9-10",
+    "category": "Good Works",
+    "translations": {
+      "NIV": "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up. Therefore, as we have opportunity, let us do good to all people, especially to those who belong to the family of believers.",
+      "ESV": "And let us not grow weary of doing good, for in due season we will reap, if we do not give up. So then, as we have opportunity, let us do good to everyone, and especially to those who are of the household of faith.",
+      "KJV": "And let us not be weary in well doing: for in due season we shall reap, if we faint not. As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith.",
+      "NKJV": "And let us not grow weary while doing good, for in due season we shall reap if we do not lose heart. Therefore, as we have opportunity, let us do good to all, especially to those who are of the household of faith."
+    }
+  },
+  {
+    "id": "1 Thessalonians 1:2-3",
+    "category": "Good Works",
+    "translations": {
+      "NIV": "We always thank God for all of you and continually mention you in our prayers. We remember before our God and Father your work produced by faith, your labor prompted by love, and your endurance inspired by hope in our Lord Jesus Christ.",
+      "ESV": "We give thanks to God always for all of you, constantly mentioning you in our prayers, remembering before our God and Father your work of faith and labor of love and steadfastness of hope in our Lord Jesus Christ.",
+      "KJV": "We give thanks to God always for you all, making mention of you in our prayers; Remembering without ceasing your work of faith, and labour of love, and patience of hope in our Lord Jesus Christ, in the sight of God and our Father;",
+      "NKJV": "We give thanks to God always for you all, making mention of you in our prayers, remembering without ceasing your work of faith, labor of love, and patience of hope in our Lord Jesus Christ in the sight of our God and Father,"
+    }
+  },
+  {
+    "id": "Hebrews 6:10",
+    "category": "Good Works",
+    "translations": {
+      "NIV": "God is not unjust; he will not forget your work and the love you have shown him as you have helped his people and continue to help them.",
+      "ESV": "For God is not unjust so as to overlook your work and the love that you have shown for his name in serving the saints, as you still do.",
+      "KJV": "For God is not unrighteous to forget your work and labour of love, which ye have shewed toward his name, in that ye have ministered to the saints, and do minister.",
+      "NKJV": "For God is not unjust to forget your work and labor of love which you have shown toward His name, in that you have ministered to the saints, and do minister."
+    }
+  },
+  {
+    "id": "James 2:17-18",
+    "category": "Good Works",
+    "translations": {
+      "NIV": "In the same way, faith by itself, if it is not accompanied by action, is dead. But someone will say, 'You have faith; I have deeds.' Show me your faith without deeds, and I will show you my faith by my deeds.",
+      "ESV": "So also faith by itself, if it does not have works, is dead. But someone will say, 'You have faith and I have works.' Show me your faith apart from your works, and I will show you my faith by my works.",
+      "KJV": "Even so faith, if it hath not works, is dead, being alone. Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works.",
+      "NKJV": "Thus also faith by itself, if it does not have works, is dead. But someone will say, 'You have faith, and I have works.' Show me your faith without your works, and I will show you my faith by my works."
+    }
+  },
+  {
+    "id": "1 Peter 4:9-11",
+    "category": "Good Works",
+    "translations": {
+      "NIV": "Offer hospitality to one another without grumbling. Each of you should use whatever gift you have received to serve others, as faithful stewards of God's grace in its various forms. If anyone speaks, they should do so as one who speaks the very words of God. If anyone serves, they should do so with the strength God provides, so that in all things God may be praised through Jesus Christ. To him be the glory and the power for ever and ever. Amen.",
+      "ESV": "Show hospitality to one another without grumbling. As each has received a gift, use it to serve one another, as good stewards of God's varied grace: whoever speaks, as one who speaks oracles of God; whoever serves, as one who serves by the strength that God supplies—in order that in everything God may be glorified through Jesus Christ. To him belong glory and dominion forever and ever. Amen.",
+      "KJV": "Use hospitality one to another without grudging. As every man hath received the gift, even so minister the same one to another, as good stewards of the manifold grace of God. If any man speak, let him speak as the oracles of God; if any man minister, let him do it as of the ability which God giveth: that God in all things may be glorified through Jesus Christ, to whom be praise and dominion for ever and ever. Amen.",
+      "NKJV": "Be hospitable to one another without grumbling. As each one has received a gift, minister it to one another, as good stewards of the manifold grace of God. If anyone speaks, let him speak as the oracles of God. If anyone ministers, let him do it as with the ability which God supplies, that in all things God may be glorified through Jesus Christ, to whom belong the glory and the dominion forever and ever. Amen."
+    }
+  },
+  {
+    "id": "Exodus 23:25-26",
+    "category": "Healing",
+    "translations": {
+      "NIV": "Worship the Lord your God, and his blessing will be on your food and water. I will take away sickness from among you, and none will miscarry or be barren in your land. I will give you a full life span.",
+      "ESV": "You shall serve the Lord your God, and he will bless your bread and your water, and I will take sickness away from among you. None shall miscarry or be barren in your land; I will fulfill the number of your days.",
+      "KJV": "And ye shall serve the Lord your God, and he shall bless thy bread, and thy water; and I will take sickness away from the midst of thee. There shall nothing cast their young, nor be barren, in thy land: the number of thy days I will fulfil.",
+      "NKJV": "So you shall serve the Lord your God, and He will bless your bread and your water. And I will take sickness away from the midst of you. No one shall suffer miscarriage or be barren in your land; I will fulfill the number of your days."
+    }
+  },
+  {
+    "id": "Psalm 30:2-3",
+    "category": "Healing",
+    "translations": {
+      "NIV": "Lord my God, I called to you for help, and you healed me. You, Lord, brought me up from the realm of the dead; you spared me from going down to the pit.",
+      "ESV": "O Lord my God, I cried to you for help, and you have healed me. O Lord, you have brought up my soul from Sheol; you restored me to life from among those who go down to the pit.",
+      "KJV": "O Lord my God, I cried unto thee, and thou hast healed me. O Lord, thou hast brought up my soul from the grave: thou hast kept me alive, that I should not go down to the pit.",
+      "NKJV": "O Lord my God, I cried out to You, And You healed me. O Lord, You brought my soul up from the grave; You have kept me alive, that I should not go down to the pit."
+    }
+  },
+  {
+    "id": "Psalm 103:2-3",
+    "category": "Healing",
+    "translations": {
+      "NIV": "Praise the Lord, my soul, and forget not all his benefits— who forgives all your sins and heals all your diseases.",
+      "ESV": "Bless the Lord, O my soul, and forget not all his benefits, who forgives all your iniquity, who heals all your diseases.",
+      "KJV": "Bless the Lord, O my soul, and forget not all his benefits: Who forgiveth all thine iniquities; who healeth all thy diseases;",
+      "NKJV": "Bless the Lord, O my soul, and forget not all His benefits: Who forgives all your iniquities, Who heals all your diseases,"
+    }
+  },
+  {
+    "id": "Isaiah 53:5",
+    "category": "Healing",
+    "translations": {
+      "NIV": "But he was pierced for our transgressions, he was crushed for our iniquities; the punishment that brought us peace was on him, and by his wounds we are healed.",
+      "ESV": "But he was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his wounds we are healed.",
+      "KJV": "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed.",
+      "NKJV": "But He was wounded for our transgressions, He was bruised for our iniquities; The chastisement for our peace was upon Him, And by His stripes we are healed."
+    }
+  },
+  {
+    "id": "Jeremiah 17:14",
+    "category": "Healing",
+    "translations": {
+      "NIV": "Heal me, Lord, and I will be healed; save me and I will be saved, for you are the one I praise.",
+      "ESV": "Heal me, O Lord, and I shall be healed; save me, and I shall be saved, for you are my praise.",
+      "KJV": "Heal me, O Lord, and I shall be healed; save me, and I shall be saved: for thou art my praise.",
+      "NKJV": "Heal me, O Lord, and I shall be healed; Save me, and I shall be saved, For You are my praise."
+    }
+  },
+  {
+    "id": "Matthew 10:1",
+    "category": "Healing",
+    "translations": {
+      "NIV": "Jesus called his twelve disciples to him and gave them authority to drive out impure spirits and to heal every disease and sickness.",
+      "ESV": "And he called to him his twelve disciples and gave them authority over unclean spirits, to cast them out, and to heal every disease and every affliction.",
+      "KJV": "And when he had called unto him his twelve disciples, he gave them power against unclean spirits, to cast them out, and to heal all manner of sickness and all manner of disease.",
+      "NKJV": "And when He had called His twelve disciples to Him, He gave them power over unclean spirits, to cast them out, and to heal all kinds of sickness and all kinds of disease."
+    }
+  },
+  {
+    "id": "Luke 4:40",
+    "category": "Healing",
+    "translations": {
+      "NIV": "At sunset, the people brought to Jesus all who had various kinds of sickness, and laying his hands on each one, he healed them.",
+      "ESV": "Now when the sun was setting, all those who had any who were sick with various diseases brought them to him, and he laid his hands on every one of them and healed them.",
+      "KJV": "Now when the sun was setting, all they that had any sick with divers diseases brought them unto him; and he laid his hands on every one of them, and healed them.",
+      "NKJV": "When the sun was setting, all those who had any that were sick with various diseases brought them to Him; and He laid His hands on every one of them and healed them."
+    }
+  },
+  {
+    "id": "Luke 6:19",
+    "category": "Healing",
+    "translations": {
+      "NIV": "and the people all tried to touch him, because power was coming from him and healing them all.",
+      "ESV": "And all the crowd sought to touch him, for power came out from him and healed them all.",
+      "KJV": "And the whole multitude sought to touch him: for there went virtue out of him, and healed them all.",
+      "NKJV": "And the whole multitude sought to touch Him, for power went out from Him and healed them all."
+    }
+  },
+  {
+    "id": "James 5:14-16",
+    "category": "Healing",
+    "translations": {
+      "NIV": "Is anyone among you sick? Let them call the elders of the church to pray over them and anoint them with oil in the name of the Lord. And the prayer offered in faith will make the sick person well; the Lord will raise them up. If they have sinned, they will be forgiven. Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective.",
+      "ESV": "Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing him with oil in the name of the Lord. And the prayer of faith will save the one who is sick, and the Lord will raise him up. And if he has committed sins, he will be forgiven. Therefore, confess your sins to one another and pray for one another, that you may be healed. The prayer of a righteous person has great power as it is working.",
+      "KJV": "Is any sick among you? let him call for the elders of the church; and let them pray over him, anointing him with oil in the name of the Lord: And the prayer of faith shall save the sick, and the Lord shall raise him up; and if he have committed sins, they shall be forgiven him. Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.",
+      "NKJV": "Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing him with oil in the name of the Lord. And the prayer of faith will save the sick, and the Lord will raise him up. And if he has committed sins, he will be forgiven. Confess your trespasses to one another, and pray for one another, that you may be healed. The effective, fervent prayer of a righteous man avails much."
+    }
+  },
+  {
+    "id": "1 Peter 2:24",
+    "category": "Healing",
+    "translations": {
+      "NIV": "He himself bore our sins in his body on the cross, so that we might die to sins and live for righteousness; by his wounds you have been healed.",
+      "ESV": "He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness. By his wounds you have been healed.",
+      "KJV": "Who his own self bare our sins in his own body on the tree, that we, being dead to sins, should live unto righteousness: by whose stripes ye were healed.",
+      "NKJV": "who Himself bore our sins in His own body on the tree, that we, having died to sins, might live for righteousness—by whose stripes you were healed."
+    }
+  },
+  {
+    "id": "Psalm 21:4",
+    "category": "Health",
+    "translations": {
+      "NIV": "May he give you the desire of your heart and make all your plans succeed.",
+      "ESV": "He asked life of you; you gave it to him, length of days forever and ever.",
+      "KJV": "He asked life of thee, and thou gavest it him, even length of days for ever and ever.",
+      "NKJV": "He asked life from You, and You gave it to him—length of days forever and ever."
+    }
+  },
+  {
+    "id": "Psalm 34:19-20",
+    "category": "Health",
+    "translations": {
+      "NIV": "The righteous person may have many troubles, but the Lord delivers him from them all; he protects all his bones, not one of them will be broken.",
+      "ESV": "Many are the afflictions of the righteous, but the Lord delivers him out of them all. He keeps all his bones; not one of them is broken.",
+      "KJV": "Many are the afflictions of the righteous: but the Lord delivereth him out of them all. He keepeth all his bones: not one of them is broken.",
+      "NKJV": "Many are the afflictions of the righteous, But the Lord delivers him out of them all. He guards all his bones; Not one of them is broken."
+    }
+  },
+  {
+    "id": "Psalm 41:1-3",
+    "category": "Health",
+    "translations": {
+      "NIV": "Blessed are those who have regard for the weak; the Lord delivers them in times of trouble. The Lord protects and preserves them—they are counted among the blessed in the land—he does not give them over to the desire of their foes. The Lord sustains them on their sickbed and restores them from their bed of illness.",
+      "ESV": "Blessed is the one who considers the poor! In the day of trouble the Lord delivers him; the Lord protects him and keeps him alive; he is called blessed in the land; you do not give him up to the will of his enemies. The Lord sustains him on his sickbed; in his illness you restore him to full health.",
+      "KJV": "Blessed is he that considereth the poor: the Lord will deliver him in time of trouble. The Lord will preserve him, and keep him alive; and he shall be blessed upon the earth: and thou wilt not deliver him unto the will of his enemies. The Lord will strengthen him upon the bed of languishing: thou wilt make all his bed in his sickness.",
+      "NKJV": "Blessed is he who considers the poor; The Lord will deliver him in time of trouble. The Lord will preserve him and keep him alive, And he will be blessed on the earth; You will not deliver him to the will of his enemies. The Lord will strengthen him on his bed of illness; You will sustain him on his sickbed."
+    }
+  },
+  {
+    "id": "Proverbs 3:7-8",
+    "category": "Health",
+    "translations": {
+      "NIV": "Do not be wise in your own eyes; fear the Lord and shun evil. This will bring health to your body and nourishment to your bones.",
+      "ESV": "Be not wise in your own eyes; fear the Lord, and turn away from evil. It will be healing to your flesh and refreshment to your bones.",
+      "KJV": "Be not wise in thine own eyes: fear the Lord, and depart from evil. It shall be health to thy navel, and marrow to thy bones.",
+      "NKJV": "Do not be wise in your own eyes; Fear the Lord and depart from evil. It will be health to your flesh, And strength to your bones."
+    }
+  },
+  {
+    "id": "Proverbs 4:20-22",
+    "category": "Health",
+    "translations": {
+      "NIV": "My son, pay attention to what I say; turn your ear to my words. Do not let them out of your sight, keep them within your heart; for they are life to those who find them and health to one’s whole body.",
+      "ESV": "My son, be attentive to my words; incline your ear to my sayings. Let them not escape from your sight; keep them within your heart. For they are life to those who find them, and healing to all their flesh.",
+      "KJV": "My son, attend to my words; incline thine ear unto my sayings. Let them not depart from thine eyes; keep them in the midst of thine heart. For they are life unto those that find them, and health to all their flesh.",
+      "NKJV": "My son, give attention to my words; Incline your ear to my sayings. Do not let them depart from your eyes; Keep them in the midst of your heart; For they are life to those who find them, And health to all their flesh."
+    }
+  },
+  {
+    "id": "Proverbs 15:30",
+    "category": "Health",
+    "translations": {
+      "NIV": "Light in a messenger’s eyes brings joy to the heart, and good news gives health to the bones.",
+      "ESV": "The light of the eyes rejoices the heart, and good news refreshes the bones.",
+      "KJV": "The light of the eyes rejoiceth the heart: and a good report maketh the bones fat.",
+      "NKJV": "The light of the eyes rejoices the heart, And a good report makes the bones healthy."
+    }
+  },
+  {
+    "id": "Proverbs 16:24",
+    "category": "Health",
+    "translations": {
+      "NIV": "Gracious words are a honeycomb, sweet to the soul and healing to the bones.",
+      "ESV": "Gracious words are like a honeycomb, sweetness to the soul and health to the body.",
+      "KJV": "Pleasant words are as an honeycomb, sweet to the soul, and health to the bones.",
+      "NKJV": "Pleasant words are like a honeycomb, Sweetness to the soul and health to the bones."
+    }
+  },
+  {
+    "id": "Romans 8:11",
+    "category": "Health",
+    "translations": {
+      "NIV": "And if the Spirit of him who raised Jesus from the dead is living in you, he who raised Christ from the dead will also give life to your mortal bodies because of his Spirit who lives in you.",
+      "ESV": "If the Spirit of him who raised Jesus from the dead dwells in you, he who raised Christ Jesus from the dead will also give life to your mortal bodies through his Spirit who dwells in you.",
+      "KJV": "But if the Spirit of him that raised up Jesus from the dead dwell in you, he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you.",
+      "NKJV": "But if the Spirit of Him who raised Jesus from the dead dwells in you, He who raised Christ from the dead will also give life to your mortal bodies through His Spirit who dwells in you."
+    }
+  },
+  {
+    "id": "3 John 1:2",
+    "category": "Health",
+    "translations": {
+      "NIV": "Dear friend, I pray that you may enjoy good health and that all may go well with you, even as your soul is getting along well.",
+      "ESV": "Beloved, I pray that all may go well with you and that you may be in good health, as it goes well with your soul.",
+      "KJV": "Beloved, I wish above all things that thou mayest prosper and be in health, even as thy soul prospereth.",
+      "NKJV": "Beloved, I pray that you may prosper in all things and be in health, just as your soul prospers."
+    }
+  },
+  {
+    "id": "Daniel 2:44",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "In the time of those kings, the God of heaven will set up a kingdom that will never be destroyed, nor will it be left to another people. It will crush all those kingdoms and bring them to an end, but it will itself endure forever.",
+      "ESV": "And in the days of those kings the God of heaven will set up a kingdom that shall never be destroyed, nor shall the kingdom be left to another people. It shall break in pieces all these kingdoms and bring them to an end, and it shall stand forever.",
+      "KJV": "And in the days of these kings shall the God of heaven set up a kingdom, which shall never be destroyed: and the kingdom shall not be left to other people, but it shall break in pieces and consume all these kingdoms, and it shall stand for ever.",
+      "NKJV": "And in the days of these kings the God of heaven will set up a kingdom which shall never be destroyed; and the kingdom shall not be left to other people; it shall break in pieces and consume all these kingdoms, and it shall stand forever."
+    }
+  },
+  {
+    "id": "Matthew 13:44",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and then in his joy went and sold all he had and bought that field.",
+      "ESV": "The kingdom of heaven is like treasure hidden in a field, which a man found and covered up. Then in his joy he goes and sells all that he has and buys that field.",
+      "KJV": "Again, the kingdom of heaven is like unto treasure hid in a field; the which when a man hath found, he hideth, and for joy thereof goeth and selleth all that he hath, and buyeth that field.",
+      "NKJV": "Again, the kingdom of heaven is like treasure hidden in a field, which a man found and hid; and for joy over it he goes and sells all that he has and buys that field."
+    }
+  },
+  {
+    "id": "John 14:1-3",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "Do not let your hearts be troubled. You believe in God; believe also in me. My Father's house has many rooms; if that were not so, would I have told you that I am going there to prepare a place for you? And if I go and prepare a place for you, I will come back and take you to be with me that you also may be where I am.",
+      "ESV": "Let not your hearts be troubled. Believe in God; believe also in me. In my Father's house are many rooms. If it were not so, would I have told you that I go to prepare a place for you? And if I go and prepare a place for you, I will come again and will take you to myself, that where I am you may be also.",
+      "KJV": "Let not your heart be troubled: ye believe in God, believe also in me. In my Father's house are many mansions: if it were not so, I would have told you. I go to prepare a place for you. And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also.",
+      "NKJV": "Let not your heart be troubled; you believe in God, believe also in Me. In My Father's house are many mansions; if it were not so, I would have told you. I go to prepare a place for you. And if I go and prepare a place for you, I will come again and receive you to Myself; that where I am, there you may be also."
+    }
+  },
+  {
+    "id": "Romans 14:17",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "For the kingdom of God is not a matter of eating and drinking, but of righteousness, peace and joy in the Holy Spirit.",
+      "ESV": "For the kingdom of God is not a matter of eating and drinking but of righteousness and peace and joy in the Holy Spirit.",
+      "KJV": "For the kingdom of God is not meat and drink; but righteousness, and peace, and joy in the Holy Ghost.",
+      "NKJV": "for the kingdom of God is not eating and drinking, but righteousness and peace and joy in the Holy Spirit."
+    }
+  },
+  {
+    "id": "1 Corinthians 15:51-54",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "Listen, I tell you a mystery: We will not all sleep, but we will all be changed— in a flash, in the twinkling of an eye, at the last trumpet. For the trumpet will sound, the dead will be raised imperishable, and we will be changed. For the perishable must clothe itself with the imperishable, and the mortal with immortality. When the perishable has been clothed with the imperishable, and the mortal with immortality, then the saying that is written will come true: 'Death has been swallowed up in victory.'",
+      "ESV": "Behold! I tell you a mystery. We shall not all sleep, but we shall all be changed, in a moment, in the twinkling of an eye, at the last trumpet. For the trumpet will sound, and the dead will be raised imperishable, and we shall be changed. For this perishable body must put on the imperishable, and this mortal body must put on immortality. When the perishable puts on the imperishable, and the mortal puts on immortality, then shall come to pass the saying that is written: 'Death is swallowed up in victory.'",
+      "KJV": "Behold, I shew you a mystery; We shall not all sleep, but we shall all be changed, In a moment, in the twinkling of an eye, at the last trump: for the trumpet shall sound, and the dead shall be raised incorruptible, and we shall be changed. For this corruptible must put on incorruption, and this mortal must put on immortality. So when this corruptible shall have put on incorruption, and this mortal shall have put on immortality, then shall be brought to pass the saying that is written, Death is swallowed up in victory.",
+      "NKJV": "Behold, I tell you a mystery: We shall not all sleep, but we shall all be changed— in a moment, in the twinkling of an eye, at the last trumpet. For the trumpet will sound, and the dead will be raised incorruptible, and we shall be changed. For this corruptible must put on incorruption, and this mortal must put on immortality. So when this corruptible has put on incorruption, and this mortal has put on immortality, then shall be brought to pass the saying that is written: 'Death is swallowed up in victory.'"
+    }
+  },
+  {
+    "id": "2 Corinthians 4:18",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "So we fix our eyes not on what is seen, but on what is unseen, since what is seen is temporary, but what is unseen is eternal.",
+      "ESV": "As we look not to the things that are seen but to the things that are unseen. For the things that are seen are transient, but the things that are unseen are eternal.",
+      "KJV": "While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal.",
+      "NKJV": "while we do not look at the things which are seen, but at the things which are not seen. For the things which are seen are temporary, but the things which are not seen are eternal."
+    }
+  },
+  {
+    "id": "Philippians 3:20-21",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "But our citizenship is in heaven. And we eagerly await a Savior from there, the Lord Jesus Christ, who, by the power that enables him to bring everything under his control, will transform our lowly bodies so that they will be like his glorious body.",
+      "ESV": "But our citizenship is in heaven, and from it we await a Savior, the Lord Jesus Christ, who will transform our lowly body to be like his glorious body, by the power that enables him even to subject all things to himself.",
+      "KJV": "For our conversation is in heaven; from whence also we look for the Saviour, the Lord Jesus Christ: Who shall change our vile body, that it may be fashioned like unto his glorious body, according to the working whereby he is able even to subdue all things unto himself.",
+      "NKJV": "For our citizenship is in heaven, from which we also eagerly wait for the Savior, the Lord Jesus Christ, who will transform our lowly body that it may be conformed to His glorious body, according to the working by which He is able even to subdue all things to Himself."
+    }
+  },
+  {
+    "id": "Colossians 3:1-4",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "Since, then, you have been raised with Christ, set your hearts on things above, where Christ is, seated at the right hand of God. Set your minds on things above, not on earthly things. For you died, and your life is now hidden with Christ in God. When Christ, who is your life, appears, then you also will appear with him in glory.",
+      "ESV": "If then you have been raised with Christ, seek the things that are above, where Christ is, seated at the right hand of God. Set your minds on things that are above, not on things that are on earth. For you have died, and your life is hidden with Christ in God. When Christ who is your life appears, then you also will appear with him in glory.",
+      "KJV": "If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God. Set your affection on things above, not on things on the earth. For ye are dead, and your life is hid with Christ in God. When Christ, who is our life, shall appear, then shall ye also appear with him in glory.",
+      "NKJV": "If then you were raised with Christ, seek those things which are above, where Christ is, sitting at the right hand of God. Set your mind on things above, not on things on the earth. For you died, and your life is hidden with Christ in God. When Christ who is our life appears, then you also will appear with Him in glory."
+    }
+  },
+  {
+    "id": "1 Thessalonians 4:16",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "For the Lord himself will come down from heaven, with a loud command, with the voice of the archangel and with the trumpet call of God, and the dead in Christ will rise first.",
+      "ESV": "For the Lord himself will descend from heaven with a cry of command, with the voice of an archangel, and with the sound of the trumpet of God. And the dead in Christ will rise first.",
+      "KJV": "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:",
+      "NKJV": "For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first."
+    }
+  },
+  {
+    "id": "1 Thessalonians 5:23-24",
+    "category": "Heaven",
+    "translations": {
+      "NIV": "May God himself, the God of peace, sanctify you through and through. May your whole spirit, soul, and body be kept blameless at the coming of our Lord Jesus Christ. The one who calls you is faithful, and he will do it.",
+      "ESV": "Now may the God of peace himself sanctify you completely, and may your whole spirit and soul and body be kept blameless at the coming of our Lord Jesus Christ. He who calls you is faithful; he will surely do it.",
+      "KJV": "And the very God of peace sanctify you wholly; and I pray God your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ. Faithful is he that calleth you, who also will do it.",
+      "NKJV": "Now may the God of peace Himself sanctify you completely; and may your whole spirit, soul, and body be preserved blameless at the coming of our Lord Jesus Christ. He who calls you is faithful, who also will do it."
+    }
+  },
+  {
+    "id": "Psalm 33:18",
+    "category": "Hope",
+    "translations": {
+      "ESV": "Behold, the eye of the Lord is on those who fear him, on those who hope in his steadfast love.",
+      "NIV": "But the eyes of the Lord are on those who fear him, on those whose hope is in his unfailing love.",
+      "KJV": "Behold, the eye of the Lord is upon them that fear him, upon them that hope in his mercy.",
+      "NKJV": "Behold, the eye of the Lord is on those who fear Him, on those who hope in His mercy."
+    }
+  },
+  {
+    "id": "Psalm 33:22",
+    "category": "Hope",
+    "translations": {
+      "ESV": "Let your steadfast love, O Lord, be upon us, even as we hope in you.",
+      "NIV": "May your unfailing love be with us, Lord, even as we put our hope in you.",
+      "KJV": "Let thy mercy, O Lord, be upon us, according as we hope in thee.",
+      "NKJV": "Let Your mercy, O Lord, be upon us, just as we hope in You."
+    }
+  },
+  {
+    "id": "Psalm 42:11",
+    "category": "Hope",
+    "translations": {
+      "ESV": "Why are you cast down, O my soul, and why are you in turmoil within me? Hope in God; for I shall again praise him, my salvation and my God.",
+      "NIV": "Why, my soul, are you downcast? Why so disturbed within me? Put your hope in God, for I will yet praise him, my Savior and my God.",
+      "KJV": "Why art thou cast down, O my soul? and why art thou disquieted within me? hope thou in God: for I shall yet praise him, who is the health of my countenance, and my God.",
+      "NKJV": "Why are you cast down, O my soul? And why are you disquieted within me? Hope in God; For I shall yet praise Him, The help of my countenance and my God."
+    }
+  },
+  {
+    "id": "Psalm 62:5-6",
+    "category": "Hope",
+    "translations": {
+      "ESV": "For God alone, O my soul, wait in silence, for my hope is from him. He only is my rock and my salvation, my fortress; I shall not be shaken.",
+      "NIV": "Yes, my soul, find rest in God; my hope comes from him. Truly he is my rock and my salvation; he is my fortress, I will not be shaken.",
+      "KJV": "My soul, wait thou only upon God; for my expectation is from him. He only is my rock and my salvation: he is my defence; I shall not be moved.",
+      "NKJV": "My soul, wait silently for God alone, For my expectation is from Him. He only is my rock and my salvation; He is my defense; I shall not be moved."
+    }
+  },
+  {
+    "id": "Psalm 71:5",
+    "category": "Hope",
+    "translations": {
+      "ESV": "For you, O Lord, are my hope, my trust, O Lord, from my youth.",
+      "NIV": "For you have been my hope, Sovereign Lord, my confidence since my youth.",
+      "KJV": "For thou art my hope, O Lord God: thou art my trust from my youth.",
+      "NKJV": "For You are my hope, O Lord God; You are my trust from my youth."
+    }
+  },
+  {
+    "id": "Romans 5:5",
+    "category": "Hope",
+    "translations": {
+      "ESV": "And hope does not put us to shame, because God's love has been poured into our hearts through the Holy Spirit who has been given to us.",
+      "NIV": "And hope does not put us to shame, because God's love has been poured out into our hearts through the Holy Spirit, who has been given to us.",
+      "KJV": "And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+      "NKJV": "Now hope does not disappoint, because the love of God has been poured out in our hearts by the Holy Spirit who was given to us."
+    }
+  },
+  {
+    "id": "Romans 15:13",
+    "category": "Hope",
+    "translations": {
+      "ESV": "May the God of hope fill you with all joy and peace in believing, so that by the power of the Holy Spirit you may abound in hope.",
+      "NIV": "May the God of hope fill you with all joy and peace as you trust in him, so that you may overflow with hope by the power of the Holy Spirit.",
+      "KJV": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+      "NKJV": "Now may the God of hope fill you with all joy and peace in believing, that you may abound in hope by the power of the Holy Spirit."
+    }
+  },
+  {
+    "id": "Colossians 1:27",
+    "category": "Hope",
+    "translations": {
+      "ESV": "To them God chose to make known how great among the Gentiles are the riches of the glory of this mystery, which is Christ in you, the hope of glory.",
+      "NIV": "To them God has chosen to make known among the Gentiles the glorious riches of this mystery, which is Christ in you, the hope of glory.",
+      "KJV": "To whom God would make known what is the riches of the glory of this mystery among the Gentiles; which is Christ in you, the hope of glory.",
+      "NKJV": "To them God willed to make known what are the riches of the glory of this mystery among the Gentiles: which is Christ in you, the hope of glory."
+    }
+  },
+  {
+    "id": "1 Peter 1:3",
+    "category": "Hope",
+    "translations": {
+      "ESV": "Blessed be the God and Father of our Lord Jesus Christ! According to his great mercy, he has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead.",
+      "NIV": "Praise be to the God and Father of our Lord Jesus Christ! In his great mercy he has given us new birth into a living hope through the resurrection of Jesus Christ from the dead.",
+      "KJV": "Blessed be the God and Father of our Lord Jesus Christ, which according to his abundant mercy hath begotten us again unto a lively hope by the resurrection of Jesus Christ from the dead.",
+      "NKJV": "Blessed be the God and Father of our Lord Jesus Christ, who according to His abundant mercy has begotten us again to a living hope through the resurrection of Jesus Christ from the dead."
+    }
+  },
+  {
+    "id": "1 Peter 1:13",
+    "category": "Hope",
+    "translations": {
+      "ESV": "Therefore, preparing your minds for action, and being sober-minded, set your hope fully on the grace that will be brought to you at the revelation of Jesus Christ.",
+      "NIV": "Therefore, with minds that are alert and fully sober, set your hope on the grace to be brought to you when Jesus Christ is revealed at his coming.",
+      "KJV": "Wherefore gird up the loins of your mind, be sober, and hope to the end for the grace that is to be brought unto you at the revelation of Jesus Christ.",
+      "NKJV": "Therefore gird up the loins of your mind, be sober, and rest your hope fully upon the grace that is to be brought to you at the revelation of Jesus Christ."
+    }
+  },
+  {
+    "id": "Psalm 16:7",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "I bless the LORD who gives me counsel; in the night also my heart instructs me.",
+      "NIV": "I will praise the LORD, who counsels me; even at night my heart instructs me.",
+      "KJV": "I will bless the LORD, who hath given me counsel: my reins also instruct me in the night seasons.",
+      "NKJV": "I will bless the LORD who has given me counsel; My heart also instructs me in the night seasons."
+    }
+  },
+  {
+    "id": "Psalm 32:8",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "I will instruct you and teach you in the way you should go; I will counsel you with my eye upon you.",
+      "NIV": "I will instruct you and teach you in the way you should go; I will counsel you with my loving eye on you.",
+      "KJV": "I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.",
+      "NKJV": "I will instruct you and teach you in the way you should go; I will guide you with My eye."
+    }
+  },
+  {
+    "id": "Proverbs 10:19",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "When words are many, transgression is not lacking, but whoever restrains his lips is prudent.",
+      "NIV": "Sin is not ended by multiplying words, but the prudent hold their tongues.",
+      "KJV": "In the multitude of words there wanteth not sin: but he that refraineth his lips is wise.",
+      "NKJV": "In the multitude of words sin is not lacking, but he who restrains his lips is wise."
+    }
+  },
+  {
+    "id": "Proverbs 14:7",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "Leave the presence of a fool, for there you do not meet words of knowledge.",
+      "NIV": "Stay away from a fool, for you will not find knowledge on their lips.",
+      "KJV": "Go from the presence of a foolish man, when thou perceivest not in him the lips of knowledge.",
+      "NKJV": "Go from the presence of a foolish man, when you do not perceive in him the lips of knowledge."
+    }
+  },
+  {
+    "id": "Proverbs 15:1",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "A soft answer turns away wrath, but a harsh word stirs up anger.",
+      "NIV": "A gentle answer turns away wrath, but a harsh word stirs up anger.",
+      "KJV": "A soft answer turneth away wrath: but grievous words stir up anger.",
+      "NKJV": "A soft answer turns away wrath, but a harsh word stirs up anger."
+    }
+  },
+  {
+    "id": "Matthew 5:39-41",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "But I say to you, do not resist the one who is evil. But if anyone slaps you on the right cheek, turn to him the other also. And if anyone would sue you and take your tunic, let him have your cloak as well. And if anyone forces you to go one mile, go with him two miles.",
+      "NIV": "But I tell you, do not resist an evil person. If anyone slaps you on the right cheek, turn to them the other cheek also. And if anyone wants to sue you and take your shirt, hand over your coat as well. If anyone forces you to go one mile, go with them two miles.",
+      "KJV": "But I say unto you, That ye resist not evil: but whosoever shall smite thee on thy right cheek, turn to him the other also. And if any man will sue thee at the law, and take away thy coat, let him have thy cloke also. And whosoever shall compel thee to go a mile, go with him twain.",
+      "NKJV": "But I tell you not to resist an evil person. But whoever slaps you on your right cheek, turn the other to him also. If anyone wants to sue you and take away your tunic, let him have your cloak also. And whoever compels you to go one mile, go with him two."
+    }
+  },
+  {
+    "id": "Luke 6:41-42",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "Why do you see the speck that is in your brother's eye, but do not notice the log that is in your own eye? How can you say to your brother, 'Brother, let me take out the speck that is in your eye,' when you yourself do not see the log that is in your own eye? You hypocrite, first take the log out of your own eye, and then you will see clearly to take out the speck that is in your brother's eye.",
+      "NIV": "Why do you look at the speck of sawdust in your brother's eye and pay no attention to the plank in your own eye? How can you say to your brother, 'Brother, let me take the speck out of your eye,' when you yourself fail to see the plank in your own eye? You hypocrite, first take the plank out of your eye, and then you will see clearly to remove the speck from your brother's eye.",
+      "KJV": "And why beholdest thou the mote that is in thy brother's eye, but perceivest not the beam that is in thine own eye? Either how canst thou say to thy brother, Brother, let me pull out the mote that is in thine eye, when thou thyself beholdest not the beam that is in thine own eye? Thou hypocrite, cast out first the beam out of thine own eye, and then shalt thou see clearly to pull out the mote that is in thy brother's eye.",
+      "NKJV": "And why do you look at the speck in your brother's eye, but do not perceive the plank in your own eye? Or how can you say to your brother, ‘Brother, let me remove the speck that is in your eye,’ when you yourself do not see the plank that is in your own eye? Hypocrite! First remove the plank from your own eye, and then you will see clearly to remove the speck that is in your brother’s eye."
+    }
+  },
+  {
+    "id": "Romans 13:1",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "Let every person be subject to the governing authorities. For there is no authority except from God, and those that exist have been instituted by God.",
+      "NIV": "Let everyone be subject to the governing authorities, for there is no authority except that which God has established. The authorities that exist have been established by God.",
+      "KJV": "Let every soul be subject unto the higher powers. For there is no power but of God: the powers that be are ordained of God.",
+      "NKJV": "Let every soul be subject to the governing authorities. For there is no authority except from God, and the authorities that exist are appointed by God."
+    }
+  },
+  {
+    "id": "Philippians 2:3-4",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "Do nothing from selfish ambition or conceit, but in humility count others more significant than yourselves. Let each of you look not only to his own interests, but also to the interests of others.",
+      "NIV": "Do nothing out of selfish ambition or vain conceit. Rather, in humility value others above yourselves, not looking to your own interests but each of you to the interests of the others.",
+      "KJV": "Let nothing be done through strife or vainglory; but in lowliness of mind let each esteem other better than themselves. Look not every man on his own things, but every man also on the things of others.",
+      "NKJV": "Let nothing be done through selfish ambition or conceit, but in lowliness of mind let each esteem others better than himself. Let each of you look out not only for his own interests, but also for the interests of others."
+    }
+  },
+  {
+    "id": "1 Peter 5:6",
+    "category": "Instruction",
+    "translations": {
+      "ESV": "Humble yourselves, therefore, under the mighty hand of God so that at the proper time he may exalt you.",
+      "NIV": "Humble yourselves, therefore, under God's mighty hand, that he may lift you up in due time.",
+      "KJV": "Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time.",
+      "NKJV": "Therefore humble yourselves under the mighty hand of God, that He may exalt you in due time."
+    }
+  },
+  {
+    "id": "Proverbs 3:1-2",
+    "category": "Instruction for Youth",
+    "translations": {
+      "ESV": "My son, do not forget my teaching, but let your heart keep my commandments, for length of days and years of life and peace they will add to you.",
+      "NIV": "My son, do not forget my teaching, but keep my commands in your heart, for they will prolong your life many years and bring you peace and prosperity.",
+      "KJV": "My son, forget not my law; but let thine heart keep my commandments: For length of days, and long life, and peace, shall they add to thee.",
+      "NKJV": "My son, do not forget my law, but let your heart keep my commands; For length of days and long life and peace they will add to you."
+    }
+  },
+  {
+    "id": "Proverbs 6:20-22",
+    "category": "Instruction for Youth",
+    "translations": {
+      "ESV": "My son, keep your father's commandment, and forsake not your mother's teaching. Bind them on your heart always; tie them around your neck. When you walk, they will lead you; when you lie down, they will watch over you; and when you awake, they will talk with you.",
+      "NIV": "My son, keep your father’s command and do not forsake your mother’s teaching. Bind them always on your heart; fasten them around your neck. When you walk, they will guide you; when you sleep, they will watch over you; when you awake, they will speak to you.",
+      "KJV": "My son, keep thy father's commandment, and forsake not the law of thy mother: Bind them continually upon thine heart, and tie them about thy neck. When thou goest, it shall lead thee; when thou sleepest, it shall keep thee; and when thou awakest, it shall talk with thee.",
+      "NKJV": "My son, keep your father’s command, and do not forsake the law of your mother. Bind them continually upon your heart; tie them around your neck. When you roam, they will lead you; When you sleep, they will keep you; And when you awake, they will speak with you."
+    }
+  },
+  {
+    "id": "Proverbs 8:32-33",
+    "category": "Instruction for Youth",
+    "translations": {
+      "ESV": "And now, O sons, listen to me: blessed are those who keep my ways. Hear instruction and be wise, and do not neglect it.",
+      "NIV": "Now then, my children, listen to me; blessed are those who keep my ways. Listen to my instruction and be wise; do not disregard it.",
+      "KJV": "Now therefore hearken unto me, O ye children: for blessed are they that keep my ways. Hear instruction, and be wise, and refuse it not.",
+      "NKJV": "Now therefore, listen to me, my children, For blessed are those who keep my ways. Hear instruction and be wise, And do not disdain it."
+    }
+  },
+  {
+    "id": "Proverbs 10:5",
+    "category": "Instruction for Youth",
+    "translations": {
+      "ESV": "He who gathers in summer is a prudent son, but he who sleeps in harvest is a son who brings shame.",
+      "NIV": "He who gathers crops in summer is a prudent son, but he who sleeps during harvest is a disgraceful son.",
+      "KJV": "He that gathereth in summer is a wise son: but he that sleepeth in harvest is a son that causeth shame.",
+      "NKJV": "He who gathers in summer is a wise son; He who sleeps in harvest is a son who causes shame."
+    }
+  },
+
+  {
+    "id": "Proverbs 15:5",
+    "category": "Instruction for Youth",
+    "translations": {
+      "ESV": "A fool despises his father's instruction, but whoever heeds reproof is prudent.",
+      "NIV": "A fool spurns a parent's discipline, but whoever heeds correction shows prudence.",
+      "KJV": "A fool despiseth his father's instruction: but he that regardeth reproof is prudent.",
+      "NKJV": "A fool despises his father's instruction, But he who receives correction is prudent."
+    }
+  },
+  {
+    "id": "Proverbs 20:11",
+    "category": "Instruction for Youth",
+    "translations": {
+      "ESV": "Even a child makes himself known by his acts, by whether his conduct is pure and upright.",
+      "NIV": "Even small children are known by their actions, so is their conduct really pure and upright?",
+      "KJV": "Even a child is known by his doings, whether his work be pure, and whether it be right.",
+      "NKJV": "Even a child is known by his deeds, Whether what he does is pure and right."
+    }
+  },
+  {
+    "id": "Proverbs 23:24-26",
+    "category": "Instruction for Youth",
+    "translations": {
+      "ESV": "The father of the righteous will greatly rejoice; he who fathers a wise son will be glad in him. Let your father and mother be glad; let her who bore you rejoice. My son, give me your heart, and let your eyes observe my ways.",
+      "NIV": "The father of a righteous child has great joy; a man who fathers a wise son rejoices in him. May your father and mother rejoice; may she who gave you birth be joyful! My son, give me your heart and let your eyes delight in my ways.",
+      "KJV": "The father of the righteous shall greatly rejoice: and he that begetteth a wise child shall have joy of him. Thy father and thy mother shall be glad, and she that bare thee shall rejoice. My son, give me thine heart, and let thine eyes observe my ways.",
+      "NKJV": "The father of the righteous will greatly rejoice, And he who begets a wise child will delight in him. Let your father and your mother be glad, And let her who bore you rejoice. My son, give me your heart, And let your eyes observe my ways."
+    }
+  },
+  {
+    "id": "Ephesians 6:1-3",
+    "category": "Instruction for Youth",
+    "translations": {
+      "ESV": "Children, obey your parents in the Lord, for this is right. “Honor your father and mother” (this is the first commandment with a promise), “that it may go well with you and that you may live long in the land.”",
+      "NIV": "Children, obey your parents in the Lord, for this is right. “Honor your father and mother”—which is the first commandment with a promise—“so that it may go well with you and that you may enjoy long life on the earth.”",
+      "KJV": "Children, obey your parents in the Lord: for this is right. Honour thy father and mother; (which is the first commandment with promise;) That it may be well with thee, and thou mayest live long on the earth.",
+      "NKJV": "Children, obey your parents in the Lord, for this is right. “Honor your father and mother,” which is the first commandment with promise: “that it may be well with you and you may live long on the earth.”"
+    }
+  },
+  {
+    "id": "Colossians 3:20",
+    "category": "Instruction for Youth",
+    "translations": {
+      "ESV": "Children, obey your parents in everything, for this pleases the Lord.",
+      "NIV": "Children, obey your parents in everything, for this pleases the Lord.",
+      "KJV": "Children, obey your parents in all things: for this is well pleasing unto the Lord.",
+      "NKJV": "Children, obey your parents in all things, for this is well pleasing to the Lord."
+    }
+  },
+  {
+    "id": "Deuteronomy 6:6-7",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "And these words that I command you today shall be on your heart. You shall teach them diligently to your children, and shall talk of them when you sit in your house, and when you walk by the way, and when you lie down, and when you rise.",
+      "NIV": "These commandments that I give you today are to be on your hearts. Impress them on your children. Talk about them when you sit at home and when you walk along the road, when you lie down and when you get up.",
+      "KJV": "And these words, which I command thee this day, shall be in thine heart: And thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up.",
+      "NKJV": "And these words which I command you today shall be in your heart. You shall teach them diligently to your children, and shall talk of them when you sit in your house, when you walk by the way, when you lie down, and when you rise up."
+    }
+  },
+  {
+    "id": "Deuteronomy 11:18-19",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "You shall therefore lay up these words of mine in your heart and in your soul, and you shall bind them as a sign on your hand, and they shall be as frontlets between your eyes. You shall teach them to your children, talking of them when you are sitting in your house, and when you are walking by the way, and when you lie down, and when you rise.",
+      "NIV": "Fix these words of mine in your hearts and minds; tie them as symbols on your hands and bind them on your foreheads. Teach them to your children, talking about them when you sit at home and when you walk along the road, when you lie down and when you get up.",
+      "KJV": "Therefore shall ye lay up these my words in your heart and in your soul, and bind them for a sign upon your hand, that they may be as frontlets between your eyes. And ye shall teach them your children, speaking of them when thou sittest in thine house, and when thou walkest by the way, when thou liest down, and when thou risest up.",
+      "NKJV": "Therefore you shall lay up these words of mine in your heart and in your soul, and bind them as a sign on your hand, and they shall be as frontlets between your eyes. You shall teach them to your children, speaking of them when you sit in your house, when you walk by the way, when you lie down, and when you rise up."
+    }
+  },
+  {
+    "id": "Deuteronomy 32:46",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "He said to them, 'Take to heart all the words by which I am warning you today, that you may command them to your children, that they may be careful to do all the words of this law.'",
+      "NIV": "he said to them, 'Take to heart all the words I have solemnly declared to you this day, so that you may command your children to obey carefully all the words of this law.'",
+      "KJV": "And he said unto them, Set your hearts unto all the words which I testify among you this day, which ye shall command your children to observe to do, all the words of this law.",
+      "NKJV": "And he said to them: 'Set your hearts on all the words which I testify among you today, which you shall command your children to be careful to observe—all the words of this law.'"
+    }
+  },
+  {
+    "id": "Psalm 78:4",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "We will not hide them from their children, but tell to the coming generation the glorious deeds of the Lord, and his might, and the wonders that he has done.",
+      "NIV": "We will not hide them from their descendants; we will tell the next generation the praiseworthy deeds of the Lord, his power, and the wonders he has done.",
+      "KJV": "We will not hide them from their children, shewing to the generation to come the praises of the Lord, and his strength, and his wonderful works that he hath done.",
+      "NKJV": "We will not hide them from their children, Telling to the generation to come the praises of the Lord, And His strength and His wonderful works that He has done."
+    }
+  },
+  {
+    "id": "Proverbs 22:6",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "Train up a child in the way he should go; even when he is old he will not depart from it.",
+      "NIV": "Start children off on the way they should go, and even when they are old they will not turn from it.",
+      "KJV": "Train up a child in the way he should go: and when he is old, he will not depart from it.",
+      "NKJV": "Train up a child in the way he should go, And when he is old he will not depart from it."
+    }
+  },
+  {
+    "id": "Proverbs 22:15",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "Folly is bound up in the heart of a child, but the rod of discipline drives it far from him.",
+      "NIV": "Folly is bound up in the heart of a child, but the rod of discipline will drive it far away.",
+      "KJV": "Foolishness is bound in the heart of a child; but the rod of correction shall drive it far from him.",
+      "NKJV": "Foolishness is bound up in the heart of a child; The rod of correction will drive it far from him."
+    }
+  },
+  {
+    "id": "Proverbs 29:15",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "The rod and reproof give wisdom, but a child left to himself brings shame to his mother.",
+      "NIV": "A rod and a reprimand impart wisdom, but a child left undisciplined disgraces its mother.",
+      "KJV": "The rod and reproof give wisdom: but a child left to himself bringeth his mother to shame.",
+      "NKJV": "The rod and rebuke give wisdom, But a child left to himself brings shame to his mother."
+    }
+  },
+  {
+    "id": "Proverbs 29:17",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "Discipline your son, and he will give you rest; he will give delight to your heart.",
+      "NIV": "Discipline your children, and they will give you peace; they will bring you the delights you desire.",
+      "KJV": "Correct thy son, and he shall give thee rest; yea, he shall give delight unto thy soul.",
+      "NKJV": "Correct your son, and he will give you rest; Yes, he will give delight to your soul."
+    }
+  },
+  {
+    "id": "Malachi 4:5-6",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "Behold, I will send you Elijah the prophet before the great and awesome day of the Lord comes. And he will turn the hearts of fathers to their children and the hearts of children to their fathers, lest I come and strike the land with a decree of utter destruction.",
+      "NIV": "“See, I will send the prophet Elijah to you before that great and dreadful day of the Lord comes. He will turn the hearts of the parents to their children, and the hearts of the children to their parents; or else I will come and strike the land with total destruction.”",
+      "KJV": "Behold, I will send you Elijah the prophet before the coming of the great and dreadful day of the Lord: And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with a curse.",
+      "NKJV": "Behold, I will send you Elijah the prophet Before the coming of the great and dreadful day of the Lord. And he will turn The hearts of the fathers to the children, And the hearts of the children to their fathers, Lest I come and strike the earth with a curse."
+    }
+  },
+  {
+    "id": "Acts 20:24",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "But I do not account my life of any value nor as precious to myself, if only I may finish my course and the ministry that I received from the Lord Jesus, to testify to the gospel of the grace of God.",
+      "NIV": "However, I consider my life worth nothing to me; my only aim is to finish the race and complete the task the Lord Jesus has given me—the task of testifying to the good news of God’s grace.",
+      "KJV": "But none of these things move me, neither count I my life dear unto myself, so that I might finish my course with joy, and the ministry, which I have received of the Lord Jesus, to testify the gospel of the grace of God.",
+      "NKJV": "But none of these things move me; nor do I count my life dear to myself, so that I may finish my race with joy, and the ministry which I received from the Lord Jesus, to testify to the gospel of the grace of God."
+    }
+  },
+  {
+    "id": "1 Corinthians 15:58",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "Therefore, my beloved brothers, be steadfast, immovable, always abounding in the work of the Lord, knowing that in the Lord your labor is not in vain.",
+      "NIV": "Therefore, my dear brothers and sisters, stand firm. Let nothing move you. Always give yourselves fully to the work of the Lord, because you know that your labor in the Lord is not in vain.",
+      "KJV": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.",
+      "NKJV": "Therefore, my beloved brethren, be steadfast, immovable, always abounding in the work of the Lord, knowing that your labor is not in vain in the Lord."
+    }
+  },
+  {
+    "id": "Ephesians 6:4",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "Fathers, do not provoke your children to anger, but bring them up in the discipline and instruction of the Lord.",
+      "NIV": "Fathers, do not exasperate your children; instead, bring them up in the training and instruction of the Lord.",
+      "KJV": "And, ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord.",
+      "NKJV": "And you, fathers, do not provoke your children to wrath, but bring them up in the training and admonition of the Lord."
+    }
+  },
+  {
+    "id": "Colossians 3:21",
+    "category": "Instruction for Parents",
+    "translations": {
+      "ESV": "Fathers, do not provoke your children, lest they become discouraged.",
+      "NIV": "Fathers, do not embitter your children, or they will become discouraged.",
+      "KJV": "Fathers, provoke not your children to anger, lest they be discouraged.",
+      "NKJV": "Fathers, do not provoke your children, lest they become discouraged."
+    }
+  },
+  {
+    "id": "Isaiah 9:6",
+    "category": "Jesus",
+    "translations": {
+      "ESV": "For to us a child is born, to us a son is given; and the government shall be upon his shoulder, and his name shall be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.",
+      "NIV": "For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.",
+      "KJV": "For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.",
+      "NKJV": "For unto us a Child is born, Unto us a Son is given; And the government will be upon His shoulder. And His name will be called Wonderful, Counselor, Mighty God, Everlasting Father, Prince of Peace."
+    }
+  },
+  {
+    "id": "Matthew 11:28-30",
+    "category": "Jesus",
+    "translations": {
+      "ESV": "Come to me, all who labor and are heavy laden, and I will give you rest. Take my yoke upon you, and learn from me, for I am gentle and lowly in heart, and you will find rest for your souls. For my yoke is easy, and my burden is light.",
+      "NIV": "Come to me, all you who are weary and burdened, and I will give you rest. Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls. For my yoke is easy and my burden is light.",
+      "KJV": "Come unto me, all ye that labour and are heavy laden, and I will give you rest. Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. For my yoke is easy, and my burden is light.",
+      "NKJV": "Come to Me, all you who labor and are heavy laden, and I will give you rest. Take My yoke upon you and learn from Me, for I am gentle and lowly in heart, and you will find rest for your souls. For My yoke is easy and My burden is light."
+    }
+  },
+  {
+    "id": "John 15:9",
+    "category": "Jesus",
+    "translations": {
+      "ESV": "As the Father has loved me, so have I loved you. Abide in my love.",
+      "NIV": "As the Father has loved me, so have I loved you. Now remain in my love.",
+      "KJV": "As the Father hath loved me, so have I loved you: continue ye in my love.",
+      "NKJV": "As the Father loved Me, I also have loved you; abide in My love."
+    }
+  },
+  {
+    "id": "Romans 8:38-39",
+    "category": "Jesus",
+    "translations": {
+      "ESV": "For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord.",
+      "NIV": "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
+      "KJV": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      "NKJV": "For I am persuaded that neither death nor life, nor angels nor principalities nor powers, nor things present nor things to come, nor height nor depth, nor any other created thing, shall be able to separate us from the love of God which is in Christ Jesus our Lord."
+    }
+  },
+  {
+    "id": "Hebrews 2:18",
+    "category": "Jesus",
+    "translations": {
+      "ESV": "For because he himself has suffered when tempted, he is able to help those who are being tempted.",
+      "NIV": "Because he himself suffered when he was tempted, he is able to help those who are being tempted.",
+      "KJV": "For in that he himself hath suffered being tempted, he is able to succour them that are tempted.",
+      "NKJV": "For in that He Himself has suffered, being tempted, He is able to aid those who are tempted."
+    }
+  },
+  {
+    "id": "Hebrews 4:15",
+    "category": "Jesus",
+    "translations": {
+      "ESV": "For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin.",
+      "NIV": "For we do not have a high priest who is unable to empathize with our weaknesses, but we have one who has been tempted in every way, just as we are—yet he did not sin.",
+      "KJV": "For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin.",
+      "NKJV": "For we do not have a High Priest who cannot sympathize with our weaknesses, but was in all points tempted as we are, yet without sin."
+    }
+  },
+  {
+    "id": "Revelation 3:20",
+    "category": "Jesus",
+    "translations": {
+      "ESV": "Behold, I stand at the door and knock. If anyone hears my voice and opens the door, I will come in to him and eat with him, and he with me.",
+      "NIV": "Here I am! I stand at the door and knock. If anyone hears my voice and opens the door, I will come in and eat with that person, and they with me.",
+      "KJV": "Behold, I stand at the door, and knock: if any man hear my voice, and open the door, I will come in to him, and will sup with him, and he with me.",
+      "NKJV": "Behold, I stand at the door and knock. If anyone hears My voice and opens the door, I will come in to him and dine with him, and he with Me."
+    }
+  },
+  {
+    "id": "Revelation 5:12",
+    "category": "Jesus",
+    "translations": {
+      "ESV": "saying with a loud voice, 'Worthy is the Lamb who was slain, to receive power and wealth and wisdom and might and honor and glory and blessing!'",
+      "NIV": "In a loud voice they were saying: 'Worthy is the Lamb, who was slain, to receive power and wealth and wisdom and strength and honor and glory and praise!'",
+      "KJV": "Saying with a loud voice, Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing.",
+      "NKJV": "Saying with a loud voice: 'Worthy is the Lamb who was slain To receive power and riches and wisdom, And strength and honor and glory and blessing!'"
+    }
+  },
+  {
+    "id": "Matthew 16:24-26",
+    "category": "Jesus Saves",
+    "translations": {
+      "ESV": "Then Jesus told his disciples, 'If anyone would come after me, let him deny himself and take up his cross and follow me. For whoever would save his life will lose it, but whoever loses his life for my sake will find it. For what will it profit a man if he gains the whole world and forfeits his soul? Or what shall a man give in return for his soul?'",
+      "NIV": "Then Jesus said to his disciples, 'Whoever wants to be my disciple must deny themselves and take up their cross and follow me. For whoever wants to save their life will lose it, but whoever loses their life for me will find it. What good will it be for someone to gain the whole world, yet forfeit their soul? Or what can anyone give in exchange for their soul?'",
+      "KJV": "Then said Jesus unto his disciples, 'If any man will come after me, let him deny himself, and take up his cross, and follow me. For whosoever will save his life shall lose it: and whosoever will lose his life for my sake shall find it. For what is a man profited, if he shall gain the whole world, and lose his own soul? Or what shall a man give in exchange for his soul?'",
+      "NKJV": "Then Jesus said to His disciples, 'If anyone desires to come after Me, let him deny himself, and take up his cross, and follow Me. For whoever desires to save his life will lose it, but whoever loses his life for My sake will find it. For what profit is it to a man if he gains the whole world, and loses his own soul? Or what will a man give in exchange for his soul?'"
+    }
+  },
+  {
+    "id": "John 14:6",
+    "category": "Jesus Saves",
+    "translations": {
+      "ESV": "Jesus said to him, 'I am the way, and the truth, and the life. No one comes to the Father except through me.'",
+      "NIV": "Jesus answered, 'I am the way and the truth and the life. No one comes to the Father except through me.'",
+      "KJV": "Jesus saith unto him, 'I am the way, the truth, and the life: no man cometh unto the Father, but by me.'",
+      "NKJV": "Jesus said to him, 'I am the way, the truth, and the life. No one comes to the Father except through Me.'"
+    }
+  },
+  {
+    "id": "John 16:27",
+    "category": "Jesus Saves",
+    "translations": {
+      "ESV": "For the Father himself loves you, because you have loved me and have believed that I came from God.",
+      "NIV": "No, the Father himself loves you because you have loved me and have believed that I came from God.",
+      "KJV": "For the Father himself loveth you, because ye have loved me, and have believed that I came out from God.",
+      "NKJV": "for the Father Himself loves you, because you have loved Me, and have believed that I came forth from God."
+    }
+  },
+  {
+    "id": "John 17:3",
+    "category": "Jesus Saves",
+    "translations": {
+      "ESV": "And this is eternal life, that they know you, the only true God, and Jesus Christ whom you have sent.",
+      "NIV": "Now this is eternal life: that they know you, the only true God, and Jesus Christ, whom you have sent.",
+      "KJV": "And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.",
+      "NKJV": "And this is eternal life, that they may know You, the only true God, and Jesus Christ whom You have sent."
+    }
+  },
+  {
+    "id": "Hebrews 7:25",
+    "category": "Jesus Saves",
+    "translations": {
+      "ESV": "Consequently, he is able to save to the uttermost those who draw near to God through him, since he always lives to make intercession for them.",
+      "NIV": "Therefore he is able to save completely those who come to God through him, because he always lives to intercede for them.",
+      "KJV": "Wherefore he is able also to save them to the uttermost that come unto God by him, seeing he ever liveth to make intercession for them.",
+      "NKJV": "Therefore He is also able to save to the uttermost those who come to God through Him, since He always lives to make intercession for them."
+    }
+  },
+  {
+    "id": "1 Peter 1:3-4",
+    "category": "Jesus Saves",
+    "translations": {
+      "ESV": "Blessed be the God and Father of our Lord Jesus Christ! According to his great mercy, he has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead, to an inheritance that is imperishable, undefiled, and unfading, kept in heaven for you.",
+      "NIV": "Praise be to the God and Father of our Lord Jesus Christ! In his great mercy he has given us new birth into a living hope through the resurrection of Jesus Christ from the dead, and into an inheritance that can never perish, spoil or fade. This inheritance is kept in heaven for you.",
+      "KJV": "Blessed be the God and Father of our Lord Jesus Christ, which according to his abundant mercy hath begotten us again unto a lively hope by the resurrection of Jesus Christ from the dead, to an inheritance incorruptible, and undefiled, and that fadeth not away, reserved in heaven for you.",
+      "NKJV": "Blessed be the God and Father of our Lord Jesus Christ, who according to His abundant mercy has begotten us again to a living hope through the resurrection of Jesus Christ from the dead, to an inheritance incorruptible and undefiled and that does not fade away, reserved in heaven for you."
+    }
+  },
+  {
+    "id": "1 Peter 3:18",
+    "category": "Jesus Saves",
+    "translations": {
+      "ESV": "For Christ also suffered once for sins, the righteous for the unrighteous, that he might bring us to God, being put to death in the flesh but made alive in the spirit.",
+      "NIV": "For Christ also suffered once for sins, the righteous for the unrighteous, to bring you to God. He was put to death in the body but made alive in the Spirit.",
+      "KJV": "For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit:",
+      "NKJV": "For Christ also suffered once for sins, the just for the unjust, that He might bring us to God, being put to death in the flesh but made alive by the Spirit."
+    }
+  },
+  {
+    "id": "Deuteronomy 4:29",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "But from there you will seek the Lord your God and you will find him, if you search after him with all your heart and with all your soul.",
+      "NIV": "But if from there you seek the Lord your God, you will find him if you seek him with all your heart and with all your soul.",
+      "KJV": "But if from thence thou shalt seek the Lord thy God, thou shalt find him, if thou seek him with all thy heart and with all thy soul.",
+      "NKJV": "But from there you will seek the Lord your God, and you will find Him if you seek Him with all your heart and with all your soul."
+    }
+  },
+  {
+    "id": "Deuteronomy 6:5",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "You shall love the Lord your God with all your heart and with all your soul and with all your might.",
+      "NIV": "Love the Lord your God with all your heart and with all your soul and with all your strength.",
+      "KJV": "And thou shalt love the Lord thy God with all thine heart, and with all thy soul, and with all thy might.",
+      "NKJV": "You shall love the Lord your God with all your heart, with all your soul, and with all your strength."
+    }
+  },
+  {
+    "id": "Joshua 22:5",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "Only be very careful to observe the commandment and the law that Moses the servant of the Lord commanded you, to love the Lord your God, and to walk in all his ways and to keep his commandments and to cling to him and to serve him with all your heart and with all your soul.",
+      "NIV": "But be very careful to keep the commandment and the law that Moses the servant of the Lord gave you: to love the Lord your God, to walk in obedience to him, to keep his commands, to hold fast to him and to serve him with all your heart and with all your soul.",
+      "KJV": "But take diligent heed to do the commandment and the law, which Moses the servant of the Lord charged you, to love the Lord your God, and to walk in all his ways, and to keep his commandments, and to cleave unto him, and to serve him with all your heart and with all your soul.",
+      "NKJV": "But take careful heed to do the commandment and the law which Moses the servant of the Lord commanded you, to love the Lord your God, to walk in all His ways, to keep His commandments, to hold fast to Him, and to serve Him with all your heart and with all your soul."
+    }
+  },
+  {
+    "id": "Psalm 18:1",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "I love you, O Lord, my strength.",
+      "NIV": "I love you, Lord, my strength.",
+      "KJV": "I will love thee, O Lord, my strength.",
+      "NKJV": "I will love You, O Lord, my strength."
+    }
+  },
+  {
+    "id": "Psalm 37:4",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "Delight yourself in the Lord, and he will give you the desires of your heart.",
+      "NIV": "Take delight in the Lord, and he will give you the desires of your heart.",
+      "KJV": "Delight thyself also in the Lord: and he shall give thee the desires of thine heart.",
+      "NKJV": "Delight yourself also in the Lord, And He shall give you the desires of your heart."
+    }
+  },
+  {
+    "id": "Psalm 73:25",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "Whom have I in heaven but you? And there is nothing on earth that I desire besides you.",
+      "NIV": "Whom have I in heaven but you? And earth has nothing I desire besides you.",
+      "KJV": "Whom have I in heaven but thee? and there is none upon earth that I desire beside thee.",
+      "NKJV": "Whom have I in heaven but You? And there is none upon earth that I desire besides You."
+    }
+  },
+  {
+    "id": "Psalm 91:14",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "Because he holds fast to me in love, I will deliver him; I will protect him, because he knows my name.",
+      "NIV": "Because he loves me, says the Lord, I will rescue him; I will protect him, for he acknowledges my name.",
+      "KJV": "Because he hath set his love upon me, therefore will I deliver him: I will set him on high, because he hath known my name.",
+      "NKJV": "Because he has set his love upon Me, therefore I will deliver him; I will set him on high, because he has known My name."
+    }
+  },
+  {
+    "id": "Psalm 116:1",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "I love the Lord, because he has heard my voice and my pleas for mercy.",
+      "NIV": "I love the Lord, for he heard my voice; he heard my cry for mercy.",
+      "KJV": "I love the Lord, because he hath heard my voice and my supplications.",
+      "NKJV": "I love the Lord, because He has heard My voice and my supplications."
+    }
+  },
+  {
+    "id": "Psalm 119:159",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "Consider how I love your precepts! Give me life according to your steadfast love.",
+      "NIV": "See how I love your precepts; preserve my life, Lord, in accordance with your love.",
+      "KJV": "Consider how I love thy precepts: quicken me, O Lord, according to thy lovingkindness.",
+      "NKJV": "Consider how I love Your precepts; Revive me, O Lord, according to Your lovingkindness."
+    }
+  },
+  {
+    "id": "John 14:21",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "Whoever has my commandments and keeps them, he it is who loves me. And he who loves me will be loved by my Father, and I will love him and manifest myself to him.",
+      "NIV": "Whoever has my commands and keeps them is the one who loves me. The one who loves me will be loved by my Father, and I too will love them and show myself to them.",
+      "KJV": "He that hath my commandments, and keepeth them, he it is that loveth me: and he that loveth me shall be loved of my Father, and I will love him, and will manifest myself to him.",
+      "NKJV": "He who has My commandments and keeps them, it is he who loves Me. And he who loves Me will be loved by My Father, and I will love him and manifest Myself to him."
+    }
+  },
+  {
+    "id": "1 Corinthians 8:3",
+    "category": "Loving God",
+    "translations": {
+      "ESV": "But if anyone loves God, he is known by God.",
+      "NIV": "But whoever loves God is known by God.",
+      "KJV": "But if any man love God, the same is known of him.",
+      "NKJV": "But if anyone loves God, this one is known by Him."
+    }
+  },
+  {
+    "id": "Proverbs 18:22",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "He who finds a wife finds a good thing and obtains favor from the Lord.",
+      "NIV": "He who finds a wife finds what is good and receives favor from the Lord.",
+      "KJV": "Whoso findeth a wife findeth a good thing, and obtaineth favour of the Lord.",
+      "NKJV": "He who finds a wife finds a good thing, And obtains favor from the Lord."
+    }
+  },
+  {
+    "id": "Proverbs 19:14",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "House and wealth are inherited from fathers, but a prudent wife is from the Lord.",
+      "NIV": "Houses and wealth are inherited from parents, but a prudent wife is from the Lord.",
+      "KJV": "House and riches are the inheritance of fathers: and a prudent wife is from the Lord.",
+      "NKJV": "Houses and riches are an inheritance from fathers, But a prudent wife is from the Lord."
+    }
+  },
+  {
+    "id": "Malachi 2:16",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "For the man who does not love his wife but divorces her, says the Lord, the God of Israel, covers his garment with violence, says the Lord of hosts. So guard yourselves in your spirit, and do not be faithless.\"",
+      "NIV": "The man who hates and divorces his wife,' says the Lord, the God of Israel, 'does violence to the one he should protect,' says the Lord Almighty. So be on your guard, and do not be unfaithful.",
+      "KJV": "For the Lord, the God of Israel, saith that he hateth putting away: for one covereth violence with his garment, saith the Lord of hosts: therefore take heed to your spirit, that ye deal not treacherously.\"",
+      "NKJV": "For the Lord God of Israel says That He hates divorce, For it covers one's garment with violence,” Says the Lord of hosts. “Therefore take heed to your spirit, That you do not deal treacherously."
+    }
+  },
+  {
+    "id": "Matthew 19:4-6",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "He answered, 'Have you not read that he who created them from the beginning made them male and female, and said, 'Therefore a man shall leave his father and his mother and hold fast to his wife, and the two shall become one flesh'? So they are no longer two but one flesh. What therefore God has joined together, let not man separate.'",
+      "NIV": "'Haven't you read,' he replied, 'that at the beginning the Creator 'made them male and female,' and said, 'For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh’? So they are no longer two, but one flesh. Therefore what God has joined together, let no one separate.'",
+      "KJV": "And he answered and said unto them, 'Have ye not read, that he which made them at the beginning made them male and female, And said, For this cause shall a man leave father and mother, and shall cleave to his wife: and they twain shall be one flesh? Wherefore they are no more twain, but one flesh. What therefore God hath joined together, let not man put asunder.'",
+      "NKJV": "And He answered and said to them, 'Have you not read that He who made them at the beginning 'made them male and female,' and said, 'For this reason a man shall leave his father and mother and be joined to his wife, and the two shall become one flesh’? So then, they are no longer two but one flesh. Therefore what God has joined together, let not man separate.'"
+    }
+  },
+  {
+    "id": "1 Corinthians 7:3",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "The husband should give to his wife her conjugal rights, and likewise the wife to her husband.",
+      "NIV": "The husband should fulfill his marital duty to his wife, and likewise the wife to her husband.",
+      "KJV": "Let the husband render unto the wife due benevolence: and likewise also the wife unto the husband.",
+      "NKJV": "Let the husband render to his wife the affection due her, and likewise also the wife to her husband."
+    }
+  },
+  {
+    "id": "Ephesians 5:22-24",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "Wives, submit to your own husbands, as to the Lord. For the husband is the head of the wife even as Christ is the head of the church, his body, and is himself its Savior. Now as the church submits to Christ, so also wives should submit in everything to their husbands.",
+      "NIV": "Wives, submit yourselves to your own husbands as you do to the Lord. For the husband is the head of the wife as Christ is the head of the church, his body, of which he is the Savior. Now as the church submits to Christ, so also wives should submit to their husbands in everything.",
+      "KJV": "Wives, submit yourselves unto your own husbands, as unto the Lord. For the husband is the head of the wife, even as Christ is the head of the church: and he is the saviour of the body. Therefore as the church is subject unto Christ, so let the wives be to their own husbands in every thing.",
+      "NKJV": "Wives, submit to your own husbands, as to the Lord. For the husband is head of the wife, as also Christ is head of the church; and He is the Savior of the body. Therefore, just as the church is subject to Christ, so let the wives be to their own husbands in everything."
+    }
+  },
+  {
+    "id": "Ephesians 5:25-27",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "Husbands, love your wives, as Christ loved the church and gave himself up for her, that he might sanctify her, having cleansed her by the washing of water with the word, so that he might present the church to himself in splendor, without spot or wrinkle or any such thing, that she might be holy and without blemish.",
+      "NIV": "Husbands, love your wives, just as Christ loved the church and gave himself up for her to make her holy, cleansing her by the washing with water through the word, and to present her to himself as a radiant church, without stain or wrinkle or any other blemish, but holy and blameless.",
+      "KJV": "Husbands, love your wives, even as Christ also loved the church, and gave himself for it; That he might sanctify and cleanse it with the washing of water by the word, That he might present it to himself a glorious church, not having spot, or wrinkle, or any such thing; but that it should be holy and without blemish.",
+      "NKJV": "Husbands, love your wives, just as Christ also loved the church and gave Himself for her, that He might sanctify and cleanse her with the washing of water by the word, that He might present her to Himself a glorious church, not having spot or wrinkle or any such thing, but that she should be holy and without blemish."
+    }
+  },
+  {
+    "id": "Ephesians 5:28-30",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "In the same way husbands should love their wives as their own bodies. He who loves his wife loves himself. For no one ever hated his own flesh, but nourishes and cherishes it, just as Christ does the church, because we are members of his body.",
+      "NIV": "In this same way, husbands ought to love their wives as their own bodies. He who loves his wife loves himself. After all, no one ever hated their own body, but they feed and care for their body, just as Christ does the church— for we are members of his body.",
+      "KJV": "So ought men to love their wives as their own bodies. He that loveth his wife loveth himself. For no man ever yet hated his own flesh; but nourisheth and cherisheth it, even as the Lord the church: For we are members of his body, of his flesh, and of his bones.",
+      "NKJV": "So husbands ought to love their own wives as their own bodies; he who loves his wife loves himself. For no one ever hated his own flesh, but nourishes and cherishes it, just as the Lord does the church. For we are members of His body, of His flesh and of His bones."
+    }
+  },
+  {
+    "id": "Ephesians 5:31-33",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "Therefore a man shall leave his father and mother and hold fast to his wife, and the two shall become one flesh. This mystery is profound, and I am saying that it refers to Christ and the church. However, let each one of you love his wife as himself, and let the wife see that she respects her husband.",
+      "NIV": "For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh. This is a profound mystery—but I am talking about Christ and the church. However, each one of you also must love his wife as he loves himself, and the wife must respect her husband.",
+      "KJV": "For this cause shall a man leave his father and mother, and shall be joined unto his wife, and they two shall be one flesh. This is a great mystery: but I speak concerning Christ and the church. Nevertheless let every one of you in particular so love his wife even as himself; and the wife see that she reverence her husband.",
+      "NKJV": "For this reason a man shall leave his father and mother and be joined to his wife, and the two shall become one flesh. This is a great mystery, but I speak concerning Christ and the church. Nevertheless let each one of you in particular so love his own wife as himself, and let the wife see that she respects her husband."
+    }
+  },
+  {
+    "id": "Colossians 3:18-19",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "Wives, submit to your husbands, as is fitting in the Lord. Husbands, love your wives, and do not be harsh with them.",
+      "NIV": "Wives, submit yourselves to your husbands, as is fitting in the Lord. Husbands, love your wives and do not be harsh with them.",
+      "KJV": "Wives, submit yourselves unto your own husbands, as it is fit in the Lord. Husbands, love your wives, and be not bitter against them.",
+      "NKJV": "Wives, submit to your own husbands, as is fitting in the Lord. Husbands, love your wives and do not be bitter toward them."
+    }
+  },
+  {
+    "id": "1 Peter 3:1-2",
+    "category": "Marriage",
+    "translations": {
+      "ESV": "Likewise, wives, be subject to your own husbands, so that even if some do not obey the word, they may be won without a word by the conduct of their wives, when they see your respectful and pure conduct.",
+      "NIV": "Wives, in the same way submit yourselves to your own husbands so that, if any of them do not believe the word, they may be won over without words by the behavior of their wives, when they see the purity and reverence of your lives.",
+      "KJV": "Likewise, ye wives, be in subjection to your own husbands; that, if any obey not the word, they also may without the word be won by the conversation of the wives; While they behold your chaste conversation coupled with fear.",
+      "NKJV": "Wives, likewise, be submissive to your own husbands, that even if some do not obey the word, they, without a word, may be won by the conduct of their wives, when they observe your chaste conduct accompanied by fear."
     }
   }
 ]

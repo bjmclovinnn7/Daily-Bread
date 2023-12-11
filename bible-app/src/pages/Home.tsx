@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, lazy, Suspense } from "react"
 import { FaTrophy, FaUserFriends, FaUser, FaBookOpen } from "react-icons/fa"
-import Categories from "./Categories/Categories"
 import { useUserContext } from "../utils/UserContext"
 import { useNavigate } from "react-router-dom"
 import { useVerseContext } from "../utils/VerseContext"
@@ -9,6 +8,8 @@ import Copyright from "../comps/Copyright"
 import PwaPrompt from "../comps/PwaPrompt"
 import { detect } from "detect-browser"
 
+const VoD = lazy(() => import("../comps/VoD"))
+const Categories = lazy(() => import("../pages/Categories/Categories"))
 interface DeferredPrompt extends Event {
   prompt: () => void
   userChoice: Promise<{
@@ -26,6 +27,7 @@ const Home = () => {
   const [selectedTranslation, setSelectedTranslation] = useState(translation)
   const [pwaPrompt, setPwaPrompt] = useState<DeferredPrompt | null>(null)
   const [categoryOpened, setCategoryOpened] = useState(false)
+  const [vodIsExpanded, setVodIsExpanded] = useState(false)
 
   const handleTranslationSelect = (translation: string) => {
     setSelectedTranslation(translation)
@@ -33,6 +35,33 @@ const Home = () => {
 
     setShowDropdown(false)
   }
+
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      const dropdownButton = document.getElementById("dropdown-button")
+      const dropdownMenu = document.getElementById("dropdown-menu")
+      if (dropdownButton && dropdownMenu && dropdownButton.contains(event.target as Node)) {
+        setShowDropdown(true)
+      } else if (dropdownMenu && !dropdownMenu.contains(event.target as Node)) {
+        setShowDropdown(false)
+      }
+    }
+    const handleTouch = (event: TouchEvent) => {
+      const dropdownButton = document.getElementById("dropdown-button")
+      const dropdownMenu = document.getElementById("dropdown-menu")
+      if (dropdownButton && dropdownMenu && dropdownButton.contains(event.target as Node)) {
+        setShowDropdown(true)
+      } else if (dropdownMenu && !dropdownMenu.contains(event.target as Node)) {
+        setShowDropdown(false)
+      }
+    }
+
+    document.addEventListener("click", handleClick)
+    document.addEventListener("touchstart", handleTouch)
+    return () => {
+      document.removeEventListener("click", handleClick)
+    }
+  }, [showDropdown])
 
   const handlePwaInstall = () => {
     if (pwaPrompt) {
@@ -81,6 +110,7 @@ const Home = () => {
         <div className="h-[10vh] w-full fixed flex justify-between items-center bg-black text-white text-xl p-5 z-20">
           <div className="flex justify-center items-center gap-4 ">
             <button
+              id="dropdown-button"
               onClick={() => setShowDropdown(!showDropdown)}
               className="cursor-pointer font-Inter bg-[#4F4F4F] rounded-lg p-1 px-2 flex items-center justify-center gap-2"
             >
@@ -97,8 +127,9 @@ const Home = () => {
                     visible: { opacity: 1, y: 0 },
                     hidden: { opacity: 0, y: -10 },
                   }}
+                  id="dropdown-menu"
                   transition={{ staggerChildren: 0.13, ease: "easeIn" }}
-                  className="absolute top-[100%] left-5 right-5 w-ffull h-fit bg-white border-2 text-2xl font-Inter rounded-xl"
+                  className="dropdown-menu absolute top-[100%] left-5 right-5 w-ffull h-fit bg-white border-2 text-2xl font-Inter rounded-xl"
                 >
                   {["NIV", "ESV", "KJV", "NKJV"].map((translationOption) => (
                     <motion.li
@@ -144,23 +175,26 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="category pt-[10vh] h-[100vh] w-full overflow-y-auto p-4 bg-black relative">
-          <div className="grid max-w-[1000px] mx-auto pt-2 pb-4">
+        <div className="category pt-[10vh] h-[100vh] w-full overflow-y-auto p-4 bg-black ">
+          <div className="grid max-w-[1000px] mx-auto">
             <div className="container w-full text-2xl md:text-3xl lg:text-4xl flex justify-between items-center">
-              <span className=" font-Inter text-white font-semibold">
+              <span className=" font-Inter text-white">
                 Welcome, {userData && userData.displayName ? userData.displayName.split(" ")[0] + "." : " "}
               </span>
               {/* <div className="font-header">
                 <span className="text-yellow-500">{userData?.experience}</span> <span className="text-white ">XP</span>
               </div> */}
             </div>
-            <h2 className=" text-sm md:text-base lg:text-lg text-white font-Inter pl-2">
-              {categoryOpened ? "Click a verse to start learning." : "Select a category to view verses."}
-            </h2>
           </div>
-
-          <Categories setCategoryOpened={setCategoryOpened} categoryOpened={categoryOpened} />
-          <Copyright />
+          <Suspense
+            fallback={
+              <div className="absolute inset-0 grid place-content-center text-2xl bg-transparent">Loading...</div>
+            }
+          >
+            <VoD vodIsExpanded={vodIsExpanded} setVodIsExpanded={setVodIsExpanded} />
+            <Categories setCategoryOpened={setCategoryOpened} categoryOpened={categoryOpened} />
+            <Copyright />
+          </Suspense>
         </div>
       </div>
     </>

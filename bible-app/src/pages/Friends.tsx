@@ -21,7 +21,7 @@ const Friends = () => {
     }
   }
 
-  interface UserData {
+  interface UserFriendData {
     uid: string
     displayName: string
     createdOn: {
@@ -29,21 +29,21 @@ const Friends = () => {
       nanoseconds: number
     }
     learnedVerses: UserLearnedVerses[]
-    friends: UserData[]
+    friends: UserFriendData[]
     experience: number
     userName: string
   }
 
-  const handleNavigateToFriend = (friendData: UserData) => {
+  const handleNavigateToFriend = (friendData: UserFriendData) => {
     console.log(friendData.displayName)
     saveSelectedFriend(friendData)
     getUpdatedFriendData(friendData)
     navigate("/friendProfile")
   }
 
-  const sortedFriends = userFriends
-    ? [...userFriends].sort((friendA, friendB) => friendB.learnedVerses.length - friendA.learnedVerses.length)
-    : []
+  // const sortedFriends = userFriends
+  //   ? [...userFriends].sort((friendA, friendB) => friendB.learnedVerses.length - friendA.learnedVerses.length)
+  //   : []
 
   return (
     <>
@@ -75,8 +75,8 @@ const Friends = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 max-w-2xl mx-auto">
-          {sortedFriends ? (
-            sortedFriends.map((friend, index) => (
+          {userFriends ? (
+            userFriends.map((friend, index) => (
               <div key={index} className="p-2 ">
                 <button
                   onClick={() => handleNavigateToFriend(friend)}

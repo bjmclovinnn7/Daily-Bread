@@ -22,7 +22,19 @@ interface UserData {
     nanoseconds: number
   }
   learnedVerses: UserLearnedVerses[]
-  friends: UserData[]
+  friends: UserFriendData[]
+  experience: number
+  userName: string
+}
+interface UserFriendData {
+  uid: string // needs to be hidden or partial so that other's can't abuse it. Displayname + # + last 5 of UID?
+  displayName: string
+  createdOn: {
+    seconds: number
+    nanoseconds: number
+  }
+  learnedVerses: UserLearnedVerses[]
+  friends: UserFriendData[]
   experience: number
   userName: string
 }
@@ -30,11 +42,11 @@ interface UserData {
 interface UserContextType {
   logOut: () => void
   userData: UserData
-  userFriends: UserData[]
-  selectedFriend: UserData
-  getFriendData: () => void
-  saveSelectedFriend: (friendData: UserData) => void
-  getUpdatedFriendData: (friendData: UserData) => void
+  userFriends: UserFriendData[]
+  selectedFriend: UserFriendData
+  getFriendData: (friendData: UserFriendData) => void
+  saveSelectedFriend: (friendData: UserFriendData) => void
+  getUpdatedFriendData: (friendData: UserFriendData) => void
   photo: string
 }
 
@@ -50,23 +62,23 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
     return initialValue
   })
   const [photo, setPhoto] = useState("")
-  const [userFriends, setUserFriends] = useState<UserData[]>(() => {
+  const [userFriends, setUserFriends] = useState<UserFriendData[]>(() => {
     const saved = localStorage.getItem("userFriends")
     const initialValue = saved ? JSON.parse(saved) : []
     return initialValue
   })
-  const [selectedFriend, setSelectedFriend] = useState<UserData>(() => {
+  const [selectedFriend, setSelectedFriend] = useState<UserFriendData>(() => {
     const saved = localStorage.getItem("selectedFriend")
     const initialValue = saved ? JSON.parse(saved) : {}
     return initialValue
   })
 
-  const saveSelectedFriend = (friendData: UserData) => {
+  const saveSelectedFriend = (friendData: UserFriendData) => {
     setSelectedFriend(friendData)
     saveToLocalStorage("selectedFriend", selectedFriend)
   }
 
-  const getUpdatedFriendData = async (oldFriendData: UserData) => {
+  const getUpdatedFriendData = async (oldFriendData: UserFriendData) => {
     const friendDocRef = doc(colRefUsers, oldFriendData.uid)
     try {
       console.log(`Getting Data for ${oldFriendData.displayName}`, oldFriendData.uid)
@@ -103,7 +115,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
 
   const getFriendData = async () => {
     if (userData && userData.friends) {
-      const updatedFriendData: UserData[] = []
+      const updatedFriendData: UserFriendData[] = []
       const existingFriendUIDs = new Set(userFriends.map((userFriend) => userFriend.uid))
 
       for (const friend of userData.friends) {
@@ -123,7 +135,7 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
             const friendData = friendDoc.data()
 
             if (friendData) {
-              const userFriendData: UserData = {
+              const userFriendData: UserFriendData = {
                 uid: friendUid,
                 userName: friendData.userName,
                 displayName: friendData.displayName,
@@ -151,6 +163,10 @@ export const UserContextProvider: React.FC<{ children: ReactNode }> = ({ childre
 
   useEffect(() => {
     getFriendData()
+
+    return () => {
+      getFriendData()
+    }
   }, [userData])
 
   //listeners for when user signs in; will check for changes in userFriends + learnedVerses and update.

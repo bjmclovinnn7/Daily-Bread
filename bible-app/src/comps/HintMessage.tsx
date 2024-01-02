@@ -12,31 +12,30 @@ const HintMessage = ({ showInstructions, setShowInstructions, stageDetails }: Pr
   if (showInstructions) {
     return (
       <div className="absolute inset-0 z-20 font-Inter">
-        <div className="grid place-content-center h-full bg-black px-8 gap-4 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-90">
-          <div className="text-white text-3xl">Instructions:</div>
+        <div className="h-full bg-black text-white p-4 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-90">
+          <div className="grid gap-4">
+            <div className="text-white text-2xl">Instructions:</div>
 
-          <h2 className="text-white text-xl ">There are two modes. Full word and first letter.</h2>
-          <h2 className="text-white text-xl ">
-            Full Word: requires you to type out the entire word. Don't worry about special characters. Just type the
-            word or number and press space.
-          </h2>
-          <h2 className="text-white text-xl ">
-            First Letter: only requires you to type the first letter of each word or first number.
-          </h2>
-          <span className="text-2xl text-white">{stageDetails?.id}</span>
-          <h2 className="text-white text-xl ">{stageDetails?.goal}</h2>
+            <h2 className=" text-xl">There are two modes. Full word and first letter.</h2>
+            <h2 className=" text-xl">
+              Full Word: requires you to type out the entire word. Don't worry about special characters. Just type the
+              word or number and press space.
+            </h2>
+            <h2 className=" text-xl">
+              First Letter: only requires you to type the first letter of each word or first number.
+            </h2>
+            <span className="text-2xl ">{stageDetails?.id}</span>
+            <h2 className=" text-xl">{stageDetails?.goal}</h2>
 
-          <h2 className=" text-xl text-orange-500">
-            You can turn off instructions permanentaly in your profile settings.
-          </h2>
-
-          <Button
-            variant={"glass1"}
-            onClick={() => setShowInstructions(!showInstructions)}
-            className=" text-white rounded-2xl w-full"
-          >
-            Dismiss
-          </Button>
+            <Button
+              variant={"secondary"}
+              size={"none"}
+              className="absolute bottom-5 right-5 left-5 h-10"
+              onClick={() => setShowInstructions(!showInstructions)}
+            >
+              Dismiss
+            </Button>
+          </div>
         </div>
       </div>
     )

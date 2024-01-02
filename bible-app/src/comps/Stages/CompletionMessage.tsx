@@ -43,15 +43,15 @@ const CompletionMessage = ({ percentage, handleReset, stageDetails, handleLearnV
           <div className="grid place-content-center h-full w-full gap-4">
             <div className="text-center">
               <span className="">
-                Nice work! You got <span className="text-green-500">{percentage.toFixed(2)}</span>%
+                Nice work! You got <span className="text-correct-1">{percentage.toFixed(2)}</span>%
               </span>
             </div>
 
             <div className="flex w-full gap-4">
-              <Button variant={"glass2"} onClick={handleReset} className="text-center w-40 text-2xl">
+              <Button variant={"primary"} onClick={handleReset} className="text-center w-40 text-2xl">
                 Retry
               </Button>
-              <Button onClick={() => handleProgression()} variant={"glass3"} className="w-40 text-2xl ">
+              <Button onClick={() => handleProgression()} variant={"right"} className="w-40 text-2xl ">
                 {stageDetails?.nextStage}
               </Button>
             </div>
@@ -82,7 +82,7 @@ const CompletionMessage = ({ percentage, handleReset, stageDetails, handleLearnV
             </div>
             <div className="text-center"></div>
             <div className="flex w-full ">
-              <Button variant={"glass2"} onClick={handleReset} className="text-center w-full text-2xl">
+              <Button variant={"wrong"} onClick={handleReset} className="text-center w-full text-2xl">
                 Retry
               </Button>
             </div>

@@ -169,7 +169,7 @@ const Login = () => {
               />
             </div>
             <div className="flex justify-center items-center gap-4 p-7">
-              <Button variant={"glass3"} className="w-full">
+              <Button variant={"primary"} className="w-full">
                 Sign-up
               </Button>
             </div>
@@ -203,7 +203,7 @@ const Login = () => {
               ></input>
             </div>
             <div className="flex justify-center items-center p-7">
-              <Button variant={"glass3"} className="w-40 text-2xl">
+              <Button variant={"primary"} className="w-40 text-2xl">
                 Login
               </Button>
             </div>

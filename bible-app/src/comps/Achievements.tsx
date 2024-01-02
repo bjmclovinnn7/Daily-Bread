@@ -48,7 +48,7 @@ const titleToIcon: { [key: string]: ReactNode } = {
 
 const Achievements = ({ achievements, setSeeAchievements, seeAchievements, learnedVerses, experience }: Props) => {
   return (
-    <div className={`${seeAchievements ? "absolute inset-0 grid gap-4 overflow-auto" : "grid gap-4"} bg-black p-4 `}>
+    <div className={`${seeAchievements ? "absolute inset-0 grid p-4 gap-4 overflow-auto" : "grid gap-4"} bg-black `}>
       {seeAchievements && (
         <div className="relative block text-center h-fit">
           <button onClick={() => setSeeAchievements(false)} className="absolute inset-0">
@@ -94,13 +94,13 @@ const Achievements = ({ achievements, setSeeAchievements, seeAchievements, learn
         }
 
         return (
-          <div key={index} className="w-full max-w-2xl mx-auto ">
-            <div className="border-2 p-2 rounded-xl h-fit bg-[#444444]">
+          <div key={index} className="w-full max-w-2xl mx-auto">
+            <div className="p-4 h-fit bg-[#444444] rounded-sm">
               <div className="flex justify-center gap-4">
                 <div className="grid place-content-center">
                   {IconComponent ? (
                     <div
-                      className={`bg-[#696969] rounded-xl ${
+                      className={`bg-[#696969] p-1 ${
                         achievement.goal / learnedVerses.length === 1 ? "bg-[#ffd700] text-[#ad9f59]" : "bg-[#444444]"
                       }`}
                     >
@@ -113,10 +113,10 @@ const Achievements = ({ achievements, setSeeAchievements, seeAchievements, learn
 
                 <div className="grid w-full">
                   <div className="flex justify-between">
-                    <h1 className="font-bold text-2xl">{achievement.title}</h1>
+                    <h1 className="text-lg md:text-xl lg:text-2xl">{achievement.title}</h1>
                     {handleGoalType()}
                   </div>
-                  <div className="bg-white h-4 ">
+                  <div className="bg-white h-4 rounded-full">
                     <motion.div
                       initial={false}
                       animate={{ width: `${handleProgressBar()}%` }}
@@ -126,10 +126,10 @@ const Achievements = ({ achievements, setSeeAchievements, seeAchievements, learn
                         stiffness: 100,
                         delay: 1,
                       }}
-                      className={`block h-full w-full z-20 bg-blue-400 `}
+                      className={`block h-full w-full z-20 bg-green-400 rounded-full`}
                     ></motion.div>
                   </div>
-                  <span>{achievement.description}</span>
+                  <span className="text-[#BDBDBD] text-xs md:text-sm lg:text-base">{achievement.description}</span>
                 </div>
               </div>
             </div>

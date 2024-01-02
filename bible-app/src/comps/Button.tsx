@@ -3,21 +3,21 @@ import { VariantProps, cva } from "class-variance-authority"
 import { cn } from "../utils/utils"
 import { motion, HTMLMotionProps } from "framer-motion"
 
-const buttonVariants = cva("h-fit w-fit flex justify-center items-center rounded-lg text-xl", {
+const buttonVariants = cva("flex justify-center items-center", {
   variants: {
     variant: {
-      default: "border-2 bg-white border-black",
-      outline1: "border bg-scarlet-300",
-      outline2: "border bg-blue-800",
-      outline3: "border bg-blueGray-700",
-      glass1: "bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-3xl border",
-      glass2: "bg-scarlet-300 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
-      glass3: "bg-blueGray-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-xl border",
+      default: "border bg-white border-black",
+      primary: "bg-white text-black rounded-sm",
+      secondary: "bg-black text-white border rounded-sm",
+      splash: "bg-[#4F4F4F] text-white rounded-sm",
+      wrong: "bg-red-500 text-white",
+      right: "bg-correct-1 text-white",
     },
     size: {
-      default: "p-2",
+      default: "h-10 w-full text-sm md:text-base lg:text-lg gap-2",
       md: "p-6",
       lg: "p-10",
+      none: "",
     },
   },
   defaultVariants: {

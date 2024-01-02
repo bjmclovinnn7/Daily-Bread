@@ -1,18 +1,15 @@
 import { useUserContext } from "../utils/UserContext"
-import { useVerseContext } from "../utils/VerseContext"
 import { useNavigate } from "react-router"
-import { Button } from "../comps/Button"
 import { FaClock, FaUserFriends, FaTrophy, FaPlus, FaArrowLeft, FaFlask, FaUser } from "react-icons/fa"
 import { cn } from "../utils/utils"
 import Achievements from "../comps/Achievements"
 import achievementData from "../utils/AchievementData.json"
 import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
 import { FaShield } from "react-icons/fa6"
+import { Button } from "../comps/Button"
 
 const Profile = () => {
   const { userData, logOut, photo } = useUserContext()
-  const { changeHints, hintsOn } = useVerseContext()
   const [rankColor, setRankColor] = useState("")
   const [userRank, setUserRank] = useState("")
   const navigate = useNavigate()
@@ -77,11 +74,13 @@ const Profile = () => {
   return (
     <>
       <div className="h-full w-full bg-black p-4 overflow-auto font-Inter ">
-        <div className="relative block text-center text-white">
-          <button onClick={() => navigate("/")} className="absolute inset-0">
-            <FaArrowLeft className="text-3xl md:text-4xl lg:text-5xl" />
-          </button>
-          <span className="text-3xl md:text-4xl lg:text-5xl text-white text-center">Profile</span>
+        <div className="h-10">
+          <div className="relative block text-center text-white">
+            <button onClick={() => navigate("/")} className="absolute inset-0">
+              <FaArrowLeft className="text-3xl md:text-4xl lg:text-5xl" />
+            </button>
+            {/* <span className="text-3xl md:text-4xl lg:text-5xl text-white text-center">Profile</span> */}
+          </div>
         </div>
 
         <section className="text-white pt-4 max-w-2xl mx-auto">
@@ -106,43 +105,23 @@ const Profile = () => {
                 <span className="">{userData?.email || "N/a"}</span>
               </div> */}
             </div>
-            <div className="flex justify-center w-fit">
+            <div className="flex justify-center w-fit h-20">
               <img className="rounded-full border border-black" src={photo}></img>
             </div>
           </div>
-          <div className="grid pt-4">
-            <button
-              onClick={() => navigate("/friends")}
-              className="flex h-8 justify-center items-center gap-2 bg-white text-black rounded-full text-xl"
-            >
-              <FaPlus />
+          <div className="grid pt-8">
+            <Button onClick={() => navigate("/friends")} variant={"primary"}>
+              <FaPlus className="text-sm md:text-base lg:text-lg" />
               <span>Add Friends</span>
-            </button>
-
-            <div className="flex justify-between items-center gap-8 p-4">
-              <h1 className=" text-xl">Help & Hints:</h1>
-              <div
-                className={`  flex  ${hintsOn ? "justify-start " : "justify-end "}  p-2 rounded-full w-20 bg-[#696969]`}
-                onClick={() => changeHints()}
-              >
-                <motion.div
-                  className={` ${
-                    hintsOn ? "bg-green-600" : "bg-red-400"
-                  } rounded-full text-black px-4 grid place-content-center w-1/2 h-8`}
-                  layout
-                  transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                  whileHover={{ scale: 1.2 }}
-                ></motion.div>
-              </div>
-            </div>
+            </Button>
           </div>
         </section>
-        <section className="text-white py-4 border-t-2 max-w-2xl mx-auto">
+        <section className="text-white py-4 max-w-2xl mx-auto">
           <div className="Statistics ">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl pb-2">Statistics</h1>
-            <div className="grid grid-cols-2 place-content-center gap-4 px-4">
+            <h1 className="text-xl md:text-2xl lg:text-3xl pb-2">Statistics</h1>
+            <div className="grid grid-cols-2 place-content-center gap-4">
               <div className="">
-                <div className="flex items-center justify-center bg-[#696969] rounded-xl">
+                <div className="flex items-center justify-center bg-[#696969] rounded p-2">
                   <div className="grid place-content-center w-1/4">
                     <FaUserFriends className="text-blue-700 text-2xl" />
                   </div>
@@ -153,7 +132,7 @@ const Profile = () => {
                 </div>
               </div>
               <div className="">
-                <div className="flex items-center justify-center bg-[#696969] rounded-xl">
+                <div className="flex items-center justify-center bg-[#696969] rounded p-2">
                   <div className="grid place-content-center w-1/4">
                     <FaTrophy className="text-yellow-500 text-2xl" />
                   </div>
@@ -164,7 +143,7 @@ const Profile = () => {
                 </div>
               </div>
               <div className="">
-                <div className="flex items-center justify-center bg-[#696969] rounded-xl">
+                <div className="flex items-center justify-center bg-[#696969] rounded p-2">
                   <div className="grid place-content-center w-1/4">
                     <FaFlask className="text-green-500 text-2xl" />
                   </div>
@@ -176,7 +155,7 @@ const Profile = () => {
                 </div>
               </div>
               <div className="">
-                <div className="flex items-center justify-center bg-[#696969] rounded-xl">
+                <div className="flex items-center justify-center bg-[#696969] rounded p-2">
                   <div className="grid place-content-center w-1/4">
                     <FaShield className={cn(`text-2xl ${rankColor}`)} />
                   </div>
@@ -190,17 +169,16 @@ const Profile = () => {
             </div>
           </div>
         </section>
-        <section className="text-white py-4 border-t-2 max-w-2xl mx-auto">
+        <section className="text-white max-w-2xl mx-auto">
           <div className="Acheivements ">
             <div className="flex justify-between items-center">
-              <div className="text-2xl md:text-3xl lg:text-4xl pb-2 flex justify-center gap-2">
+              <div className="text-xl md:text-2xl lg:text-3xl pb-2 flex justify-center gap-2">
                 <span>Acheivements</span>
-                <span className="text-sm">{achievementData.length}</span>
               </div>
               <button onClick={() => setSeeAchievements(true)}>View All</button>
             </div>
 
-            <div className="max-h-[440px] overflow-hidden rounded-lg">
+            <div className="max-h-[350px] overflow-hidden">
               <Achievements
                 achievements={achievementData}
                 seeAchievements={seeAchievements}
@@ -211,15 +189,11 @@ const Profile = () => {
             </div>
           </div>
         </section>
-        <div className="p-4">
+        <div className="pt-4 grid">
           {seeAchievements ? (
             ""
           ) : (
-            <Button
-              variant={"glass2"}
-              className="w-full border rounded-2xl text-white max-w-2xl mx-auto"
-              onClick={() => handleLogOut()}
-            >
+            <Button variant={"secondary"} className="max-w-2xl mx-auto" onClick={() => handleLogOut()}>
               Log out
             </Button>
           )}

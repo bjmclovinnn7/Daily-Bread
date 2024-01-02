@@ -61,6 +61,9 @@ export default {
           600: "#366BA1",
           700: "#2A547E",
         },
+        correct: {
+          1: "#10B972",
+        },
       },
       fontFamily: {
         body: ["Bebas Neue"],

@@ -1,7 +1,7 @@
 # Daily Bread 📖✨
 
-## The Approach 🚀
-I started this project with a vision to make a Bible verse memorization tool. I wanted it to be something people would find helpful but also easy to use! The goal was to create an app that made memorization fun and engaging while also providing a sleek and user-friendly interface.
+## What is Daily Bread? 🤔
+After being a long-time user of Duolingo, I became inspired to create a Bible memorization app that I could use the learn some of my favorite scriputes better! Daily Bread is a full-blown Progressive Web Application that utilizes user creation and authentication, storage of user data with a agile backend, and implements proven memorization strategies all while adding a game-like feel to the application. This application took me roughly 200-250 hours to get it to where it is. This included learning a lot about React, TypeScript/JavaScript, databases, Rest Api's, and much more. Overall, I am extremely proud of where it is and many of my close friends and family use it in it's current state.  
 
 ## Features ⚡
 - Proven memorization methods 🧠
@@ -11,9 +11,6 @@ I started this project with a vision to make a Bible verse memorization tool. I 
 - Saving and storing user data securely 🗄️
 - Engaging stages for effective memorization 🎉
 - Friendly competitions with fellow users 🤝
-
-## Lessons Learned 📚
-Developing Daily Bread has been an intense yet rewarding journey. The challenges included implementing complex functions for user input, setting up a robust yet simple backend with Firebase, and handling various stages of memorization. Key aspects of the app involve user authentication, live database interaction, data storage, and navigating interactive stages. Future updates will bring exciting features like weekly competitions, review sessions, and social elements to enhance user engagement!
 
 ## Tools + Tech Stack 🔨
 - React

@@ -4,6 +4,7 @@ import SearchFriends from "../comps/SearchFriend"
 import { useState } from "react"
 import { FaTrophy, FaPlus } from "react-icons/fa6"
 import { FaArrowLeft } from "react-icons/fa"
+import { Button } from "../comps/Button"
 
 const Friends = () => {
   const navigate = useNavigate()
@@ -60,13 +61,10 @@ const Friends = () => {
         </div>
 
         <div className="grid p-4 max-w-2xl mx-auto">
-          <button
-            onClick={() => setOpen(!open)}
-            className="flex h-8 justify-center items-center gap-2 bg-white text-black rounded-full text-xl"
-          >
+          <Button onClick={() => setOpen(!open)} variant={"primary"}>
             <FaPlus />
             <span>Add Friends</span>
-          </button>
+          </Button>
         </div>
 
         <div className="flex items-center gap-2 pl-2 max-w-2xl mx-auto">

@@ -1,12 +1,15 @@
 import { useVerseContext } from "../utils/VerseContext"
 import { useNavigate } from "react-router"
 import React, { useState, useRef } from "react"
-import { PiNumberCircleTwoFill, PiNumberCircleThreeFill, PiArrowRight, PiCheckCircleFill } from "react-icons/pi"
+
 import HintMessage from "../comps/HintMessage"
 import { motion } from "framer-motion"
 import CompletionMessage from "../comps/Stages/CompletionMessage"
 import LetterMode from "../comps/Stages/LetterMode"
 import { FaArrowLeft } from "react-icons/fa"
+
+import { FaRegCircleQuestion } from "react-icons/fa6"
+import Copyright from "../comps/Copyright"
 const Stage2 = () => {
   const stageDetails = {
     id: "Stage 2",
@@ -22,46 +25,13 @@ const Stage2 = () => {
   const [userInput, setUserInput] = useState("")
   const [activeWordIndex, setActiveWordIndex] = useState(0)
   const [correctArray, setCorrectArray] = useState<boolean[]>([])
-  const formatString = (id: string) => {
-    let idArr = id.split(" ")
-    let formattedArr = []
-
-    for (let x = 0; x < idArr.length; x++) {
-      if (idArr[x].includes(":") || idArr[x].includes("-")) {
-        let splitItems = idArr[x].split(/(:|-)/).filter((item: any) => item !== "") // Split by ':' or '-' and filter out empty strings
-        formattedArr.push(...splitItems)
-      } else {
-        formattedArr.push(idArr[x])
-      }
-    }
-
-    let finalArray = []
-    let index = 0
-
-    while (index < formattedArr.length) {
-      let current = formattedArr[index]
-
-      if (/^[a-zA-Z0-9]+$/.test(current)) {
-        let combined = current
-
-        while (index + 1 < formattedArr.length && !/^[a-zA-Z0-9]+$/.test(formattedArr[index + 1])) {
-          combined += formattedArr[index + 1]
-          index++
-        }
-
-        finalArray.push(combined)
-      } else {
-        finalArray.push(current)
-      }
-
-      index++
-    }
-
-    return finalArray.join(" ")
-  }
+  const verseId = selectedVerse?.id ?? ""
+  const formattedVerseId = verseId.replace(/[:-]/g, " ").split(" ")
+  const translationText = selectedVerse?.translations[translation as keyof typeof selectedVerse.translations] ?? ""
   const verseWordArray =
-    selectedVerse?.translations[translation as keyof typeof selectedVerse.translations]
-      .concat(" " + formatString(selectedVerse?.id))
+    verseId
+      .replace(/[:-]/g, " ")
+      .concat(" " + translationText)
       .split(" ") || []
   const cleanedUpVerseArray = verseWordArray.map((word) => word.replace(/[^a-zA-Z0-9]/g, ""))
   const totalWordsRef = useRef(cleanedUpVerseArray.length)
@@ -200,14 +170,16 @@ const Stage2 = () => {
           <button onClick={() => navigate("/stage1")} className="h-fit w-1/5">
             <FaArrowLeft />
           </button>
-          <div className="flex items-center justify-center w-3/5">
-            <PiCheckCircleFill className="text-green-500" />
-            <PiArrowRight className="text-2xl w-10" />
-            <PiNumberCircleTwoFill className="text-yellow-500 animate-pulse" />
-            <PiArrowRight className="text-2xl w-10" />
-            <PiNumberCircleThreeFill className="text-red-500" />
+
+          <button onClick={() => setShowInstructions(!showInstructions)} className="">
+            <FaRegCircleQuestion className="text-3xl" />
+          </button>
+        </div>
+        <div className="py-4 max-w-2xl mx-auto">
+          <span className="font-Inter text-sm">2 of 3</span>
+          <div className="relative w-full bg-white h-4 rounded-full">
+            <span className="absolute w-2/3 h-full bg-correct-1 rounded-full"></span>
           </div>
-          <div className="text-end h-fit w-1/5">{`${percentage.toFixed(0)}%`}</div>
         </div>
         <div className="max-w-2xl mx-auto text-2xl md:text-3xl lg:text-4xl pt-4">
           <div className="px-2">
@@ -222,16 +194,37 @@ const Stage2 = () => {
               transition={{ type: "spring", stiffness: 200, damping: 10 }}
               className="grid gap-2 md:gap-4 lg:gap-8"
             >
-              <div className="flex flex-wrap gap-x-2 text-lg md:text-2xl lg:text-3xl py-4">
-                {verseWordArray?.map((word, index) => (
-                  <Word key={index} text={word} active={index === activeWordIndex} correct={correctArray[index]} />
-                ))}
+              <div className="text-xl md:text-2xl lg:text-3xl py-4 w-full">
+                {/* Title section for first 3 or 4 elements */}
+                <div className="flex flex-wrap gap-1">
+                  {verseWordArray?.slice(0, formattedVerseId.length).map((word, index) => (
+                    <React.Fragment key={index}>
+                      <Word text={word} active={index === activeWordIndex} correct={correctArray[index]} />
+
+                      {index === (formattedVerseId.length === 5 ? 2 : 1) ? <span className="font-bold">:</span> : null}
+                      {index === (formattedVerseId.length === 5 ? 3 : 2) && formattedVerseId.length > 3 ? (
+                        <span className="font-bold">-</span>
+                      ) : null}
+                    </React.Fragment>
+                  ))}
+                </div>
+                {/* Text section for the rest of the elements */}
+                <div className="flex flex-wrap gap-x-2 text-sm md:text-lg lg:text-xl py-4">
+                  {verseWordArray?.slice(formattedVerseId.length).map((word, index) => (
+                    <Word
+                      key={index + formattedVerseId.length} // Add 4 or 3 to differentiate keys
+                      text={word}
+                      active={index + formattedVerseId.length === activeWordIndex} // Adjust active index
+                      correct={correctArray[index + formattedVerseId.length]} // Adjust correct index
+                    />
+                  ))}
+                </div>
               </div>
 
               <input
-                className="w-full h-8 lg:h-10 text-black bg-white"
+                className="w-full p-4 h-10 lg:h-12 text-black bg-white text-base"
                 type="text"
-                placeholder={`${oneLetterMode ? "1st Letter" : "Full Word"}`}
+                placeholder={`${oneLetterMode ? "Type the 1st letter..." : "Type the full word..."}`}
                 value={userInput}
                 onChange={(e) => handleSwitch(e.target.value)}
                 autoFocus={false}
@@ -247,16 +240,9 @@ const Stage2 = () => {
             )}
             <LetterMode oneLetterMode={oneLetterMode} changeLearnMethods={changeLearnMethods} />
 
-            <button
-              onClick={() =>
-                setTimeout(() => {
-                  setShowInstructions(!showInstructions)
-                }, 300)
-              }
-              className="absolute bottom-10 right-10 left-10 text-base rounded-full"
-            >
-              Show Instructions
-            </button>
+            <div className="absolute bottom-4 right-5 left-5 rounded-full">
+              <Copyright />
+            </div>
           </div>
         </div>
       </div>

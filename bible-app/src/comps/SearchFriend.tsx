@@ -108,7 +108,7 @@ const SearchFriends = ({ open, setOpen }: Props) => {
         return false
       }
     } catch (error) {
-      console.error("Error querying by displayName:", error)
+      console.error("Error querying by username:", error)
       throw error
     }
   }
@@ -185,23 +185,23 @@ const SearchFriends = ({ open, setOpen }: Props) => {
               <div className="p-3 bg-gray-200 rounded text-center flex items-center justify-center gap-2">
                 <BiSearchAlt className="text-2xl text-gray-500" />
                 <input
-                  placeholder="Ex. John Doe or johndoe@gmail.com"
+                  placeholder="Enter name or username"
                   type="text"
                   onChange={(e: ChangeEvent<HTMLInputElement>) => {
                     setUserInput(e.target.value)
                   }}
-                  value={userInput} // Set the value of the input field
+                  value={userInput} //set the value of the input field
                   required
-                  className="w-full h-10 text-xl bg-gray-200 text-black"
+                  className="w-full h-10 bg-gray-200 text-black"
                 ></input>
               </div>
               <div className="p-4">
-                <button className="bg-gray-500 w-full rounded-3xl text-xl">Search</button>
+                <Button variant={"splash"}>Search</Button>
               </div>
               {error && (
                 <div className="text-red-500 text-xl md:text-2xl lg:text-3xl w-full text-center flex justify-center items-center gap-4">
                   <p>{error}!</p>
-                  <Button variant={"glass2"} className="text-white" onClick={clearError}>
+                  <Button variant={"secondary"} className="text-white" onClick={clearError}>
                     <FaXmark />
                   </Button>
                 </div>

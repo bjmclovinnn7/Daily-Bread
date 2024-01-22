@@ -4,7 +4,6 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { useUserContext } from "../../utils/UserContext"
 import { FaTrophy } from "react-icons/fa6"
-import verseData from "../../utils/Verses.json"
 import { FaArrowRight } from "react-icons/fa"
 // import bookData from "../../utils/Biblebooks.json"
 
@@ -29,7 +28,7 @@ interface SelectedVerse {
 // Create a separate component for filtered verses
 const FilteredVerses = ({ category, animate }: { category: string; animate: boolean }) => {
   const navigate = useNavigate()
-  const { saveSelectedVerse, saveCurrentCategory, translation } = useVerseContext()
+  const { saveSelectedVerse, saveCurrentCategory, translation, verseData } = useVerseContext()
   const { userData } = useUserContext()
 
   const handleLearnClick = (verse: SelectedVerse) => {
@@ -89,9 +88,38 @@ interface Props {
 
 const Categories = ({ setCategoryOpened, categoryOpened }: Props) => {
   const navigate = useNavigate()
-  const { saveCurrentCategory } = useVerseContext()
+  const { saveCurrentCategory, verseData } = useVerseContext()
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({})
-  const verseCategories = ["Top 100", "Salvation", "Prayer", "Praise", "Faith", "Love", "Birth and Youth"]
+  const verseCategories = [
+    "Top 100",
+    "Salvation",
+    "Prayer",
+    "Praise",
+    "Faith",
+    "Love",
+    "Birth and Youth",
+    "Comfort in Sorrow",
+    "Creation",
+    "Eternal Life",
+    "Fellowship",
+    "Financial Provision",
+    "Forgiveness",
+    "Freedom from Sin",
+    "Giving",
+    "God the Father",
+    "Good Works",
+    "Healing",
+    "Health",
+    "Heaven",
+    "Hope",
+    "Instruction",
+    "Instruction for Youth",
+    "Instruction for Parents",
+    "Jesus",
+    "Jesus Saves",
+    "Loving God",
+    "Marriage",
+  ]
   // const bookCategories = ["All Books", "Old Testament", "New Testament"]
 
   const handleClick = (category: string) => {
@@ -124,6 +152,12 @@ const Categories = ({ setCategoryOpened, categoryOpened }: Props) => {
 
   return (
     <>
+      <div className="w-full text-2xl md:text-3xl lg:text-4xl font-Inter max-w-[1000px] mx-auto">
+        <span>Categories</span>
+        <h2 className=" text-sm md:text-base lg:text-lg text-white font-Inter pl-2 pb-2">
+          {categoryOpened ? "Click a verse to start learning." : "Select a category to view verses."}
+        </h2>
+      </div>
       <div className="grid place-content-center gap-5 overscroll-auto pb-4">
         {verseCategories.map((category, index) => {
           const versesInCategory = verseData.filter((verse) => verse.category === category)

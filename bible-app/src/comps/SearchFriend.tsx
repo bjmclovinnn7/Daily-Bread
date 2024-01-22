@@ -94,7 +94,7 @@ const SearchFriends = ({ open, setOpen }: Props) => {
         const matchingUsers = querySnapshot.docs.map((doc) => {
           const friendUserData = doc.data() as UserData
           return {
-            uid: userData.uid,
+            uid: friendUserData.uid,
             displayName: friendUserData.displayName,
             createdOn: friendUserData.createdOn,
             userName: friendUserData.userName,
@@ -114,6 +114,7 @@ const SearchFriends = ({ open, setOpen }: Props) => {
   }
 
   const handleAddFriend = async (friend: UserData) => {
+    console.log(friend)
     const userDocRef = doc(colRefUsers, userData?.uid)
 
     try {
@@ -121,9 +122,9 @@ const SearchFriends = ({ open, setOpen }: Props) => {
       if (userDoc.exists()) {
         const userData = userDoc.data()
         const friends = userData?.friends || []
-        const friendExists = friends.some((frnd: UserData) => frnd.uid === friend.uid)
+        const alreadyFriend = friends.some((frnd: UserData) => frnd.uid === friend.uid)
 
-        if (!friendExists) {
+        if (!alreadyFriend && userData?.uid !== friend.uid) {
           friends.push({
             uid: friend.uid,
             displayName: friend.displayName,
@@ -140,7 +141,7 @@ const SearchFriends = ({ open, setOpen }: Props) => {
           setUserInput("")
           setFriendData([]) // Clear friend data after adding
         } else {
-          console.log("Friend already added.")
+          console.log("Friend already added or is yourself.")
         }
       }
     } catch (error) {

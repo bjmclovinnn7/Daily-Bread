@@ -4,18 +4,16 @@ import React, { useState, useRef } from "react"
 import { colRefUsers } from "../utils/firebase"
 import { getDoc, updateDoc, doc } from "firebase/firestore"
 import { useUserContext } from "../utils/UserContext"
-
 import { PiNumberCircleThreeFill, PiArrowRight, PiCheckCircleFill } from "react-icons/pi"
-import { FaXmark } from "react-icons/fa6"
 import HintMessage from "../comps/HintMessage"
 import { motion } from "framer-motion"
 import CompletionMessage from "../comps/Stages/CompletionMessage"
 import Stage3FinalCompletion from "../comps/Stage3FinalCompletion"
 import LetterMode from "../comps/Stages/LetterMode"
+import { FaArrowLeft } from "react-icons/fa"
 
 const Stage3 = () => {
   const navigate = useNavigate()
-
   const { selectedVerse, translation, changeLearnMethods, oneLetterMode, hintsOn } = useVerseContext()
   const [showInstructions, setShowInstructions] = useState(hintsOn)
   const [showCompletionMessage, setShowCompletionMessage] = useState(false)
@@ -25,6 +23,10 @@ const Stage3 = () => {
   const [userInput, setUserInput] = useState("")
   const [activeWordIndex, setActiveWordIndex] = useState(0)
   const [correctArray, setCorrectArray] = useState<boolean[]>([])
+
+  const handleNavigate = () => {
+    window.history.go(-1)
+  }
 
   const stageDetails = {
     id: "Stage 3",
@@ -327,8 +329,8 @@ const Stage3 = () => {
     <>
       <div className="fixed inset-0 h-screen w-full p-4 bg-black text-white font-Inter">
         <div className="text-3xl md:text-4xl lg:text-5xl relative flex justify-between items-center gap-8">
-          <button onClick={() => navigate("/all_verses")} className="h-fit w-1/5">
-            <FaXmark />
+          <button onClick={() => handleNavigate()} className="h-fit w-1/5">
+            <FaArrowLeft />
           </button>
           <div className="flex items-center justify-center w-3/5">
             <PiCheckCircleFill className="text-green-500" />

@@ -1,106 +1,204 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Suspense, lazy } from "react"
+import { UserContextProvider } from "./utils/UserContext"
+import { VerseProvider } from "./utils/VerseContext"
+import ProtectedRoute from "./utils/ProtectedRoute"
 import Home from "./pages/Home"
 import Auth from "./pages/Auth"
-import { VerseProvider } from "./utils/VerseContext"
-import { UserContextProvider } from "./utils/UserContext"
 import Login from "./pages/Login"
-import Profile from "./pages/Profile"
-import ProtectedRoute from "./utils/ProtectedRoute"
-import AllLoaded from "./pages/Categories/AllLoaded"
-import Stage1 from "./pages/Stage1"
-import Stage2 from "./pages/Stage2"
-import Stage3 from "./pages/Stage3"
-import Learned from "./pages/Learned"
-import Friends from "./pages/Friends"
-import FriendProfile from "./pages/FriendProfile"
+//Lazy Loaded
+const Profile = lazy(() => import("./pages/Profile"))
+const AllLoaded = lazy(() => import("./pages/Categories/AllLoaded"))
+const Stage1 = lazy(() => import("./pages/Stage1"))
+const Stage2 = lazy(() => import("./pages/Stage2"))
+const Stage3 = lazy(() => import("./pages/Stage3"))
+const Learned = lazy(() => import("./pages/Learned"))
+const Friends = lazy(() => import("./pages/Friends"))
+const FriendProfile = lazy(() => import("./pages/FriendProfile"))
 
 function App() {
   return (
-    <>
-      <UserContextProvider>
-        <VerseProvider>
-          <Router>
-            <Routes>
-              <Route path="/auth" element={<Auth />} />
-              <Route path="/login" element={<Login />} />
+    <UserContextProvider>
+      <VerseProvider>
+        <Router>
+          <Routes>
+            <Route
+              path="/auth"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                      Loading...
+                    </div>
+                  }
+                >
+                  <Auth />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                      Loading...
+                    </div>
+                  }
+                >
+                  <Login />
+                </Suspense>
+              }
+            />
 
-              <Route
-                path="/"
-                element={
-                  <ProtectedRoute>
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute>
+                  <Suspense
+                    fallback={
+                      <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                        Loading...
+                      </div>
+                    }
+                  >
                     <Home />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/all_verses"
-                element={
-                  <ProtectedRoute>
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/all_verses"
+              element={
+                <ProtectedRoute>
+                  <Suspense
+                    fallback={
+                      <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                        Loading...
+                      </div>
+                    }
+                  >
                     <AllLoaded />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/profile"
-                element={
-                  <ProtectedRoute>
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <Suspense
+                    fallback={
+                      <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                        Loading...
+                      </div>
+                    }
+                  >
                     <Profile />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/stage1"
-                element={
-                  <ProtectedRoute>
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/stage1"
+              element={
+                <ProtectedRoute>
+                  <Suspense
+                    fallback={
+                      <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                        Loading...
+                      </div>
+                    }
+                  >
                     <Stage1 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/stage2"
-                element={
-                  <ProtectedRoute>
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/stage2"
+              element={
+                <ProtectedRoute>
+                  <Suspense
+                    fallback={
+                      <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                        Loading...
+                      </div>
+                    }
+                  >
                     <Stage2 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/stage3"
-                element={
-                  <ProtectedRoute>
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/stage3"
+              element={
+                <ProtectedRoute>
+                  <Suspense
+                    fallback={
+                      <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                        Loading...
+                      </div>
+                    }
+                  >
                     <Stage3 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/learned"
-                element={
-                  <ProtectedRoute>
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/learned"
+              element={
+                <ProtectedRoute>
+                  <Suspense
+                    fallback={
+                      <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                        Loading...
+                      </div>
+                    }
+                  >
                     <Learned />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/friends"
-                element={
-                  <ProtectedRoute>
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/friends"
+              element={
+                <ProtectedRoute>
+                  <Suspense
+                    fallback={
+                      <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                        Loading...
+                      </div>
+                    }
+                  >
                     <Friends />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/friendProfile"
-                element={
-                  <ProtectedRoute>
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/friendProfile"
+              element={
+                <ProtectedRoute>
+                  <Suspense
+                    fallback={
+                      <div className="absolute inset-0 h-[100vh] w-full grid place-content-center font-Inter text-2xl">
+                        Loading...
+                      </div>
+                    }
+                  >
                     <FriendProfile />
-                  </ProtectedRoute>
-                }
-              />
-            </Routes>
-          </Router>
-        </VerseProvider>
-      </UserContextProvider>
-    </>
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </Router>
+      </VerseProvider>
+    </UserContextProvider>
   )
 }
 

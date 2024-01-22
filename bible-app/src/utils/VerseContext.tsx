@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react"
+import { createContext, useContext, useState, ReactNode, useEffect } from "react"
 
 interface SelectedVerse {
   id: string
@@ -22,6 +22,7 @@ interface VerseContextType {
   oneLetterMode: boolean
   changeHints: () => void
   hintsOn: boolean
+  verseData: SelectedVerse[]
 }
 const VerseContext = createContext<VerseContextType | undefined>(undefined)
 
@@ -51,7 +52,7 @@ export function VerseProvider({ children }: { children: ReactNode }) {
   })
   const [oneLetterMode, setOneLetterMode] = useState(() => {
     const saved = localStorage.getItem("oneWordMode")
-    const initialValue = saved ? JSON.parse(saved) : false // Initialize to null if not found
+    const initialValue = saved ? JSON.parse(saved) : true // Initialize to null if not found
     return initialValue
   })
   const [hintsOn, setHintsOff] = useState(() => {
@@ -59,6 +60,21 @@ export function VerseProvider({ children }: { children: ReactNode }) {
     const initialValue = saved ? JSON.parse(saved) : false // Initialize to null if not found
     return initialValue
   })
+
+  const [verseData, setVerseData] = useState<SelectedVerse[]>([])
+
+  useEffect(() => {
+    const fetchVerseData = async () => {
+      try {
+        const verseData = await import("../utils/Verses.json")
+        setVerseData(verseData.default)
+      } catch (error) {
+        console.error("Error fetching verse data:", error)
+      }
+    }
+
+    fetchVerseData()
+  }, [])
 
   const changeLearnMethods = () => {
     const updatedLearnMethod = !oneLetterMode
@@ -97,6 +113,7 @@ export function VerseProvider({ children }: { children: ReactNode }) {
     oneLetterMode,
     hintsOn,
     changeHints,
+    verseData,
   }
   return <VerseContext.Provider value={contextValue}>{children}</VerseContext.Provider>
 }

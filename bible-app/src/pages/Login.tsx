@@ -183,7 +183,7 @@ const Login = () => {
             <div className="text-2xl">
               <label className="">Email</label>
               <input
-                className="border-2 border-gray-300 rounded-sm w-full text-black"
+                className="border-2 border-gray-300 rounded-sm w-full text-white"
                 type="email"
                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
                   // Use ChangeEvent<HTMLInputElement> for the event type
@@ -193,7 +193,7 @@ const Login = () => {
               ></input>
               <label className="">Password</label>
               <input
-                className="border-2 border-gray-300 rounded-sm w-full text-black"
+                className="border-2 border-gray-300 rounded-sm w-full text-white"
                 type="password"
                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
                   // Use ChangeEvent<HTMLInputElement> for the event type

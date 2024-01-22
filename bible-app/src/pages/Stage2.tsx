@@ -2,11 +2,11 @@ import { useVerseContext } from "../utils/VerseContext"
 import { useNavigate } from "react-router"
 import React, { useState, useRef } from "react"
 import { PiNumberCircleTwoFill, PiNumberCircleThreeFill, PiArrowRight, PiCheckCircleFill } from "react-icons/pi"
-import { FaXmark } from "react-icons/fa6"
 import HintMessage from "../comps/HintMessage"
 import { motion } from "framer-motion"
 import CompletionMessage from "../comps/Stages/CompletionMessage"
 import LetterMode from "../comps/Stages/LetterMode"
+import { FaArrowLeft } from "react-icons/fa"
 const Stage2 = () => {
   const stageDetails = {
     id: "Stage 2",
@@ -197,8 +197,8 @@ const Stage2 = () => {
     <>
       <div className="fixed inset-0 h-screen w-full p-4 bg-black text-white font-Inter">
         <div className="text-3xl md:text-4xl lg:text-5xl relative flex justify-between items-center gap-8">
-          <button onClick={() => navigate("/all_verses")} className="h-fit w-1/5">
-            <FaXmark />
+          <button onClick={() => navigate("/stage1")} className="h-fit w-1/5">
+            <FaArrowLeft />
           </button>
           <div className="flex items-center justify-center w-3/5">
             <PiCheckCircleFill className="text-green-500" />

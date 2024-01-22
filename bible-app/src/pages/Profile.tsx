@@ -90,20 +90,21 @@ const Profile = () => {
               <div className="flex justify-between items-center w-full">
                 <div className="text-2xl md:text-3xl lg:text-4xl">{userData?.displayName}</div>
               </div>
+              <div className="flex items-center gap-2 justify-start">
+                <FaUser className="" />
+                <span className="text-white">{userData.userName}</span>
+              </div>
               <div className="flex justify-start gap-2 items-center">
                 <span>
                   <FaClock className="" />
                 </span>
                 <span>Joined {handleTimeStamp(userData.createdOn)}</span>
               </div>
+
               {/* <div className="flex items-center gap-2 justify-start">
                 <MdMail className="" />
                 <span className="">{userData?.email || "N/a"}</span>
               </div> */}
-              <div className="flex items-center gap-2 justify-start">
-                <FaUser className="" />
-                <span className="text-white">{userData.userName}</span>
-              </div>
             </div>
             <div className="flex justify-center w-fit">
               <img className="rounded-full border border-black" src={photo}></img>

@@ -129,7 +129,6 @@ const Auth = () => {
       const currentUserRef = doc(colRefUsers, googleUid)
       const userDoc = await getDoc(currentUserRef)
       let googleUserData = userDoc.data()
-
       if (userDoc.exists() && googleUserData?.userName) {
         console.log("User already exists")
         navigate("/")
@@ -156,14 +155,14 @@ const Auth = () => {
   return (
     <>
       <div className="h-screen w-full grid place-content-center p-10 bg-black text-white font-Inter">
-        <div className="text-center text-3xl md:text-4xl lg:text-5xl p-4"> Sign Up</div>
+        <div className="text-center text-5xl md:text-6xl lg:text-7xl p-4"> Sign Up</div>
         {/* First step form */}
         {showFirstStep && (
           <form
             onSubmit={handleFirstStep}
-            className="max-w-[400px] p-5 border-2 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-xl rounded-xl grid gap-3"
+            className="max-w-[400px] p-5 border-2 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-xl rounded-xl grid"
           >
-            <div className="text-xl">
+            <div className="text-2xl">
               <label>First Name</label>
               <input
                 value={userData.firstName}
@@ -182,7 +181,7 @@ const Auth = () => {
               />
             </div>
             <div className="flex justify-center items-center p-7">
-              <Button variant={"glass3"} className="w-40">
+              <Button variant={"glass3"} className="w-40 text-2xl">
                 Next
               </Button>
             </div>

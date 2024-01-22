@@ -4,7 +4,6 @@ import { useUserContext } from "../../utils/UserContext"
 import { useNavigate } from "react-router"
 import { FaTrophy } from "react-icons/fa"
 import { FaXmark } from "react-icons/fa6"
-import verseData from "../../utils/Verses.json"
 
 interface Verse {
   id: string
@@ -18,7 +17,7 @@ interface Verse {
 }
 
 const AllVerses = () => {
-  const { saveSelectedVerse, currentCategory, translation } = useVerseContext()
+  const { saveSelectedVerse, currentCategory, translation, verseData } = useVerseContext()
   const { userData } = useUserContext()
   const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState("")

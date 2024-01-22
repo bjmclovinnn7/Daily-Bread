@@ -48,7 +48,6 @@ const LearnedVerseCard = ({ open, setOpen }: Props) => {
   }
 
   const handleNavigateToFriend = (friendData: UserData) => {
-    console.log(friendData.displayName)
     saveSelectedFriend(friendData)
     getUpdatedFriendData(friendData)
     navigate("/friendProfile")
@@ -111,12 +110,11 @@ const LearnedVerseCard = ({ open, setOpen }: Props) => {
     const timeDifference = date14DaysAfter.getTime() - currentDate.getTime()
     // Convert milliseconds to days
     const daysDifference = Math.ceil(timeDifference / (1000 * 3600 * 24))
-    console.log(handleDaysLeftColor(daysDifference))
+
     return daysDifference
   }
 
   const handleDaysLeftColor = (days: number) => {
-    console.log(days)
     if (days >= 30) {
       return "text-green-500"
     } else if (days < 30 && days > 5) {
@@ -166,26 +164,27 @@ const LearnedVerseCard = ({ open, setOpen }: Props) => {
               {currentUserVerse &&
                 currentUserVerse.map((verse) => (
                   <div key={verse.id} className="grid rounded-xl p-4 gap-4 md:text-xl lg:text-2xl">
-                    <div className="grid">
-                      <span className=" text-2xl md:text-3xl lg:text-4xl font-bold">{verse.id}</span>
+                    <div className="grid gap-1">
+                      <span className=" text-2xl md:text-3xl lg:text-4xl">{verse.id}</span>
 
                       <span>Category: {verse?.category?.toUpperCase()}</span>
                       <span>Translation: {verse.translation}</span>
                     </div>
 
-                    <div>
+                    <div className="grid gap-1">
                       <div className="flex justify-between items-center">
-                        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Status</h1>
+                        <h1 className="text-2xl md:text-3xl lg:text-4xl">Status</h1>
                         <button onClick={() => setShowInfoMessage(!showInfoMessage)}>
                           <FaCircleInfo className="text-blue-300" />
                         </button>
                       </div>
 
                       <span>
-                        Learned On: <span className="text-green-500">{handleTimeStamp(verse.timeStamp)}</span>
+                        Learned on <span className="text-green-500">{handleTimeStamp(verse.timeStamp)}</span>
                       </span>
                       <div>
-                        Verse will be lost on <span className="">{getDate14DaysAfter(verse.timeStamp)}</span>
+                        Verse will be lost on{" "}
+                        <span className="text-orange-500">{getDate14DaysAfter(verse.timeStamp)}</span>
                       </div>
                       <p>
                         You have{" "}
@@ -214,7 +213,7 @@ const LearnedVerseCard = ({ open, setOpen }: Props) => {
                     </div>
                     {friendLearnedVerse.length > 0 ? (
                       <div className="text-white w-full">
-                        <h1 className=" p-2">Friends who also know this:</h1>
+                        <h1 className=" p-2">Friends who also learned this. ({friendLearnedVerse.length})</h1>
                         <div className="grid grid-cols-2 gap-2">
                           {friendLearnedVerse.map((friend, index) => (
                             <button

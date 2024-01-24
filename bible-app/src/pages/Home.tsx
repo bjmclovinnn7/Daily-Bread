@@ -97,7 +97,7 @@ const Home = () => {
     }
 
     return () => {
-      window.removeEventListener("beforeinstallprompt", () => {})
+      window.removeEventListener("beforeinstallprompt", () => { })
     }
   }, [])
 
@@ -129,7 +129,7 @@ const Home = () => {
                   }}
                   id="dropdown-menu"
                   transition={{ staggerChildren: 0.13, ease: "easeIn" }}
-                  className="dropdown-menu absolute top-[100%] left-5 right-5 w-ffull h-fit bg-white border-2 text-2xl font-Inter rounded-xl"
+                  className="dropdown-menu absolute top-[100%] left-5 right-5 w-ffull h-fit bg-white border-2 text-2xl font-Inter rounded-xl lg:w-1/5"
                 >
                   {["NIV", "ESV", "KJV", "NKJV"].map((translationOption) => (
                     <motion.li
@@ -138,9 +138,8 @@ const Home = () => {
                         visible: { opacity: 1, y: 0 },
                         hidden: { opacity: 0, y: -10 },
                       }}
-                      className={`${
-                        selectedTranslation === translationOption ? "bg-[#4F4F4F] text-white" : "bg-white text-black"
-                      }  p-4 text-center rounded-xl`}
+                      className={`${selectedTranslation === translationOption ? "bg-[#4F4F4F] text-white" : "bg-white text-black"
+                        }  p-4 text-center rounded-xl`}
                       onClick={() => handleTranslationSelect(translationOption)}
                     >
                       {translationOption}

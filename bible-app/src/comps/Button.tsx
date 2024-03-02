@@ -28,7 +28,7 @@ const buttonVariants = cva("flex justify-center items-center", {
 
 type ButtonMotionProps = ButtonProps & HTMLMotionProps<"button">
 
-interface ButtonProps extends React.ComponentPropsWithRef<"button">, VariantProps<typeof buttonVariants> {}
+interface ButtonProps extends React.ComponentPropsWithRef<"button">, VariantProps<typeof buttonVariants> { }
 
 const Button = forwardRef<HTMLButtonElement, ButtonMotionProps>(({ className, size, variant, ...props }, buttonRef) => {
   return <motion.button ref={buttonRef} className={cn(buttonVariants({ variant, size, className }))} {...props} />

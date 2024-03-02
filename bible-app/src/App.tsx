@@ -1,20 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { Suspense, lazy } from "react"
-import { UserContextProvider } from "./utils/UserContext"
-import { VerseProvider } from "./utils/VerseContext"
-import ProtectedRoute from "./utils/ProtectedRoute"
-import Home from "./pages/Home"
-import Auth from "./pages/Auth"
-import Login from "./pages/Login"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import { UserContextProvider } from "./utils/UserContext";
+import { VerseProvider } from "./utils/VerseContext";
+import ProtectedRoute from "./utils/ProtectedRoute";
+import Home from "./pages/Home";
+import Auth from "./pages/Auth";
+import Login from "./pages/Login";
 //Lazy Loaded
-const Profile = lazy(() => import("./pages/Profile"))
-const AllLoaded = lazy(() => import("./pages/Categories/AllLoaded"))
-const Stage1 = lazy(() => import("./pages/Stage1"))
-const Stage2 = lazy(() => import("./pages/Stage2"))
-const Stage3 = lazy(() => import("./pages/Stage3"))
-const Learned = lazy(() => import("./pages/Learned"))
-const Friends = lazy(() => import("./pages/Friends"))
-const FriendProfile = lazy(() => import("./pages/FriendProfile"))
+const Profile = lazy(() => import("./pages/Profile"));
+const AllLoaded = lazy(() => import("./pages/Categories/AllLoaded"));
+const Stage1 = lazy(() => import("./pages/Stage1"));
+const Stage2 = lazy(() => import("./pages/Stage2"));
+const Stage3 = lazy(() => import("./pages/Stage3"));
+const Learned = lazy(() => import("./pages/Learned"));
+const Friends = lazy(() => import("./pages/Friends"));
+const FriendProfile = lazy(() => import("./pages/FriendProfile"));
 
 function App() {
   return (
@@ -199,7 +199,7 @@ function App() {
         </Router>
       </VerseProvider>
     </UserContextProvider>
-  )
+  );
 }
 
-export default App
+export default App;

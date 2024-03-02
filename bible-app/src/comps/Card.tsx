@@ -23,7 +23,7 @@ const cardVariants = cva("relative grid place-items-center", {
   },
 })
 //extends these objects to any React.Component that is specified ex. "div"
-interface CardProps extends React.ComponentPropsWithRef<"div">, VariantProps<typeof cardVariants> {}
+interface CardProps extends React.ComponentPropsWithRef<"div">, VariantProps<typeof cardVariants> { }
 
 //...props catched all attributes that are unwanted other than the ones we want.
 const Card = forwardRef<HTMLDivElement, CardProps>(({ className, size, variant, ...props }, cardRef) => {
